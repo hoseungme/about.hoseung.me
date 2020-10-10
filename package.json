@@ -23,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "format:watch": "onchange 'src/**/*.{ts,tsx}' -- prettier --write {{changed}}"
   },
   "eslintConfig": {
