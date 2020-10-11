@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes } from "./routes";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/resume">
     <Routes />
   </BrowserRouter>,
   document.getElementById("root")
