@@ -12,7 +12,11 @@ export const ProjectCard: React.FC<Project> = ({
   description,
   references,
 }) => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <img src={img} alt="Project Image" />
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -25,4 +29,11 @@ const Container = styled.div`
   border-radius: 6px;
 
   box-shadow: 0 0 15px ${Color.LightGrey};
+
+  > img {
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+  }
 `;
