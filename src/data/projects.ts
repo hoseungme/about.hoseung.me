@@ -13,6 +13,7 @@ export const projects: Project[] = [
         link: "https://velog.io/@alvin/series/Reffering",
       },
     ],
+    tags: ["Front End"],
   },
   {
     img:
@@ -26,6 +27,7 @@ export const projects: Project[] = [
         link: "https://velog.io/@alvin/series/Reffering",
       },
     ],
+    tags: ["Front End"],
   },
   {
     img:
@@ -39,6 +41,7 @@ export const projects: Project[] = [
         link: "https://velog.io/@alvin/series/Reffering",
       },
     ],
+    tags: ["Front End"],
   },
   {
     img:
@@ -52,6 +55,7 @@ export const projects: Project[] = [
         link: "https://velog.io/@alvin/series/Reffering",
       },
     ],
+    tags: ["Front End"],
   },
   {
     img:
@@ -65,5 +69,6 @@ export const projects: Project[] = [
         link: "https://velog.io/@alvin/series/Reffering",
       },
     ],
+    tags: ["Front End"],
   },
 ];

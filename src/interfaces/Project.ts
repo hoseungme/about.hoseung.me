@@ -4,4 +4,5 @@ export interface Project {
   duration: string;
   description: string;
   references: { name: string; link: string }[];
+  tags: string[];
 }
