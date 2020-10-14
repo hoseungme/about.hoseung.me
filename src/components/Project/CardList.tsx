@@ -11,7 +11,9 @@ export const ProjectCardList: React.FC<{ projects: Project[] }> = ({
   return (
     <Container>
       {projects.map((p) => (
-        <ProjectCard {...p} />
+        <div className="card">
+          <ProjectCard {...p} />
+        </div>
       ))}
     </Container>
   );
@@ -23,7 +25,20 @@ const Container = styled.div`
   display: flex;
   flex-flow: row wrap;
 
-  > * {
+  margin: 20px 0;
+
+  > .card {
     width: 25%;
+
+    @media (max-width: 950px) {
+      width: 50%;
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+
+    padding: 0 10px 60px;
+    box-sizing: border-box;
   }
 `;
