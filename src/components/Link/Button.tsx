@@ -9,7 +9,11 @@ export const LinkButton: React.FC<Project["references"][0]> = ({
   name,
   link,
 }) => {
-  return <Link href={link}>{name}</Link>;
+  return (
+    <Link href={link} onClick={(e) => e.stopPropagation()}>
+      {name}
+    </Link>
+  );
 };
 
 const Link = styled.a`
