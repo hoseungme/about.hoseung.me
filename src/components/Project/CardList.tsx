@@ -12,8 +12,8 @@ export const ProjectCardList: React.FC<{ projects: Project[] }> = ({
 }) => {
   return (
     <Container>
-      {projects.map((p) => (
-        <div className="card">
+      {projects.map((p, index) => (
+        <div className="card" key={index}>
           <ProjectCard {...p} />
         </div>
       ))}
