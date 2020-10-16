@@ -28,7 +28,7 @@ const Container = styled.div`
   margin: 20px 0;
 
   > .card {
-    width: 25%;
+    width: 33.3%;
 
     @media (max-width: 950px) {
       width: 50%;
