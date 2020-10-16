@@ -16,6 +16,7 @@ export const ProjectCard: React.FC<Project> = ({
     <Container>
       <img src={img} alt="Project" />
       <div className="name">{name}</div>
+      <div className="duration">{duration}</div>
     </Container>
   );
 };
@@ -50,6 +51,16 @@ const Container = styled.div`
     color: ${Color.FontBlack};
 
     font-size: 25px;
+
+    word-break: keep-all;
+  }
+
+  > .duration {
+    margin: 10px 20px;
+
+    color: ${Color.FontBlack};
+
+    font-size: 15px;
 
     word-break: keep-all;
   }
