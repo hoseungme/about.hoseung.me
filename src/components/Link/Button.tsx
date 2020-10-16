@@ -9,11 +9,7 @@ export const LinkButton: React.FC<Project["references"][0]> = ({
   name,
   link,
 }) => {
-  return (
-    <Link href={link} target="blank">
-      {name}
-    </Link>
-  );
+  return <Link href={link}>{name}</Link>;
 };
 
 const Link = styled.a`
