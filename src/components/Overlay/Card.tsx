@@ -46,9 +46,16 @@ const Container = styled.div`
 
   box-sizing: border-box;
 
-  opacity: 0;
-
   background-color: rgba(0, 0, 0, 0.7);
+
+  opacity: 1;
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  animation: fadeIn 1s;
 
   > .description {
     font-size: 17px;
