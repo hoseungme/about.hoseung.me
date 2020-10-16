@@ -15,6 +15,7 @@ export const ProjectCard: React.FC<Project> = ({
   return (
     <Container>
       <img src={img} alt="Project" />
+      <div className="name">{name}</div>
     </Container>
   );
 };
@@ -23,6 +24,7 @@ const Container = styled.div`
   width: 100%;
 
   display: flex;
+  flex-direction: column;
 
   overflow: hidden;
 
@@ -35,5 +37,15 @@ const Container = styled.div`
     height: 450px;
 
     object-fit: cover;
+  }
+
+  > .name {
+    margin: 10px 20px;
+
+    color: ${Color.FontBlack};
+
+    font-size: 25px;
+
+    word-break: keep-all;
   }
 `;
