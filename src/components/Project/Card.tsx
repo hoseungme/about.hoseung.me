@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Project } from "../../interfaces/Project";
@@ -12,11 +12,16 @@ export const ProjectCard: React.FC<Project> = ({
   duration,
   ...others
 }) => {
+  const [overlayVisible, setOverlayvisible] = useState(false);
+
   return (
     <Container>
-      <div className="project-info">
+      <div
+        className="project-info"
+        onClick={() => setOverlayvisible(!overlayVisible)}
+      >
         <img src={img} alt="Project" />
-        <OverlayCard {...others} />
+        {overlayVisible && <OverlayCard {...others} />}
       </div>
       <div className="name">{name}</div>
       <div className="duration">{duration}</div>
@@ -41,14 +46,6 @@ const Container = styled.div`
     box-shadow: 0 10px 15px ${Color.LightGrey};
 
     transition: transform 1s, box-shadow 1s;
-
-    > .project-info {
-      > div {
-        opacity: 1;
-
-        transition: opacity 1s;
-      }
-    }
   }
 
   > .project-info {
