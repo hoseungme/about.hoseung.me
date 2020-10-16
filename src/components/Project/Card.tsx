@@ -14,7 +14,7 @@ export const ProjectCard: React.FC<Project> = ({
 }) => {
   return (
     <Container>
-      <img src={img} alt="Project Image" />
+      <img src={img} alt="Project" />
     </Container>
   );
 };
