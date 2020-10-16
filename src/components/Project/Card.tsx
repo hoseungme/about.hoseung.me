@@ -4,17 +4,20 @@ import styled from "styled-components";
 import { Project } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
+import { OverlayCard } from "../Overlay/Card";
 
 export const ProjectCard: React.FC<Project> = ({
   img,
   name,
   duration,
-  description,
-  references,
+  ...others
 }) => {
   return (
     <Container>
-      <img src={img} alt="Project" />
+      <div className="project-info">
+        <img src={img} alt="Project" />
+        <OverlayCard {...others} />
+      </div>
       <div className="name">{name}</div>
       <div className="duration">{duration}</div>
     </Container>
@@ -35,14 +38,32 @@ const Container = styled.div`
 
   &:hover {
     transform: translateY(-1.5%);
-    transition: transform 1s;
+    box-shadow: 0 10px 15px ${Color.LightGrey};
+
+    transition: transform 1s, box-shadow 1s;
+
+    > .project-info {
+      > div {
+        opacity: 1;
+
+        transition: opacity 1s;
+      }
+    }
   }
 
-  > img {
-    width: 100%;
+  > .project-info {
+    position: relative;
+
     height: 450px;
 
-    object-fit: cover;
+    display: flex;
+
+    > img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
   }
 
   > .name {
