@@ -32,6 +32,11 @@ const Container = styled.div`
 
   box-shadow: 0 0 15px ${Color.LightGrey};
 
+  &:hover {
+    transform: translateY(-1.5%);
+    transition: transform 1s;
+  }
+
   > img {
     width: 100%;
     height: 450px;
