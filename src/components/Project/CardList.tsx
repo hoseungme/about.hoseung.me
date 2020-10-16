@@ -5,6 +5,8 @@ import { ProjectCard } from "./Card";
 
 import { Project } from "../../interfaces/Project";
 
+import { Device } from "../../constants/Device";
+
 export const ProjectCardList: React.FC<{ projects: Project[] }> = ({
   projects,
 }) => {
@@ -30,15 +32,15 @@ const Container = styled.div`
   > .card {
     width: 33.3%;
 
-    @media (max-width: 950px) {
+    @media (max-width: ${Device.Tablet}) {
       width: 50%;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: ${Device.Mobile}) {
       width: 100%;
     }
 
-    padding: 0 10px 60px;
+    padding: 0 20px 60px;
     box-sizing: border-box;
   }
 `;
