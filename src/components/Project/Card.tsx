@@ -42,8 +42,8 @@ const Container = styled.div`
   box-shadow: 0 0 15px ${Color.LightGrey};
 
   &:hover {
-    transform: translateY(-1.5%);
-    box-shadow: 0 10px 15px ${Color.LightGrey};
+    transform: translateY(-1%);
+    box-shadow: 0 5px 15px ${Color.LightGrey};
 
     transition: transform 1s, box-shadow 1s;
   }
