@@ -28,6 +28,7 @@ const Link = styled.a`
   color: ${Color.White};
 
   border: 2px solid ${Color.White};
+  border-radius: 5px;
 
   &:hover {
     background-color: ${Color.White};
