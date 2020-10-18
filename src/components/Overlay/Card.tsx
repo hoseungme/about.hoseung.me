@@ -46,7 +46,7 @@ const Container = styled.div`
 
   box-sizing: border-box;
 
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 
   opacity: 1;
 
