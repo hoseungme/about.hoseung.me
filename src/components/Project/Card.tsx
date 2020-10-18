@@ -6,11 +6,13 @@ import { Project } from "../../interfaces/Project";
 import { Color } from "../../constants/Color";
 import { OverlayCard } from "../Overlay/Card";
 import { Device } from "../../constants/Device";
+import { Tag } from "../Tag/Tag";
 
 export const ProjectCard: React.FC<Project> = ({
   img,
   name,
   duration,
+  tags,
   ...others
 }) => {
   const [overlayVisible, setOverlayvisible] = useState(false);
@@ -22,6 +24,11 @@ export const ProjectCard: React.FC<Project> = ({
         onClick={() => setOverlayvisible(!overlayVisible)}
       >
         <img src={img} alt="Project" />
+        <div className="tags">
+          {tags.map((tag, index) => (
+            <Tag key={index} tag={tag} />
+          ))}
+        </div>
         {overlayVisible && <OverlayCard {...others} />}
       </div>
       <div className="name">{name}</div>
@@ -71,6 +78,24 @@ const Container = styled.div`
       height: 100%;
 
       object-fit: cover;
+    }
+
+    > .tags {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      z-index: 0;
+
+      padding: 10px;
+
+      display: flex;
+      flex-direction: column;
+
+      > * {
+        margin-bottom: 5px;
+      }
     }
   }
 
