@@ -5,6 +5,7 @@ import { Project } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
 import { OverlayCard } from "../Overlay/Card";
+import { Device } from "../../constants/Device";
 
 export const ProjectCard: React.FC<Project> = ({
   img,
@@ -51,9 +52,19 @@ const Container = styled.div`
   > .project-info {
     position: relative;
 
-    height: 450px;
+    height: 400px;
+
+    @media (max-width: ${Device.Tablet}) {
+      height: 350px;
+    }
+
+    @media (max-width: ${Device.Mobile}) {
+      height: 200px;
+    }
 
     display: flex;
+
+    cursor: pointer;
 
     > img {
       width: 100%;
