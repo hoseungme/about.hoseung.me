@@ -80,18 +80,19 @@ const Container = styled.div`
       }
     }
 
-    animation: textFadeIn 1s;
+    > .motto,
+    > .comment {
+      color: ${Color.White};
+
+      animation: textFadeIn 1s;
+    }
 
     > .motto {
       font-size: 60px;
-
-      color: ${Color.White};
     }
 
     > .comment {
       font-size: 30px;
-
-      color: ${Color.White};
     }
   }
 `;
