@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
         <div className="accounts">
           <a href="https://github.com/HoseungJang">
             <IoLogoGithub />
-            <div className="name">github</div>
+            <div className="name">Github</div>
           </a>
         </div>
       </Container>
@@ -53,7 +53,7 @@ const Container = styled.div`
 
   padding: 0 30px;
 
-  background-color: ${Color.White};
+  background-color: ${Color.DarkWhite};
 
   box-shadow: 0;
 
@@ -100,7 +100,7 @@ const Container = styled.div`
         height: 50px;
 
         color: ${Color.DarkMint};
-        background-color: ${Color.White};
+        background-color: ${Color.DarkWhite};
       }
 
       > .name {

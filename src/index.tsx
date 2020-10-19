@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
+import { Color } from "./constants/Color";
 
 import { Routes } from "./routes";
 
@@ -12,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
 
     margin: 0;
     padding: 0;
+
+    background-color: ${Color.DarkWhite};
 
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 100;
