@@ -3,4 +3,5 @@ export const Color = {
   FontBlack: "#585858",
   White: "#ffffff",
   Black: "#000000",
+  Mint: "#00d1b2",
 };
