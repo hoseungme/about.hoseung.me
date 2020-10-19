@@ -15,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
 
     background-color: ${Color.DarkWhite};
-
-    font-family: "Noto Sans KR", sans-serif;
+    
+    font-family: 'Gothic A1', sans-serif;
     font-weight: 100;
   }
 `;

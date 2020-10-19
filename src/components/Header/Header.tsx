@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <Container className={shadow ? "scrolled" : undefined}>
-        <div className="title">장호승 Résumé</div>
+        <div className="title">Hoseung Jang Résumé</div>
         <div className="accounts">
           <a href="https://github.com/HoseungJang">
             <IoLogoGithub />
@@ -64,8 +64,8 @@ const Container = styled.div`
   }
 
   > .title {
-    font-size: 35px;
-    font-weight: 400;
+    font-family: "Bebas Neue", cursive;
+    font-size: 50px;
 
     color: ${Color.DarkMint};
   }
