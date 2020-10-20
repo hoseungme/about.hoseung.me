@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { IoLogoGithub } from "react-icons/io";
+
+import { Icon } from "../Icon/Icon";
+
+import { Account } from "../../interfaces/Account";
 
 import { Color } from "../../constants/Color";
 
-export const Header: React.FC = () => {
+export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
   const [shadow, setShadow] = useState(false);
 
   const listener = () => {
@@ -24,10 +27,12 @@ export const Header: React.FC = () => {
       <Container className={shadow ? "scrolled" : undefined}>
         <div className="title">Hoseung Jang Résumé</div>
         <div className="accounts">
-          <a href="https://github.com/HoseungJang">
-            <IoLogoGithub />
-            <div className="name">Github</div>
-          </a>
+          {accounts.map((account, index) => (
+            <a key={index} href={account.link}>
+              <Icon className="icon" icon={account.icon} />
+              <div className="name">{account.name}</div>
+            </a>
+          ))}
         </div>
       </Container>
       <div style={{ height: 100 }} />
@@ -95,7 +100,7 @@ const Container = styled.div`
         }
       }
 
-      > svg {
+      > .icon {
         width: 50px;
         height: 50px;
 
