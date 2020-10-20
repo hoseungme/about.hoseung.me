@@ -106,8 +106,8 @@ const Container = styled.div`
       > .name {
         max-width: 0;
 
-        font-size: 25px;
-        font-weight: 100;
+        font-family: "Bebas Neue", cursive;
+        font-size: 40px;
 
         color: ${Color.DarkMint};
 
