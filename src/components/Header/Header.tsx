@@ -118,7 +118,7 @@ const Container = styled.div`
 
         overflow: hidden;
 
-        transition: max-width 1s;
+        transition: max-width 0.8s cubic-bezier(0.4, 0, 0, 0.7);
       }
     }
   }
