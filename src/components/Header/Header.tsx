@@ -70,7 +70,7 @@ const Container = styled.div`
 
   > .title {
     font-family: "Bebas Neue", cursive;
-    font-size: 50px;
+    font-size: 2.5rem;
 
     color: ${Color.DarkMint};
   }
@@ -112,7 +112,7 @@ const Container = styled.div`
         max-width: 0;
 
         font-family: "Bebas Neue", cursive;
-        font-size: 40px;
+        font-size: 2rem;
 
         color: ${Color.DarkMint};
 

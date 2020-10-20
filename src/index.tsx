@@ -18,6 +18,8 @@ const GlobalStyles = createGlobalStyle`
     
     font-family: 'Gothic A1', sans-serif;
     font-weight: 100;
+
+    font-size: 20px;
   }
 `;
 

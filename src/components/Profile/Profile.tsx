@@ -88,11 +88,11 @@ const Container = styled.div`
     }
 
     > .motto {
-      font-size: 60px;
+      font-size: 3rem;
     }
 
     > .comment {
-      font-size: 30px;
+      font-size: 1.5rem;
     }
   }
 `;

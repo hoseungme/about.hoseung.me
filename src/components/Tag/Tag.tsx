@@ -12,7 +12,7 @@ const Container = styled.div`
 
   padding: 5px;
 
-  font-size: 20px;
+  font-size: 1rem;
 
   background-color: ${Color.White};
 

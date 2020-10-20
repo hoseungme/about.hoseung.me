@@ -58,7 +58,7 @@ const Container = styled.div`
   animation: fadeIn 1s;
 
   > .description {
-    font-size: 17px;
+    font-size: 0.85rem;
 
     color: ${Color.White};
   }

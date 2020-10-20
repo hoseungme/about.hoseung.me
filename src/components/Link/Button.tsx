@@ -21,7 +21,7 @@ const Link = styled.a`
 
   padding: 5px 15px;
 
-  font-size: 20px;
+  font-size: 1rem;
 
   text-decoration: none;
 

@@ -104,7 +104,7 @@ const Container = styled.div`
 
     color: ${Color.FontBlack};
 
-    font-size: 25px;
+    font-size: 1.25rem;
 
     word-break: keep-all;
   }
@@ -114,7 +114,7 @@ const Container = styled.div`
 
     color: ${Color.FontBlack};
 
-    font-size: 15px;
+    font-size: 0.75rem;
 
     word-break: keep-all;
   }
