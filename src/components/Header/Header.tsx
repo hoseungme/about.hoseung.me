@@ -23,20 +23,17 @@ export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
   }, []);
 
   return (
-    <>
-      <Container className={shadow ? "scrolled" : undefined}>
-        <div className="title">Hoseung Jang Résumé</div>
-        <div className="accounts">
-          {accounts.map((account, index) => (
-            <a key={index} href={account.link}>
-              <Icon className="icon" icon={account.icon} />
-              <div className="name">{account.name}</div>
-            </a>
-          ))}
-        </div>
-      </Container>
-      <div style={{ height: 100 }} />
-    </>
+    <Container className={shadow ? "scrolled" : undefined}>
+      <div className="title">Hoseung Jang Résumé</div>
+      <nav className="accounts">
+        {accounts.map((account, index) => (
+          <a key={index} href={account.link}>
+            <Icon className="icon" icon={account.icon} />
+            <div className="name">{account.name}</div>
+          </a>
+        ))}
+      </nav>
+    </Container>
   );
 };
 
