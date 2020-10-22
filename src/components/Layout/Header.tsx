@@ -7,6 +7,8 @@ import { Account } from "../../interfaces/Account";
 
 import { Color } from "../../constants/Color";
 
+export const headerHeight = 100;
+
 export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
   const [shadow, setShadow] = useState(false);
 
