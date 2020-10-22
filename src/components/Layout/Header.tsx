@@ -95,7 +95,6 @@ const Container = styled.header`
       &:hover {
         > .name {
           max-width: 100px;
-          width: auto;
         }
       }
 
@@ -109,6 +108,7 @@ const Container = styled.header`
 
       > .name {
         max-width: 0;
+        width: auto;
 
         font-family: "Bebas Neue", cursive;
         font-size: 2rem;
