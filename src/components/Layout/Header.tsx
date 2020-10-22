@@ -10,10 +10,10 @@ import { Color } from "../../constants/Color";
 export const headerHeight = 100;
 
 export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
-  const [shadow, setShadow] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const listener = () => {
-    setShadow(window.pageYOffset > 0);
+    setIsScrolled(window.pageYOffset > 0);
   };
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
   }, []);
 
   return (
-    <Container className={shadow ? "scrolled" : undefined}>
+    <Container className={isScrolled ? "scrolled" : undefined}>
       <div className="title">Hoseung Jang Résumé</div>
       <nav className="accounts">
         {accounts.map((account, index) => (
