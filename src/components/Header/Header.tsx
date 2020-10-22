@@ -40,7 +40,7 @@ export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.header`
   position: fixed;
 
   top: 0;
