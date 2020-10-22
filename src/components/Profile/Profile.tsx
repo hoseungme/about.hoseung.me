@@ -19,7 +19,7 @@ export const Profile: React.FC<{
   );
 };
 
-const Container = styled.div`
+const Container = styled.section`
   position: relative;
 
   width: 100%;
