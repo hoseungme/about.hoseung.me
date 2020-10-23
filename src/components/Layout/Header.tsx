@@ -122,7 +122,7 @@ const Container = styled.header`
   }
 
   @media (max-width: ${Device.Tablet}) {
-    height: 70px;
+    height: 80px;
 
     padding: 0 20px;
 
@@ -137,7 +137,7 @@ const Container = styled.header`
   }
 
   @media (max-width: ${Device.Mobile}) {
-    height: 50px;
+    height: 60px;
 
     padding: 0 15px;
 
