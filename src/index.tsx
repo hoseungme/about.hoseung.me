@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import { Color } from "./constants/Color";
 
 import { Routes } from "./routes";
+
+import { Color } from "./constants/Color";
+import { Device } from "./constants/Device";
 
 const GlobalStyles = createGlobalStyle`
   html, body {
@@ -20,6 +22,14 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 100;
 
     font-size: 20px;
+
+    @media (max-width: ${Device.Tablet}) {
+      font-size: 17px;
+    }
+
+    @media (max-width: ${Device.Mobile}) {
+      font-size: 10px;
+    }
   }
 `;
 

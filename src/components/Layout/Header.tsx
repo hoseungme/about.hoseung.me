@@ -6,8 +6,7 @@ import { Icon } from "../Icon/Icon";
 import { Account } from "../../interfaces/Account";
 
 import { Color } from "../../constants/Color";
-
-export const headerHeight = 100;
+import { Device } from "../../constants/Device";
 
 export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -118,6 +117,36 @@ const Container = styled.header`
         overflow: hidden;
 
         transition: max-width 0.8s cubic-bezier(0.4, 0, 0, 0.7);
+      }
+    }
+  }
+
+  @media (max-width: ${Device.Tablet}) {
+    height: 70px;
+
+    padding: 0 20px;
+
+    > .accounts {
+      > a {
+        > .icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: ${Device.Mobile}) {
+    height: 50px;
+
+    padding: 0 15px;
+
+    > .accounts {
+      > a {
+        > .icon {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }

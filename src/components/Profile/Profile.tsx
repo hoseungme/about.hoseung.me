@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
 export const Profile: React.FC<{
   profileImage: string;
@@ -25,6 +26,20 @@ const Container = styled.section`
   width: 100%;
   min-height: 400px;
 
+  @media (max-width: ${Device.Tablet}) {
+    min-height: 300px;
+
+    margin-top: 200px;
+  }
+
+  @media (max-width: ${Device.Mobile}) {
+    min-height: 200px;
+
+    margin-top: 150px;
+
+    justify-content: center;
+  }
+
   display: flex;
   flex-direction: row;
 
@@ -39,6 +54,14 @@ const Container = styled.section`
     left: 5%;
 
     width: 400px;
+
+    @media (max-width: ${Device.Tablet}) {
+      width: 300px;
+    }
+
+    @media (max-width: ${Device.Mobile}) {
+      width: 200px;
+    }
 
     border-radius: 50%;
 
