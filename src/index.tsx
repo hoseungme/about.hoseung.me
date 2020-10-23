@@ -17,9 +17,9 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
 
     background-color: ${Color.DarkWhite};
-    
+
     font-family: 'Gothic A1', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
 
     font-size: 20px;
 
@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media (max-width: ${Device.Mobile}) {
-      font-size: 10px;
+      font-size: 11px;
     }
   }
 `;
