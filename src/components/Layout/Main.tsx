@@ -15,6 +15,8 @@ const Container = styled.main`
 
   padding-top: 100px;
 
+  overflow: hidden;
+
   @media (max-width: ${Device.Tablet}) {
     padding-top: 80px;
   }
