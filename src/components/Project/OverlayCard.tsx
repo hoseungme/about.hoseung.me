@@ -6,6 +6,7 @@ import { LinkButton } from "../Link/Button";
 import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
 export const OverlayCard: React.FC<
   Pick<IProject, "description" | "references"> & { visible: boolean }
@@ -15,7 +16,7 @@ export const OverlayCard: React.FC<
       <div className="description">{description}</div>
       <div className="references">
         {references.map((props, index) => (
-          <LinkButton key={index} {...props} />
+          <LinkButton key={index} disabled={!visible} {...props} />
         ))}
       </div>
     </Container>
@@ -52,7 +53,7 @@ const Container = styled.div<{ visible: boolean }>`
   transition: opacity 0.5s;
 
   > .description {
-    font-size: 0.85rem;
+    font-size: 1rem;
 
     color: ${Color.White};
   }
@@ -62,8 +63,25 @@ const Container = styled.div<{ visible: boolean }>`
     flex-direction: column;
     flex-grow: 0;
 
+    margin-top: 10px;
+
     > * {
       margin: 5px 0;
+
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: ${Device.Mobile}px) {
+    > .description {
+      font-size: 1.5rem;
+    }
+  
+    > .references {
+      > * {
+        font-size: 1.5rem;
+      }
     }
   }
 `;

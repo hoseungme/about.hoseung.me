@@ -126,4 +126,16 @@ const Container = styled.div`
       word-break: keep-all;
     }
   }
+
+  @media (max-width: ${Device.Mobile}px) {
+    > .bottom {
+      > .name {
+        font-size: 1.5rem;
+      }
+
+      > .duration {
+        font-size: 1.25rem;
+      }
+    }
+  }
 `;
