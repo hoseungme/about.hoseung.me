@@ -9,10 +9,11 @@ type Animation =
   | "fadeInToRight";
 
 export const FadeInWrapper: React.FC<PropsWithChildren<{
+  className?: string;
   animation: Animation;
   animationDelay?: number;
   intersecting: number;
-}>> = ({ animation, animationDelay, intersecting, children }) => {
+}>> = ({ className, animation, animationDelay, intersecting, children }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: intersecting,
@@ -20,7 +21,7 @@ export const FadeInWrapper: React.FC<PropsWithChildren<{
 
   return (
     <Container
-      className={inView ? "intersected" : undefined}
+      className={`${className ?? ""} ${inView ? "intersected" : ""}`}
       animation={animation}
       delay={animationDelay}
       ref={ref}
@@ -78,8 +79,6 @@ const animations: { [key in Animation]: Keyframes } = {
 };
 
 const Container = styled.div<{ animation: Animation; delay?: number }>`
-  width: 100%;
-
   display: flex;
 
   opacity: 0;

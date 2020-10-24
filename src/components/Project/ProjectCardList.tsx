@@ -23,15 +23,15 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   return (
     <Container columnSize={columnSize}>
       {projects.map((p, index) => (
-        <div className="card" key={index}>
-          <FadeInWrapper
-            animation="fadeInToUp"
-            animationDelay={0.2 * (index % columnSize)}
-            intersecting={0.4}
-          >
-            <ProjectCard {...p} />
-          </FadeInWrapper>
-        </div>
+        <FadeInWrapper
+          key={index}
+          className="card"
+          animation="fadeInToUp"
+          animationDelay={0.2 * (index % columnSize)}
+          intersecting={0.4}
+        >
+          <ProjectCard {...p} />
+        </FadeInWrapper>
       ))}
     </Container>
   );

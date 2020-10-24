@@ -15,16 +15,20 @@ export const Profile: React.FC<IProfile> = ({
 }) => {
   return (
     <Container>
-      <div className="image">
-        <FadeInWrapper animation="fadeInToDown" intersecting={0.8}>
-          <img src={profileImage} alt="Profile" />
-        </FadeInWrapper>
-      </div>
-      <FadeInWrapper animation="fadeInToLeft" intersecting={0.5}>
-        <div className="text">
-          <div className="motto">{`"${motto}"`}</div>
-          <div className="comment">{comment}</div>
-        </div>
+      <FadeInWrapper
+        className="image"
+        animation="fadeInToDown"
+        intersecting={0.8}
+      >
+        <img src={profileImage} alt="Profile" />
+      </FadeInWrapper>
+      <FadeInWrapper
+        className="text"
+        animation="fadeInToLeft"
+        intersecting={0.5}
+      >
+        <div className="motto">{`"${motto}"`}</div>
+        <div className="comment">{comment}</div>
       </FadeInWrapper>
     </Container>
   );
@@ -43,7 +47,7 @@ const Container = styled.section`
 
   background-color: ${Color.Mint};
 
-  .image {
+  > .image {
     position: absolute;
 
     top: -50%;
@@ -52,7 +56,7 @@ const Container = styled.section`
 
     padding-left: 5%;
 
-    img {
+    > img {
       width: 400px;
       height: 400px;
 
@@ -62,7 +66,7 @@ const Container = styled.section`
     }
   }
 
-  .text {
+  > .text {
     width: 100%;
 
     display: flex;
@@ -73,17 +77,14 @@ const Container = styled.section`
     padding-right: 10%;
     padding-bottom: 5%;
 
-    .motto,
-    .comment {
+    > .motto {
+      font-size: 3rem;
       color: ${Color.White};
     }
 
-    .motto {
-      font-size: 3rem;
-    }
-
-    .comment {
+    > .comment {
       font-size: 1.5rem;
+      color: ${Color.White};
     }
   }
 
@@ -92,8 +93,8 @@ const Container = styled.section`
 
     margin-top: 200px;
 
-    .image {
-      img {
+    > .image {
+      > img {
         width: 300px;
         height: 300px;
       }
@@ -107,16 +108,16 @@ const Container = styled.section`
 
     justify-content: center;
 
-    .image {
+    > .image {
       padding: 0;
 
-      img {
+      > img {
         width: 200px;
         height: 200px;
       }
     }
 
-    .text {
+    > .text {
       justify-content: flex-end;
       align-items: center;
 
