@@ -13,7 +13,9 @@ export const Profile: React.FC<IProfile> = ({
 }) => {
   return (
     <Container>
-      <img src={profileImage} alt="Profile" />
+      <div className="image">
+        <img src={profileImage} alt="Profile" />
+      </div>
       <div className="text">
         <div className="motto">{`"${motto}"`}</div>
         <div className="comment">{comment}</div>
@@ -22,41 +24,20 @@ export const Profile: React.FC<IProfile> = ({
   );
 };
 
-const imageFadeIn = keyframes`
+const FadeInDown = keyframes`
   from {
     opacity: 0;
 
     transform: translateY(-10%);
-    
-    @media (max-width: ${Device.Mobile}) {
-      transform: translate(-50%, -10%);
-    }
   }
   to {
     opacity: 1;
 
     transform: translateY(0);
-
-    @media (max-width: ${Device.Mobile}) {
-      transform: translate(-50%, 0);
-    }
   }
 `;
 
-const mobileImageFadeIn = keyframes`
-  from {
-    opacity: 0;
-
-    transform: translate(-50%, -10%);
-  }
-  to {
-    opacity: 1;
-
-    transform: translate(-50%, 0);
-  }
-`;
-
-const textFadeIn = keyframes`
+const FadeInLeft = keyframes`
   from {
     opacity: 0;
     transform: translateX(5%);
@@ -64,17 +45,6 @@ const textFadeIn = keyframes`
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-`;
-
-const mobileTextFadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-5%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 `;
 
@@ -91,19 +61,24 @@ const Container = styled.section`
 
   background-color: ${Color.Mint};
 
-  > img {
+  > .image {
     position: absolute;
 
     top: -50%;
-    left: 5%;
 
-    width: 400px;
+    display: flex;
 
-    border-radius: 50%;
+    padding-left: 5%;
 
-    box-shadow: 0 -5px 20px ${Color.LightGrey};
+    > img {
+      width: 400px;
 
-    animation: ${imageFadeIn} 1s;
+      border-radius: 50%;
+
+      box-shadow: 0 -5px 20px ${Color.LightGrey};
+
+      animation: ${FadeInDown} 1s;
+    }
   }
 
   > .text {
@@ -117,7 +92,7 @@ const Container = styled.section`
     padding-right: 10%;
     padding-bottom: 5%;
 
-    animation: ${textFadeIn} 1s;
+    animation: ${FadeInLeft} 1s;
 
     > .motto,
     > .comment {
@@ -138,8 +113,10 @@ const Container = styled.section`
 
     margin-top: 200px;
 
-    > img {
-      width: 300px;
+    > .image {
+      > img {
+        width: 300px;
+      }
     }
   }
 
@@ -150,14 +127,14 @@ const Container = styled.section`
 
     justify-content: center;
 
-    > img {
-      width: 200px;
+    > .image {
+      padding: 0;
 
-      left: 50%;
+      > img {
+        width: 200px;
 
-      transform: translateX(-50%);
-
-      animation: ${mobileImageFadeIn} 1s;
+        animation: ${FadeInDown} 1s;
+      }
     }
 
     > .text {
@@ -167,7 +144,7 @@ const Container = styled.section`
       padding-right: 0;
       padding-bottom: 5%;
 
-      animation: ${mobileTextFadeIn} 1s;
+      animation: ${FadeInDown} 1s;
     }
   }
 `;
