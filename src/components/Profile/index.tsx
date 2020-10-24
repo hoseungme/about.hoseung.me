@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FadeInWrapper } from "../Layout/FadeInWrapper";
+import { TransitionContainer } from "../Layout/TransitionContainer";
 
 import { IProfile } from "../../interfaces/Profile";
 
@@ -15,17 +15,21 @@ export const Profile: React.FC<IProfile> = ({
 }) => {
   return (
     <Container>
-      <FadeInWrapper
+      <TransitionContainer
         className="image"
-        animation="fadeInToDown"
+        type="fadeInToDown"
         intersecting={0.8}
       >
         <img src={profileImage} alt="Profile" />
-      </FadeInWrapper>
-      <FadeInWrapper className="text" animation="fadeInToUp" intersecting={0.5}>
+      </TransitionContainer>
+      <TransitionContainer
+        className="text"
+        type="fadeInToUp"
+        intersecting={0.5}
+      >
         <div className="motto">{`"${motto}"`}</div>
         <div className="comment">{comment}</div>
-      </FadeInWrapper>
+      </TransitionContainer>
     </Container>
   );
 };

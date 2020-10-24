@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useMediaLayout } from "use-media";
 
 import { ProjectCard } from "./ProjectCard";
-import { FadeInWrapper } from "../Layout/FadeInWrapper";
+import { TransitionContainer } from "../Layout/TransitionContainer";
 
 import { IProject } from "../../interfaces/Project";
 
@@ -23,15 +23,15 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   return (
     <Container columnSize={columnSize}>
       {projects.map((p, index) => (
-        <FadeInWrapper
+        <TransitionContainer
           key={index}
           className="card"
-          animation="fadeInToUp"
-          animationDelay={0.2 * (index % columnSize)}
+          type="fadeInToUp"
+          delay={0.2 * (index % columnSize)}
           intersecting={0.4}
         >
           <ProjectCard {...p} />
-        </FadeInWrapper>
+        </TransitionContainer>
       ))}
     </Container>
   );
