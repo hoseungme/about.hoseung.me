@@ -2,11 +2,7 @@ import React, { PropsWithChildren } from "react";
 import styled, { Keyframes, keyframes } from "styled-components";
 import { useInView } from "react-intersection-observer";
 
-type Animation =
-  | "fadeInToUp"
-  | "fadeInToDown"
-  | "fadeInToLeft"
-  | "fadeInToRight";
+type Animation = "fadeInToUp" | "fadeInToDown";
 
 export const FadeInWrapper: React.FC<PropsWithChildren<{
   className?: string;
@@ -54,26 +50,6 @@ const animations: { [key in Animation]: Keyframes } = {
       opacity: 1;
 
       transform: translateY(0);
-    }
-  `,
-  fadeInToLeft: keyframes`
-    from {
-      opacity: 0;
-      transform: translateX(5%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  `,
-  fadeInToRight: keyframes`
-    from {
-      opacity: 0;
-      transform: translateX(-5%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
     }
   `,
 };

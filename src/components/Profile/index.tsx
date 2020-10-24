@@ -22,11 +22,7 @@ export const Profile: React.FC<IProfile> = ({
       >
         <img src={profileImage} alt="Profile" />
       </FadeInWrapper>
-      <FadeInWrapper
-        className="text"
-        animation="fadeInToLeft"
-        intersecting={0.5}
-      >
+      <FadeInWrapper className="text" animation="fadeInToUp" intersecting={0.5}>
         <div className="motto">{`"${motto}"`}</div>
         <div className="comment">{comment}</div>
       </FadeInWrapper>
