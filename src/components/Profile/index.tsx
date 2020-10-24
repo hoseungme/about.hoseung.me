@@ -38,23 +38,26 @@ const Container = styled.section`
   position: relative;
 
   width: 100%;
-  min-height: 400px;
 
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
 
   margin-top: 300px;
+  padding-top: 150px;
+
+  box-sizing: border-box;
 
   background-color: ${Color.Mint};
 
   > .image {
     position: absolute;
 
-    top: -50%;
+    top: -200px;
 
     display: flex;
 
-    padding-left: 5%;
+    padding-left: 10%;
 
     > img {
       width: 400px;
@@ -73,18 +76,24 @@ const Container = styled.section`
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    text-align: right;
 
-    padding-right: 10%;
-    padding-bottom: 5%;
+    padding: 0 10% 3%;
 
     > .motto {
-      font-size: 3rem;
+      margin-bottom: 10px;
+
+      font-size: 2.3rem;
       color: ${Color.White};
     }
 
     > .comment {
+      width: 60%;
+
       font-size: 1.5rem;
       color: ${Color.White};
+
+      word-break: keep-all;
     }
   }
 
@@ -92,12 +101,28 @@ const Container = styled.section`
     min-height: 300px;
 
     margin-top: 200px;
+    padding-top: calc(150px + 5%);
+
+    justify-content: center;
 
     > .image {
+      top: -150px;
+
+      padding: 0;
+
       > img {
         width: 300px;
         height: 300px;
       }
+    }
+
+    > .text {
+      align-items: center;
+      text-align: center;
+
+      word-break: keep-all;
+
+      padding: 0 3% 5%;
     }
   }
 
@@ -105,24 +130,15 @@ const Container = styled.section`
     min-height: 200px;
 
     margin-top: 150px;
-
-    justify-content: center;
+    padding-top: calc(100px + 5%);
 
     > .image {
-      padding: 0;
+      top: -100px;
 
       > img {
         width: 200px;
         height: 200px;
       }
-    }
-
-    > .text {
-      justify-content: flex-end;
-      align-items: center;
-
-      padding-right: 0;
-      padding-bottom: 5%;
     }
   }
 `;

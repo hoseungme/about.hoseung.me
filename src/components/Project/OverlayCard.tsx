@@ -61,27 +61,25 @@ const Container = styled.div<{ visible: boolean }>`
   > .references {
     display: flex;
     flex-direction: column;
-    flex-grow: 0;
 
     margin-top: 10px;
 
     > * {
       margin: 5px 0;
+      flex-shrink: 0;
+    }
+  }
 
-      font-size: 1rem;
-      font-weight: 500;
+
+  @media (max-width: ${Device.Tablet}px) {
+    > .description {
+      font-size: 1.3rem;
     }
   }
 
   @media (max-width: ${Device.Mobile}px) {
     > .description {
       font-size: 1.5rem;
-    }
-  
-    > .references {
-      > * {
-        font-size: 1.5rem;
-      }
     }
   }
 `;

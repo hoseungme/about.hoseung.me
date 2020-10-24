@@ -34,7 +34,7 @@ const effects: {
     opacity: 0;
     transform: translateY(10%);
 
-    transition: all 1s ${delay ?? 0}s;
+    transition: opacity 1s ${delay ?? 0}s, transform 1s ${delay ?? 0}s;
 
     &.intersected {
       opacity: 1;
@@ -45,7 +45,7 @@ const effects: {
     opacity: 0;
     transform: translateY(-10%);
 
-    transition: all 1s ${delay ?? 0}s;
+    transition: opacity 1s ${delay ?? 0}s, transform 1s ${delay ?? 0}s;
 
     &.intersected {
       opacity: 1;
