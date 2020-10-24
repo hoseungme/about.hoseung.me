@@ -36,6 +36,7 @@ const Container = styled.div<{ visible: boolean }>`
   width: 100%:
   height: 100%;
 
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,6 +60,7 @@ const Container = styled.div<{ visible: boolean }>`
   }
 
   > .references {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
 

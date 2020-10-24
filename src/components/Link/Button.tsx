@@ -10,8 +10,15 @@ export const LinkButton: React.FC<
   IProject["references"][0] & { disabled?: boolean }
 > = ({ name, link, disabled }) => {
   return (
-    <Containter onClick={(e) => e.stopPropagation()} disabled={disabled}>
-      <a href={link}>{name}</a>
+    <Containter
+      type="submit"
+      onClick={(e) => {
+        e.stopPropagation();
+        window.location.href = link;
+      }}
+      disabled={disabled}
+    >
+      {name}
     </Containter>
   );
 };
@@ -26,25 +33,19 @@ const Containter = styled.button`
 
   background-color: transparent;
 
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 
   font-size: 1rem;
   font-weight: 500;
 
-  > a {
-    text-decoration: none;
+  color: ${Color.White};
 
-    color: ${Color.White};
-
-    transition: color 0.5s;
-  }
+  outline: none;
 
   &:hover {
     background-color: ${Color.White};
 
-    > a {
-      color: ${Color.Black};
-    }
+    color: ${Color.Black};
   }
 
   @media (max-width: ${Device.Tablet}px) {
