@@ -1,4 +1,4 @@
 export const Device = {
-  Tablet: "950px",
+  Tablet: "1024px",
   Mobile: "550px",
 };
