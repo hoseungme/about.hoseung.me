@@ -27,7 +27,7 @@ export const ProjectCard: React.FC<IProject> = ({
             <Tag key={index} tag={tag} />
           ))}
         </div>
-        {overlayVisible && <OverlayCard {...others} />}
+        <OverlayCard {...others} visible={overlayVisible} />
       </div>
       <div className="bottom">
         <div className="name">{name}</div>

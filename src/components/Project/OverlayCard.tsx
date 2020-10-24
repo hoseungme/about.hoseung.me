@@ -7,12 +7,11 @@ import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
 
-export const OverlayCard: React.FC<Pick<
-  IProject,
-  "description" | "references"
->> = ({ description, references }) => {
+export const OverlayCard: React.FC<
+  Pick<IProject, "description" | "references"> & { visible: boolean }
+> = ({ description, references, visible }) => {
   return (
-    <Container>
+    <Container visible={visible}>
       <div className="description">{description}</div>
       <div className="references">
         {references.map((props, index) => (
@@ -23,7 +22,7 @@ export const OverlayCard: React.FC<Pick<
   );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ visible: boolean }>`
   position: absolute;
 
   top: 0;
@@ -48,14 +47,9 @@ const Container = styled.div`
 
   background-color: rgba(0, 0, 0, 0.8);
 
-  opacity: 1;
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  animation: fadeIn 1s;
+  transition: opacity 0.5s;
 
   > .description {
     font-size: 0.85rem;
