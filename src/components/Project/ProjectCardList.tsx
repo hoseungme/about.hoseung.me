@@ -12,12 +12,12 @@ import { Device } from "../../constants/Device";
 export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   projects,
 }) => {
-  const tablet = useMediaLayout({ maxWidth: Device.Tablet });
-  const mobile = useMediaLayout({ maxWidth: Device.Mobile });
+  const desktop = useMediaLayout({ minWidth: Device.Tablet + 1 });
+  const tablet = useMediaLayout({ minWidth: Device.Mobile + 1 });
 
-  const columnSize = useMemo(() => (tablet ? 2 : mobile ? 0 : 3), [
+  const columnSize = useMemo(() => (desktop ? 3 : tablet ? 2 : 1), [
+    desktop,
     tablet,
-    mobile,
   ]);
 
   return (
@@ -49,6 +49,7 @@ const Container = styled.div<{ columnSize: number }>`
     width: ${({ columnSize }) => 100 / columnSize}%;
 
     padding: 0 20px 60px;
+
     box-sizing: border-box;
   }
 `;
