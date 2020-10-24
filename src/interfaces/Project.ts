@@ -1,4 +1,4 @@
-export interface Project {
+export interface IProject {
   img: string;
   name: string;
   duration: string;

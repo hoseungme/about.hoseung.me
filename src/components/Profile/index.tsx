@@ -1,14 +1,16 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+import { IProfile } from "../../interfaces/Profile";
+
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
-export const Profile: React.FC<{
-  profileImage: string;
-  motto: string;
-  comment: string;
-}> = ({ profileImage, motto, comment }) => {
+export const Profile: React.FC<IProfile> = ({
+  profileImage,
+  motto,
+  comment,
+}) => {
   return (
     <Container>
       <img src={profileImage} alt="Profile" />

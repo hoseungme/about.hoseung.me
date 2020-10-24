@@ -1,6 +1,6 @@
-import { Project } from "../interfaces/Project";
+import { IProject } from "../interfaces/Project";
 
-export const projects: Project[] = [
+export const projects: IProject[] = [
   {
     img:
       "https://media.vlpt.us/images/alvin/post/657edced-a696-4f56-a2f9-eff2d5d929b1/Referring.png",

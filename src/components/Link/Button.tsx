@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Project } from "../../interfaces/Project";
+import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
 
-export const LinkButton: React.FC<Project["references"][0]> = ({
+export const LinkButton: React.FC<IProject["references"][0]> = ({
   name,
   link,
 }) => {

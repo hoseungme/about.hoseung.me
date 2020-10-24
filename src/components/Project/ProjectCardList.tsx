@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ProjectCard } from "./Card";
+import { ProjectCard } from "./ProjectCard";
 
-import { Project } from "../../interfaces/Project";
+import { IProject } from "../../interfaces/Project";
 
 import { Device } from "../../constants/Device";
 
-export const ProjectCardList: React.FC<{ projects: Project[] }> = ({
+export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   projects,
 }) => {
   return (

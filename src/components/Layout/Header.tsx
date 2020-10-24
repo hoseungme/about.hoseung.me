@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 import { Icon } from "../Icon/Icon";
 
-import { Account } from "../../interfaces/Account";
+import { IAccount } from "../../interfaces/Account";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
-export const Header: React.FC<{ accounts: Account[] }> = ({ accounts }) => {
+export const Header: React.FC<{ accounts: IAccount[] }> = ({ accounts }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const listener = () => {

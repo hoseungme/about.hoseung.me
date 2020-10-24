@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 import { LinkButton } from "../Link/Button";
 
-import { Project } from "../../interfaces/Project";
+import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
 
 export const OverlayCard: React.FC<Pick<
-  Project,
+  IProject,
   "description" | "references"
 >> = ({ description, references }) => {
   return (
