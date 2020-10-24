@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styled from "styled-components";
+import { useMediaLayout } from "use-media";
 
 import { ProjectCard } from "./ProjectCard";
 import { FadeInWrapper } from "../Layout/FadeInWrapper";
@@ -11,11 +12,23 @@ import { Device } from "../../constants/Device";
 export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   projects,
 }) => {
+  const tablet = useMediaLayout({ maxWidth: Device.Tablet });
+  const mobile = useMediaLayout({ maxWidth: Device.Mobile });
+
+  const columnSize = useMemo(() => (tablet ? 2 : mobile ? 0 : 3), [
+    tablet,
+    mobile,
+  ]);
+
   return (
-    <Container>
+    <Container columnSize={columnSize}>
       {projects.map((p, index) => (
         <div className="card" key={index}>
-          <FadeInWrapper animation="fadeInUp" intersecting={0.8}>
+          <FadeInWrapper
+            animation="fadeInUp"
+            animationDelay={0.2 * (index % columnSize)}
+            intersecting={0.4}
+          >
             <ProjectCard {...p} />
           </FadeInWrapper>
         </div>
@@ -24,7 +37,7 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ columnSize: number }>`
   width: 100%;
 
   display: flex;
@@ -33,15 +46,7 @@ const Container = styled.div`
   margin: 20px 0;
 
   > .card {
-    width: 33.3%;
-
-    @media (max-width: ${Device.Tablet}) {
-      width: 50%;
-    }
-
-    @media (max-width: ${Device.Mobile}) {
-      width: 100%;
-    }
+    width: ${({ columnSize }) => 100 / columnSize}%;
 
     padding: 0 20px 60px;
     box-sizing: border-box;
