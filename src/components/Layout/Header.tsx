@@ -121,7 +121,7 @@ const Container = styled.header`
     }
   }
 
-  @media (max-width: ${Device.Tablet}) {
+  @media (max-width: ${Device.Tablet}px) {
     height: 80px;
 
     padding: 0 20px;
@@ -136,7 +136,7 @@ const Container = styled.header`
     }
   }
 
-  @media (max-width: ${Device.Mobile}) {
+  @media (max-width: ${Device.Mobile}px) {
     height: 60px;
 
     padding: 0 15px;

@@ -14,8 +14,6 @@ export const FadeInWrapper: React.FC<PropsWithChildren<{
     threshold: intersecting,
   });
 
-  console.log(animationDelay ?? 0);
-
   return (
     <Container
       className={inView ? "intersected" : undefined}

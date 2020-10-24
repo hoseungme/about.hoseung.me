@@ -62,11 +62,11 @@ const Container = styled.div`
 
     height: 400px;
 
-    @media (max-width: ${Device.Tablet}) {
+    @media (max-width: ${Device.Tablet}px) {
       height: 350px;
     }
 
-    @media (max-width: ${Device.Mobile}) {
+    @media (max-width: ${Device.Mobile}px) {
       height: 200px;
     }
 

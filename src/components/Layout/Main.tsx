@@ -17,11 +17,11 @@ const Container = styled.main`
 
   overflow: hidden;
 
-  @media (max-width: ${Device.Tablet}) {
+  @media (max-width: ${Device.Tablet}px) {
     padding-top: 80px;
   }
 
-  @media (max-width: ${Device.Mobile}) {
+  @media (max-width: ${Device.Mobile}px) {
     padding-top: 50px;
   }
 `;

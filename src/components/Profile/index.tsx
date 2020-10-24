@@ -54,6 +54,7 @@ const Container = styled.section`
 
     img {
       width: 400px;
+      height: 400px;
 
       border-radius: 50%;
 
@@ -86,7 +87,7 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Tablet}) {
+  @media (max-width: ${Device.Tablet}px) {
     min-height: 300px;
 
     margin-top: 200px;
@@ -94,11 +95,12 @@ const Container = styled.section`
     .image {
       img {
         width: 300px;
+        height: 300px;
       }
     }
   }
 
-  @media (max-width: ${Device.Mobile}) {
+  @media (max-width: ${Device.Mobile}px) {
     min-height: 200px;
 
     margin-top: 150px;
@@ -110,6 +112,7 @@ const Container = styled.section`
 
       img {
         width: 200px;
+        height: 200px;
       }
     }
 

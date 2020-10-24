@@ -23,11 +23,11 @@ const GlobalStyles = createGlobalStyle`
 
     font-size: 20px;
 
-    @media (max-width: ${Device.Tablet}) {
+    @media (max-width: ${Device.Tablet}px) {
       font-size: 17px;
     }
 
-    @media (max-width: ${Device.Mobile}) {
+    @media (max-width: ${Device.Mobile}px) {
       font-size: 11px;
     }
   }
