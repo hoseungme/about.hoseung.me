@@ -16,11 +16,11 @@ export const Profile: React.FC<IProfile> = ({
   return (
     <Container>
       <div className="image">
-        <FadeInWrapper animation="fadeInDown" intersecting={0.8}>
+        <FadeInWrapper animation="fadeInToDown" intersecting={0.8}>
           <img src={profileImage} alt="Profile" />
         </FadeInWrapper>
       </div>
-      <FadeInWrapper animation="fadeInLeft" intersecting={0.5}>
+      <FadeInWrapper animation="fadeInToLeft" intersecting={0.5}>
         <div className="text">
           <div className="motto">{`"${motto}"`}</div>
           <div className="comment">{comment}</div>
