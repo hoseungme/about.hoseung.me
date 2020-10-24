@@ -20,10 +20,7 @@ export const ProjectCard: React.FC<IProject> = ({
 
   return (
     <Container>
-      <div
-        className="project-info"
-        onClick={() => setOverlayvisible(!overlayVisible)}
-      >
+      <div className="top" onClick={() => setOverlayvisible(!overlayVisible)}>
         <img src={img} alt="Project" />
         <div className="tags">
           {tags.map((tag, index) => (
@@ -32,14 +29,17 @@ export const ProjectCard: React.FC<IProject> = ({
         </div>
         {overlayVisible && <OverlayCard {...others} />}
       </div>
-      <div className="name">{name}</div>
-      <div className="duration">{duration}</div>
+      <div className="bottom">
+        <div className="name">{name}</div>
+        <div className="duration">{duration}</div>
+      </div>
     </Container>
   );
 };
 
 const Container = styled.div`
   width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -48,16 +48,16 @@ const Container = styled.div`
 
   border-radius: 6px;
 
-  box-shadow: 0 0 15px ${Color.LightGrey};
+  box-shadow: 0 0 50px ${Color.LightGrey};
 
   &:hover {
     transform: scale(1.03);
-    box-shadow: 0 5px 15px ${Color.LightGrey};
+    box-shadow: 0 0 80px ${Color.LightGrey};
 
     transition: transform 0.3s, box-shadow 1s;
   }
 
-  > .project-info {
+  > .top {
     position: relative;
 
     height: 400px;
@@ -100,23 +100,30 @@ const Container = styled.div`
     }
   }
 
-  > .name {
-    margin: 10px 20px;
+  > .bottom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    color: ${Color.FontBlack};
+    > .name {
+      margin: 10px 20px;
 
-    font-size: 1.25rem;
+      color: ${Color.FontBlack};
 
-    word-break: keep-all;
-  }
+      font-size: 1.25rem;
 
-  > .duration {
-    margin: 10px 20px;
+      word-break: keep-all;
+    }
 
-    color: ${Color.FontBlack};
+    > .duration {
+      margin: 10px 20px;
 
-    font-size: 0.75rem;
+      color: ${Color.FontBlack};
 
-    word-break: keep-all;
+      font-size: 0.75rem;
+
+      word-break: keep-all;
+    }
   }
 `;
