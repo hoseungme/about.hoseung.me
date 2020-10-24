@@ -12,7 +12,10 @@ const Container = styled.div`
 
   padding: 5px;
 
-  font-size: 1rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+
+  color: ${Color.FontBlack};
 
   background-color: ${Color.White};
 
