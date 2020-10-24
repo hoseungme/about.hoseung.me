@@ -1,5 +1,7 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+
+import { FadeInWrapper } from "../Layout/FadeInWrapper";
 
 import { IProfile } from "../../interfaces/Profile";
 
@@ -14,39 +16,19 @@ export const Profile: React.FC<IProfile> = ({
   return (
     <Container>
       <div className="image">
-        <img src={profileImage} alt="Profile" />
+        <FadeInWrapper animation="fadeInDown" intersecting={0.8}>
+          <img src={profileImage} alt="Profile" />
+        </FadeInWrapper>
       </div>
-      <div className="text">
-        <div className="motto">{`"${motto}"`}</div>
-        <div className="comment">{comment}</div>
-      </div>
+      <FadeInWrapper animation="fadeInLeft" intersecting={0.5}>
+        <div className="text">
+          <div className="motto">{`"${motto}"`}</div>
+          <div className="comment">{comment}</div>
+        </div>
+      </FadeInWrapper>
     </Container>
   );
 };
-
-const FadeInDown = keyframes`
-  from {
-    opacity: 0;
-
-    transform: translateY(-10%);
-  }
-  to {
-    opacity: 1;
-
-    transform: translateY(0);
-  }
-`;
-
-const FadeInLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(5%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
 
 const Container = styled.section`
   position: relative;
@@ -61,7 +43,7 @@ const Container = styled.section`
 
   background-color: ${Color.Mint};
 
-  > .image {
+  .image {
     position: absolute;
 
     top: -50%;
@@ -70,18 +52,16 @@ const Container = styled.section`
 
     padding-left: 5%;
 
-    > img {
+    img {
       width: 400px;
 
       border-radius: 50%;
 
       box-shadow: 0 -5px 20px ${Color.LightGrey};
-
-      animation: ${FadeInDown} 1s;
     }
   }
 
-  > .text {
+  .text {
     width: 100%;
 
     display: flex;
@@ -92,18 +72,16 @@ const Container = styled.section`
     padding-right: 10%;
     padding-bottom: 5%;
 
-    animation: ${FadeInLeft} 1s;
-
-    > .motto,
-    > .comment {
+    .motto,
+    .comment {
       color: ${Color.White};
     }
 
-    > .motto {
+    .motto {
       font-size: 3rem;
     }
 
-    > .comment {
+    .comment {
       font-size: 1.5rem;
     }
   }
@@ -113,8 +91,8 @@ const Container = styled.section`
 
     margin-top: 200px;
 
-    > .image {
-      > img {
+    .image {
+      img {
         width: 300px;
       }
     }
@@ -127,24 +105,20 @@ const Container = styled.section`
 
     justify-content: center;
 
-    > .image {
+    .image {
       padding: 0;
 
-      > img {
+      img {
         width: 200px;
-
-        animation: ${FadeInDown} 1s;
       }
     }
 
-    > .text {
+    .text {
       justify-content: flex-end;
       align-items: center;
 
       padding-right: 0;
       padding-bottom: 5%;
-
-      animation: ${FadeInDown} 1s;
     }
   }
 `;

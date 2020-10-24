@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { ProjectCard } from "./ProjectCard";
+import { FadeInWrapper } from "../Layout/FadeInWrapper";
 
 import { IProject } from "../../interfaces/Project";
 
@@ -14,7 +15,9 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
     <Container>
       {projects.map((p, index) => (
         <div className="card" key={index}>
-          <ProjectCard {...p} />
+          <FadeInWrapper animation="fadeInUp" intersecting={0.8}>
+            <ProjectCard {...p} />
+          </FadeInWrapper>
         </div>
       ))}
     </Container>
