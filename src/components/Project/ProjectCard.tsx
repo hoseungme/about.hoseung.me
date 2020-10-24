@@ -4,9 +4,10 @@ import styled from "styled-components";
 import { Project } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
-import { OverlayCard } from "../Overlay/Card";
-import { Device } from "../../constants/Device";
+import { OverlayCard } from "./OverlayCard";
 import { Tag } from "../Tag/Tag";
+
+import { Device } from "../../constants/Device";
 
 export const ProjectCard: React.FC<Project> = ({
   img,
