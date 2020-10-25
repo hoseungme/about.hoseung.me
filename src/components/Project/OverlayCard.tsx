@@ -55,6 +55,8 @@ const Container = styled.div<{ visible: boolean }>`
   > .description {
     font-size: 16px;
 
+    line-height: 25px;
+
     color: ${Color.White};
   }
 
