@@ -6,7 +6,6 @@ import { LinkButton } from "../Link/Button";
 import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
 
 export const OverlayCard: React.FC<
   Pick<IProject, "description" | "references"> & { visible: boolean }
@@ -54,7 +53,7 @@ const Container = styled.div<{ visible: boolean }>`
   transition: opacity 0.5s;
 
   > .description {
-    font-size: 1rem;
+    font-size: 16px;
 
     color: ${Color.White};
   }
@@ -69,19 +68,6 @@ const Container = styled.div<{ visible: boolean }>`
     > * {
       margin: 5px 0;
       flex-shrink: 0;
-    }
-  }
-
-
-  @media (max-width: ${Device.Tablet}px) {
-    > .description {
-      font-size: 1.3rem;
-    }
-  }
-
-  @media (max-width: ${Device.Mobile}px) {
-    > .description {
-      font-size: 1.5rem;
     }
   }
 `;

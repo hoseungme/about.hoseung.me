@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
 
 export const LinkButton: React.FC<
   IProject["references"][0] & { disabled?: boolean }
@@ -35,7 +34,7 @@ const Containter = styled.button`
 
   transition: background-color 0.5s, color 0.5s;
 
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
 
   color: ${Color.White};
@@ -46,13 +45,5 @@ const Containter = styled.button`
     background-color: ${Color.White};
 
     color: ${Color.Black};
-  }
-
-  @media (max-width: ${Device.Tablet}px) {
-    font-size: 1.3rem;
-  }
-
-  @media (max-width: ${Device.Mobile}px) {
-    font-size: 1.5rem;
   }
 `;
