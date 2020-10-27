@@ -67,8 +67,14 @@ const Container = styled.header`
   }
 
   > .title {
+    width: auto;
+
     font-family: "Bebas Neue", cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     color: ${Color.DarkMint};
   }
