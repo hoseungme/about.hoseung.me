@@ -68,8 +68,6 @@ const Container = styled.section`
       font-weight: 700;
 
       color: ${Color.DarkMint};
-
-      margin-bottom: 20px;
     }
 
     > .info {
@@ -115,7 +113,7 @@ const Container = styled.section`
         > .title {
           width: fit-content;
 
-          margin: 2% 0;
+          margin: 0;
         }
 
         > .description {
