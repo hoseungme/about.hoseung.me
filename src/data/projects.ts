@@ -56,7 +56,7 @@ export const projects: IProject[] = [
     name: "어디서든 함께해. 프로젝트 CoNote",
     duration: "2020.07 ~ 2020.08",
     description:
-      "CoNote는 실시간 웹 자바스크립트 에디터 입니다. Microsoft의 Monaco Editor를 기반하였고, Socket.io로 편집된 코드가 접속자들에게 실시간으로 반영될 수 있도록 하였습니다.",
+      "CoNote는 실시간 웹 자바스크립트 에디터 입니다. Microsoft의 Monaco Editor를 기반하였고, Socket.io를 사용해 접속자들에게 편집된 코드가 실시간으로 반영될 수 있도록 하였습니다.",
     references: [
       {
         name: "프론트엔드, 백엔드 코드",
