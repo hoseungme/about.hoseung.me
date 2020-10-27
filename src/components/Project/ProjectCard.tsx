@@ -50,11 +50,11 @@ const Container = styled.div`
 
   box-shadow: 0 0 50px ${Color.LightGrey};
 
+  transition: transform 0.3s, box-shadow 1s;
+
   &:hover {
     transform: scale(1.03);
     box-shadow: 0 0 80px ${Color.LightGrey};
-
-    transition: transform 0.3s, box-shadow 1s;
   }
 
   > .top {
@@ -124,18 +124,6 @@ const Container = styled.div`
       font-size: 0.75rem;
 
       word-break: keep-all;
-    }
-  }
-
-  @media (max-width: ${Device.Mobile}px) {
-    > .bottom {
-      > .name {
-        font-size: 1.5rem;
-      }
-
-      > .duration {
-        font-size: 1.25rem;
-      }
     }
   }
 `;

@@ -25,7 +25,7 @@ export const Project: React.FC<{ projects: IProject[] }> = ({ projects }) => {
             delay={0.2}
             intersecting={0.8}
           >
-            프로젝트 둘러보기
+            <h1>프로젝트 둘러보기</h1>
           </TransitionContainer>
           <TransitionContainer
             className="description"
@@ -34,7 +34,7 @@ export const Project: React.FC<{ projects: IProject[] }> = ({ projects }) => {
             intersecting={0.8}
           >
             <p>새로운 것을 배우고 싶을 때면</p>
-            <p>토이프로젝트를 진행합니다.</p>
+            <p>서브 프로젝트를 진행합니다.</p>
             <p>그러다 보면 마치 프로그래밍을</p>
             <p>처음 배울 때로 돌아가는 기분이 드는데,</p>
             <p>이는 개발이 질릴 날이 없도록 만들어주죠.</p>
@@ -64,8 +64,8 @@ const Container = styled.section`
     > .topic {
       width: fit-content;
 
-      font-size: 1.2rem;
-      font-weight: 600;
+      font-size: 0.85rem;
+      font-weight: 700;
 
       color: ${Color.DarkMint};
 
@@ -80,9 +80,6 @@ const Container = styled.section`
 
         margin-right: 10%;
 
-        font-size: 1.8rem;
-        font-weight: 500;
-
         word-break: keep-all;
 
         color: ${Color.FontBlack};
@@ -92,7 +89,7 @@ const Container = styled.section`
         display: flex;
         flex-direction: column;
 
-        font-size: 1.1rem;
+        font-size: 1rem;
 
         word-break: break-all;
 
@@ -119,21 +116,12 @@ const Container = styled.section`
           width: fit-content;
 
           margin: 2% 0;
-
-          font-size: 2rem;
-          font-weight: 500;
-
-          color: ${Color.FontBlack};
         }
 
         > .description {
           text-align: center;
 
-          font-size: 1.4rem;
-
           word-break: keep-all;
-
-          color: ${Color.FontBlack};
         }
       }
     }
