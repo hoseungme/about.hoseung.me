@@ -15,129 +15,167 @@ export const Profile: React.FC<IProfile> = ({
 }) => {
   return (
     <Container>
-      <TransitionContainer
-        className="image"
-        type="fadeInToDown"
-        intersecting={0.8}
-      >
-        <img src={profileImage} alt="Profile" />
-      </TransitionContainer>
-      <TransitionContainer
-        className="text"
-        type="fadeInToUp"
-        intersecting={0.5}
-      >
-        <div className="motto">{`"${motto}"`}</div>
-        <div className="comment">{comment}</div>
-      </TransitionContainer>
+      <div className="profile">
+        <TransitionContainer
+          className="image"
+          type="fadeInToDown"
+          intersecting={0.8}
+        >
+          <img src={profileImage} alt="Profile" />
+        </TransitionContainer>
+      </div>
+      <div className="description">
+        <div className="text">
+          <TransitionContainer
+            className="topic"
+            type="fadeInToUp"
+            intersecting={0.5}
+            delay={0.2}
+          >
+            WHO I AM
+          </TransitionContainer>
+          <TransitionContainer
+            className="motto"
+            type="fadeInToUp"
+            intersecting={0.5}
+            delay={0.4}
+          >
+            <h1>{motto}</h1>
+          </TransitionContainer>
+          <TransitionContainer
+            className="comment"
+            type="fadeInToUp"
+            intersecting={0.5}
+            delay={0.6}
+          >
+            {comment}
+          </TransitionContainer>
+        </div>
+      </div>
     </Container>
   );
 };
 
 const Container = styled.section`
-  position: relative;
-
-  width: 100%;
-
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
 
-  margin-top: 300px;
-  padding-top: 150px;
+  margin: 0 auto;
+  padding: 150px 20px;
 
   box-sizing: border-box;
 
-  background-color: ${Color.Mint};
-
-  > .image {
-    position: absolute;
-
-    top: -200px;
-
+  > .profile {
     display: flex;
-
-    padding-left: 10%;
-
-    > img {
-      width: 400px;
-      height: 400px;
-
-      border-radius: 50%;
-
-      box-shadow: 0 -5px 20px ${Color.LightGrey};
-    }
-  }
-
-  > .text {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
+    align-items: center;
 
-    padding: 0 10% 3%;
+    padding: 20px 40px;
 
-    > .motto {
-      margin-bottom: 10px;
+    box-sizing: border-box;
 
-      font-size: 2.3rem;
-      color: ${Color.White};
-    }
-
-    > .comment {
-      width: 60%;
-
-      font-size: 1.5rem;
-      color: ${Color.White};
-
-      word-break: keep-all;
-    }
-  }
-
-  @media (max-width: ${Device.Tablet}px) {
-    min-height: 300px;
-
-    margin-top: 200px;
-    padding-top: calc(150px + 5%);
-
-    justify-content: center;
-
-    > .image {
-      top: -150px;
-
-      padding: 0;
+    .image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
 
       > img {
         width: 300px;
         height: 300px;
+
+        border-radius: 50%;
+
+        box-shadow: 0 -5px 20px ${Color.LightGrey};
+      }
+    }
+  }
+
+  > .description {
+    max-width: 500px;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    > .text {
+      display: flex;
+      flex-direction: column;
+
+      > .topic {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: ${Color.DarkMint};
+      }
+
+      > .motto {
+        color: ${Color.Black};
+      }
+
+      > .comment {
+        line-height: 30px;
+        font-size: 0.95rem;
+        color: ${Color.FontBlack};
+
+        word-break: keep-all;
+      }
+    }
+  }
+
+  @media (max-width: ${Device.Tablet}px) {
+    padding: 100px 20px;
+
+    box-sizing: border-box;
+
+    > .profile {
+      padding: 10px 20px;
+
+      > .image {
+        > img {
+          width: 200px;
+          height: 200px;
+
+          border-radius: 50%;
+
+          box-shadow: 0 -5px 20px ${Color.LightGrey};
+        }
       }
     }
 
-    > .text {
-      align-items: center;
-      text-align: center;
+    > .description {
+      max-width: 400px;
 
-      word-break: keep-all;
-
-      padding: 0 3% 5%;
+      > .text {
+        > .comment {
+          line-height: 27px;
+        }
+      }
     }
   }
 
   @media (max-width: ${Device.Mobile}px) {
-    min-height: 200px;
+    flex-direction: column;
+    align-items: center;
 
-    margin-top: 150px;
-    padding-top: calc(100px + 5%);
+    padding: 50px 10px;
 
-    > .image {
-      top: -100px;
+    > .profile {
+      padding: 20px 0;
+    }
 
-      > img {
-        width: 200px;
-        height: 200px;
+    > .description {
+      flex: 0;
+      display: flex;
+      justify-content: center;
+
+      > .text {
+        display: flex;
+        align-items: center;
+
+        text-align: center;
+
+        > * {
+          width: fit-content;
+        }
       }
     }
   }
