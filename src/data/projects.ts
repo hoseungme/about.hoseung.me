@@ -31,12 +31,12 @@ export const projects: IProject[] = [
   {
     img: diaryImage,
     name: "개발만 기록하니? 오늘 하루도 기록해. 프로젝트 Diary",
-    duration: "2020.07 ~ 2020.08",
+    duration: "2020.08 ~ 2020.08",
     description:
       "Diary는 간단한 일기장 프로젝트 입니다. 리액트를 처음 써보았던 프로젝트 였고, infinite scrolling을 구현하면서 viewport, intersection observer 등 웹 개발에 있어서 기초적인 개념들을 많이 배웠습니다.",
     references: [
       {
-        name: "프론트엔드 코드",
+        name: "프론트엔드, 백엔드 코드",
         link: "https://github.com/HoseungJang/diary",
       },
     ],
