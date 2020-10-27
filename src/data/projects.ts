@@ -14,7 +14,7 @@ export const projects: IProject[] = [
     name: "읽다가 말아도 안심. 주소를 잊어도 안심. 프로젝트 Referring",
     duration: "2020.08 ~ 2020.10",
     description:
-      "Reffering은 나만의 북마크 서비스 입니다. operation id에 따라 request paramters가 자동 추론되게 만들어 보면서 Typescript의 타입 추론에 대한 이해도를 한층 높힐 수 있었고, 반응형 웹을 처음 접했습니다. 서버는 fp-ts라는 함수형 라이브러리와 Express를 사용하여 개발하였으며, Docker에 기반하고 있습니다.",
+      "Reffering은 나만의 북마크 서비스 입니다. operation id에 따라 request paramters가 자동 추론되게 만들어 보면서 Typescript의 타입 추론에 대한 이해도를 한층 높힐 수 있었고, 반응형 웹을 처음 만들어 보았습니다. 서버는 fp-ts라는 함수형 라이브러리와 Express를 사용하여 개발했고, Docker를 활용했습니다.",
     references: [
       {
         name: "프로젝트 일지",
@@ -30,11 +30,16 @@ export const projects: IProject[] = [
   },
   {
     img: diaryImage,
-    name: "특별한 레시피를 찾으시나요? 프로젝트 My Little Cook",
+    name: "개발만 기록하니? 오늘 하루도 기록해. 프로젝트 Diary",
     duration: "2020.07 ~ 2020.08",
     description:
-      "My Little Cook은 요리 레시피를 제공해주는 서비스입니다. 서버리스 백엔드에 처음 입문했고, AWS Lambda를 기반으로 개발했습니다. serverless framework를 사용해서 인프라를 구축하고, 배포했습니다. Auth, User, Fridge, Recipe로 백엔드 서비스를 나누어서 개발했습니다.",
-    references: [],
+      "Diary는 간단한 일기장 프로젝트 입니다. 리액트를 처음 써보았던 프로젝트 였고, infinite scrolling을 구현하면서 viewport, intersection observer 등 웹 개발에 있어서 기초적인 개념들을 많이 배웠습니다.",
+    references: [
+      {
+        name: "프론트엔드 코드",
+        link: "https://github.com/HoseungJang/diary",
+      },
+    ],
     tags: ["Front-end", "Back-end"],
   },
   {
