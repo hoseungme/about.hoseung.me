@@ -13,11 +13,14 @@ export const SkillCard: React.FC<ISkill> = ({ img, name }) => {
         <img src={img} />
       </div>
       <div className="name">{name}</div>
+      <div className="background" />
     </Container>
   );
 };
 
 const Container = styled.div`
+  position: relative;
+
   width: 100%;
 
   display: flex;
@@ -31,6 +34,8 @@ const Container = styled.div`
   }
 
   > .image {
+    z-index: 1;
+
     width: 100px;
     height: 100px;
 
@@ -47,8 +52,24 @@ const Container = styled.div`
   }
 
   > .name {
+    z-index: 1;
+
     font-weight: 500;
     color: ${Color.FontBlack};
+  }
+
+  > .background {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: 0;
+
+    width: 1px;
+    height: 1px;
+
+    box-shadow: 0 0 80px 20px ${Color.Mint};
   }
 
   @media (max-width: ${Device.Mobile}px) {
@@ -57,6 +78,20 @@ const Container = styled.div`
       height: 70px;
 
       padding: 5px;
+    }
+
+    > .background {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      z-index: 0;
+
+      width: 1px;
+      height: 1px;
+
+      box-shadow: 0 0 40px 10px ${Color.Mint};
     }
   }
 `;
