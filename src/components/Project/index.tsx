@@ -82,7 +82,7 @@ const Container = styled.section`
 
         word-break: keep-all;
 
-        color: ${Color.FontBlack};
+        color: ${Color.Black};
 
         > h1 {
           margin: 0;
@@ -107,7 +107,7 @@ const Container = styled.section`
   }
 
   @media (max-width: ${Device.Tablet}px) {
-    padding: 2% 4%;
+    padding: 5% 2%;
 
     > header {
       align-items: center;
@@ -119,7 +119,8 @@ const Container = styled.section`
         > .title {
           width: fit-content;
 
-          margin: 0;
+          margin-right: 0;
+          margin-bottom: 20px;
         }
 
         > .description {
@@ -132,6 +133,6 @@ const Container = styled.section`
   }
 
   @media (max-width: ${Device.Mobile}px) {
-    padding: 1% 0;
+    padding: 5% 1%;
   }
 `;
