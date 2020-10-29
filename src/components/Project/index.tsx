@@ -13,11 +13,13 @@ export const Project: React.FC<{ projects: IProject[] }> = ({ projects }) => {
   return (
     <Container>
       <header>
-        <div className="topic">
-          <TransitionContainer type="fadeInToDown" intersecting={1}>
-            My Projects
-          </TransitionContainer>
-        </div>
+        <TransitionContainer
+          className="topic"
+          type="fadeInToDown"
+          intersecting={1}
+        >
+          My Projects
+        </TransitionContainer>
         <div className="info">
           <TransitionContainer
             className="title"
@@ -62,8 +64,6 @@ const Container = styled.section`
     padding: 5% 3%;
 
     > .topic {
-      width: fit-content;
-
       margin-bottom: 20px;
 
       font-size: 0.85rem;
