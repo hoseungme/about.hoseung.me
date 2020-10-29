@@ -64,6 +64,8 @@ const Container = styled.section`
     > .topic {
       width: fit-content;
 
+      margin-bottom: 20px;
+
       font-size: 0.85rem;
       font-weight: 700;
 
@@ -81,6 +83,10 @@ const Container = styled.section`
         word-break: keep-all;
 
         color: ${Color.FontBlack};
+
+        > h1 {
+          margin: 0;
+        }
       }
 
       > .description {
