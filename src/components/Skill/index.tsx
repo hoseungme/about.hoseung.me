@@ -33,8 +33,6 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
 
-  padding: 10%;
-
   box-sizing: border-box;
 
   > header {
