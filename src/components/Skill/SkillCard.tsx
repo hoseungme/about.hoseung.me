@@ -10,7 +10,7 @@ export const SkillCard: React.FC<ISkill> = ({ img, name }) => {
   return (
     <Container>
       <div className="image">
-        <img src={img} />
+        <img src={img} alt="Skill" />
       </div>
       <div className="name">{name}</div>
       <div className="background" />
