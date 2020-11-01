@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from "react";
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 import { useInView } from "react-intersection-observer";
 
-type Effect = "fadeIn" | "fadeInToUp" | "fadeInToDown";
+type Effect = "fadeInToUp" | "fadeInToDown";
 
 export const TransitionContainer: React.FC<PropsWithChildren<{
   className?: string;
@@ -30,15 +30,6 @@ export const TransitionContainer: React.FC<PropsWithChildren<{
 const effects: {
   [key in Effect]: (delay?: number) => FlattenSimpleInterpolation;
 } = {
-  fadeIn: (delay?: number) => css`
-    opacity: 0;
-
-    transition: opacity 1s ${delay ?? 0}s, transform 1s ${delay ?? 0}s;
-
-    &.intersected {
-      opacity: 1;
-    }
-  `,
   fadeInToUp: (delay?: number) => css`
     opacity: 0;
     transform: translateY(10%);
