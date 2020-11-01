@@ -12,6 +12,7 @@ export const Profile: React.FC<IProfile> = ({
   profileImage,
   motto,
   comment,
+  links,
 }) => {
   return (
     <Container>
@@ -51,6 +52,16 @@ export const Profile: React.FC<IProfile> = ({
             {comment}
           </TransitionContainer>
         </div>
+        <TransitionContainer
+          className="links"
+          type="fadeInToUp"
+          intersecting={0.5}
+          delay={0.8}
+        >
+          {links.map(({ name, link }) => (
+            <a href={link}>{name}</a>
+          ))}
+        </TransitionContainer>
       </div>
     </Container>
   );
@@ -95,7 +106,8 @@ const Container = styled.section`
 
     flex: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     > .text {
       display: flex;
@@ -117,6 +129,20 @@ const Container = styled.section`
         color: ${Color.FontBlack};
 
         word-break: keep-all;
+      }
+    }
+
+    > .links {
+      margin-top: 8px;
+
+      > a {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+
+        font-size: 1.1rem;
+        color: ${Color.DarkMint};
+        text-decoration: underline;
       }
     }
   }
@@ -156,7 +182,7 @@ const Container = styled.section`
     flex-direction: column;
     align-items: center;
 
-    padding: 50px 10px;
+    padding: 50px 40px;
 
     > .profile {
       padding: 20px 0;
@@ -176,6 +202,11 @@ const Container = styled.section`
         > * {
           width: fit-content;
         }
+      }
+
+      > .links {
+        display: flex;
+        justify-content: center;
       }
     }
   }
