@@ -96,6 +96,10 @@ const Container = styled.div`
 
       > * {
         margin-bottom: 5px;
+
+        background-color: ${Color.Mint};
+
+        color: ${Color.White};
       }
     }
   }
