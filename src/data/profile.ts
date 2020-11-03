@@ -13,8 +13,8 @@ export const profile: IProfile = {
       link: "https://github.com/HoseungJang",
     },
     {
-      name: "기록장",
-      link: "https://velog.io/@alvin/series/%EA%B8%B0%EB%A1%9D%EC%9E%A5",
+      name: "개발 일지",
+      link: "https://velog.io/@alvin/series/development-report",
     },
   ],
 };
