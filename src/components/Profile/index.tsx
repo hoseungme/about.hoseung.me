@@ -103,7 +103,7 @@ const Container = styled.section`
 
         border-radius: 50%;
 
-        box-shadow: 0 0 20px ${Color.LightGrey};
+        box-shadow: 0 0 15px ${Color.LightGrey};
       }
     }
   }
@@ -186,8 +186,6 @@ const Container = styled.section`
           height: 200px;
 
           border-radius: 50%;
-
-          box-shadow: 0 -5px 20px ${Color.LightGrey};
         }
       }
     }
