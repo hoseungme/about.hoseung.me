@@ -59,7 +59,14 @@ export const Profile: React.FC<IProfile> = ({
           delay={0.8}
         >
           {links.map(({ name, link }) => (
-            <a href={link}>{name}</a>
+            <button
+              className="link"
+              onClick={() => {
+                window.location.href = link;
+              }}
+            >
+              {name}
+            </button>
           ))}
         </TransitionContainer>
       </div>
@@ -135,14 +142,20 @@ const Container = styled.section`
     > .links {
       margin-top: 8px;
 
-      > a {
+      > .link {
+        padding: 4px 8px;
+
+        border: 0;
+        border-radius: 5px;
+
+        background-color: ${Color.DarkMint};
+
+        font-size: 1.1rem;
+        color: ${Color.White};
+
         &:not(:last-child) {
           margin-right: 10px;
         }
-
-        font-size: 1.1rem;
-        color: ${Color.DarkMint};
-        text-decoration: underline;
       }
     }
   }
