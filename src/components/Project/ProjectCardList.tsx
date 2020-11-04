@@ -27,8 +27,8 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
           key={index}
           className="card"
           type="fadeInToUp"
-          delay={0.2 * (index % columnSize)}
           intersecting={0.4}
+          delay={0.2 * (index % columnSize)}
         >
           <ProjectCard {...p} />
         </TransitionContainer>

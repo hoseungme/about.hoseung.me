@@ -32,6 +32,7 @@ export const Profile: React.FC<IProfile> = ({
             type="fadeInToUp"
             intersecting={0.5}
             delay={0.2}
+            translateY={50}
           >
             WHO I AM
           </TransitionContainer>
@@ -57,6 +58,7 @@ export const Profile: React.FC<IProfile> = ({
           type="fadeInToUp"
           intersecting={0.5}
           delay={0.8}
+          translateY={40}
         >
           {links.map(({ name, link }) => (
             <button

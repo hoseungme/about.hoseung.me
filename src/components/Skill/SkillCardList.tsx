@@ -20,8 +20,8 @@ export const SkillCardList: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
           key={index}
           className="card"
           type="fadeInToUp"
-          delay={0.25 * (index % columnSize)}
           intersecting={0.8}
+          delay={0.25 * (index % columnSize)}
         >
           <SkillCard {...skill} />
         </TransitionContainer>

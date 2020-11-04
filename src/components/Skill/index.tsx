@@ -15,6 +15,7 @@ export const Skill: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
           className="topic"
           type="fadeInToDown"
           intersecting={1}
+          translateY={50}
         >
           My Skills
         </TransitionContainer>

@@ -17,6 +17,7 @@ export const Project: React.FC<{ projects: IProject[] }> = ({ projects }) => {
           className="topic"
           type="fadeInToDown"
           intersecting={1}
+          translateY={50}
         >
           My Projects
         </TransitionContainer>
@@ -24,8 +25,8 @@ export const Project: React.FC<{ projects: IProject[] }> = ({ projects }) => {
           <TransitionContainer
             className="title"
             type="fadeInToDown"
-            delay={0.2}
             intersecting={0.8}
+            delay={0.2}
           >
             <h1>프로젝트 둘러보기</h1>
           </TransitionContainer>
