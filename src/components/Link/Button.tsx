@@ -12,10 +12,11 @@ export const LinkButton: React.FC<
     <Containter
       type="submit"
       onClick={(e) => {
-        e.stopPropagation();
-        window.location.href = link;
+        if (!disabled) {
+          e.stopPropagation();
+          window.location.href = link;
+        }
       }}
-      disabled={disabled}
     >
       {name}
     </Containter>
