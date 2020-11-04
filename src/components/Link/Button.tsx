@@ -39,6 +39,8 @@ const Containter = styled.button`
 
   color: ${Color.White};
 
+  cursor: pointer;
+
   outline: none;
 
   &:hover {
