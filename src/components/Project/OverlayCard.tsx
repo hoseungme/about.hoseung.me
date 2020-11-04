@@ -10,6 +10,7 @@ import { Color } from "../../constants/Color";
 export const OverlayCard: React.FC<
   Pick<IProject, "description" | "references"> & { visible: boolean }
 > = ({ description, references, visible }) => {
+  console.log(visible);
   return (
     <Container visible={visible}>
       <div className="description">{description}</div>
@@ -40,7 +41,7 @@ const Container = styled.div<{ visible: boolean }>`
   flex-direction: column;
   justify-content: space-between;
 
-  overflow-y: scroll;
+  overflow-y: ${({ visible }) => (visible ? "scroll" : "hidden")};
 
   padding: 10px;
 
