@@ -143,9 +143,9 @@ const Container = styled.section`
       margin-top: 8px;
 
       > .link {
-        padding: 4px 8px;
+        padding: 2px 8px;
 
-        border: 0;
+        border: 2px solid ${Color.DarkMint};
         border-radius: 5px;
 
         background-color: ${Color.DarkMint};
@@ -153,8 +153,20 @@ const Container = styled.section`
         font-size: 1.1rem;
         color: ${Color.White};
 
+        cursor: pointer;
+
+        outline: none;
+
+        transition: color 0.5s, background-color 0.5s;
+
         &:not(:last-child) {
           margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: ${Color.DarkWhite};
+
+          color: ${Color.DarkMint};
         }
       }
     }
