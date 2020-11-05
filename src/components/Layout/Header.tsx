@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import classNames from "classnames";
 
 import { Icon } from "../Icon/Icon";
 
@@ -24,7 +25,7 @@ export const Header: React.FC<{ accounts: IAccount[] }> = ({ accounts }) => {
   }, []);
 
   return (
-    <Container className={isScrolled ? "scrolled" : undefined}>
+    <Container className={classNames({ scrolled: isScrolled })}>
       <div className="title">Hoseung Jang Résumé</div>
       <nav className="accounts">
         {accounts.map((account, index) => (

@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 import { useInView } from "react-intersection-observer";
+import classNames from "classnames";
 
 type Effect = "fadeInToUp" | "fadeInToDown";
 
@@ -18,7 +19,7 @@ export const TransitionContainer: React.FC<PropsWithChildren<{
 
   return (
     <Container
-      className={`${className ?? ""} ${inView ? "intersected" : ""}`}
+      className={classNames(className, { intersected: inView })}
       effect={type}
       delay={delay}
       translateY={translateY}
