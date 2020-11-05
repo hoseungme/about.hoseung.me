@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import styled, { css, FlattenSimpleInterpolation } from "styled-components";
+import styled, { css } from "styled-components";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 
@@ -34,7 +34,7 @@ const effects: {
   [key in Effect]: (
     delay?: number,
     translateY?: number
-  ) => FlattenSimpleInterpolation;
+  ) => ReturnType<typeof css>;
 } = {
   fadeInToUp: (delay, translateY) => css`
     opacity: 0;
