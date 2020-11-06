@@ -145,7 +145,7 @@ const Container = styled.section`
       margin-top: 8px;
 
       > .link {
-        padding: 2px 8px;
+        padding: 4px 8px;
 
         border: 2px solid ${Color.DarkMint};
         border-radius: 5px;
