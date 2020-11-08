@@ -1,17 +1,17 @@
 import React, { useMemo } from "react";
 import styled from "styled-components";
-import { useMediaLayout } from "use-media";
 
 import { SkillCard } from "./SkillCard";
+import { TransitionContainer } from "../Layout/TransitionContainer";
+
+import { useValueByMedia } from "../../hooks/useValueByMedia";
 
 import { ISkill } from "../../interfaces/Skill";
-import { TransitionContainer } from "../Layout/TransitionContainer";
+
 import { Device } from "../../constants/Device";
 
 export const SkillCardList: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
-  const mobile = useMediaLayout({ maxWidth: Device.Mobile });
-
-  const columnSize = useMemo(() => (mobile ? 3 : 5), [mobile]);
+  const columnSize = useValueByMedia({ desktop: 5, tablet: 5, mobile: 3 });
 
   return (
     <Container columnSize={columnSize}>

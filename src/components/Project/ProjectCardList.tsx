@@ -1,24 +1,17 @@
-import React, { useMemo } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useMediaLayout } from "use-media";
 
 import { ProjectCard } from "./ProjectCard";
 import { TransitionContainer } from "../Layout/TransitionContainer";
 
-import { IProject } from "../../interfaces/Project";
+import { useValueByMedia } from "../../hooks/useValueByMedia";
 
-import { Device } from "../../constants/Device";
+import { IProject } from "../../interfaces/Project";
 
 export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   projects,
 }) => {
-  const desktop = useMediaLayout({ minWidth: Device.Tablet + 1 });
-  const tablet = useMediaLayout({ minWidth: Device.Mobile + 1 });
-
-  const columnSize = useMemo(() => (desktop ? 3 : tablet ? 2 : 1), [
-    desktop,
-    tablet,
-  ]);
+  const columnSize = useValueByMedia({ desktop: 3, tablet: 2, mobile: 1 });
 
   return (
     <Container columnSize={columnSize}>
