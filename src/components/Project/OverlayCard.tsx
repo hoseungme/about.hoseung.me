@@ -10,7 +10,6 @@ import { Color } from "../../constants/Color";
 export const OverlayCard: React.FC<
   Pick<IProject, "description" | "references"> & { visible: boolean }
 > = ({ description, references, visible }) => {
-  console.log(visible);
   return (
     <Container visible={visible}>
       <div className="description">{description}</div>
