@@ -11,7 +11,7 @@ import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
 export const Header: React.FC<{ accounts: IAccount[] }> = ({ accounts }) => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ initialInView: true });
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
