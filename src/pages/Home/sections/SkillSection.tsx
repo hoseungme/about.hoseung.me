@@ -5,6 +5,7 @@ import { TransitionContainer } from "../../../components/Layout/TransitionContai
 import { SkillCardList } from "../../../components/Skill/SkillCardList";
 
 import { ISkill } from "../../../interfaces/Skill";
+
 import { Color } from "../../../constants/Color";
 
 export const SkillSection: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
@@ -33,6 +34,8 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 10% 0;
 
   box-sizing: border-box;
 
