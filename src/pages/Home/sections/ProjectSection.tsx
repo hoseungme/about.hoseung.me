@@ -60,6 +60,8 @@ const Container = styled.section`
 
   box-sizing: border-box;
 
+  background-color: ${Color.DeepDarkWhite};
+
   > header {
     display: flex;
     flex-direction: column;
