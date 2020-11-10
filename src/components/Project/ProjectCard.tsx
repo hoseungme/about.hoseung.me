@@ -11,7 +11,7 @@ import { Device } from "../../constants/Device";
 
 export const ProjectCard: React.FC<IProject> = ({
   img,
-  name,
+  title,
   duration,
   tags,
   ...others
@@ -30,7 +30,7 @@ export const ProjectCard: React.FC<IProject> = ({
         <OverlayCard {...others} visible={overlayVisible} />
       </div>
       <div className="bottom">
-        <div className="name">{name}</div>
+        <div className="title">{title}</div>
         <div className="duration">{duration}</div>
       </div>
     </Container>
@@ -110,7 +110,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    > .name {
+    > .title {
       margin: 10px 20px;
 
       color: ${Color.FontBlack};
