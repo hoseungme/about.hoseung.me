@@ -71,8 +71,6 @@ const Container = styled.section`
     }
 
     > .info {
-      display: flex;
-
       > .title {
         font-size: 1.35rem;
         font-weight: 700;
@@ -102,14 +100,18 @@ const Container = styled.section`
     align-items: center;
 
     > summary {
-      width: 100%;
-
       display: flex;
       flex-direction: column;
       align-items: center;
 
       margin-right: 0;
       margin-bottom: 50px;
+
+      > .topic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     > aside {

@@ -65,7 +65,5 @@ const Container = styled.div<{
   delay?: number;
   translateY?: number;
 }>`
-  display: flex;
-
   ${({ effect, delay, translateY }) => effects[effect](delay, translateY)}
 `;
