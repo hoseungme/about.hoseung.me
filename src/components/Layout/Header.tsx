@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import classNames from "classnames";
+import { useInView } from "react-intersection-observer";
 
 import { Icon } from "../Icon/Icon";
 
@@ -10,32 +11,28 @@ import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
 export const Header: React.FC<{ accounts: IAccount[] }> = ({ accounts }) => {
+  const { ref, inView } = useInView();
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const listener = () => {
-    setIsScrolled(window.pageYOffset > 0);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", listener);
-
-    return () => {
-      window.removeEventListener("scroll", listener);
-    };
-  }, []);
+    setIsScrolled(!inView);
+  }, [inView]);
 
   return (
-    <Container className={classNames({ scrolled: isScrolled })}>
-      <div className="title">Hoseung Jang Résumé</div>
-      <nav className="accounts">
-        {accounts.map((account, index) => (
-          <a key={index} href={account.link}>
-            <Icon className="icon" icon={account.icon} />
-            <div className="name">{account.name}</div>
-          </a>
-        ))}
-      </nav>
-    </Container>
+    <>
+      <div ref={ref} />
+      <Container className={classNames({ scrolled: isScrolled })}>
+        <div className="title">Hoseung Jang Résumé</div>
+        <nav className="accounts">
+          {accounts.map((account, index) => (
+            <a key={index} href={account.link}>
+              <Icon className="icon" icon={account.icon} />
+              <div className="name">{account.name}</div>
+            </a>
+          ))}
+        </nav>
+      </Container>
+    </>
   );
 };
 
