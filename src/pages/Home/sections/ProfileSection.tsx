@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../Layout/TransitionContainer";
+import { TransitionContainer } from "../../../components/Layout/TransitionContainer";
+import { ProfileLink } from "../../../components/Profile/ProfileLink";
 
-import { IProfile } from "../../interfaces/Profile";
+import { IProfile } from "../../../interfaces/Profile";
 
-import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Color } from "../../../constants/Color";
+import { Device } from "../../../constants/Device";
 
-export const Profile: React.FC<IProfile> = ({
+export const ProfileSection: React.FC<IProfile> = ({
   profileImage,
   motto,
   comment,
@@ -60,15 +61,8 @@ export const Profile: React.FC<IProfile> = ({
           delay={0.8}
           translateY={40}
         >
-          {links.map(({ name, link }) => (
-            <button
-              className="link"
-              onClick={() => {
-                window.location.href = link;
-              }}
-            >
-              {name}
-            </button>
+          {links.map((props, index) => (
+            <ProfileLink key={index} {...props} />
           ))}
         </TransitionContainer>
       </div>
@@ -143,34 +137,6 @@ const Container = styled.section`
 
     > .links {
       margin-top: 8px;
-
-      > .link {
-        padding: 4px 8px;
-
-        border: 1px solid ${Color.DarkMint};
-        border-radius: 5px;
-
-        background-color: ${Color.DarkMint};
-
-        font-size: 1.1rem;
-        color: ${Color.White};
-
-        cursor: pointer;
-
-        outline: none;
-
-        transition: color 0.5s, background-color 0.5s;
-
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
-
-        &:hover {
-          background-color: ${Color.DarkWhite};
-
-          color: ${Color.DarkMint};
-        }
-      }
     }
   }
 
