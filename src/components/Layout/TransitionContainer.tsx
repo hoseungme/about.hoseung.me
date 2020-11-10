@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import styled, { css } from "styled-components";
-import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import { useInView } from "react-intersection-observer";
 
 type Effect = "fadeInToUp" | "fadeInToDown";
 

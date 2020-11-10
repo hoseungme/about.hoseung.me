@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import { ISkill } from "../../interfaces/Skill";
 
-import { Device } from "../../constants/Device";
 import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
 export const SkillCard: React.FC<ISkill> = ({ img, name }) => {
   return (

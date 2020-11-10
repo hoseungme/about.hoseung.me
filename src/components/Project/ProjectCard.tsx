@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { Color } from "../../constants/Color";
 import { OverlayCard } from "./OverlayCard";
 import { Tag } from "../Tag/Tag";
 
 import { IProject } from "../../interfaces/Project";
 
+import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
 export const ProjectCard: React.FC<IProject> = ({

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ProjectCard } from "./ProjectCard";
 import { TransitionContainer } from "../Layout/TransitionContainer";
+import { ProjectCard } from "./ProjectCard";
 
 import { useValueByMedia } from "../../hooks/useValueByMedia";
 
