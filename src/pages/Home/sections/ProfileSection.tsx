@@ -35,7 +35,7 @@ export const ProfileSection: React.FC<IProfile> = ({
             delay={0.2}
             translateY={50}
           >
-            WHO I AM
+            WELCOME
           </TransitionContainer>
           <TransitionContainer
             className="motto"
@@ -43,7 +43,7 @@ export const ProfileSection: React.FC<IProfile> = ({
             intersecting={0.5}
             delay={0.4}
           >
-            <h1>{motto}</h1>
+            {motto}
           </TransitionContainer>
           <TransitionContainer
             className="comment"
@@ -123,6 +123,10 @@ const Container = styled.section`
       }
 
       > .motto {
+        margin: 15px 0;
+
+        font-size: 1.2rem;
+        font-weight: 700;
         color: ${Color.Black};
       }
 
@@ -136,7 +140,7 @@ const Container = styled.section`
     }
 
     > .links {
-      margin-top: 8px;
+      margin-top: 20px;
     }
   }
 
