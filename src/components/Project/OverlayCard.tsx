@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { LinkButton } from "../Link/Button";
+import { ProjectLink } from "./ProjectLink";
 
 import { IProject } from "../../interfaces/Project";
 
@@ -15,7 +15,7 @@ export const OverlayCard: React.FC<
       <div className="description">{description}</div>
       <div className="references">
         {references.map((props, index) => (
-          <LinkButton key={index} disabled={!visible} {...props} />
+          <ProjectLink key={index} disabled={!visible} {...props} />
         ))}
       </div>
     </Container>
