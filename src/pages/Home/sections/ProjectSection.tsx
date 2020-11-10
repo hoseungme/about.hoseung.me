@@ -21,7 +21,7 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
           intersecting={1}
           translateY={50}
         >
-          My Projects
+          MY PROJECTS
         </TransitionContainer>
         <div className="info">
           <TransitionContainer

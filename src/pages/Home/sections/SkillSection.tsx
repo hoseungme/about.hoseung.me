@@ -17,7 +17,7 @@ export const SkillSection: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
           intersecting={1}
           translateY={50}
         >
-          My Skills
+          MY SKILLS
         </TransitionContainer>
       </header>
       <main>
