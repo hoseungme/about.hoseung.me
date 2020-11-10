@@ -113,7 +113,7 @@ const Container = styled.div`
     > .title {
       margin: 10px 20px;
 
-      color: ${Color.FontBlack};
+      color: ${Color.LightBlack};
 
       font-size: 1.25rem;
 
@@ -123,7 +123,7 @@ const Container = styled.div`
     > .duration {
       margin: 10px 20px;
 
-      color: ${Color.FontBlack};
+      color: ${Color.LightBlack};
 
       font-size: 0.75rem;
 

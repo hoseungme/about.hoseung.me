@@ -15,7 +15,7 @@ const Container = styled.div`
   font-family: "Bebas Neue", cursive;
   font-size: 1.5rem;
 
-  color: ${Color.FontBlack};
+  color: ${Color.LightBlack};
 
   background-color: ${Color.White};
 

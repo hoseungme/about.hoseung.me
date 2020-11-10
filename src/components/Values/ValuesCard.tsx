@@ -47,7 +47,7 @@ const Container = styled.div`
     > .values {
       font-size: 1.3rem;
 
-      color: ${Color.FontBlack};
+      color: ${Color.LightBlack};
     }
   }
 
@@ -59,6 +59,6 @@ const Container = styled.div`
 
     border-top: 1px solid ${Color.LightGrey};
 
-    color: ${Color.FontBlack};
+    color: ${Color.LightBlack};
   }
 `;

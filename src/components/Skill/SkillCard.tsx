@@ -55,7 +55,7 @@ const Container = styled.div`
     z-index: 1;
 
     font-weight: 500;
-    color: ${Color.FontBlack};
+    color: ${Color.LightBlack};
   }
 
   > .background {

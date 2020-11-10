@@ -133,7 +133,7 @@ const Container = styled.section`
       > .comment {
         line-height: 30px;
         font-size: 0.95rem;
-        color: ${Color.FontBlack};
+        color: ${Color.LightBlack};
 
         word-break: keep-all;
       }

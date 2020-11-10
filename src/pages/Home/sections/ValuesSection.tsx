@@ -56,7 +56,7 @@ const Container = styled.section`
 
   padding: 10% 13%;
 
-  background-color: ${Color.DeepDarkWhite};
+  background-color: ${Color.WhiteGrey};
 
   > summary {
     margin-right: 8%;

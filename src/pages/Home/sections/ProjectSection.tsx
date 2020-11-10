@@ -60,7 +60,7 @@ const Container = styled.section`
 
   box-sizing: border-box;
 
-  background-color: ${Color.DeepDarkWhite};
+  background-color: ${Color.WhiteGrey};
 
   > header {
     display: flex;
@@ -102,7 +102,7 @@ const Container = styled.section`
 
         word-break: break-all;
 
-        color: ${Color.FontBlack};
+        color: ${Color.LightBlack};
 
         > * {
           margin: 3px 0;
