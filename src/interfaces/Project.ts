@@ -1,8 +1,8 @@
 export interface IProject {
   img: string;
-  name: string;
+  title: string;
   duration: string;
   description: string;
-  references: { name: string; link: string }[];
+  references: { text: string; link: string }[];
   tags: string[];
 }

@@ -3,7 +3,7 @@ export interface IProfile {
   motto: string;
   comment: string;
   links: {
-    name: string;
+    text: string;
     link: string;
   }[];
 }
