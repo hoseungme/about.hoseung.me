@@ -6,8 +6,9 @@ import { Color } from "../../constants/Color";
 export const Footer: React.FC = () => {
   return (
     <Container>
-      ⓒ 2020 <a href="https://github.com/HoseungJang/resume">HoseungJang</a> All
-      RIGHTS RESERVED.
+      <span>ⓒ 2020</span>
+      <a href="https://github.com/HoseungJang/resume">HoseungJang</a>
+      <span>All RIGHTS RESERVED.</span>
     </Container>
   );
 };
@@ -17,6 +18,7 @@ const Container = styled.footer`
   height: 150px;
 
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 
@@ -38,5 +40,9 @@ const Container = styled.footer`
     text-decoration: none;
 
     cursor: pointer;
+  }
+
+  > * {
+    flex-shrink: 0;
   }
 `;
