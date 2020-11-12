@@ -7,4 +7,5 @@ export const Color = {
   DarkMint: "#00B99D",
   DarkWhite: "#FAFAFA",
   WhiteGrey: "#F6F6F6",
+  LightMint: "#00E3C0",
 };
