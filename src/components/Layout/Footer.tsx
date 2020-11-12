@@ -50,4 +50,12 @@ const Container = styled.footer`
       flex-shrink: 0;
     }
   }
+
+  @media (max-width: ${Device.Tablet}px) {
+    height: 100px;
+  }
+
+  @media (max-width: ${Device.Mobile}px) {
+    height: 70px;
+  }
 `;
