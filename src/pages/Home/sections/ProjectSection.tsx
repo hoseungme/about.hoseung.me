@@ -46,9 +46,9 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
           </TransitionContainer>
         </div>
       </header>
-      <main>
+      <article>
         <ProjectCardList projects={projects} />
-      </main>
+      </article>
     </Container>
   );
 };

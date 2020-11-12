@@ -21,9 +21,9 @@ export const SkillSection: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
           MY SKILLS
         </TransitionContainer>
       </header>
-      <main>
+      <article>
         <SkillCardList skills={skills} />
-      </main>
+      </article>
     </Container>
   );
 };
