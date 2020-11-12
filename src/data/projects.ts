@@ -49,7 +49,7 @@ export const projects: IProject[] = [
     description:
       "My Little Cook은 요리 레시피를 제공해주는 서비스입니다. 서버리스 백엔드에 처음 입문했고, AWS Lambda를 기반으로 개발했습니다. serverless framework를 사용해서 인프라를 구축하고, 배포했습니다. Auth, User, Fridge, Recipe로 백엔드 서비스를 나누어서 개발했습니다.",
     references: [],
-    tags: ["Front-end", "Back-end"],
+    tags: ["Back-end"],
   },
   {
     img: coNoteImage,
