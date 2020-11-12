@@ -36,6 +36,7 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
       <aside>
         {values.map((props, index) => (
           <TransitionContainer
+            key={index}
             className="card"
             type="fadeInToDown"
             intersecting={0.8}
