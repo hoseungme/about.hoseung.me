@@ -6,6 +6,7 @@ import { ProfileSection } from "./sections/ProfileSection";
 import { ValuesSection } from "./sections/ValuesSection";
 import { SkillSection } from "./sections/SkillSection";
 import { ProjectSection } from "./sections/ProjectSection";
+import { Footer } from "../../components/Layout/Footer";
 
 import { accounts } from "../../data/accounts";
 import { profile } from "../../data/profile";
@@ -23,6 +24,7 @@ export const Home: React.FC = () => {
         <SkillSection skills={skills} />
         <ProjectSection projects={projects} />
       </Main>
+      <Footer />
     </>
   );
 };
