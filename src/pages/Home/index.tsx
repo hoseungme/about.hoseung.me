@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Header } from "../../components/Layout/Header";
 import { Main } from "../../components/Layout/Main";
@@ -8,6 +8,8 @@ import { SkillSection } from "./sections/SkillSection";
 import { ProjectSection } from "./sections/ProjectSection";
 import { Footer } from "../../components/Layout/Footer";
 
+import { GA } from "../../services/ga";
+
 import { accounts } from "../../data/accounts";
 import { profile } from "../../data/profile";
 import { values } from "../../data/values";
@@ -15,6 +17,8 @@ import { skills } from "../../data/skills";
 import { projects } from "../../data/projects";
 
 export const Home: React.FC = () => {
+  useEffect(() => GA.trackPageView("/"), []);
+
   return (
     <>
       <Header accounts={accounts} />
