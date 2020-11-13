@@ -13,7 +13,10 @@ export class GAService {
     }
 
     this.env = process.env.NODE_ENV;
-    ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+
+    if (this.isProduction) {
+      ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+    }
   }
 
   private get isProduction() {
