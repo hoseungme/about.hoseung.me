@@ -1,5 +1,9 @@
 import ReactGA from "react-ga";
 
+interface TrackPageViewParams {
+  path: string;
+}
+
 export class GAService {
   private env: "development" | "production" | "test";
 
@@ -17,7 +21,7 @@ export class GAService {
     return this.env === "production";
   }
 
-  public trackPageView(path: string) {
+  public trackPageView({ path }: TrackPageViewParams) {
     if (!this.isProduction) {
       console.log("page viewed");
 

@@ -17,7 +17,7 @@ import { skills } from "../../data/skills";
 import { projects } from "../../data/projects";
 
 export const Home: React.FC = () => {
-  useEffect(() => GA.trackPageView("/"), []);
+  useEffect(() => GA.trackPageView({ path: "/" }), []);
 
   return (
     <>
