@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useEffect } from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
@@ -11,11 +11,26 @@ export const TransitionContainer: React.FC<PropsWithChildren<{
   intersecting: number;
   delay?: number;
   translateY?: number;
-}>> = ({ className, type, intersecting, delay, translateY, children }) => {
+  onInView?: () => void;
+}>> = ({
+  className,
+  type,
+  intersecting,
+  delay,
+  translateY,
+  children,
+  onInView,
+}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: intersecting,
   });
+
+  useEffect(() => {
+    if (inView) {
+      onInView?.();
+    }
+  }, [inView, onInView]);
 
   return (
     <Container
