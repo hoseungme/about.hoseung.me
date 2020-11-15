@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
+import { GA } from "../../services/ga";
+
 import { Color } from "../../constants/Color";
 
 import { IProfile } from "../../interfaces/Profile";
@@ -8,6 +11,10 @@ export const ProfileLink: React.FC<IProfile["links"][0]> = ({ text, link }) => {
   return (
     <Container
       onClick={() => {
+        GA.trackProfileSectionEvent({
+          action: "Link Button Clicked",
+          label: text,
+        });
         window.location.href = link;
       }}
     >
