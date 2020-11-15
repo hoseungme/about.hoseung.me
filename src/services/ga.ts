@@ -4,7 +4,19 @@ interface TrackPageViewParams {
   path: string;
 }
 
-export class GAService {
+interface TrackEventParams {
+  category: string;
+  action: string;
+  value?: number;
+  label?: string;
+}
+
+interface TrackProfileSectionEventParams
+  extends Omit<TrackEventParams, "category"> {
+  action: "Link Button Clicked";
+}
+
+class GAService {
   private env: "development" | "production" | "test";
 
   constructor() {
@@ -25,11 +37,24 @@ export class GAService {
 
   public trackPageView({ path }: TrackPageViewParams) {
     if (!this.isProduction) {
-      console.log("page viewed");
+      console.log("Page Viewed");
       return;
     }
 
     ReactGA.pageview(path);
+  }
+
+  private trackEvent(params: TrackEventParams) {
+    if (!this.isProduction) {
+      console.log(params);
+      return;
+    }
+
+    ReactGA.event(params);
+  }
+
+  public trackProfileSectionEvent(params: TrackProfileSectionEventParams) {
+    this.trackEvent({ category: "Profile", ...params });
   }
 }
 
