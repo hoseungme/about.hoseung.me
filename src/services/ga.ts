@@ -16,6 +16,11 @@ interface TrackProfileSectionEventParams
   action: "Link Button Clicked";
 }
 
+interface TrackProjectSectionEventParams
+  extends Omit<TrackEventParams, "category"> {
+  action: "Card Viewd" | "Description Viewd" | "Link Button Clicked";
+}
+
 class GAService {
   private env: "development" | "production" | "test";
 
@@ -55,6 +60,10 @@ class GAService {
 
   public trackProfileSectionEvent(params: TrackProfileSectionEventParams) {
     this.trackEvent({ category: "Profile", ...params });
+  }
+
+  public trackProjectSectionEvent(params: TrackProjectSectionEventParams) {
+    this.trackEvent({ category: "Project", ...params });
   }
 }
 

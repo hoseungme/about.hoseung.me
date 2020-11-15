@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { GA } from "../../services/ga";
+
 import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
@@ -14,6 +16,10 @@ export const ProjectLink: React.FC<
       onClick={(e) => {
         if (!disabled) {
           e.stopPropagation();
+          GA.trackProjectSectionEvent({
+            action: "Link Button Clicked",
+            label: text,
+          });
           window.location.href = link;
         }
       }}

@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { OverlayCard } from "./OverlayCard";
 import { Tag } from "../Tag/Tag";
 
+import { GA } from "../../services/ga";
+
 import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
@@ -20,7 +22,18 @@ export const ProjectCard: React.FC<IProject> = ({
 
   return (
     <Container>
-      <div className="top" onClick={() => setOverlayvisible(!overlayVisible)}>
+      <div
+        className="top"
+        onClick={() => {
+          if (!overlayVisible) {
+            GA.trackProjectSectionEvent({
+              action: "Description Viewd",
+              label: title,
+            });
+          }
+          setOverlayvisible(!overlayVisible);
+        }}
+      >
         <img src={img} alt="Project" />
         <div className="tags">
           {tags.map((tag, index) => (

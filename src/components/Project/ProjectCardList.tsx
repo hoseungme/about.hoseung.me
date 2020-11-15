@@ -7,6 +7,7 @@ import { ProjectCard } from "./ProjectCard";
 import { useValueByMedia } from "../../hooks/useValueByMedia";
 
 import { IProject } from "../../interfaces/Project";
+import { GA } from "../../services/ga";
 
 export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   projects,
@@ -22,6 +23,12 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
           type="fadeInToUp"
           intersecting={0.4}
           delay={0.2 * (index % columnSize)}
+          onInView={() =>
+            GA.trackProjectSectionEvent({
+              action: "Card Viewd",
+              label: p.title,
+            })
+          }
         >
           <ProjectCard {...p} />
         </TransitionContainer>
