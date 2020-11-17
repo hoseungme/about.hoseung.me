@@ -5,12 +5,12 @@ import { useInView } from "react-intersection-observer";
 
 import { Icon } from "../Icon/Icon";
 
-import { IAccount } from "../../interfaces/Account";
+import { IHeaderTab } from "../../interfaces/HeaderTab";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
-export const Header: React.FC<{ accounts: IAccount[] }> = ({ accounts }) => {
+export const Header: React.FC<{ tabs: IHeaderTab[] }> = ({ tabs }) => {
   const { ref, inView } = useInView({ initialInView: true });
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -24,10 +24,10 @@ export const Header: React.FC<{ accounts: IAccount[] }> = ({ accounts }) => {
       <Container className={classNames({ scrolled: isScrolled })}>
         <div className="title">Hoseung Jang Résumé</div>
         <nav className="accounts">
-          {accounts.map((account, index) => (
-            <a key={index} href={account.link}>
-              <Icon className="icon" icon={account.icon} />
-              <div className="name">{account.name}</div>
+          {tabs.map((tab, index) => (
+            <a key={index} href={tab.link}>
+              <Icon className="icon" icon={tab.icon} />
+              <div className="name">{tab.text}</div>
             </a>
           ))}
         </nav>

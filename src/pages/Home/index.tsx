@@ -10,7 +10,7 @@ import { Footer } from "../../components/Layout/Footer";
 
 import { GA } from "../../services/ga";
 
-import { accounts } from "../../data/accounts";
+import { headerTabs } from "../../data/headerTabs";
 import { profile } from "../../data/profile";
 import { values } from "../../data/values";
 import { skills } from "../../data/skills";
@@ -21,7 +21,7 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      <Header accounts={accounts} />
+      <Header tabs={headerTabs} />
       <Main>
         <ProfileSection {...profile} />
         <ValuesSection values={values} />

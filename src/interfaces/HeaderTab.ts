@@ -1,7 +1,7 @@
 import * as icons from "react-icons/io";
 
-export interface IAccount {
+export interface IHeaderTab {
   icon: keyof typeof icons;
-  name: string;
+  text: string;
   link: string;
 }
