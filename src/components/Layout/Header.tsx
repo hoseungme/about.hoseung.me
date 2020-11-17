@@ -133,6 +133,8 @@ const Container = styled.header`
 
     > .accounts {
       > a {
+        margin-left: 10px;
+
         > .icon {
           width: 40px;
           height: 40px;
@@ -148,6 +150,8 @@ const Container = styled.header`
 
     > .accounts {
       > a {
+        margin-left: 5px;
+
         > .icon {
           width: 30px;
           height: 30px;
