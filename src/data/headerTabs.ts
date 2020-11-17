@@ -1,6 +1,6 @@
 import { IoLogoGithub } from "react-icons/io";
 import { AiFillMediumSquare } from "react-icons/ai";
-import { FaBook } from "react-icons/fa";
+import { FaVimeo } from "react-icons/fa";
 
 import { IHeaderTab } from "../interfaces/HeaderTab";
 
@@ -16,7 +16,7 @@ export const headerTabs: IHeaderTab[] = [
     link: "https://medium.com/@HoseungJang",
   },
   {
-    icon: FaBook,
+    icon: FaVimeo,
     text: "velog",
     link: "https://velog.io/@alvin/series",
   },
