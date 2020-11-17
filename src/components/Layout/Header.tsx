@@ -121,7 +121,7 @@ const Container = styled.header`
 
         overflow: hidden;
 
-        transition: max-width 0.8s cubic-bezier(0.4, 0, 0, 0.7);
+        transition: max-width 0.3s cubic-bezier(0.4, 0, 0, 0.7);
       }
     }
   }
