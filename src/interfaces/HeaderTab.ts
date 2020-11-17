@@ -1,7 +1,7 @@
-import * as icons from "react-icons/io";
+import { IconType } from "react-icons";
 
 export interface IHeaderTab {
-  icon: keyof typeof icons;
+  icon: IconType;
   text: string;
   link: string;
 }
