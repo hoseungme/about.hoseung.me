@@ -21,19 +21,18 @@ export const ProjectCard: React.FC<IProject> = ({
   const [overlayVisible, setOverlayvisible] = useState(false);
 
   return (
-    <Container>
-      <div
-        className="top"
-        onClick={() => {
-          if (!overlayVisible) {
-            GA.trackProjectSectionEvent({
-              action: "Description Viewd",
-              label: title,
-            });
-          }
-          setOverlayvisible(!overlayVisible);
-        }}
-      >
+    <Container
+      onClick={() => {
+        if (!overlayVisible) {
+          GA.trackProjectSectionEvent({
+            action: "Description Viewd",
+            label: title,
+          });
+        }
+        setOverlayvisible(!overlayVisible);
+      }}
+    >
+      <div className="top">
         <img src={img} alt="Project" />
         <div className="tags">
           {tags.map((tag, index) => (
@@ -63,6 +62,8 @@ const Container = styled.div`
 
   box-shadow: 0 0 50px ${Color.LightGrey};
 
+  cursor: pointer;
+
   transition: transform 0.3s, box-shadow 1s;
 
   &:hover {
@@ -84,8 +85,6 @@ const Container = styled.div`
     }
 
     display: flex;
-
-    cursor: pointer;
 
     > img {
       width: 100%;
