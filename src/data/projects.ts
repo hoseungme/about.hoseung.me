@@ -1,9 +1,7 @@
 import { IProject } from "../interfaces/Project";
 
 import referringImage from "../images/project/referring.png";
-import diaryImage from "../images/project/diary.png";
 import myLittleCookImage from "../images/project/my-little-cook.png";
-import coNoteImage from "../images/project/co-note.png";
 import coronaSolutionImage from "../images/project/corona-solution.png";
 import apartmentPriceAPIImage from "../images/project/apartment-price-api.png";
 import dsmMarketImage from "../images/project/dsm-market.png";
@@ -29,48 +27,20 @@ export const projects: IProject[] = [
     tags: ["Front-end", "Back-end"],
   },
   {
-    img: diaryImage,
-    title: "개발만 기록하니? 오늘 하루도 기록해. 프로젝트 Diary",
-    duration: "2020.08 ~ 2020.08",
-    description:
-      "Diary는 간단한 일기장 프로젝트 입니다. 리액트를 처음 써보았던 프로젝트 였고, infinite scrolling을 구현하면서 viewport, intersection observer 등 웹 개발에 있어서 기초적인 개념들을 많이 배웠습니다.",
-    references: [
-      {
-        text: "프론트엔드, 백엔드 코드",
-        link: "https://github.com/HoseungJang/diary",
-      },
-    ],
-    tags: ["Front-end", "Back-end"],
-  },
-  {
     img: myLittleCookImage,
     title: "특별한 레시피를 찾으시나요? 프로젝트 My Little Cook",
     duration: "2020.07 ~ 2020.08",
     description:
-      "My Little Cook은 요리 레시피를 제공해주는 서비스입니다. 서버리스 백엔드에 처음 입문했고, AWS Lambda를 기반으로 개발했습니다. serverless framework를 사용해서 인프라를 구축하고, 배포했습니다. Auth, User, Fridge, Recipe로 백엔드 서비스를 나누어서 개발했습니다.",
+      "My Little Cook은 요리 레시피를 제공해주는 서비스입니다. 서버리스 백엔드에 처음 입문했고, AWS Lambda를 기반으로 개발했습니다. serverless framework를 사용해서 인프라를 구축하고, 배포했습니다.",
     references: [],
     tags: ["Back-end"],
-  },
-  {
-    img: coNoteImage,
-    title: "어디서든 함께해. 프로젝트 CoNote",
-    duration: "2020.07 ~ 2020.08",
-    description:
-      "CoNote는 실시간 웹 자바스크립트 에디터 입니다. Microsoft의 Monaco Editor를 기반하였고, Socket.io를 사용해 접속자들에게 편집된 코드가 실시간으로 반영될 수 있도록 하였습니다.",
-    references: [
-      {
-        text: "프론트엔드, 백엔드 코드",
-        link: "https://github.com/HoseungJang/CoNote",
-      },
-    ],
-    tags: ["Front-end", "Back-end"],
   },
   {
     img: coronaSolutionImage,
     title: "전국의 마스크 재고정보가 한눈에. 프로젝트 코로나 솔루션",
     duration: "2020.03 ~ 2020.07",
     description:
-      "코로나 솔루션은 코로나 19 확진자 현황, 진료소 위치 정보를 제공해주는 서비스 입니다. CloudFront 캐싱을 통해서 응답이 느렸던 문제를 해결하거나 Docker, NginX를 사용한 Blue-Green 무중단 배포 자동화를 구축하는 등, 4월 출시 이후 3개월 동안 약 70명의 유저들을 대상으로 유지보수 하며 사용자 경험과 서비스 개선에 많은 노력을 기울였습니다.",
+      "코로나 솔루션은 코로나 19 확진자 현황, 진료소 위치 정보를 제공해주는 서비스 입니다. CloudFront 캐싱을 통해서 응답이 느렸던 문제를 해결하거나 Docker, NginX를 사용한 Blue-Green 무중단 배포 자동화를 구축하는 등 사용자/개발자 경험 개선에 집중했고, 4월 출시 이후 3개월 동안 약 70명의 유저들을 대상으로 유지보수 하였습니다.",
     references: [
       {
         text: "백엔드 코드",
