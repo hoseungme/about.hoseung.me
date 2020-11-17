@@ -3,8 +3,6 @@ import styled from "styled-components";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 
-import { Icon } from "../Icon/Icon";
-
 import { IHeaderTab } from "../../interfaces/HeaderTab";
 
 import { Color } from "../../constants/Color";
@@ -24,12 +22,15 @@ export const Header: React.FC<{ tabs: IHeaderTab[] }> = ({ tabs }) => {
       <Container className={classNames({ scrolled: isScrolled })}>
         <div className="title">Hoseung Jang Résumé</div>
         <nav className="accounts">
-          {tabs.map((tab, index) => (
-            <a key={index} href={tab.link}>
-              <Icon className="icon" icon={tab.icon} />
-              <div className="name">{tab.text}</div>
-            </a>
-          ))}
+          {tabs.map((tab, index) => {
+            const Icon = tab.icon;
+            return (
+              <a key={index} href={tab.link}>
+                <Icon className="icon" />
+                <div className="name">{tab.text}</div>
+              </a>
+            );
+          })}
         </nav>
       </Container>
     </>
