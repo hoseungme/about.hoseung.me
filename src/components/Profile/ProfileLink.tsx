@@ -24,10 +24,12 @@ export const ProfileLink: React.FC<IProfile["links"][0]> = ({ text, link }) => {
 };
 
 const Container = styled.button`
-  padding: 4px 8px;
+  padding: 5px 8px;
 
-  border: 1px solid ${Color.DarkMint};
+  border: 0;
   border-radius: 5px;
+
+  box-shadow: 0 0 4px 1px ${Color.LightGrey};
 
   background-color: ${Color.DarkMint};
 
