@@ -29,7 +29,7 @@ const Container = styled.button`
   border: 0;
   border-radius: 5px;
 
-  box-shadow: 0 0 4px 1px ${Color.LightGrey};
+  box-shadow: 0 0 5px 0.1px ${Color.LightGrey};
 
   background-color: ${Color.DarkMint};
 
