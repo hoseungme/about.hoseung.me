@@ -13,7 +13,7 @@ export const projects: IProject[] = [
     title: "나를 소개합니다. Résumé V1",
     duration: "2020.10 ~ 2020.11",
     description:
-      "Résumé V1은 저의 포트폴리오 웹입니다. 누군가에게 저를 소개하는 페이지인 만큼, 딱딱하고 심심한 느낌이 들지 않는 UI를 위해 노력했습니다. AWS S3, CloudFront를 사용해서 배포하였습니다.",
+      "Résumé V1은 저의 포트폴리오 웹 사이트입니다. 누군가에게 저를 소개하는 페이지인 만큼, 딱딱하고 심심한 느낌이 들지 않는 UI를 위해 노력했습니다. AWS S3, CloudFront를 사용해서 배포하였습니다.",
     references: [
       {
         text: "프로젝트 일지",
