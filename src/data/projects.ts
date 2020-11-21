@@ -1,5 +1,6 @@
 import { IProject } from "../interfaces/Project";
 
+import resumeImage from "../images/project/resume.png";
 import referringImage from "../images/project/referring.png";
 import myLittleCookImage from "../images/project/my-little-cook.png";
 import coronaSolutionImage from "../images/project/corona-solution.png";
@@ -7,6 +8,25 @@ import apartmentPriceAPIImage from "../images/project/apartment-price-api.png";
 import dsmMarketImage from "../images/project/dsm-market.png";
 
 export const projects: IProject[] = [
+  {
+    img: resumeImage,
+    title: "나를 소개합니다. Résumé V1",
+    duration: "2020.10 ~ 2020.11",
+    description:
+      "Résumé V1은 저의 포트폴리오 웹입니다. 누군가에게 저를 소개하는 페이지인 만큼, 딱딱하고 심심한 느낌이 들지 않는 UI를 위해 노력했습니다. AWS S3, CloudFront를 사용해서 배포하였습니다.",
+    references: [
+      {
+        text: "프로젝트 일지",
+        link:
+          "https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Rsum",
+      },
+      {
+        text: "프론트엔드 코드",
+        link: "https://github.com/HoseungJang/Referring/",
+      },
+    ],
+    tags: ["Front-end"],
+  },
   {
     img: referringImage,
     title: "읽다가 말아도 안심. 주소를 잊어도 안심. 프로젝트 Referring",
