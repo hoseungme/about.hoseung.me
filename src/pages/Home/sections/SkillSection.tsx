@@ -14,7 +14,7 @@ export const SkillSection: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
       <header>
         <TransitionContainer
           className="topic"
-          type="fadeInToDown"
+          effect="fadeInToDown"
           intersecting={1}
           translateY={50}
         >

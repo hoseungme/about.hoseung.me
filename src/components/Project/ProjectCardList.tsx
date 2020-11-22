@@ -21,7 +21,7 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
         <TransitionContainer
           key={index}
           className="card"
-          type="fadeInToUp"
+          effect="fadeInToUp"
           intersecting={0.4}
           delay={0.2 * (index % columnSize)}
           onInView={() =>

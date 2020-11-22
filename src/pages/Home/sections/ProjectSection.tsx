@@ -17,7 +17,7 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
       <header>
         <TransitionContainer
           className="topic"
-          type="fadeInToDown"
+          effect="fadeInToDown"
           intersecting={1}
           translateY={50}
         >
@@ -26,7 +26,7 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
         <div className="info">
           <TransitionContainer
             className="title"
-            type="fadeInToDown"
+            effect="fadeInToDown"
             intersecting={0.8}
             delay={0.2}
           >
@@ -34,7 +34,7 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
           </TransitionContainer>
           <TransitionContainer
             className="description"
-            type="fadeInToUp"
+            effect="fadeInToUp"
             delay={0.4}
             intersecting={0.8}
           >
