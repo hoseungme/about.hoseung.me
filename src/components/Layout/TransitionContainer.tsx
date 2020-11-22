@@ -6,12 +6,12 @@ import { useInView } from "react-intersection-observer";
 type Effect = "fadeInToUp" | "fadeInToDown";
 
 export const TransitionContainer: React.FC<PropsWithChildren<{
+  intersecting: number;
+  onInView?: () => void;
   className?: string;
   effect: Effect;
-  intersecting: number;
   delay?: number;
   translateY?: number;
-  onInView?: () => void;
 }>> = ({ intersecting, onInView, children, className, ...options }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
