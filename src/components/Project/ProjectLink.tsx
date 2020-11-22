@@ -12,7 +12,6 @@ export const ProjectLink: React.FC<
 > = ({ text, link, disabled }) => {
   return (
     <Containter
-      type="submit"
       onClick={(e) => {
         if (!disabled) {
           e.stopPropagation();
