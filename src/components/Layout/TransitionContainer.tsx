@@ -7,20 +7,12 @@ type Effect = "fadeInToUp" | "fadeInToDown";
 
 export const TransitionContainer: React.FC<PropsWithChildren<{
   className?: string;
-  type: Effect;
+  effect: Effect;
   intersecting: number;
   delay?: number;
   translateY?: number;
   onInView?: () => void;
-}>> = ({
-  className,
-  type,
-  intersecting,
-  delay,
-  translateY,
-  children,
-  onInView,
-}) => {
+}>> = ({ intersecting, onInView, children, className, ...options }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: intersecting,
@@ -35,10 +27,8 @@ export const TransitionContainer: React.FC<PropsWithChildren<{
   return (
     <Container
       className={classNames(className, { intersected: inView })}
-      effect={type}
-      delay={delay}
-      translateY={translateY}
       ref={ref}
+      {...options}
     >
       {children}
     </Container>
