@@ -2,9 +2,7 @@ import { IProject } from "../interfaces/Project";
 
 import resumeImage from "../images/project/resume.png";
 import referringImage from "../images/project/referring.png";
-import myLittleCookImage from "../images/project/my-little-cook.png";
 import coronaSolutionImage from "../images/project/corona-solution.png";
-import apartmentPriceAPIImage from "../images/project/apartment-price-api.png";
 import dsmMarketImage from "../images/project/dsm-market.png";
 
 export const projects: IProject[] = [
@@ -47,15 +45,6 @@ export const projects: IProject[] = [
     tags: ["Front-end", "Back-end"],
   },
   {
-    img: myLittleCookImage,
-    title: "특별한 레시피를 찾으시나요? 프로젝트 My Little Cook",
-    duration: "2020.07 ~ 2020.08",
-    description:
-      "My Little Cook은 요리 레시피를 제공해주는 서비스입니다. 서버리스 백엔드에 처음 입문했고, AWS Lambda를 기반으로 개발했습니다. serverless framework를 사용해서 인프라를 구축하고, 배포했습니다.",
-    references: [],
-    tags: ["Back-end"],
-  },
-  {
     img: coronaSolutionImage,
     title: "전국의 마스크 재고정보가 한눈에. 프로젝트 코로나 솔루션",
     duration: "2020.03 ~ 2020.07",
@@ -68,15 +57,6 @@ export const projects: IProject[] = [
       },
     ],
     tags: ["Back-end"],
-  },
-  {
-    img: apartmentPriceAPIImage,
-    title: "공시가격 정보를 한눈에. 공동주택 공시가격 API",
-    duration: "2020.01 ~ 2020.03",
-    description:
-      "고등학교 2학년 겨울방학 때 주식회사 집토스에서 인턴으로 근무하며 진행했던 토이 프로젝트 입니다. 프론트엔드 개발에 JQuery를 사용했고, CI/CD 자동화 프로세스를 처음 구축해 보았습니다. 약 1300만개의 대용량 데이터를 다루었기 때문에 인덱싱 등의 성능 개선에 많은 노력을 기울였습니다.",
-    references: [],
-    tags: ["Front-end", "Back-end"],
   },
   {
     img: dsmMarketImage,
