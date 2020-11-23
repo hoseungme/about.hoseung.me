@@ -10,12 +10,12 @@ import { Color } from "../../constants/Color";
 export const ProfileLink: React.FC<IProfile["links"][0]> = ({ text, link }) => {
   return (
     <Container
+      href={link}
       onClick={() => {
         GA.trackProfileSectionEvent({
           action: "Link Button Clicked",
           label: text,
         });
-        window.location.href = link;
       }}
     >
       {text}
@@ -23,8 +23,8 @@ export const ProfileLink: React.FC<IProfile["links"][0]> = ({ text, link }) => {
   );
 };
 
-const Container = styled.button`
-  padding: 5px 8px;
+const Container = styled.a`
+  padding: 7px 7px;
 
   border: 0;
   border-radius: 5px;
@@ -35,12 +35,18 @@ const Container = styled.button`
 
   font-size: 1.1rem;
   color: ${Color.White};
-
-  cursor: pointer;
+  text-decoration: none;
 
   outline: none;
 
   transition: color 0.5s, background-color 0.5s;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   &:not(:last-child) {
     margin-right: 10px;

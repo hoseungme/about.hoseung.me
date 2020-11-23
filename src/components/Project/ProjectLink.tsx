@@ -12,6 +12,7 @@ export const ProjectLink: React.FC<
 > = ({ text, link, disabled }) => {
   return (
     <Containter
+      href={link}
       onClick={(e) => {
         if (!disabled) {
           e.stopPropagation();
@@ -19,7 +20,6 @@ export const ProjectLink: React.FC<
             action: "Link Button Clicked",
             label: text,
           });
-          window.location.href = link;
         }
       }}
     >
@@ -28,7 +28,7 @@ export const ProjectLink: React.FC<
   );
 };
 
-const Containter = styled.button`
+const Containter = styled.a`
   width: fit-content;
 
   padding: 5px 15px;
@@ -44,10 +44,16 @@ const Containter = styled.button`
   font-weight: 500;
 
   color: ${Color.White};
-
-  cursor: pointer;
+  text-decoration: none;
 
   outline: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   &:hover {
     background-color: ${Color.White};
