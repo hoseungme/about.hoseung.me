@@ -38,7 +38,7 @@ const Containter = styled.a`
 
   background-color: transparent;
 
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.3s, color 0.3s;
 
   font-size: 16px;
   font-weight: 500;

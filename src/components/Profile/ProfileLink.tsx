@@ -39,7 +39,7 @@ const Container = styled.a`
 
   outline: none;
 
-  transition: color 0.5s, background-color 0.5s;
+  transition: color 0.3s, background-color 0.3s;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
