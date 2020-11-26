@@ -20,7 +20,7 @@ export const projects: IProject[] = [
       },
       {
         text: "프론트엔드 코드",
-        link: "https://github.com/HoseungJang/Referring/",
+        link: "https://github.com/HoseungJang/resume-v1",
       },
     ],
     tags: ["Front-end"],
@@ -39,7 +39,7 @@ export const projects: IProject[] = [
       },
       {
         text: "프론트엔드, 백엔드 코드",
-        link: "https://github.com/HoseungJang/Referring/",
+        link: "https://github.com/HoseungJang/Referring",
       },
     ],
     tags: ["Front-end", "Back-end"],
@@ -51,6 +51,10 @@ export const projects: IProject[] = [
     description:
       "코로나 솔루션은 코로나 19 확진자 현황, 진료소 위치 정보를 제공해주는 서비스 입니다. CloudFront 캐싱을 통해서 응답이 느렸던 문제를 해결하거나 Docker, NginX를 사용한 Blue-Green 무중단 배포 자동화를 구축하는 등 사용자/개발자 경험 개선에 집중했고, 4월 출시 이후 3개월 동안 약 70명의 유저들을 대상으로 유지보수 하였습니다.",
     references: [
+      {
+        text: "프로젝트 일지",
+        link: "https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%BD%94%EB%A1%9C%EB%82%98-%EC%86%94%EB%A3%A8%EC%85%98"
+      },
       {
         text: "백엔드 코드",
         link: "https://github.com/HoseungJang/Corona-Solution-BackEnd",
