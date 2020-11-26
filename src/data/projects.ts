@@ -30,7 +30,7 @@ export const projects: IProject[] = [
     title: "읽다가 말아도 안심. 주소를 잊어도 안심. 프로젝트 Referring",
     duration: "2020.08 ~ 2020.10",
     description:
-      "Reffering은 나만의 북마크 서비스 입니다. operation id에 따라 request paramters가 자동 추론되게 만들어 보면서 Typescript의 타입 추론에 대한 이해도를 한층 높힐 수 있었고, 반응형 웹을 처음 만들어 보았습니다. 서버는 fp-ts라는 함수형 라이브러리와 Express를 사용하여 개발했고, Docker를 활용했습니다.",
+      "Refering은 나만의 북마크 서비스 입니다. operation id에 따라 request paramters가 자동 추론되게 만들어 보면서 Typescript의 타입 추론에 대한 이해도를 한층 높힐 수 있었고, 반응형 웹을 처음 만들어 보았습니다. 서버는 fp-ts라는 함수형 라이브러리와 Express를 사용하여 개발했고, Docker를 활용했습니다.",
     references: [
       {
         text: "프로젝트 일지",
