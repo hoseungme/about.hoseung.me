@@ -17,7 +17,7 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
 
   return (
     <Container columnSize={columnSize}>
-      {projects.map((p, index) => (
+      {projects.map((project, index) => (
         <TransitionContainer
           key={index}
           className="card"
@@ -27,11 +27,11 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
           onInView={() =>
             GA.trackProjectSectionEvent({
               action: "Card Viewd",
-              label: p.title,
+              label: project.title,
             })
           }
         >
-          <ProjectCard {...p} />
+          <ProjectCard {...project} />
         </TransitionContainer>
       ))}
     </Container>
