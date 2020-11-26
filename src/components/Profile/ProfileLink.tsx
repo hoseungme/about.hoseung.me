@@ -33,7 +33,7 @@ const Container = styled.a`
 
   background-color: ${Color.DarkMint};
 
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: ${Color.White};
   text-decoration: none;
 
