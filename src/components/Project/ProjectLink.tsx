@@ -20,6 +20,8 @@ export const ProjectLink: React.FC<
             action: "Link Button Clicked",
             label: text,
           });
+        } else {
+          e.preventDefault();
         }
       }}
     >
