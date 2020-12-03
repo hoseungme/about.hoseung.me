@@ -14,6 +14,7 @@ interface TrackEventParams {
 interface TrackHeaderEventParams extends Omit<TrackEventParams, "category"> {
   action: "Link Button Clicked";
 }
+
 interface TrackProfileSectionEventParams
   extends Omit<TrackEventParams, "category"> {
   action: "Link Button Clicked";
@@ -22,6 +23,10 @@ interface TrackProfileSectionEventParams
 interface TrackProjectSectionEventParams
   extends Omit<TrackEventParams, "category"> {
   action: "Card Viewd" | "Description Viewd" | "Link Button Clicked";
+}
+
+interface TrackFooterEventParams extends Omit<TrackEventParams, "category"> {
+  action: "Name Clicked";
 }
 
 class GAService {
@@ -71,6 +76,10 @@ class GAService {
 
   public trackProjectSectionEvent(params: TrackProjectSectionEventParams) {
     this.trackEvent({ category: "Project", ...params });
+  }
+
+  public trackFooterEvent(params: TrackFooterEventParams) {
+    this.trackEvent({ category: "Footer", ...params });
   }
 }
 

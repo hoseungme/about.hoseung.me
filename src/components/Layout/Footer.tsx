@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { GA } from "../../services/ga";
+
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
@@ -9,7 +11,12 @@ export const Footer: React.FC = () => {
     <Container>
       <span>
         ⓒ 2020
-        <a href="https://github.com/HoseungJang/resume">HoseungJang</a>
+        <a
+          href="https://github.com/HoseungJang/resume"
+          onClick={() => GA.trackFooterEvent({ action: "Name Clicked" })}
+        >
+          HoseungJang
+        </a>
         All RIGHTS RESERVED.
       </span>
     </Container>
