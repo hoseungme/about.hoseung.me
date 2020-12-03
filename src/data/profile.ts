@@ -13,7 +13,7 @@ export const profile: IProfile = {
     },
     {
       text: "개발 일지",
-      link: "https://velog.io/@alvin/series",
+      link: "https://velog.io/@alvin/series/development-report",
     },
   ],
 };
