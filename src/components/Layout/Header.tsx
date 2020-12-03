@@ -3,6 +3,8 @@ import styled from "styled-components";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 
+import { GA } from "../../services/ga";
+
 import { IHeaderTab } from "../../interfaces/HeaderTab";
 
 import { Color } from "../../constants/Color";
@@ -25,7 +27,16 @@ export const Header: React.FC<{ tabs: IHeaderTab[] }> = ({ tabs }) => {
           {tabs.map((tab, index) => {
             const Icon = tab.icon;
             return (
-              <a key={index} href={tab.link}>
+              <a
+                key={index}
+                href={tab.link}
+                onClick={() =>
+                  GA.trackHeaderEvent({
+                    action: "Link Button Clicked",
+                    label: tab.text,
+                  })
+                }
+              >
                 <Icon className="icon" />
                 <div className="name">{tab.text}</div>
               </a>
