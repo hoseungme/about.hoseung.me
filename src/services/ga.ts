@@ -11,6 +11,9 @@ interface TrackEventParams {
   label?: string;
 }
 
+interface TrackHeaderEventParams extends Omit<TrackEventParams, "category"> {
+  action: "Link Button Clicked";
+}
 interface TrackProfileSectionEventParams
   extends Omit<TrackEventParams, "category"> {
   action: "Link Button Clicked";
@@ -56,6 +59,10 @@ class GAService {
     }
 
     ReactGA.event(params);
+  }
+
+  public trackHeaderEvent(params: TrackHeaderEventParams) {
+    this.trackEvent({ category: "Header", ...params });
   }
 
   public trackProfileSectionEvent(params: TrackProfileSectionEventParams) {
