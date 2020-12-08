@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import dotenv from "dotenv";
-import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
-import { Routes } from "./routes";
+import { Home } from "./pages/Home";
 
 import { Color } from "./constants/Color";
 import { Device } from "./constants/Device";
@@ -39,9 +38,7 @@ const GlobalStyles = createGlobalStyle`
 ReactDOM.render(
   <>
     <GlobalStyles />
-    <BrowserRouter basename="/resume">
-      <Routes />
-    </BrowserRouter>
+    <Home />
   </>,
   document.getElementById("root")
 );
