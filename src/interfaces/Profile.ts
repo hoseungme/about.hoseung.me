@@ -1,5 +1,5 @@
 export interface IProfile {
-  profileImage: string;
+  image: string;
   motto: string;
   comment: string;
   links: {
