@@ -1,14 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import dotenv from "dotenv";
 import { createGlobalStyle } from "styled-components";
 
 import { Home } from "./Home";
 
 import { Color } from "./constants/Color";
 import { Device } from "./constants/Device";
-
-dotenv.config();
 
 const GlobalStyles = createGlobalStyle`
   html, body {
