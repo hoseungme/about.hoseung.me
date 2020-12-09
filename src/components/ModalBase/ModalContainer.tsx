@@ -37,7 +37,6 @@ const Container = styled.div`
 
     background-color: ${Color.WhiteGrey};
 
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
   }
 `;
