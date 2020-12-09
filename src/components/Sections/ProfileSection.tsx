@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../../../components/Layout/TransitionContainer";
-import { ProfileLink } from "../../../components/Profile/ProfileLink";
+import { TransitionContainer } from "../Layout/TransitionContainer";
+import { ProfileLink } from "../Profile/ProfileLink";
 
-import { IProfile } from "../../../interfaces/Profile";
+import { IProfile } from "../../interfaces/Profile";
 
-import { Color } from "../../../constants/Color";
-import { Device } from "../../../constants/Device";
+import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
 export const ProfileSection: React.FC<IProfile> = ({
-  profileImage,
+  image,
   motto,
   comment,
   links,
@@ -23,7 +23,7 @@ export const ProfileSection: React.FC<IProfile> = ({
           effect="fadeInToDown"
           intersecting={0.8}
         >
-          <img src={profileImage} alt="Profile" />
+          <img src={image} alt="Profile" />
         </TransitionContainer>
       </div>
       <div className="description">

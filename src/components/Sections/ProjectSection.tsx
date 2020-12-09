@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../../../components/Layout/TransitionContainer";
-import { ProjectCardList } from "../../../components/Project/ProjectCardList";
+import { TransitionContainer } from "../Layout/TransitionContainer";
+import { ProjectCardList } from "../Project/ProjectCardList";
 
-import { IProject } from "../../../interfaces/Project";
+import { IProject } from "../../interfaces/Project";
 
-import { Color } from "../../../constants/Color";
-import { Device } from "../../../constants/Device";
+import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
 export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
   projects,

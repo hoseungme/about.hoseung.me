@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../../../components/Layout/TransitionContainer";
-import { ValuesCard } from "../../../components/Values/ValuesCard";
+import { TransitionContainer } from "../Layout/TransitionContainer";
+import { ValuesCard } from "../Values/ValuesCard";
 
-import { IValues } from "../../../interfaces/Values";
+import { IValues } from "../../interfaces/Values";
 
-import { Color } from "../../../constants/Color";
-import { Device } from "../../../constants/Device";
+import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
 export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
   return (

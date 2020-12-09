@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../../../components/Layout/TransitionContainer";
-import { SkillCardList } from "../../../components/Skill/SkillCardList";
+import { TransitionContainer } from "../Layout/TransitionContainer";
+import { SkillCardList } from "../Skill/SkillCardList";
 
-import { ISkill } from "../../../interfaces/Skill";
+import { ISkill } from "../../interfaces/Skill";
 
-import { Color } from "../../../constants/Color";
+import { Color } from "../../constants/Color";
 
 export const SkillSection: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
   return (
