@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import { OverlayCard } from "./OverlayCard";
 import { Tag } from "../Tag/Tag";
-
-import { GA } from "../../services/ga";
 
 import { IProject } from "../../interfaces/Project";
 
@@ -16,22 +13,9 @@ export const ProjectCard: React.FC<IProject> = ({
   title,
   duration,
   tags,
-  ...others
 }) => {
-  const [overlayVisible, setOverlayvisible] = useState(false);
-
   return (
-    <Container
-      onClick={() => {
-        if (!overlayVisible) {
-          GA.trackProjectSectionEvent({
-            action: "Description Viewd",
-            label: title,
-          });
-        }
-        setOverlayvisible(!overlayVisible);
-      }}
-    >
+    <Container>
       <div className="top">
         <img src={img} alt="Project" />
         <div className="tags">
@@ -39,7 +23,6 @@ export const ProjectCard: React.FC<IProject> = ({
             <Tag key={index} tag={tag} />
           ))}
         </div>
-        <OverlayCard {...others} visible={overlayVisible} />
       </div>
       <div className="bottom">
         <div className="title">{title}</div>
