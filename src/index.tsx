@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import dotenv from "dotenv";
 import { createGlobalStyle } from "styled-components";
 
-import { Home } from "./pages/Home";
+import { Home } from "./Home";
 
 import { Color } from "./constants/Color";
 import { Device } from "./constants/Device";
