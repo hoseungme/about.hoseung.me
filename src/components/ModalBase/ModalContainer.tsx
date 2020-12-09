@@ -36,5 +36,8 @@ const Container = styled.div`
     border-radius: 3px;
 
     background-color: ${Color.WhiteGrey};
+
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 `;
