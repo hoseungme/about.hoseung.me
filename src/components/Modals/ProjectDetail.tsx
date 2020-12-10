@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+
 import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
 import { ModalContainer } from "../ModalBase/ModalContainer";
 
@@ -9,7 +11,6 @@ import { ModalProps } from "../../contexts/Modal";
 import { GA } from "../../services/ga";
 
 import { IProject } from "../../interfaces/Project";
-import { Device } from "../../constants/Device";
 
 export const ProjectDetail: React.FC<ModalProps & IProject> = ({
   close,
