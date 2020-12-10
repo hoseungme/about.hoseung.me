@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { CgClose } from "react-icons/cg";
 
 import { Color } from "../../constants/Color";
@@ -19,11 +20,11 @@ export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
     };
 
     window.addEventListener("keydown", closeModal);
-    document.body.style.overflow = "hidden";
+    disableBodyScroll(document.body);
 
     return () => {
       window.removeEventListener("keydown", closeModal);
-      document.body.style.removeProperty("overflow");
+      enableBodyScroll(document.body);
     };
   }, []);
 
