@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Color } from "../../constants/Color";
 
@@ -6,15 +6,22 @@ import { ModalContainer } from "../ModalBase/ModalContainer";
 
 import { ModalProps } from "../../contexts/Modal";
 
+import { GA } from "../../services/ga";
+
 import { IProject } from "../../interfaces/Project";
 
 export const ProjectDetail: React.FC<ModalProps & IProject> = ({
   close,
   img,
+  title,
   description,
   activities,
   references,
 }) => {
+  useEffect(() => {
+    GA.trackProjectSectionEvent({ action: "Modal Opened", label: title });
+  }, []);
+
   return (
     <ModalContainer close={close}>
       <Container>
@@ -30,7 +37,16 @@ export const ProjectDetail: React.FC<ModalProps & IProject> = ({
         <div className="divider" />
         <div className="references">
           {references.map((reference, index) => (
-            <a key={index} href={reference.link}>
+            <a
+              key={index}
+              href={reference.link}
+              onClick={() =>
+                GA.trackProjectSectionEvent({
+                  action: "Link Button Clicked",
+                  label: reference.text,
+                })
+              }
+            >
               {reference.text}
             </a>
           ))}
