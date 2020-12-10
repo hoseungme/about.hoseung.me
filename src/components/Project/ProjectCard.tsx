@@ -8,14 +8,15 @@ import { IProject } from "../../interfaces/Project";
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
-export const ProjectCard: React.FC<IProject> = ({
-  img,
-  title,
-  duration,
-  tags,
-}) => {
+import { useModal } from "../../contexts/Modal";
+
+export const ProjectCard: React.FC<IProject> = (project) => {
+  const modal = useModal();
+
+  const { img, tags, title, duration } = project;
+
   return (
-    <Container>
+    <Container onClick={() => modal.open("ProjectDetail", project)}>
       <div className="top">
         <img src={img} alt="Project" />
         <div className="tags">
