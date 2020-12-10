@@ -22,7 +22,7 @@ interface TrackProfileSectionEventParams
 
 interface TrackProjectSectionEventParams
   extends Omit<TrackEventParams, "category"> {
-  action: "Card Viewd" | "Description Viewd" | "Link Button Clicked";
+  action: "Card Viewd" | "Modal Opened" | "Link Button Clicked";
 }
 
 interface TrackFooterEventParams extends Omit<TrackEventParams, "category"> {
