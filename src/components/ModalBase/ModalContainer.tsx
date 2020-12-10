@@ -66,6 +66,8 @@ const Container = styled.div`
 
         background-color: transparent;
 
+        cursor: pointer;
+
         outline: none;
 
         > svg {
