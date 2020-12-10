@@ -10,6 +10,7 @@ export const TransitionContainer: React.FC<PropsWithChildren<{
   onInView?: () => void;
   className?: string;
   effect: Effect;
+  duration?: number;
   delay?: number;
   translateY?: number;
 }>> = ({ intersecting, onInView, children, className, ...options }) => {
@@ -37,26 +38,29 @@ export const TransitionContainer: React.FC<PropsWithChildren<{
 
 const effects: {
   [key in Effect]: (
+    duration?: number,
     delay?: number,
     translateY?: number
   ) => ReturnType<typeof css>;
 } = {
-  fadeInToUp: (delay, translateY) => css`
+  fadeInToUp: (duration, delay, translateY) => css`
     opacity: 0;
     transform: translateY(${translateY ?? 10}%);
 
-    transition: opacity 1s ${delay ?? 0}s, transform 1s ${delay ?? 0}s;
+    transition: opacity ${duration ?? 1}s ${delay ?? 0}s,
+      transform ${duration ?? 1}s ${delay ?? 0}s;
 
     &.intersected {
       opacity: 1;
       transform: translateY(0);
     }
   `,
-  fadeInToDown: (delay, translateY) => css`
+  fadeInToDown: (duration, delay, translateY) => css`
     opacity: 0;
     transform: translateY(-${translateY ?? 10}%);
 
-    transition: opacity 1s ${delay ?? 0}s, transform 1s ${delay ?? 0}s;
+    transition: opacity ${duration ?? 1}s ${delay ?? 0}s,
+      transform ${duration ?? 1}s ${delay ?? 0}s;
 
     &.intersected {
       opacity: 1;
@@ -67,8 +71,10 @@ const effects: {
 
 const Container = styled.div<{
   effect: Effect;
+  duration?: number;
   delay?: number;
   translateY?: number;
 }>`
-  ${({ effect, delay, translateY }) => effects[effect](delay, translateY)}
+  ${({ effect, duration, delay, translateY }) =>
+    effects[effect](duration, delay, translateY)}
 `;
