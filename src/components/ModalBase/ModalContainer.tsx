@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { CgClose } from "react-icons/cg";
 
@@ -9,6 +9,20 @@ import { ModalProps } from "../../contexts/Modal";
 import { hexToRgb } from "../../helpers/hexToRgb";
 
 export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
+  useEffect(() => {
+    const handler = (e: Event) => {
+      e.preventDefault();
+    };
+
+    document.body.addEventListener("touchmove", handler, { passive: false });
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.removeEventListener("touchmove", handler);
+      document.body.style.removeProperty("overflow");
+    };
+  }, []);
+
   return (
     <Container>
       <div className="modal">
