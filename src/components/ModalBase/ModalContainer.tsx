@@ -4,35 +4,44 @@ import { CgClose } from "react-icons/cg";
 
 import { Color } from "../../constants/Color";
 
+import { TransitionContainer } from "../Layout/TransitionContainer";
+
 import { ModalProps } from "../../contexts/Modal";
 
 import { hexToRgb } from "../../helpers/hexToRgb";
 
 export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
   useEffect(() => {
-    const handler = (e: Event) => {
-      e.preventDefault();
+    const closeModal = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        close();
+      }
     };
 
-    document.body.addEventListener("touchmove", handler, { passive: false });
+    window.addEventListener("keydown", closeModal);
     document.body.style.overflow = "hidden";
 
     return () => {
-      document.body.removeEventListener("touchmove", handler);
+      window.removeEventListener("keydown", closeModal);
       document.body.style.removeProperty("overflow");
     };
   }, []);
 
   return (
     <Container>
-      <div className="modal">
+      <TransitionContainer
+        className="modal"
+        effect="fadeInToUp"
+        intersecting={0}
+        duration={0.5}
+      >
         <div className="header">
           <button onClick={close}>
             <CgClose />
           </button>
         </div>
         {children}
-      </div>
+      </TransitionContainer>
     </Container>
   );
 };
