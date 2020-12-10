@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
@@ -24,9 +25,21 @@ export const ProjectDetail: React.FC<ModalProps & IProject> = ({
     GA.trackProjectSectionEvent({ action: "Modal Opened", label: title });
   }, []);
 
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      disableBodyScroll(ref.current);
+
+      return () => {
+        enableBodyScroll(ref.current!);
+      };
+    }
+  }, []);
+
   return (
     <ModalContainer close={close}>
-      <Container>
+      <Container ref={ref}>
         <img className="image" src={img} alt="Project" />
         <div className="divider" />
         <div className="description">{description}</div>
@@ -69,7 +82,7 @@ const Container = styled.div`
 
   box-sizing: border-box;
 
-  overflow-y: auto;
+  overflow-y: scroll;
 
   > * {
     flex-grow: 1;

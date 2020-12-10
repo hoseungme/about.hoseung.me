@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { CgClose } from "react-icons/cg";
 
 import { Color } from "../../constants/Color";
@@ -20,16 +19,14 @@ export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
     };
 
     window.addEventListener("keydown", closeModal);
-    disableBodyScroll(document.body);
 
     return () => {
       window.removeEventListener("keydown", closeModal);
-      enableBodyScroll(document.body);
     };
   }, []);
 
   return (
-    <Container>
+    <Container onTouchMove={(e) => e.stopPropagation()}>
       <TransitionContainer
         className="modal"
         effect="fadeInToUp"
