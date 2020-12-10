@@ -9,6 +9,7 @@ import { ModalProps } from "../../contexts/Modal";
 import { GA } from "../../services/ga";
 
 import { IProject } from "../../interfaces/Project";
+import { Device } from "../../constants/Device";
 
 export const ProjectDetail: React.FC<ModalProps & IProject> = ({
   close,
@@ -131,6 +132,24 @@ const Container = styled.div`
       &:not(:last-child) {
         margin-right: 10px;
       }
+    }
+  }
+
+  @media (max-width: ${Device.Tablet}px) {
+    width: 500px;
+    max-height: 600px;
+
+    > .image {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: ${Device.Mobile}px) {
+    width: 300px;
+    max-height: 400px;
+
+    > .image {
+      height: 100px;
     }
   }
 `;
