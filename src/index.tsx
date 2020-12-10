@@ -4,6 +4,8 @@ import { createGlobalStyle } from "styled-components";
 
 import { Home } from "./Home";
 
+import { ModalContextProvider } from "./contexts/Modal";
+
 import { Color } from "./constants/Color";
 import { Device } from "./constants/Device";
 
@@ -33,9 +35,9 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <>
+  <ModalContextProvider>
     <GlobalStyles />
     <Home />
-  </>,
+  </ModalContextProvider>,
   document.getElementById("root")
 );
