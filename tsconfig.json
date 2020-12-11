@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "outDir": "./build/",
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -14,5 +15,8 @@
     "typeRoots": [
       "src/types/index.d.ts"
     ]
-  }
+  },
+  "exclude": [
+    "build",
+  ]
 }
