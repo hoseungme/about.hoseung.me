@@ -15,6 +15,7 @@ export const projects: IProject[] = [
     activities: [
       "다른 레주메 사이트, 회사 소개 페이지, 개인 블로그 등을 참고하여 깔끔한 UI와 부드러운 인터랙션에 대해 학습",
       "Intersection Observer를 적극 활용한 UI 구현",
+      "AWS S3, CloudFront를 사용해서 배포",
       "Google Analytics를 활용한 유저 행동 트래킹",
     ],
     references: [
