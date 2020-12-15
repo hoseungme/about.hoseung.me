@@ -15,9 +15,9 @@
     "use-media": "^1.4.0"
   },
   "scripts": {
-    "deploy": "npm run build && npm run remove && npm run upload",
-    "remove": "aws s3 rm s3://about-hoseung --recursive --profile hsjang",
-    "upload": "aws s3 sync ./build s3://about-hoseung --acl public-read --cache-control no-store --profile hsjang",
+    "deploy": "npm run build && npm run upload && npm run upload:image",
+    "upload": "aws s3 sync ./build s3://about-hoseung --exclude *.png --acl public-read --cache-control no-store --delete --profile hsjang",
+    "upload:image": "aws s3 sync ./build/static s3://about-hoseung/static --acl public-read --delete --profile hsjang",
     "build": "webpack --env mode=production",
     "dev": "webpack serve --env mode=development",
     "start": "run-p dev eslint format",
