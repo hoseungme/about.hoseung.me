@@ -15,10 +15,12 @@ export const LazyFullImage: React.FC<{
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
-    const image = new Image();
-    image.src = src;
-    image.onload = () => setIsImageLoaded(true);
-  }, [src]);
+    if (inView) {
+      const image = new Image();
+      image.src = src;
+      image.onload = () => setIsImageLoaded(true);
+    }
+  }, [inView, src]);
 
   return (
     <div
