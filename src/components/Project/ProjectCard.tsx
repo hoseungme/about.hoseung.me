@@ -44,7 +44,7 @@ const Container = styled.div`
 
   border-radius: 6px;
 
-  box-shadow: 0 0 50px ${Color.LightGrey};
+  box-shadow: 0 0 50px ${Color.Grey};
 
   cursor: pointer;
 
@@ -52,7 +52,7 @@ const Container = styled.div`
 
   &:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 80px ${Color.LightGrey};
+    box-shadow: 0 0 80px ${Color.Grey};
   }
 
   > .top {

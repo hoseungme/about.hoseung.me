@@ -95,7 +95,7 @@ const Container = styled.div`
 
     margin: 20px 0;
 
-    background-color: ${Color.LightGrey};
+    background-color: ${Color.Grey};
   }
 
   > .image {

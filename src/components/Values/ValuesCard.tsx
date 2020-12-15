@@ -41,7 +41,7 @@ const Container = styled.div`
 
       font-size: 1.8rem;
 
-      color: ${Color.LightGrey};
+      color: ${Color.Grey};
     }
 
     > .values {
@@ -57,7 +57,7 @@ const Container = styled.div`
 
     box-sizing: border-box;
 
-    border-top: 1px solid ${Color.LightGrey};
+    border-top: 1px solid ${Color.Grey};
 
     color: ${Color.LightBlack};
   }

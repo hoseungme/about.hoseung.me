@@ -29,7 +29,7 @@ const Container = styled.a`
   border: 0;
   border-radius: 5px;
 
-  box-shadow: 0 0 5px 0.1px ${Color.LightGrey};
+  box-shadow: 0 0 5px 0.1px ${Color.Grey};
 
   background-color: ${Color.DarkMint};
 

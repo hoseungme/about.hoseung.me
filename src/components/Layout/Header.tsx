@@ -73,7 +73,7 @@ const Container = styled.header`
   transition: box-shadow 0.5s;
 
   &.scrolled {
-    box-shadow: 0 0 15px ${Color.LightGrey};
+    box-shadow: 0 0 15px ${Color.Grey};
   }
 
   > .title {
