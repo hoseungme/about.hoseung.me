@@ -21,7 +21,7 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
         <TransitionContainer
           key={index}
           className="card"
-          effect="fadeInToUp"
+          effect="fadeInUp"
           delay={0.2 * (index % columnSize)}
           onInView={() =>
             GA.trackProjectSectionEvent({

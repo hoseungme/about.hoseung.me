@@ -18,7 +18,7 @@ export const ProfileSection: React.FC<IProfile> = ({
   return (
     <Container>
       <div className="profile">
-        <TransitionContainer className="image" effect="fadeInToDown">
+        <TransitionContainer className="image" effect="fadeInDown">
           <img src={image} alt="Profile" />
         </TransitionContainer>
       </div>
@@ -26,22 +26,18 @@ export const ProfileSection: React.FC<IProfile> = ({
         <div className="text">
           <TransitionContainer
             className="topic"
-            effect="fadeInToUp"
+            effect="fadeInUp"
             delay={0.2}
             translateY={50}
           >
             WELCOME
           </TransitionContainer>
-          <TransitionContainer
-            className="motto"
-            effect="fadeInToUp"
-            delay={0.4}
-          >
+          <TransitionContainer className="motto" effect="fadeInUp" delay={0.4}>
             {motto}
           </TransitionContainer>
           <TransitionContainer
             className="comment"
-            effect="fadeInToUp"
+            effect="fadeInUp"
             delay={0.6}
           >
             {comment}
@@ -49,7 +45,7 @@ export const ProfileSection: React.FC<IProfile> = ({
         </div>
         <TransitionContainer
           className="links"
-          effect="fadeInToUp"
+          effect="fadeInUp"
           delay={0.8}
           translateY={40}
         >

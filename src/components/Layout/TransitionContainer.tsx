@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 
-type Effect = "fadeInToUp" | "fadeInToDown";
+type Effect = "fadeInUp" | "fadeInDown";
 
 export const TransitionContainer: React.FC<PropsWithChildren<{
   onInView?: () => void;
@@ -39,7 +39,7 @@ const effects: {
     translateY?: number
   ) => ReturnType<typeof css>;
 } = {
-  fadeInToUp: (duration, delay, translateY) => css`
+  fadeInUp: (duration, delay, translateY) => css`
     opacity: 0;
     transform: translateY(${translateY ?? 10}%);
 
@@ -51,7 +51,7 @@ const effects: {
       transform: translateY(0);
     }
   `,
-  fadeInToDown: (duration, delay, translateY) => css`
+  fadeInDown: (duration, delay, translateY) => css`
     opacity: 0;
     transform: translateY(-${translateY ?? 10}%);
 

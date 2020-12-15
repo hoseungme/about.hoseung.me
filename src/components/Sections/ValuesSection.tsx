@@ -15,7 +15,7 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
       <summary>
         <TransitionContainer
           className="topic"
-          effect="fadeInToDown"
+          effect="fadeInDown"
           translateY={50}
         >
           WHO AM I
@@ -23,7 +23,7 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
         <div className="info">
           <TransitionContainer
             className="title"
-            effect="fadeInToDown"
+            effect="fadeInDown"
             delay={0.2}
             translateY={50}
           >
@@ -36,7 +36,7 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
           <TransitionContainer
             key={index}
             className="card"
-            effect="fadeInToDown"
+            effect="fadeInDown"
             delay={0.1 * index}
           >
             <ValuesCard key={index} page={index + 1} {...props} />

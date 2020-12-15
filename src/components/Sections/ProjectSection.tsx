@@ -17,7 +17,7 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
       <header>
         <TransitionContainer
           className="topic"
-          effect="fadeInToDown"
+          effect="fadeInDown"
           translateY={50}
         >
           MY PROJECTS
@@ -25,14 +25,14 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
         <div className="info">
           <TransitionContainer
             className="title"
-            effect="fadeInToDown"
+            effect="fadeInDown"
             delay={0.2}
           >
             <h1>프로젝트 둘러보기</h1>
           </TransitionContainer>
           <TransitionContainer
             className="description"
-            effect="fadeInToUp"
+            effect="fadeInUp"
             delay={0.4}
           >
             <p>새로운 것을 배우고 싶을 때면</p>
