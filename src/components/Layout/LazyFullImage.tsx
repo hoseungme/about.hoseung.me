@@ -8,7 +8,7 @@ export const LazyFullImage: React.FC<{
   src: string;
   alt?: string;
   imageFit?: "contain" | "cover";
-}> = ({ className, src, alt, imageFit = "contain" }) => {
+}> = ({ className, src, alt, imageFit }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
 
   const [isImageLoaded, setIsImageLoaded] = useState(false);
