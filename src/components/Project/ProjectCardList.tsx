@@ -22,7 +22,6 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
           key={index}
           className="card"
           effect="fadeInToUp"
-          intersecting={0.4}
           delay={0.2 * (index % columnSize)}
           onInView={() =>
             GA.trackProjectSectionEvent({

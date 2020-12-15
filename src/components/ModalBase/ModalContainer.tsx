@@ -27,12 +27,7 @@ export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
 
   return (
     <Container onTouchMove={(e) => e.stopPropagation()}>
-      <TransitionContainer
-        className="modal"
-        effect="fadeInToUp"
-        intersecting={0}
-        duration={0.5}
-      >
+      <TransitionContainer className="modal" effect="fadeInToUp" duration={0.5}>
         <div className="header">
           <button onClick={close}>
             <CgClose />
