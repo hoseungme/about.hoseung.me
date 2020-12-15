@@ -8,6 +8,7 @@ import { IProfile } from "../../interfaces/Profile";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
+import { LazyFullImage } from "../Layout/LazyFullImage";
 
 export const ProfileSection: React.FC<IProfile> = ({
   image,
@@ -17,11 +18,9 @@ export const ProfileSection: React.FC<IProfile> = ({
 }) => {
   return (
     <Container>
-      <div className="profile">
-        <TransitionContainer className="image" effect="fadeInDown">
-          <img src={image} alt="Profile" />
-        </TransitionContainer>
-      </div>
+      <TransitionContainer className="image-container" effect="fadeInDown">
+        <LazyFullImage className="image" src={image} alt="profile image" />
+      </TransitionContainer>
       <div className="description">
         <div className="text">
           <TransitionContainer
@@ -67,28 +66,22 @@ const Container = styled.section`
 
   box-sizing: border-box;
 
-  > .profile {
+  > .image-container {
+    width: 300px;
+    height: 300px;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    padding: 20px 40px;
+    margin: 20px 40px;
 
-    box-sizing: border-box;
+    > .image {
+      border-radius: 50%;
 
-    .image {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      box-shadow: 0 0 15px ${Color.Grey};
 
-      > img {
-        width: 300px;
-        height: 300px;
-
-        border-radius: 50%;
-
-        box-shadow: 0 0 15px ${Color.LightGrey};
-      }
+      overflow: hidden;
     }
   }
 
