@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 import { Tag } from "../Tag/Tag";
+import { LazyFullImage } from "../Layout/LazyFullImage";
+
+import { useModal } from "../../contexts/Modal";
 
 import { IProject } from "../../interfaces/Project";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
-
-import { useModal } from "../../contexts/Modal";
 
 export const ProjectCard: React.FC<IProject> = (project) => {
   const modal = useModal();
@@ -18,7 +19,7 @@ export const ProjectCard: React.FC<IProject> = (project) => {
   return (
     <Container onClick={() => modal.open("ProjectDetail", project)}>
       <div className="top">
-        <img src={img} alt="Project" />
+        <LazyFullImage src={img} alt="Project" imageFit="cover" />
         <div className="tags">
           {tags.map((tag, index) => (
             <Tag key={index} tag={tag} />
@@ -69,13 +70,6 @@ const Container = styled.div`
     }
 
     display: flex;
-
-    > img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-    }
 
     > .tags {
       position: absolute;
