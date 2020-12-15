@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { CgClose } from "react-icons/cg";
 
-import { Color } from "../../constants/Color";
-
 import { TransitionContainer } from "../Layout/TransitionContainer";
 
 import { ModalProps } from "../../contexts/Modal";
 
 import { hexToRgb } from "../../helpers/hexToRgb";
+
+import { Color } from "../../constants/Color";
 
 export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
   useEffect(() => {

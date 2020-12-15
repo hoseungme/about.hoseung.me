@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../Layout/TransitionContainer";
+import { LazyFullImage } from "../Layout/LazyFullImage";
 import { ProfileLink } from "../Profile/ProfileLink";
 
 import { IProfile } from "../../interfaces/Profile";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
-import { LazyFullImage } from "../Layout/LazyFullImage";
 
 export const ProfileSection: React.FC<IProfile> = ({
   image,

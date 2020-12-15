@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
+
 import { Color } from "../../constants/Color";
 
 export const LazyFullImage: React.FC<{
