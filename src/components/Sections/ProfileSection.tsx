@@ -18,9 +18,11 @@ export const ProfileSection: React.FC<IProfile> = ({
 }) => {
   return (
     <Container>
-      <TransitionContainer className="image-container" effect="fadeInDown">
-        <LazyFullImage className="image" src={image} alt="profile image" />
-      </TransitionContainer>
+      <div className="profile">
+        <TransitionContainer className="image" effect="fadeInDown">
+          <img src={image} alt="Profile" />
+        </TransitionContainer>
+      </div>
       <div className="description">
         <div className="text">
           <TransitionContainer
@@ -66,22 +68,28 @@ const Container = styled.section`
 
   box-sizing: border-box;
 
-  > .image-container {
-    width: 300px;
-    height: 300px;
-
+  > .profile {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    margin: 20px 40px;
+    padding: 20px 40px;
 
-    > .image {
-      border-radius: 50%;
+    box-sizing: border-box;
 
-      box-shadow: 0 0 15px ${Color.Grey};
+    .image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
 
-      overflow: hidden;
+      > img {
+        width: 300px;
+        height: 300px;
+
+        border-radius: 50%;
+
+        box-shadow: 0 0 15px ${Color.LightGrey};
+      }
     }
   }
 
