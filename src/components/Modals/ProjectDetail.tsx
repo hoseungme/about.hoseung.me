@@ -2,17 +2,16 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
+import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
+
 import { ModalContainer } from "../ModalBase/ModalContainer";
-import { LazyFullImage } from "../Layout/LazyFullImage";
 
 import { ModalProps } from "../../contexts/Modal";
 
 import { GA } from "../../services/ga";
 
 import { IProject } from "../../interfaces/Project";
-
-import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
 
 export const ProjectDetail: React.FC<ModalProps & IProject> = ({
   close,
@@ -41,14 +40,7 @@ export const ProjectDetail: React.FC<ModalProps & IProject> = ({
   return (
     <ModalContainer close={close}>
       <Container ref={ref}>
-        <div className="image-container">
-          <LazyFullImage
-            className="image"
-            src={img}
-            alt="project image"
-            imageFit="contain"
-          />
-        </div>
+        <img className="image" src={img} alt="Project" />
         <div className="divider" />
         <div className="description">{description}</div>
         <div className="divider" />
@@ -106,9 +98,11 @@ const Container = styled.div`
     background-color: ${Color.Grey};
   }
 
-  > .image-container {
+  > .image {
     width: 100%;
     height: 300px;
+
+    object-fit: contain;
   }
 
   > .description {

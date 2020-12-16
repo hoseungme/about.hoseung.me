@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { LazyFullImage } from "../Layout/LazyFullImage";
-
 import { ISkill } from "../../interfaces/Skill";
 
 import { Color } from "../../constants/Color";
@@ -11,8 +9,8 @@ import { Device } from "../../constants/Device";
 export const SkillCard: React.FC<ISkill> = ({ img, name }) => {
   return (
     <Container>
-      <div className="image-container">
-        <LazyFullImage src={img} alt="Skill" imageFit="contain" />
+      <div className="image">
+        <img src={img} alt="Skill" />
       </div>
       <div className="name">{name}</div>
       <div className="background" />
@@ -35,7 +33,7 @@ const Container = styled.div`
     transform: scale(1.1);
   }
 
-  > .image-container {
+  > .image {
     z-index: 1;
 
     width: 100px;
@@ -44,6 +42,13 @@ const Container = styled.div`
     padding: 10px;
 
     box-sizing: border-box;
+
+    > img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
   }
 
   > .name {
