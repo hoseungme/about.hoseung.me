@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../Layout/TransitionContainer";
-import { LazyFullImage } from "../Layout/LazyFullImage";
 import { ProfileLink } from "../Profile/ProfileLink";
 
 import { IProfile } from "../../interfaces/Profile";
@@ -77,7 +76,7 @@ const Container = styled.section`
 
     box-sizing: border-box;
 
-    .image {
+    > .image {
       display: flex;
       justify-content: flex-end;
       align-items: center;
