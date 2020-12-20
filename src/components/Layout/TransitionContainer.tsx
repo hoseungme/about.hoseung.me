@@ -5,14 +5,16 @@ import { useInView } from "react-intersection-observer";
 
 type Effect = "fadeInUp" | "fadeInDown";
 
-export const TransitionContainer: React.FC<PropsWithChildren<{
-  onInView?: () => void;
-  className?: string;
-  effect: Effect;
-  duration?: number;
-  delay?: number;
-  translateY?: number;
-}>> = ({ onInView, children, className, ...options }) => {
+export const TransitionContainer: React.FC<
+  JSX.IntrinsicElements["div"] & {
+    onInView?: () => void;
+    className?: string;
+    effect: Effect;
+    duration?: number;
+    delay?: number;
+    translateY?: number;
+  }
+> = ({ onInView, children, className, ...options }) => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
@@ -25,7 +27,7 @@ export const TransitionContainer: React.FC<PropsWithChildren<{
     <Container
       className={classNames(className, { intersected: inView })}
       ref={ref}
-      {...options}
+      {...(options as any)}
     >
       {children}
     </Container>
