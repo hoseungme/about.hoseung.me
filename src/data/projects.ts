@@ -16,7 +16,7 @@ export const projects: IProject[] = [
     activities: [
       "Youtube data API, Local Storage를 활용한 동영상 정보 저장",
       "react-player를 사용한 유튜브 동영상 컨트롤",
-      "CRA에서 벗어나 바벨, 웹팩, prettier, eslint 등 전체적인 프론트엔드 개발환경을 직접 커스터마이징",
+      "CRA에서 벗어나 Babel, Webpack, Eslint, Prettier 등 전체적인 프론트엔드 개발환경을 직접 커스터마이징",
     ],
     references: [
       {
