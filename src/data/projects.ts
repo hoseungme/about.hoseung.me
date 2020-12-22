@@ -9,7 +9,7 @@ import dsmMarketImage from "../images/project/dsm-market.png";
 export const projects: IProject[] = [
   {
     img: lplImage,
-    title: "듣고싶은 음악을 한눈에. LPL",
+    title: "듣고싶은 음악을 한눈에. 프로젝트 LPL",
     duration: "2020.12 ~ 2020.12",
     description:
       "LPL은 Listing, Playing, Listening에서 유래한 이름으로, 간단한 플레이리스트 웹 사이트입니다. 회사에서 음악을 들으려고 유튜브를 켜는게 눈치가 보여서, 직접 만든 플레이리스트를 사용해보자는 생각으로 시작하게 되었습니다.",
@@ -37,10 +37,10 @@ export const projects: IProject[] = [
   },
   {
     img: resumeImage,
-    title: "나를 소개합니다. Résumé V1",
+    title: "나를 소개합니다. 프로젝트 Résumé",
     duration: "2020.10 ~ 2020.11",
     description:
-      "Résumé V1은 저의 포트폴리오 웹 사이트입니다. 형식적인 이력서 보다는, 부드러운 인터랙션이 포함된 깔끔한 소개 페이지로 스스로를 어필하고 싶어서 시작하게 되었습니다.",
+      "Résumé는 저의 포트폴리오 웹 사이트입니다. 형식적인 이력서 보다는, 부드러운 인터랙션이 포함된 깔끔한 소개 페이지로 스스로를 어필하고 싶어서 시작하게 되었습니다.",
     activities: [
       "다른 레주메 사이트, 회사 소개 페이지, 개인 블로그 등을 참고하여 깔끔한 UI와 부드러운 인터랙션에 대해 학습",
       "Intersection Observer를 적극 활용한 UI 구현",
@@ -56,7 +56,7 @@ export const projects: IProject[] = [
       },
       {
         text: "프론트엔드 코드",
-        link: "https://github.com/HoseungJang/resume-v1",
+        link: "https://github.com/HoseungJang/about.janghoseung.com",
       },
     ],
     tags: ["Front-end"],
