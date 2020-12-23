@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useState,
-  useMemo,
-  useCallback,
-  useContext,
-} from "react";
+import React, { createContext, useState, useCallback, useContext } from "react";
 import * as modals from "../components/Modals";
 
 export type ModalProps = {
@@ -33,12 +27,8 @@ const ModalContext = createContext<ModalContextValues | null>(null);
 export const ModalContextProvider: React.FC = ({ children }) => {
   const [openedModal, setOpenedModal] = useState<Modal | null>(null);
 
-  const contextValues = useMemo(() => {
-    const open: ModalContextValues["open"] = (name, props) => {
-      setOpenedModal({ name, props });
-    };
-
-    return { open };
+  const open: ModalContextValues["open"] = useCallback((name, props) => {
+    setOpenedModal({ name, props });
   }, []);
 
   const close = useCallback(() => {
@@ -46,7 +36,7 @@ export const ModalContextProvider: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <ModalContext.Provider value={contextValues}>
+    <ModalContext.Provider value={{ open }}>
       {children}
       {openedModal && <ModalRenderer close={close} modal={openedModal} />}
     </ModalContext.Provider>
