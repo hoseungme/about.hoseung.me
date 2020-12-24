@@ -106,6 +106,8 @@ const Container = styled.div`
   }
 
   > .description {
+    padding: 0 10px;
+
     font-size: 0.85rem;
   }
 
