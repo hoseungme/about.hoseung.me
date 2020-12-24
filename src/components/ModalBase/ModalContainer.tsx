@@ -6,8 +6,6 @@ import { TransitionContainer } from "../Layout/TransitionContainer";
 
 import { ModalProps } from "../../contexts/Modal";
 
-import { hexToRgb } from "../../helpers/hexToRgb";
-
 import { Color } from "../../constants/Color";
 
 export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
@@ -67,7 +65,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(${hexToRgb(Color.Black)}, 0.5);
+  background-color: ${Color.BlackTransparency50};
 
   > .modal {
     border-radius: 3px;
