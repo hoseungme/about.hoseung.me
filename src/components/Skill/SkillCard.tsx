@@ -68,8 +68,6 @@ const Container = styled.div`
 
     width: 1px;
     height: 1px;
-
-    box-shadow: 0 0 80px 20px ${Color.Mint};
   }
 
   @media (max-width: ${Device.Mobile}px) {
