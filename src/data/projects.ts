@@ -56,7 +56,7 @@ export const projects: IProject[] = [
       },
       {
         text: "프론트엔드 코드",
-        link: "https://github.com/HoseungJang/about.janghoseung.com",
+        link: "https://github.com/hoseung-only/about.janghoseung.com",
       },
     ],
     tags: ["Front-end"],
