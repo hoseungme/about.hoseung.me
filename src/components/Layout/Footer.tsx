@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
       <span>
         ⓒ 2020
         <a
-          href="https://github.com/HoseungJang/about.janghoseung.com"
+          href="https://github.com/hoseung-only/about.janghoseung.com"
           onClick={() => GA.trackFooterEvent({ action: "Name Clicked" })}
         >
           HoseungJang
