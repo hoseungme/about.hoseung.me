@@ -1,10 +1,10 @@
 import { IProject } from "../../interfaces/section/Project";
 
-import lplImage from "../images/project/lpl.png";
-import resumeImage from "../images/project/resume.png";
-import referringImage from "../images/project/referring.png";
-import coronaSolutionImage from "../images/project/corona-solution.png";
-import dsmMarketImage from "../images/project/dsm-market.png";
+import lplImage from "../../images/project/lpl.png";
+import resumeImage from "../../images/project/resume.png";
+import referringImage from "../../images/project/referring.png";
+import coronaSolutionImage from "../../images/project/corona-solution.png";
+import dsmMarketImage from "../../images/project/dsm-market.png";
 
 export const projects: IProject[] = [
   {

@@ -1,6 +1,6 @@
 import { IProfile } from "../../interfaces/section/Profile";
 
-import profileImage from "../images/profile/profile.png";
+import profileImage from "../../images/profile/profile.png";
 
 export const profile: IProfile = {
   image: profileImage,
