@@ -6,13 +6,13 @@ import { GA } from "../../services/ga";
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
-export const Footer: React.FC = () => {
+export const Footer: React.FC<{ link: string }> = ({ link }) => {
   return (
     <Container>
       <span>
         ⓒ 2020
         <a
-          href="https://github.com/hoseung-only/about.janghoseung.com"
+          href={link}
           onClick={() => GA.trackFooterEvent({ action: "Name Clicked" })}
         >
           HoseungJang

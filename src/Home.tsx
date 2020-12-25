@@ -15,6 +15,7 @@ import { profile } from "./data/profile";
 import { values } from "./data/values";
 import { skills } from "./data/skills";
 import { projects } from "./data/projects";
+import { footerLink } from "./data/footerLink";
 
 export const Home: React.FC = () => {
   useEffect(() => GA.trackPageView({ path: "/" }), []);
@@ -28,7 +29,7 @@ export const Home: React.FC = () => {
         <SkillSection skills={skills} />
         <ProjectSection projects={projects} />
       </Main>
-      <Footer />
+      <Footer link={footerLink} />
     </>
   );
 };
