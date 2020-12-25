@@ -10,12 +10,12 @@ import { Footer } from "./components/Layout/Footer";
 
 import { GA } from "./services/ga";
 
-import { headerTabs } from "./data/headerTabs";
-import { profile } from "./data/profile";
-import { values } from "./data/values";
-import { skills } from "./data/skills";
-import { projects } from "./data/projects";
-import { footerLink } from "./data/footerLink";
+import { headerTabs } from "./data/layout/headerTabs";
+import { profile } from "./data/section/profile";
+import { values } from "./data/section/values";
+import { skills } from "./data/section/skills";
+import { projects } from "./data/section/projects";
+import { footerLink } from "./data/layout/footerLink";
 
 export const Home: React.FC = () => {
   useEffect(() => GA.trackPageView({ path: "/" }), []);

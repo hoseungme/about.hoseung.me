@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 import { GA } from "../../services/ga";
 
-import { IHeaderTab } from "../../interfaces/HeaderTab";
+import { IHeaderTab } from "../../interfaces/layout/HeaderTab";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";

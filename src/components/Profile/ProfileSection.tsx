@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { TransitionContainer } from "../Layout/TransitionContainer";
 import { ProfileLink } from "./ProfileLink";
 
-import { IProfile } from "../../interfaces/Profile";
+import { IProfile } from "../../interfaces/section/Profile";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";

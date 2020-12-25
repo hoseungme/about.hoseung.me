@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ISkill } from "../../interfaces/Skill";
+import { ISkill } from "../../interfaces/section/Skill";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";

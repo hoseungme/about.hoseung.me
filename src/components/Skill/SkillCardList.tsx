@@ -6,7 +6,7 @@ import { SkillCard } from "./SkillCard";
 
 import { useValueByMedia } from "../../hooks/useValueByMedia";
 
-import { ISkill } from "../../interfaces/Skill";
+import { ISkill } from "../../interfaces/section/Skill";
 
 import { Device } from "../../constants/Device";
 

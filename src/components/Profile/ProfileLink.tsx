@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { GA } from "../../services/ga";
 
-import { IProfile } from "../../interfaces/Profile";
+import { IProfile } from "../../interfaces/section/Profile";
 
 import { Color } from "../../constants/Color";
 

@@ -1,4 +1,4 @@
-import { IProfile } from "../interfaces/Profile";
+import { IProfile } from "../../interfaces/section/Profile";
 
 import profileImage from "../images/profile/profile.png";
 

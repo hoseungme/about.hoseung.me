@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { IValues } from "../../interfaces/Values";
+import { IValues } from "../../interfaces/section/Values";
 
 import { Color } from "../../constants/Color";
 

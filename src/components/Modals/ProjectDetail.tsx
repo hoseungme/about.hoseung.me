@@ -11,7 +11,7 @@ import { ModalProps } from "../../contexts/Modal";
 
 import { GA } from "../../services/ga";
 
-import { IProject } from "../../interfaces/Project";
+import { IProject } from "../../interfaces/section/Project";
 
 export const ProjectDetail: React.FC<ModalProps & IProject> = ({
   close,

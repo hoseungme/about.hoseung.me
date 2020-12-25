@@ -8,7 +8,7 @@ import { useValueByMedia } from "../../hooks/useValueByMedia";
 
 import { GA } from "../../services/ga";
 
-import { IProject } from "../../interfaces/Project";
+import { IProject } from "../../interfaces/section/Project";
 
 export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
   projects,

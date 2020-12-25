@@ -1,4 +1,4 @@
-import { IValues } from "../interfaces/Values";
+import { IValues } from "../../interfaces/section/Values";
 
 export const values: IValues[] = [
   {

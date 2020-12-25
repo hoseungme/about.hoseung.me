@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { TransitionContainer } from "../Layout/TransitionContainer";
 import { SkillCardList } from "./SkillCardList";
 
-import { ISkill } from "../../interfaces/Skill";
+import { ISkill } from "../../interfaces/section/Skill";
 
 import { Color } from "../../constants/Color";
 

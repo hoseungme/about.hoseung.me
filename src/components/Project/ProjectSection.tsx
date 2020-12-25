@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { TransitionContainer } from "../Layout/TransitionContainer";
 import { ProjectCardList } from "./ProjectCardList";
 
-import { IProject } from "../../interfaces/Project";
+import { IProject } from "../../interfaces/section/Project";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";

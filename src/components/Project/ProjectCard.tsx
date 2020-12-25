@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Tag } from "../Tag/Tag";
 
-import { IProject } from "../../interfaces/Project";
+import { IProject } from "../../interfaces/section/Project";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";

@@ -1,4 +1,4 @@
-import { IProject } from "../interfaces/Project";
+import { IProject } from "../../interfaces/section/Project";
 
 import lplImage from "../images/project/lpl.png";
 import resumeImage from "../images/project/resume.png";

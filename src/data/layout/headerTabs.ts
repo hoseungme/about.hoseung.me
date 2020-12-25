@@ -2,7 +2,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { AiFillMediumSquare } from "react-icons/ai";
 import { FaVimeo } from "react-icons/fa";
 
-import { IHeaderTab } from "../interfaces/HeaderTab";
+import { IHeaderTab } from "../../interfaces/layout/HeaderTab";
 
 export const headerTabs: IHeaderTab[] = [
   {

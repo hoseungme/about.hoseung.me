@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { TransitionContainer } from "../Layout/TransitionContainer";
 import { ValuesCard } from "./ValuesCard";
 
-import { IValues } from "../../interfaces/Values";
+import { IValues } from "../../interfaces/section/Values";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
