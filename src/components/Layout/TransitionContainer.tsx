@@ -1,7 +1,7 @@
-import React, { PropsWithChildren, useEffect } from "react";
+import React, { useEffect } from "react";
 import styled, { css } from "styled-components";
 import classNames from "classnames";
-import { useInView } from "react-intersection-observer";
+import { useInView, IntersectionOptions } from "react-intersection-observer";
 
 type Effect = "fadeInUp" | "fadeInDown";
 
@@ -13,9 +13,19 @@ export const TransitionContainer: React.FC<
     duration?: number;
     delay?: number;
     translateY?: number;
+    intersectionOptions?: Omit<IntersectionOptions, "triggerOnce">;
   }
-> = ({ onInView, children, className, ...options }) => {
-  const [ref, inView] = useInView({ triggerOnce: true });
+> = ({
+  onInView,
+  children,
+  className,
+  intersectionOptions = {},
+  ...options
+}) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    ...intersectionOptions,
+  });
 
   useEffect(() => {
     if (inView) {
