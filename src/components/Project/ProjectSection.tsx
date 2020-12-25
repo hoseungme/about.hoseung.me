@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../Layout/TransitionContainer";
-import { ProjectCardList } from "../Project/ProjectCardList";
+import { ProjectCardList } from "./ProjectCardList";
 
 import { IProject } from "../../interfaces/Project";
 

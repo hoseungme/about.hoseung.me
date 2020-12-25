@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 
 import { Header } from "./components/Layout/Header";
 import { Main } from "./components/Layout/Main";
-import { ProfileSection } from "./components/Sections/ProfileSection";
-import { ValuesSection } from "./components/Sections/ValuesSection";
-import { SkillSection } from "./components/Sections/SkillSection";
-import { ProjectSection } from "./components/Sections/ProjectSection";
+import { ProfileSection } from "./components/Profile/ProfileSection";
+import { ValuesSection } from "./components/Values/ValuesSection";
+import { SkillSection } from "./components/Skill/SkillSection";
+import { ProjectSection } from "./components/Project/ProjectSection";
 import { Footer } from "./components/Layout/Footer";
 
 import { GA } from "./services/ga";

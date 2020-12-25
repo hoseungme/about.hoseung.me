@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../Layout/TransitionContainer";
-import { ProfileLink } from "../Profile/ProfileLink";
+import { ProfileLink } from "./ProfileLink";
 
 import { IProfile } from "../../interfaces/Profile";
 

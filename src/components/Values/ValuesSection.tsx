@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../Layout/TransitionContainer";
-import { ValuesCard } from "../Values/ValuesCard";
+import { ValuesCard } from "./ValuesCard";
 
 import { IValues } from "../../interfaces/Values";
 
