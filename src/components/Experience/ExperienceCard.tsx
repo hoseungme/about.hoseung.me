@@ -4,19 +4,25 @@ import styled from "styled-components";
 import { IExperience } from "../../interfaces/section/Experience";
 
 import { Color } from "../../constants/Color";
+import { Device } from "../../constants/Device";
 
-export const ExperienceCard: React.FC<IExperience> = ({
-  info,
-  duration,
-  detail,
-}) => {
+export const ExperienceCard: React.FC<
+  IExperience & { position: "left" | "right" }
+> = ({ info, duration, detail, position }) => {
   return (
-    <Container>
+    <Container
+      style={{ alignItems: position === "left" ? "flex-end" : "flex-start" }}
+    >
       <div className="duration">{duration}</div>
       <a className="name" href={info.link}>
         {info.name}
       </a>
-      <div className="detail">{detail}</div>
+      <div
+        className="detail"
+        style={{ textAlign: position === "left" ? "right" : "left" }}
+      >
+        {detail}
+      </div>
     </Container>
   );
 };
@@ -26,7 +32,6 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 
   > .duration {
     margin-bottom: 3px;
@@ -44,6 +49,7 @@ const Container = styled.div`
     font-weight: 500;
     color: ${Color.Black};
     text-decoration: none;
+    word-break: keep-all;
 
     transition: color 0.1s;
 
@@ -59,6 +65,18 @@ const Container = styled.div`
     font-size: 1rem;
     line-height: 30px;
     color: ${Color.DarkGrey};
-    text-align: right;
+  }
+
+  @media (max-width: ${Device.Tablet}px) {
+    > .detail {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: ${Device.Mobile}px) {
+    > .detail {
+      width: 250px;
+      line-height: 25px;
+    }
   }
 `;
