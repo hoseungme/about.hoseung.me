@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
-import { experiences } from "../../data/section/experiences";
 
 import { IExperience } from "../../interfaces/section/Experience";
 import { ExperienceCardList } from "./ExperienceCardList";
 
+import { Device } from "../../constants/Device";
+
 export const ExperienceSection: React.FC<{
   experiences: IExperience[];
-}> = () => {
+}> = ({ experiences }) => {
   return (
     <Container>
       <ExperienceCardList experiences={experiences} />
