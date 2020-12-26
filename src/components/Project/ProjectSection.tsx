@@ -57,8 +57,6 @@ const Container = styled.section`
 
   box-sizing: border-box;
 
-  background-color: ${Color.WhiteGrey};
-
   > header {
     display: flex;
     flex-direction: column;
