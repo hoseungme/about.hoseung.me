@@ -124,8 +124,12 @@ const Container = styled.div`
   }
 
   > .references {
+    display: flex;
+    flex-flow: row wrap;
+
     > a {
       padding: 10px 8px;
+      margin-bottom: 4px;
 
       box-sizing: border-box;
 
@@ -158,6 +162,12 @@ const Container = styled.div`
     > .image {
       height: 200px;
     }
+
+    > .references {
+      > a {
+        padding: 8px 6px;
+      }
+    }
   }
 
   @media (max-width: ${Device.Mobile}px) {
@@ -166,6 +176,12 @@ const Container = styled.div`
 
     > .image {
       height: 100px;
+    }
+
+    > .references {
+      > a {
+        padding: 5px 4px;
+      }
     }
   }
 `;
