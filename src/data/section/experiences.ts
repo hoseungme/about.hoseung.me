@@ -3,7 +3,7 @@ import { IExperience } from "../../interfaces/section/Experience";
 export const experiences: IExperience[] = [
   {
     info: {
-      name: "스마일벤처스",
+      name: "CATCH FASHION",
       link: "https://www.catchfashion.com/",
     },
     duration: "2020.08",
