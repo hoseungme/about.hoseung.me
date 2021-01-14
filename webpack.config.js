@@ -23,6 +23,7 @@ module.exports = (env) => {
     output: {
       filename: "bundle.js",
       path: path.resolve("./build"),
+      publicPath: "/"
     },
     resolve: {
       fallback: {
@@ -43,7 +44,7 @@ module.exports = (env) => {
               loader: "url-loader",
               options: {
                 limit: 10000,
-                name: 'static/[name].[hash:8].[ext]',
+                name: 'static/[name].[ext]',
               },
             },
           ],
