@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
 
-import { Home } from "./Home";
+import { Home } from "./pages/Home";
 
 import { ModalContextProvider } from "./contexts/Modal";
 
