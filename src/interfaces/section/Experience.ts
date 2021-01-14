@@ -4,5 +4,5 @@ export interface IExperience {
     link: string;
   };
   duration: string;
-  detail: string;
+  summary: string;
 }

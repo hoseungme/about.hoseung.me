@@ -8,7 +8,7 @@ import { Device } from "../../constants/Device";
 
 export const ExperienceCard: React.FC<
   IExperience & { position: "left" | "right" }
-> = ({ info, duration, detail, position }) => {
+> = ({ info, duration, summary, position }) => {
   return (
     <Container
       style={{ alignItems: position === "left" ? "flex-end" : "flex-start" }}
@@ -18,10 +18,10 @@ export const ExperienceCard: React.FC<
         {info.name}
       </a>
       <div
-        className="detail"
+        className="summary"
         style={{ textAlign: position === "left" ? "right" : "left" }}
       >
-        {detail}
+        {summary}
       </div>
     </Container>
   );
@@ -59,7 +59,7 @@ const Container = styled.div`
     }
   }
 
-  > .detail {
+  > .summary {
     width: 350px;
 
     font-size: 1rem;
@@ -68,13 +68,13 @@ const Container = styled.div`
   }
 
   @media (max-width: ${Device.Tablet}px) {
-    > .detail {
+    > .summary {
       width: 300px;
     }
   }
 
   @media (max-width: ${Device.Mobile}px) {
-    > .detail {
+    > .summary {
       width: 250px;
       line-height: 25px;
     }
