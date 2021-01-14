@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { Home } from "./pages/Home";
+import { ExperienceDetail } from "./pages/ExperienceDetail";
 
 import { ModalContextProvider } from "./contexts/Modal";
 
@@ -37,7 +39,12 @@ const GlobalStyles = createGlobalStyle`
 ReactDOM.render(
   <ModalContextProvider>
     <GlobalStyles />
-    <Home />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/experience/:name" component={ExperienceDetail} />
+      </Switch>
+    </BrowserRouter>
   </ModalContextProvider>,
   document.getElementById("root")
 );
