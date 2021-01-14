@@ -52,6 +52,10 @@ module.exports = (env) => {
           test: /\.(ts|tsx)$/,
           use: ["babel-loader", "ts-loader"],
         },
+        {
+          test: /\.md$/,
+          use: "raw-loader",
+        },
       ],
     },
     plugins: [
