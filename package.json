@@ -11,6 +11,7 @@
     "react-ga": "^3.2.1",
     "react-icons": "^3.11.0",
     "react-intersection-observer": "^8.29.1",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.0",
     "use-media": "^1.4.0"
   },
@@ -48,6 +49,7 @@
     "@types/node": "^12.12.67",
     "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
