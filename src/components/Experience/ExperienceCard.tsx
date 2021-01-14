@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { BiLinkExternal } from "react-icons/bi";
 
 import { IExperience } from "../../interfaces/section/Experience";
 
@@ -8,7 +10,7 @@ import { Device } from "../../constants/Device";
 
 export const ExperienceCard: React.FC<
   IExperience & { position: "left" | "right" }
-> = ({ info, duration, summary, position }) => {
+> = ({ info, duration, summary, detailEndpoint, position }) => {
   return (
     <Container
       style={{ alignItems: position === "left" ? "flex-end" : "flex-start" }}
@@ -23,6 +25,12 @@ export const ExperienceCard: React.FC<
       >
         {summary}
       </div>
+      {detailEndpoint && (
+        <Link className="link" to={`/experience${detailEndpoint}`}>
+          자세히보기
+          <BiLinkExternal />
+        </Link>
+      )}
     </Container>
   );
 };
@@ -65,6 +73,23 @@ const Container = styled.div`
     font-size: 1rem;
     line-height: 30px;
     color: ${Color.DarkGrey};
+  }
+
+  > .link {
+    display: flex;
+    align-items: center;
+
+    margin-top: 4px;
+
+    font-size: 1.1rem;
+    color: ${Color.Blue};
+    text-decoration: none;
+
+    transition: color 0.1s;
+
+    &:hover {
+      color: ${Color.BlueHover};
+    }
   }
 
   @media (max-width: ${Device.Tablet}px) {
