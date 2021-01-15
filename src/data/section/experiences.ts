@@ -1,5 +1,7 @@
 import { IExperience } from "../../interfaces/section/Experience";
 
+import catchFashionDetail from "../markdown/catch-fashion.md";
+
 export const experiences: IExperience[] = [
   {
     info: {
@@ -9,7 +11,7 @@ export const experiences: IExperience[] = [
     duration: "2020.08",
     summary:
       "명품 이커머스 캐치패션과 어드민 페이지 개발을 담당하고 있습니다. React를 사용한 프론트엔드, AWS Lambda를 사용한 MSA 기반 백엔드를 개발하고 있습니다.",
-    detailEndpoint: "/catch-fashion",
+    detail: catchFashionDetail,
   },
   {
     info: {
