@@ -42,7 +42,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/experience/:name" component={ExperienceDetail} />
+        <Route exact path="/experience/:title" component={ExperienceDetail} />
       </Switch>
     </BrowserRouter>
   </ModalContextProvider>,
