@@ -5,5 +5,5 @@ export interface IExperience {
   };
   duration: string;
   summary: string;
-  detailEndpoint?: string;
+  detail?: string;
 }
