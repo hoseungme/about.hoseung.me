@@ -10,14 +10,14 @@ import { Device } from "../../constants/Device";
 
 export const ExperienceCard: React.FC<
   IExperience & { position: "left" | "right" }
-> = ({ info, duration, summary, detailEndpoint, position }) => {
+> = ({ info, duration, summary, detail, position }) => {
   return (
     <Container
       style={{ alignItems: position === "left" ? "flex-end" : "flex-start" }}
     >
       <div className="duration">{duration}</div>
       <a className="name" href={info.link}>
-        {info.name}
+        {info.title}
       </a>
       <div
         className="summary"
@@ -25,8 +25,16 @@ export const ExperienceCard: React.FC<
       >
         {summary}
       </div>
-      {detailEndpoint && (
-        <Link className="link" to={`/experience${detailEndpoint}`}>
+      {detail && (
+        <Link
+          className="link"
+          to={{
+            pathname: `/experience/${info.title}`,
+            state: {
+              content: detail,
+            },
+          }}
+        >
           자세히보기
           <BiLinkExternal />
         </Link>
