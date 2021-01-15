@@ -30,9 +30,20 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
 
-  padding: 0 20%;
+  padding: 0 25%;
 
   box-sizing: border-box;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 20px 0 10px;
+  }
 
   a {
     font-weight: 500;
@@ -40,11 +51,30 @@ const Container = styled.main`
     text-decoration: none;
   }
 
+  ul {
+    margin: 0;
+    padding: 0 0 0 40px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+  }
+
   @media (max-width: ${Device.Tablet}px) {
-    padding: 0 10%;
+    padding: 0 20%;
+
+    ul {
+      padding: 0 0 0 30px;
+    }
   }
 
   @media (max-width: ${Device.Mobile}px) {
     padding: 0 2%;
+
+    ul {
+      padding: 0 0 0 20px;
+    }
   }
 `;
