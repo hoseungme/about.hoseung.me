@@ -5,7 +5,7 @@ import catchFashionDetail from "../markdown/catch-fashion.md";
 export const experiences: IExperience[] = [
   {
     info: {
-      name: "CATCH FASHION",
+      title: "CATCH FASHION",
       link: "https://www.catchfashion.com/",
     },
     duration: "2020.08",
@@ -15,7 +15,7 @@ export const experiences: IExperience[] = [
   },
   {
     info: {
-      name: "대덕 소프트웨어 마이스터고등학교",
+      title: "대덕 소프트웨어 마이스터고등학교",
       link: "http://dsmhs.djsch.kr/main.do",
     },
     duration: "2018.03",

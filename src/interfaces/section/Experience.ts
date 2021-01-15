@@ -1,6 +1,6 @@
 export interface IExperience {
   info: {
-    name: string;
+    title: string;
     link: string;
   };
   duration: string;
