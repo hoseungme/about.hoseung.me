@@ -10,15 +10,13 @@ import { Device } from "../../constants/Device";
 
 export const ExperienceCard: React.FC<
   IExperience & { position: "left" | "right" }
-> = ({ info, duration, summary, detail, position }) => {
+> = ({ title, duration, summary, detail, position }) => {
   return (
     <Container
       style={{ alignItems: position === "left" ? "flex-end" : "flex-start" }}
     >
       <div className="duration">{duration}</div>
-      <a className="name" href={info.link}>
-        {info.title}
-      </a>
+      <div className="title">{title}</div>
       <div
         className="summary"
         style={{ textAlign: position === "left" ? "right" : "left" }}
@@ -29,7 +27,7 @@ export const ExperienceCard: React.FC<
         <Link
           className="link"
           to={{
-            pathname: `/experience/${info.title}`,
+            pathname: `/experience/${title}`,
             state: {
               content: detail,
             },
@@ -56,7 +54,7 @@ const Container = styled.div`
     color: ${Color.DarkMint};
   }
 
-  > .name {
+  > .title {
     height: fit-content;
 
     margin-bottom: 8px;
@@ -66,13 +64,6 @@ const Container = styled.div`
     color: ${Color.Black};
     text-decoration: none;
     word-break: keep-all;
-
-    transition: color 0.1s;
-
-    &:hover,
-    &:active {
-      color: ${Color.BlackTransparency50};
-    }
   }
 
   > .summary {
