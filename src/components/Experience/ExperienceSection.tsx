@@ -6,6 +6,7 @@ import { ExperienceCardList } from "./ExperienceCardList";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
+import { TransitionContainer } from "../Layout/TransitionContainer";
 
 export const ExperienceSection: React.FC<{
   experiences: IExperience[];
@@ -13,8 +14,25 @@ export const ExperienceSection: React.FC<{
   return (
     <Container>
       <div className="summary">
-        <div className="topic">EXPERIENCE</div>
-        <div className="title">저는 이런 경험을 쌓아왔습니다.</div>
+        <TransitionContainer
+          className="topic"
+          effect="fadeInDown"
+          translateY={50}
+          duration={0.2}
+          intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
+        >
+          EXPERIENCE
+        </TransitionContainer>
+        <TransitionContainer
+          className="title"
+          effect="fadeInDown"
+          delay={0.2}
+          translateY={50}
+          duration={0.2}
+          intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
+        >
+          저는 이런 경험을 쌓아왔습니다.
+        </TransitionContainer>
       </div>
       <ExperienceCardList experiences={experiences} />
     </Container>
