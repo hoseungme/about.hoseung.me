@@ -58,7 +58,7 @@ const Container = styled.section`
     > .topic {
       width: fit-content;
 
-      margin-bottom: 10px;
+      margin-bottom: 20px;
 
       font-weight: 700;
       color: ${Color.DarkMint};
