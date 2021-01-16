@@ -30,7 +30,7 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
 
-  padding: 0 25%;
+  padding: 0 25% 20px;
 
   box-sizing: border-box;
 
@@ -63,7 +63,7 @@ const Container = styled.main`
   }
 
   @media (max-width: ${Device.Tablet}px) {
-    padding: 0 20%;
+    padding: 0 20% 20px;
 
     ul {
       padding: 0 0 0 30px;
@@ -71,7 +71,7 @@ const Container = styled.main`
   }
 
   @media (max-width: ${Device.Mobile}px) {
-    padding: 0 2%;
+    padding: 0 2% 20px;
 
     ul {
       padding: 0 0 0 20px;
