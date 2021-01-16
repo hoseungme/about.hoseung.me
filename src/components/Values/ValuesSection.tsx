@@ -16,7 +16,9 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
         <TransitionContainer
           className="topic"
           effect="fadeInDown"
+          duration={0.2}
           translateY={50}
+          intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
         >
           WHO AM I
         </TransitionContainer>
@@ -25,7 +27,9 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
             className="title"
             effect="fadeInDown"
             delay={0.2}
+            duration={0.2}
             translateY={50}
+            intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
             저는 이런 사람입니다.
           </TransitionContainer>
@@ -38,6 +42,8 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
             className="card"
             effect="fadeInDown"
             delay={0.1 * index}
+            duration={0.5}
+            intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
             <ValuesCard key={index} page={index + 1} {...props} />
           </TransitionContainer>

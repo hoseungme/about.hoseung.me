@@ -19,6 +19,8 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
           className="topic"
           effect="fadeInDown"
           translateY={50}
+          duration={0.2}
+          intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
         >
           MY PROJECTS
         </TransitionContainer>
@@ -27,6 +29,8 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
             className="title"
             effect="fadeInDown"
             delay={0.2}
+            duration={0.2}
+            intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
             <h1>프로젝트 둘러보기</h1>
           </TransitionContainer>
@@ -34,6 +38,8 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
             className="description"
             effect="fadeInUp"
             delay={0.4}
+            duration={0.2}
+            intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
             <p>새로운 것을 배우고 싶을 때면</p>
             <p>서브 프로젝트를 진행합니다.</p>

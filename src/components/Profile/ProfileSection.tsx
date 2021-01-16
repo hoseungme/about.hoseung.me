@@ -28,6 +28,7 @@ export const ProfileSection: React.FC<IProfile> = ({
             className="topic"
             effect="fadeInUp"
             delay={0.2}
+            duration={0.2}
             translateY={50}
           >
             WELCOME
@@ -39,6 +40,7 @@ export const ProfileSection: React.FC<IProfile> = ({
             className="comment"
             effect="fadeInUp"
             delay={0.6}
+            duration={0.2}
           >
             {comment}
           </TransitionContainer>
@@ -47,6 +49,7 @@ export const ProfileSection: React.FC<IProfile> = ({
           className="links"
           effect="fadeInUp"
           delay={0.8}
+          duration={0.2}
           translateY={40}
         >
           {links.map((props, index) => (
