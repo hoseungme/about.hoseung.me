@@ -49,6 +49,12 @@ const Container = styled.main`
     font-weight: 500;
     color: ${Color.DarkMint};
     text-decoration: none;
+
+    transition: color 0.1s;
+
+    &:hover {
+      color: ${Color.Mint};
+    }
   }
 
   ul {
