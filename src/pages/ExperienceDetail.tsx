@@ -62,6 +62,27 @@ const Container = styled.main`
     object-fit: contain;
   }
 
+  pre {
+    padding: 10px 10px;
+
+    box-sizing: border-box;
+
+    background-color: ${Color.LightGrey};
+
+    overflow-x: scroll;
+  }
+
+  hr {
+    width: 100%;
+    height: 3px;
+
+    margin-top: 30px;
+
+    border: 0;
+
+    background-color: ${Color.LightGrey};
+  }
+
   @media (max-width: ${Device.Tablet}px) {
     padding: 0 20% 20px;
 
