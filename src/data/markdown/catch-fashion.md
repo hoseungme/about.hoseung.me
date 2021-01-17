@@ -1,5 +1,3 @@
-![](/static/catch-fashion-intro.png)
-
 # CATCH FASHION
 ### 포지션
 - 프론트엔드 개발자
