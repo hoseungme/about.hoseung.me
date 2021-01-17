@@ -42,7 +42,7 @@ const Container = styled.main`
   }
 
   p {
-    margin: 20px 0 10px;
+    margin: 20px 0;
   }
 
   a {
@@ -95,6 +95,10 @@ const Container = styled.main`
     ul {
       padding: 0 0 0 30px;
     }
+
+    p {
+      margin: 15px 0;
+    }
   }
 
   @media (max-width: ${Device.Mobile}px) {
@@ -102,6 +106,10 @@ const Container = styled.main`
 
     ul {
       padding: 0 0 0 20px;
+    }
+
+    p {
+      margin: 10px 0;
     }
   }
 `;
