@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
+import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
 import { experienceDetailMap } from "../data/section/experiences";
@@ -18,7 +19,13 @@ export const ExperienceDetail: React.FC = () => {
 
   return (
     <Container>
-      <ReactMarkdown>{experienceDetailMap.get(title)!}</ReactMarkdown>
+      <Link className="back-button" to="/">
+        <BiArrowBack />
+        메인으로 돌아가기
+      </Link>
+      <div className="content">
+        <ReactMarkdown>{experienceDetailMap.get(title)!}</ReactMarkdown>
+      </div>
     </Container>
   );
 };
@@ -29,84 +36,107 @@ const Container = styled.main`
 
   padding: 0 25% 20px;
 
-  box-sizing: border-box;
+  > .back-button {
+    display: flex;
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin-bottom: 0;
-  }
+    margin-top: 20px;
 
-  p {
-    margin: 20px 0;
-  }
-
-  a {
+    font-size: 1.3rem;
     font-weight: 500;
-    color: ${Color.DarkMint};
+    color: ${Color.Blue};
     text-decoration: none;
 
     transition: color 0.1s;
 
     &:hover {
-      color: ${Color.Mint};
+      color: ${Color.BlueHover};
     }
   }
 
-  ul {
-    margin: 0;
-    padding: 0 0 0 40px;
-  }
-
-  img {
-    max-width: 100%;
-    max-height: 450px;
-    object-fit: contain;
-  }
-
-  pre {
-    padding: 10px 10px;
-
+  > .content {
     box-sizing: border-box;
 
-    background-color: ${Color.LightGrey};
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 0;
+    }
 
-    overflow-x: scroll;
-  }
+    p {
+      margin: 20px 0;
+    }
 
-  hr {
-    width: 100%;
-    height: 3px;
+    a {
+      font-weight: 500;
+      color: ${Color.DarkMint};
+      text-decoration: none;
 
-    margin-top: 30px;
+      transition: color 0.1s;
 
-    border: 0;
+      &:hover {
+        color: ${Color.Mint};
+      }
+    }
 
-    background-color: ${Color.LightGrey};
+    ul {
+      margin: 0;
+      padding: 0 0 0 40px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 450px;
+      object-fit: contain;
+    }
+
+    pre {
+      padding: 10px 10px;
+
+      box-sizing: border-box;
+
+      background-color: ${Color.LightGrey};
+
+      overflow-x: scroll;
+    }
+
+    hr {
+      width: 100%;
+      height: 3px;
+
+      margin-top: 30px;
+
+      border: 0;
+
+      background-color: ${Color.LightGrey};
+    }
   }
 
   @media (max-width: ${Device.Tablet}px) {
     padding: 0 20% 20px;
 
-    ul {
-      padding: 0 0 0 30px;
-    }
+    > .content {
+      ul {
+        padding: 0 0 0 30px;
+      }
 
-    p {
-      margin: 15px 0;
+      p {
+        margin: 15px 0;
+      }
     }
   }
 
   @media (max-width: ${Device.Mobile}px) {
     padding: 0 2% 20px;
 
-    ul {
-      padding: 0 0 0 20px;
-    }
+    > .content {
+      ul {
+        padding: 0 0 0 20px;
+      }
 
-    p {
-      margin: 10px 0;
+      p {
+        margin: 10px 0;
+      }
     }
   }
 `;
