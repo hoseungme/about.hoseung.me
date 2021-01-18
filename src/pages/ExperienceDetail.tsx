@@ -1,27 +1,24 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { RouteComponentProps } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+
+import { experienceDetailMap } from "../data/section/experiences";
 
 import { Color } from "../constants/Color";
 import { Device } from "../constants/Device";
 
-type LocationState = {
-  content: string;
-};
-
-export const ExperienceDetail: React.FC<RouteComponentProps> = ({
-  location,
-}) => {
-  const { content } = location.state as LocationState;
+export const ExperienceDetail: React.FC = () => {
+  const { title } = useParams<{ title: string }>();
 
   useEffect(() => {
+    // prevent scrolling down to the bottom when markdown rendered
     window.scrollTo({ top: 0 });
   }, []);
 
   return (
     <Container>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown>{experienceDetailMap.get(title)!}</ReactMarkdown>
     </Container>
   );
 };

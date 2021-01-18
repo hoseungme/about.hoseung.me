@@ -24,15 +24,7 @@ export const ExperienceCard: React.FC<
         {summary}
       </div>
       {detail && (
-        <Link
-          className="link"
-          to={{
-            pathname: `/experience/${title}`,
-            state: {
-              content: detail,
-            },
-          }}
-        >
+        <Link className="link" to={`/experience/${title}`}>
           자세히보기
           <BiLinkExternal />
         </Link>

@@ -17,3 +17,7 @@ export const experiences: IExperience[] = [
       "여러 프로젝트를 진행하며 개발 / 유지보수에 대해 공부하고, 협업에 대해 배웠습니다. 백엔드 개발을 중심적으로 공부하였습니다.",
   },
 ];
+
+export const experienceDetailMap = new Map(
+  experiences.filter((e) => e.detail).map((e) => [e.title, e.detail])
+);
