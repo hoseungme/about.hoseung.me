@@ -20,7 +20,7 @@ import { projects } from "../data/section/projects";
 import { footerLink } from "../data/layout/footerLink";
 
 export const Home: React.FC = () => {
-  useEffect(() => GA.trackPageView({ path: "/" }), []);
+  useEffect(() => GA.trackPageView({ path: window.location.pathname }), []);
 
   return (
     <>
