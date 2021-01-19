@@ -29,6 +29,11 @@ interface TrackFooterEventParams extends Omit<TrackEventParams, "category"> {
   action: "Name Clicked";
 }
 
+interface TrackExperienceDetailEventParams
+  extends Omit<TrackEventParams, "category"> {
+  action: "Scrolled" | "All Content Viewed";
+}
+
 class GAService {
   private env: "development" | "production" | "test";
 
@@ -82,6 +87,12 @@ class GAService {
 
   public trackFooterEvent(params: TrackFooterEventParams) {
     this.trackEvent({ category: "Footer", ...params });
+  }
+
+  public trackExperienceDetailEventParams(
+    params: TrackExperienceDetailEventParams
+  ) {
+    this.trackEvent({ category: "ExperienceDetail", ...params });
   }
 }
 
