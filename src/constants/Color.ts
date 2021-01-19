@@ -12,5 +12,5 @@ export const Color = {
   LightMint: "#00E3C0",
   BlackTransparency50: "rgba(0, 0, 0, 0.5)",
   Blue: "#58ACFA",
-  BlueHover: "#0080FF",
+  BlueHover: "#81BEF7",
 };
