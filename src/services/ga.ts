@@ -50,7 +50,7 @@ class GAService {
 
   public trackPageView({ path }: TrackPageViewParams) {
     if (!this.isProduction) {
-      console.log("Page Viewed");
+      console.log(`Page Viewed: ${path}`);
       return;
     }
 
