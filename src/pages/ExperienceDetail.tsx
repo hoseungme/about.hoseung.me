@@ -15,7 +15,6 @@ export const ExperienceDetail: React.FC = () => {
   const { title } = useParams<{ title: string }>();
 
   useEffect(() => {
-    // prevent scrolling down to the bottom when markdown rendered
     window.scrollTo({ top: 0 });
     GA.trackPageView({ path: window.location.pathname });
   }, []);
