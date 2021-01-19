@@ -4,6 +4,8 @@ import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
+import { GA } from "../services/ga";
+
 import { experienceDetailMap } from "../data/section/experiences";
 
 import { Color } from "../constants/Color";
@@ -15,6 +17,7 @@ export const ExperienceDetail: React.FC = () => {
   useEffect(() => {
     // prevent scrolling down to the bottom when markdown rendered
     window.scrollTo({ top: 0 });
+    GA.trackPageView({ path: window.location.pathname });
   }, []);
 
   return (
