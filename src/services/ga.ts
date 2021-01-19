@@ -49,12 +49,14 @@ class GAService {
   }
 
   public trackPageView({ path }: TrackPageViewParams) {
+    const decodedPath = decodeURIComponent(path);
+
     if (!this.isProduction) {
-      console.log(`Page Viewed: ${path}`);
+      console.log(`Page Viewed: ${decodedPath}`);
       return;
     }
 
-    ReactGA.pageview(path);
+    ReactGA.pageview(decodedPath);
   }
 
   private trackEvent(params: TrackEventParams) {
