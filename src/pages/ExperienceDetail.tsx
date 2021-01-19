@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 import ReactMarkdown from "react-markdown";
 
 import { GA } from "../services/ga";
@@ -14,10 +15,18 @@ import { Device } from "../constants/Device";
 export const ExperienceDetail: React.FC = () => {
   const { title } = useParams<{ title: string }>();
 
+  const [bottomRef, bottomInView] = useInView({ triggerOnce: true });
+
   useEffect(() => {
     window.scrollTo({ top: 0 });
     GA.trackPageView({ path: window.location.pathname });
   }, []);
+
+  useEffect(() => {
+    if (bottomInView) {
+      GA.trackExperienceDetailEventParams({ action: "All Content Viewed" });
+    }
+  }, [bottomInView]);
 
   return (
     <Container>
@@ -28,6 +37,7 @@ export const ExperienceDetail: React.FC = () => {
       <div className="content">
         <ReactMarkdown>{experienceDetailMap.get(title)!}</ReactMarkdown>
       </div>
+      <div ref={bottomRef} />
     </Container>
   );
 };
