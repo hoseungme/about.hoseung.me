@@ -5,6 +5,8 @@ import { useParams, Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import ReactMarkdown from "react-markdown";
 
+import { CodeBlock } from "../components/MarkdownRenderers/CodeBlock";
+
 import { GA } from "../services/ga";
 
 import { experienceDetailMap } from "../data/section/experiences";
@@ -35,7 +37,9 @@ export const ExperienceDetail: React.FC = () => {
         메인으로 돌아가기
       </Link>
       <div className="content">
-        <ReactMarkdown>{experienceDetailMap.get(title)!}</ReactMarkdown>
+        <ReactMarkdown renderers={{ code: CodeBlock }}>
+          {experienceDetailMap.get(title)!}
+        </ReactMarkdown>
       </div>
       <div ref={bottomRef} />
     </Container>
@@ -100,16 +104,6 @@ const Container = styled.main`
       max-width: 100%;
       max-height: 450px;
       object-fit: contain;
-    }
-
-    pre {
-      padding: 10px 10px;
-
-      box-sizing: border-box;
-
-      background-color: ${Color.LightGrey};
-
-      overflow-x: scroll;
     }
 
     hr {
