@@ -116,6 +116,10 @@ const Container = styled.main`
 
       background-color: ${Color.LightGrey};
     }
+
+    code {
+      font-size: 0.85rem;
+    }
   }
 
   @media (max-width: ${Device.Tablet}px) {
