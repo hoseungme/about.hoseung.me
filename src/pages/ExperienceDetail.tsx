@@ -5,6 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import ReactMarkdown from "react-markdown";
 
+import { HeadingBlock } from "../components/MarkdownRenderers/HeadingBlock";
 import { CodeBlock } from "../components/MarkdownRenderers/CodeBlock";
 
 import { GA } from "../services/ga";
@@ -20,8 +21,10 @@ export const ExperienceDetail: React.FC = () => {
   const [bottomRef, bottomInView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
-    GA.trackPageView({ path: window.location.pathname });
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0 });
+      GA.trackPageView({ path: window.location.pathname });
+    }
   }, []);
 
   useEffect(() => {
@@ -37,7 +40,7 @@ export const ExperienceDetail: React.FC = () => {
         메인으로 돌아가기
       </Link>
       <div className="content">
-        <ReactMarkdown renderers={{ code: CodeBlock }}>
+        <ReactMarkdown renderers={{ heading: HeadingBlock, code: CodeBlock }}>
           {experienceDetailMap.get(title)!}
         </ReactMarkdown>
       </div>
@@ -108,7 +111,7 @@ const Container = styled.main`
 
     hr {
       width: 100%;
-      height: 3px;
+      height: 1px;
 
       margin-top: 30px;
 
