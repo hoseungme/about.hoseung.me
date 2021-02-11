@@ -51,8 +51,8 @@
 ## 주요 업무
 ### 프로모션 페이지 프론트엔드 / 백엔드 개발 (2021.01)
 
-![](/static/promotion-list-desktop.png)
-![](/static/promotion-list-mobile.png)
+![](/static/catch-fashion/promotion-list-desktop.png)
+![](/static/catch-fashion/promotion-list-mobile.png)
 
 - **설명**
   - 기존에 카드사 프로모션을 진행할 때의 문제점은, 한 사람이 여러 카드를 같은 프로모션에 등록할 수 있다는 점이었습니다.
@@ -177,7 +177,7 @@
 
 ### 상품 페이지 리팩토링 (2020.10)
 
-![](/static/product-detail.png)
+![](/static/catch-fashion/product-detail.png)
 
 - **설명**
   - 상품 페이지의 UI를 개선하고, 내부 코드를 리팩토링 했습니다.
@@ -208,7 +208,7 @@
 
 ### 상품 태그 시스템 도입 (2020.09)
 
-![](/static/product-tag.png)
+![](/static/catch-fashion/product-tag.png)
 
 - **설명**
   - 기존의 관련 상품 리스트에서는 같은 카테고리 내의 상품들을 보여주고 있었습니다.
@@ -240,8 +240,8 @@
 
 ### 새로운 디자인 반영 (2020.08)
 
-![](/static/product-list.png)
-![](/static/search-result.png)
+![](/static/catch-fashion/product-list.png)
+![](/static/catch-fashion/search-result.png)
 
 - **설명**
   - 상품 리스트 페이지, 검색 결과 페이지에 완전히 새로운 디자인을 적용했습니다.
