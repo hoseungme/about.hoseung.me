@@ -27,6 +27,7 @@
 ## 목차
 
 - [주요 업무](#주요-업무)
+  - [Visual Regression Test 도입 (2021.02)](#Visual-Regression-Test-도입-(2021.02))
 
   - [프로모션 페이지 프론트엔드 / 백엔드 개발 (2021.01)](#프로모션-페이지-프론트엔드-/-백엔드-개발-(2021.01))
 
@@ -49,6 +50,39 @@
 ---
 
 ## 주요 업무
+### Visual Regression Test 도입 (2021.02)
+
+![](/static/catch-fashion/visual-regression-test.png)
+
+- **설명**
+  - 작업 중에 의도치 않게 생긴 UI 변경을 인지하지 못하고 프로덕션에 배포되거나, 변경된 UI의 Before / After를 한눈에 비교하기가 힘든 문제가 있었습니다.
+
+  - 위의 문제들을 해결하기 위해서 PR에서 변경사항을 한눈에 확인할 수 있게 Visual Regression Test를 도입해보기로 했습니다.
+
+  - 기존에 팀에서 [Storybook](https://storybook.js.org/)을 사용하고 있었기 때문에, [Chromatic](https://www.chromatic.com/)을 연결하여 성공적으로 도입할 수 있었습니다.
+
+- **배운 점 & 어려웠던 점**
+  - Dependency Injection과 같은 의존성 관리 패턴의 중요성을 생각해볼 수 있는 계기가 되었습니다.
+    - Swift로 IOS앱을 개발할 때는 각각의 컴포넌트에 API Response를 주입해주는 방식이라서 Mocking을 통한 스크린샷 촬영이 매우 간단했습니다.
+
+    - 하지만 프론트엔드는 react-query의 useQuery Hook을 사용해서 동적으로 데이터를 fetch하고 있었기 때문에 여러 문제가 많았습니다.
+
+  - 좋은 개발자 경험과 인터페이스에 대해 고민해볼 수 있었습니다.
+    - 테스트코드를 작성하는 일이 팀원들에게 너무 어려워서는 안된다고 생각했습니다.
+
+    - 따라서 팀원들에게 적절하게 추상화된 좋은 인터페이스를 제공하기 위해 helper 함수들을 만들며 테스트코드 작성 과정을 간소화하려 노력했습니다.
+
+  - Docker같은 가상화 플랫폼을 사용한 일관된 환경 구축의 중요성을 배웠습니다.
+    - Mac, Linux같은 환경 차이 때문에 가상 브라우저에서 스크린샷이 다르게 찍히는 문제가 있었습니다.
+
+    - 이를 Docker를 사용한 가상화를 통해 해결했고, 결과적으로 크로스 플랫폼 이슈와 그런 상황을 해결하는 경험을 해볼 수 있었습니다.
+
+  - 자세한 내용은 [도입 과정을 정리한 글](https://velog.io/@alvin/Visual-Regression-Test-%EB%8F%84%EC%9E%85%EA%B8%B0)에서 확인하실 수 있습니다.
+
+- [목차로 가기](#목차)
+
+---
+
 ### 프로모션 페이지 프론트엔드 / 백엔드 개발 (2021.01)
 
 ![](/static/catch-fashion/promotion-list-desktop.png)
