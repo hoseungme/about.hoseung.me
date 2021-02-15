@@ -85,8 +85,8 @@ const Container = styled.section`
       align-items: center;
 
       > img {
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
 
         border-radius: 50%;
 
@@ -145,8 +145,8 @@ const Container = styled.section`
 
       > .image {
         > img {
-          width: 200px;
-          height: 200px;
+          width: 250px;
+          height: 250px;
 
           border-radius: 50%;
         }
