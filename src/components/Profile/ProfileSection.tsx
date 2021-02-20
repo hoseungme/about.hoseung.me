@@ -2,59 +2,42 @@ import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../Layout/TransitionContainer";
-import { ProfileLink } from "./ProfileLink";
 
 import { IProfile } from "../../interfaces/section/Profile";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
-export const ProfileSection: React.FC<IProfile> = ({
-  image,
-  motto,
-  comment,
-  links,
-}) => {
+export const ProfileSection: React.FC<IProfile> = ({ image, description }) => {
   return (
     <Container>
-      <div className="profile">
-        <TransitionContainer className="image" effect="fadeInDown">
-          <img src={image} alt="Profile" />
-        </TransitionContainer>
-      </div>
-      <div className="description">
-        <div className="text">
-          <TransitionContainer
-            className="topic"
-            effect="fadeInUp"
-            delay={0.2}
-            duration={0.2}
-            translateY={50}
-          >
-            WELCOME
-          </TransitionContainer>
-          <TransitionContainer className="motto" effect="fadeInUp" delay={0.4}>
-            {motto}
-          </TransitionContainer>
-          <TransitionContainer
-            className="comment"
-            effect="fadeInUp"
-            delay={0.6}
-            duration={0.2}
-          >
-            {comment}
-          </TransitionContainer>
-        </div>
+      <TransitionContainer className="profile-image" effect="fadeInDown">
+        <img src={image} alt="Profile" />
+      </TransitionContainer>
+      <div className="profile-text">
         <TransitionContainer
-          className="links"
+          className="topic"
           effect="fadeInUp"
-          delay={0.8}
+          delay={0.2}
           duration={0.2}
-          translateY={40}
+          translateY={50}
         >
-          {links.map((props, index) => (
-            <ProfileLink key={index} {...props} />
-          ))}
+          WELCOME
+        </TransitionContainer>
+        <TransitionContainer
+          className="description-primary"
+          effect="fadeInUp"
+          delay={0.4}
+        >
+          {description.primary}
+        </TransitionContainer>
+        <TransitionContainer
+          className="description-secondary"
+          effect="fadeInUp"
+          delay={0.6}
+          duration={0.2}
+        >
+          {description.secondary}
         </TransitionContainer>
       </div>
     </Container>
@@ -70,7 +53,7 @@ const Container = styled.section`
 
   box-sizing: border-box;
 
-  > .profile {
+  > .profile-image {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -79,23 +62,17 @@ const Container = styled.section`
 
     box-sizing: border-box;
 
-    > .image {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    > img {
+      width: 300px;
+      height: 300px;
 
-      > img {
-        width: 350px;
-        height: 350px;
+      border-radius: 50%;
 
-        border-radius: 50%;
-
-        box-shadow: 0 0 15px ${Color.LightGrey};
-      }
+      box-shadow: 0 0 15px ${Color.LightGrey};
     }
   }
 
-  > .description {
+  > .profile-text {
     max-width: 500px;
 
     flex: 1;
@@ -103,35 +80,26 @@ const Container = styled.section`
     flex-direction: column;
     justify-content: center;
 
-    > .text {
-      display: flex;
-      flex-direction: column;
-
-      > .topic {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: ${Color.DarkMint};
-      }
-
-      > .motto {
-        margin: 15px 0;
-
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: ${Color.Black};
-      }
-
-      > .comment {
-        line-height: 30px;
-        font-size: 0.95rem;
-        color: ${Color.LightBlack};
-
-        word-break: keep-all;
-      }
+    > .topic {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: ${Color.DarkMint};
     }
 
-    > .links {
-      margin-top: 20px;
+    > .description-primary {
+      margin: 15px 0 5px;
+
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: ${Color.Black};
+    }
+
+    > .description-secondary {
+      line-height: 30px;
+      font-size: 0.95rem;
+      color: ${Color.LightBlack};
+
+      word-break: keep-all;
     }
   }
 
@@ -140,27 +108,17 @@ const Container = styled.section`
 
     box-sizing: border-box;
 
-    > .profile {
+    > .profile-image {
       padding: 10px 20px;
 
-      > .image {
-        > img {
-          width: 250px;
-          height: 250px;
-
-          border-radius: 50%;
-        }
+      > img {
+        width: 250px;
+        height: 250px;
       }
     }
 
-    > .description {
+    > .profile-text {
       max-width: 400px;
-
-      > .text {
-        > .comment {
-          line-height: 27px;
-        }
-      }
     }
   }
 
@@ -170,29 +128,19 @@ const Container = styled.section`
 
     padding: 50px 40px;
 
-    > .profile {
-      padding: 20px 0;
+    > .profile-image {
+      padding: 20px 0 40px;
     }
 
-    > .description {
+    > .profile-text {
       flex: 0;
       display: flex;
-      justify-content: center;
+      align-items: center;
 
-      > .text {
-        display: flex;
-        align-items: center;
+      text-align: center;
 
-        text-align: center;
-
-        > * {
-          width: fit-content;
-        }
-      }
-
-      > .links {
-        display: flex;
-        justify-content: center;
+      > * {
+        width: fit-content;
       }
     }
   }
