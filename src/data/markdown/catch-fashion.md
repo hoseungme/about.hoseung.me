@@ -26,7 +26,7 @@
 
 ## 목차
 
-- [주요 업무](#주요-업무)
+- [활동 리스트](#활동-리스트)
   - [Visual Regression Test 도입 (2021.02)](#Visual-Regression-Test-도입-(2021.02))
 
   - [프로모션 페이지 프론트엔드 / 백엔드 개발 (2021.01)](#프로모션-페이지-프론트엔드-/-백엔드-개발-(2021.01))
@@ -49,7 +49,7 @@
 
 ---
 
-## 주요 업무
+## 활동 리스트
 ### Visual Regression Test 도입 (2021.02)
 
 ![](/static/catch-fashion/visual-regression-test.png)
