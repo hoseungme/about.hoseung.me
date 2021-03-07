@@ -1,11 +1,47 @@
 import { IProject } from "../../interfaces/section/Project";
 
+import blogImage from "../../images/project/blog.png";
 import resumeImage from "../../images/project/resume.png";
 import referringImage from "../../images/project/referring.png";
 import coronaSolutionImage from "../../images/project/corona-solution.png";
 import dsmMarketImage from "../../images/project/dsm-market.png";
 
 export const projects: IProject[] = [
+  {
+    img: blogImage,
+    title: "나만의 공간. 프로젝트 블로그",
+    duration: "2020.12 ~ 진행중",
+    description:
+      "개인 블로그 프로젝트입니다. 글에 대한 각종 통계, 알람 서비스 등 블로그에 관련된 여러 기능을 직접 커스터마이징하고 싶어서 시작하게 되었습니다. 현재 프로젝트 진행중에 있습니다.",
+    activities: [
+      "Microservice 아키텍처에 기반한 백엔드 시스템 설계",
+      "Serverless Framework를 활용한 인프라 구축 및 배포 자동화",
+      "ERD를 사용한 데이터베이스 모델링",
+      "BDD에 기반한 테스트 코드를 Mocha, Chai, SuperTest로 작성",
+      "Docker를 활용한 테스트 환경 분리",
+      "Github Packages Registry를 사용한 마이크로서비스 간에 호출하는 라이브러리 배포",
+    ],
+    references: [
+      {
+        text: "프로젝트 일지",
+        link:
+          "https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Blog",
+      },
+      {
+        text: "백엔드 시스템 아키텍처",
+        link: "https://miro.com/app/board/o9J_laTyd80=/",
+      },
+      {
+        text: "RDB 테이블 구조",
+        link: "https://www.erdcloud.com/d/XrM5reMPurCNBreWr",
+      },
+      {
+        text: "깃허브 Organization",
+        link: "https://github.com/hoseung-only",
+      },
+    ],
+    tags: ["Front-end", "Back-end"],
+  },
   {
     img: resumeImage,
     title: "나를 소개합니다. 프로젝트 Résumé",
