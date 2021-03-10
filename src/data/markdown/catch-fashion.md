@@ -19,9 +19,6 @@
   - AWS
   - Microservice Architecture
 
-- CI/CD
-  - Github Actions
-
 ---
 
 ## 목차
