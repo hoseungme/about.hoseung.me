@@ -410,7 +410,7 @@
 ### moment.js를 dayjs로 마이그레이션 (2021.03)
 
 - **설명**
-  - [lighthouse CI](https://developers.google.com/web/tools/lighthouse)를 통해 확인한 결과, moment.js의 용량 낭비가 매우 심했습니다. (14KB 중 미사용 용량이 9KB)
+  - [Google Lighthouse CI](https://developers.google.com/web/tools/lighthouse)를 통해 확인한 결과, moment.js의 용량 낭비가 매우 심했습니다. (14KB 중 미사용 용량이 9KB)
 
 - **원인**
   - moment.js의 API가 매우 광범위하기 때문에 사용하지 않는 기능도 불가피하게 불러오게 되는 문제였습니다.
