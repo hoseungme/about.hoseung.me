@@ -44,11 +44,11 @@
 
 - [문제 해결](#문제-해결)
 
-  - [Chrome의 Back/Forward Cache 관련 문제](#Chrome의-Back/Forward-Cache-관련-문제)
+  - [Chrome의 Back/Forward Cache 관련 문제 (2020.10)](#Chrome의-Back/Forward-Cache-관련-문제-(2020.10))
 
-  - [네이밍 컨벤션 도입](#네이밍-컨벤션-도입)
+  - [네이밍 컨벤션 도입 (2021.01)](#네이밍-컨벤션-도입-(2021.01))
 
-  - [moment.js를 dayjs로 마이그레이션](#moment.js를-dayjs로-마이그레이션)
+  - [moment.js를 dayjs로 마이그레이션 (2021.03)](#moment.js를-dayjs로-마이그레이션-(2021.03))
 
 ---
 
@@ -353,7 +353,7 @@
 ---
 
 ## 문제 해결
-### Chrome의 Back/Forward Cache 관련 문제
+### Chrome의 Back/Forward Cache 관련 문제 (2020.10)
 - **설명**
   - 회사 프론트엔드 코드 내에서는 react-query를 사용한 메모리 캐싱을 활용하고, HTTP 단에서는 Cache-Control: no-cache를 설정하여 캐싱을 막고 있었습니다.
 
@@ -384,7 +384,7 @@
 
 ---
 
-### 네이밍 컨벤션 도입
+### 네이밍 컨벤션 도입 (2021.01)
 - **설명**
   - 코드리뷰를 할 때, 네이밍에 관한 이야기가 길어질 때가 자주 있었습니다.
 
@@ -407,7 +407,7 @@
 
 - [목차로 가기](#목차)
 
-### moment.js를 dayjs로 마이그레이션
+### moment.js를 dayjs로 마이그레이션 (2021.03)
 
 - **설명**
   - [lighthouse CI](https://developers.google.com/web/tools/lighthouse)를 통해 확인한 결과, moment.js의 용량 낭비가 매우 심했습니다. (14KB 중 미사용 용량이 9KB)
