@@ -31,7 +31,7 @@ export const ExperienceSection: React.FC<{
           duration={0.2}
           intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
         >
-          저는 이런 경험을 쌓아왔습니다.
+          저는 이런 경험을 가지고 있어요!
         </TransitionContainer>
       </div>
       <ExperienceCardList experiences={experiences} />

@@ -42,10 +42,10 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
             intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
             <p>새로운 것을 배우고 싶을 때면</p>
-            <p>서브 프로젝트를 진행합니다.</p>
+            <p>서브 프로젝트를 진행해요.</p>
             <p>그러다 보면 마치 프로그래밍을</p>
             <p>처음 배울 때로 돌아가는 기분이 드는데,</p>
-            <p>이는 개발이 질릴 날이 없도록 만들어주죠.</p>
+            <p>이 덕분에 항상 개발이 즐겁답니다.</p>
           </TransitionContainer>
         </div>
       </header>

@@ -31,7 +31,7 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
             translateY={50}
             intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
-            저는 이런 사람입니다.
+            저는 이런 사람이에요!
           </TransitionContainer>
         </div>
       </summary>
