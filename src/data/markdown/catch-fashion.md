@@ -466,7 +466,7 @@
 
     - "cacheTime과 staleTime이 undefined이다" 와 "cacheTime과 staleTime 옵션이 존재하지 않는다" 가 똑같은 것이라고 생각했기에 생겼던 문제였습니다.
 
-      - undefined로 넘겨진 cacheTime, staleTime 값이 default 값을 덮어씌우고 있었습니다.
+      - undefined로 넘겨진 cacheTime, staleTime 값이 useQuery 내부에서 default 값을 덮어씌우고 있었습니다.
 
     - 따라서 위 방식을 아래와 같이 고쳤습니다.
       ```typescript
