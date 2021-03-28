@@ -50,6 +50,8 @@
 
   - [moment.js를 dayjs로 마이그레이션 (2021.03)](#moment.js를-dayjs로-마이그레이션-(2021.03))
 
+  - [상품 리스트에서 스크롤 유지가 안되는 문제 (2021.03)](#상품-리스트에서-스크롤-유지가-안되는-문제-(2021.03))
+
 ---
 
 ## 활동 리스트
@@ -437,5 +439,71 @@
     - 이런 마이그레이션 과정에서 했던 모든 생각과 결론들을 문서화하는 것이 작업 내용을 잘 모르는 팀원들에게 큰 도움이 되었습니다.
 
     - 새로운 기술을 접할 때 어떤 것들이 고려되어야 하는지 스스로 고민해볼 수 있는 좋은 기회였던 것 같습니다.
+
+- [목차로 가기](#목차)
+
+### 상품 리스트에서 스크롤 유지가 안되는 문제 (2021.03)
+
+- **설명**
+  - 상품 리스트에서 상품 페이지로 들어갔다가 뒤로가기로 돌아왔을 때, 스크롤이 유지되지 않는 문제가 있었습니다.
+
+- **원인**
+  - [react-query](https://react-query.tanstack.com/)의 useQuery에 옵션을 잘못 넘겨줘서 생긴 문제였습니다.
+
+- **해결**
+    - 기존에 아래와 같이 옵션을 넣어주고 있었습니다.
+      ```typescript
+      useQuery(
+        "",
+        () => {},
+        {
+          ...otherOptions,
+          cacheTime,
+          staleTime: cacheTime,
+        }
+      );
+      ```
+
+    - "cacheTime과 staleTime이 undefined이다" 와 "cacheTime과 staleTime 옵션이 존재하지 않는다" 가 똑같은 것이라고 생각했기에 생겼던 문제였습니다.
+
+      - undefined로 넘겨진 cacheTime, staleTime 값이 default 값을 덮어씌우고 있었습니다.
+
+    - 따라서 위 방식을 아래와 같이 고쳤습니다.
+      ```typescript
+      useQuery(
+        "",
+        () => {},
+        {
+          ...otherOptions,
+          ...(cacheTime !== undefined ? { cacheTime, staleTime: cacheTime } : {}),
+        }
+      );
+      ```
+
+- **배운 점**
+  - JSON에서 undefined는 없는 스펙이었습니다.
+    - undefined는 Javascript에서만 지원되는 스펙이었고, undefined와 null이 같은 의미일 것이라고 착각했습니다.
+
+    - 따라서 데이터의 optional 유무가 아니라, 단순히 있냐/없냐를 따질 경우에는 undefined가 아니라 null을 사용하는게 더 좋은 방향임을 배웠습니다.
+
+  - Javascript 상에서 아래의 코드는 분명히 다르다는 것을 깨달았고, undefined를 "해당 프로퍼티가 존재하지 않음" 이라고 보는건 잘못된 시각임을 배웠습니다.
+    - ```javascript
+      {
+        cacheTime: Infinity,
+        staleTime: Infinity,
+        ...{
+          cacheTime: undefined,
+          staleTime: undefined,
+        },
+      }
+      ```
+
+    - ```javascript
+      {
+        cacheTime: Infinity,
+        staleTime: Infinity,
+        ...{},
+      }
+      ```
 
 - [목차로 가기](#목차)
