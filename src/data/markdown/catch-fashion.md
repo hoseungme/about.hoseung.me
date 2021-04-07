@@ -481,10 +481,12 @@
       ```
 
 - **배운 점**
-  - JSON에서 undefined는 없는 스펙이었습니다.
+  - JSON에서 undefined는 지원되지 않는 타입이었습니다.
     - undefined는 Javascript에서만 지원되는 스펙이었고, undefined와 null이 같은 의미일 것이라고 착각했습니다.
 
-    - 따라서 데이터의 optional 유무가 아니라, 단순히 있냐/없냐를 따질 경우에는 undefined가 아니라 null을 사용하는게 더 좋은 방향임을 배웠습니다.
+    - 실제로 JSON.stringify를 실행해보면 null은 남아있지만 undefined는 삭제되었습니다.
+
+    - 따라서 데이터의 optional 유무가 아니라, 단순히 있냐/없냐를 따질 경우에는 undefined가 아니라 null을 사용하는게 혼란을 방지하기에 좋다는 것을 알았습니다.
 
   - Javascript 상에서 아래의 코드는 분명히 다르다는 것을 깨달았고, undefined를 "해당 프로퍼티가 존재하지 않음" 이라고 보는건 잘못된 시각임을 배웠습니다.
     - ```javascript
