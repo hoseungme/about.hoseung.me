@@ -112,6 +112,7 @@ const Container = styled.div`
   }
 
   > .activities {
+    padding-left: 30px;
     margin: 0;
 
     > li {
@@ -176,6 +177,10 @@ const Container = styled.div`
 
     > .image {
       height: 100px;
+    }
+
+    > .activities {
+      padding-left: 20px;
     }
 
     > .references {
