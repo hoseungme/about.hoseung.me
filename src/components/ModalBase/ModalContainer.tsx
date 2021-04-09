@@ -68,6 +68,12 @@ const Container = styled.div`
   background-color: ${Color.BlackTransparency50};
 
   > .modal {
+    max-width: 100%;
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
     border-radius: 3px;
 
     background-color: ${Color.WhiteGrey};
