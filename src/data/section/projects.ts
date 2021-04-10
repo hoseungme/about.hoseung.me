@@ -1,5 +1,6 @@
 import { IProject } from "../../interfaces/section/Project";
 
+import oasApiClientImage from "../../images/project/oas-api-client.png";
 import blogImage from "../../images/project/blog.png";
 import resumeImage from "../../images/project/resume.png";
 import referringImage from "../../images/project/referring.png";
@@ -7,6 +8,31 @@ import coronaSolutionImage from "../../images/project/corona-solution.png";
 import dsmMarketImage from "../../images/project/dsm-market.png";
 
 export const projects: IProject[] = [
+  {
+    img: oasApiClientImage,
+    title: "oas-api-client",
+    duration: "2021.04 ~ 2021.04",
+    description:
+      "oas-api-client는 프론트엔드를 위한 API client 라이브러리를 OpenAPI Specification에 기반하여 자동 생성해주는 CLI 패키지에요. 개인 블로그 프로젝트를 진행하다보니 프론트엔드 개발을 위해 이런게 필요해져서 시작하게 되었답니다.",
+    activities: [
+      "JSON schema 학습",
+      "OpenAPI Specificaion 학습",
+      "commander를 사용한 CLI 개발",
+      "json-schema-to-typescript를 사용하여 OpenAPI Schema를 Typescript interface로 변환",
+      "npm에 배포",
+    ],
+    references: [
+      {
+        text: "소스 코드",
+        link: "https://github.com/HoseungJang/oas-api-client",
+      },
+      {
+        text: "npm",
+        link: "https://www.npmjs.com/package/oas-api-client",
+      },
+    ],
+    tags: ["Open Source"],
+  },
   {
     img: blogImage,
     title: "나만의 공간. 개인 블로그 프로젝트",
