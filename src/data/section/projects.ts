@@ -45,7 +45,8 @@ export const projects: IProject[] = [
       "ERD를 사용한 데이터베이스 모델링",
       "BDD에 기반한 테스트 코드를 Mocha, Chai, SuperTest로 작성",
       "Docker를 활용한 테스트 환경 분리",
-      "Github Packages Registry를 사용한 마이크로서비스 간에 호출하는 라이브러리 배포",
+      "마이크로서비스 간 호출할 수 있는 client 라이브러리 개발 및 Github Package Registry에 private으로 배포",
+      "자체 개발한 oas-api-client 라이브러리를 사용한 프론트엔드 전용 API client 라이브러리 자동 생성",
     ],
     references: [
       {
