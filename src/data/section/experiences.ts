@@ -1,6 +1,7 @@
 import { IExperience } from "../../interfaces/section/Experience";
 
 import catchFashionDetail from "../markdown/catch-fashion.md";
+import dsmDetail from "../markdown/dsm.md";
 
 export const experiences: IExperience[] = [
   {
@@ -15,6 +16,7 @@ export const experiences: IExperience[] = [
     duration: "2018.03",
     summary:
       "여러 프로젝트를 진행하며 개발 / 유지보수에 대해 공부하고, 협업에 대해 배웠으며, 백엔드 개발을 중심적으로 공부했어요.",
+    detail: dsmDetail,
   },
 ];
 
