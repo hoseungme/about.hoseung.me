@@ -21,13 +21,6 @@ export const ExperienceDetail: React.FC = () => {
   const [bottomRef, bottomInView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
-    if (!window.location.hash) {
-      window.scrollTo({ top: 0 });
-      GA.trackPageView({ path: window.location.pathname });
-    }
-  }, []);
-
-  useEffect(() => {
     if (bottomInView) {
       GA.trackExperienceDetailEventParams({ action: "All Content Viewed" });
     }
