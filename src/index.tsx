@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import { ScrollToTop } from "./components/ScrollToTop";
+
 import { Home } from "./pages/Home";
 import { ExperienceDetail } from "./pages/ExperienceDetail";
 
@@ -40,6 +42,7 @@ ReactDOM.render(
   <ModalContextProvider>
     <GlobalStyles />
     <BrowserRouter>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/experience/:title" component={ExperienceDetail} />
