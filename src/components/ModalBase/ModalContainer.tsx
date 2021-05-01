@@ -2,9 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { CgClose } from "react-icons/cg";
 
-import { TransitionContainer } from "../Layout/TransitionContainer";
-
-import { ModalProps } from "../../contexts/Modal";
+import { ModalProps, useTransitionStatus } from "../../contexts/Modal";
 
 import { Color } from "../../constants/Color";
 
@@ -23,27 +21,25 @@ export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
     };
   }, []);
 
+  const transitionStatus = useTransitionStatus();
+
   return (
     <Container
+      className={transitionStatus}
       onTouchMove={(e) => e.stopPropagation()}
       onClick={(e) => {
         e.stopPropagation();
         close();
       }}
     >
-      <TransitionContainer
-        className="modal"
-        effect="fadeInUp"
-        duration={0.5}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className="modal">
         <div className="header">
           <button onClick={close}>
             <CgClose />
           </button>
         </div>
         {children}
-      </TransitionContainer>
+      </div>
     </Container>
   );
 };
@@ -67,6 +63,34 @@ const Container = styled.div`
 
   background-color: ${Color.BlackTransparency50};
 
+  opacity: 0;
+
+  transition: opacity 0.3s;
+
+  &.entered {
+    opacity: 1;
+
+    > .modal {
+      transform: translateY(0);
+    }
+  }
+
+  &.entering {
+    opacity: 1;
+
+    > .modal {
+      transform: translateY(0);
+    }
+  }
+
+  &.exiting {
+    opacity: 0;
+
+    > .modal {
+      transform: translateY(5%);
+    }
+  }
+
   > .modal {
     max-width: 100%;
     max-height: 100%;
@@ -79,6 +103,10 @@ const Container = styled.div`
     background-color: ${Color.WhiteGrey};
 
     overflow: hidden;
+
+    transform: translateY(5%);
+
+    transition: transform 0.3s;
 
     > .header {
       padding-top: 10px;
