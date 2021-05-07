@@ -70,14 +70,6 @@ module.exports = (env) => {
         ...process.env,
       }),
       new CleanWebpackPlugin(),
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: "src/data/markdown/images",
-            to: "static",
-          },
-        ],
-      }),
     ],
   };
 };
