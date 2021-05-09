@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { CgClose } from "react-icons/cg";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 import { ModalProps, useTransitionStatus } from "../../contexts/Modal";
 
 import { Color } from "../../constants/Color";
 
-export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
+export const ModalBase: React.FC<ModalProps> = ({ close, children }) => {
   useEffect(() => {
     const closeModal = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -21,6 +22,19 @@ export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
     };
   }, []);
 
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const current = ref.current;
+    if (current) {
+      disableBodyScroll(current);
+
+      return () => {
+        enableBodyScroll(current);
+      };
+    }
+  }, []);
+
   const transitionStatus = useTransitionStatus();
 
   return (
@@ -32,7 +46,7 @@ export const ModalContainer: React.FC<ModalProps> = ({ close, children }) => {
         close();
       }}
     >
-      <div className="modal">
+      <div className="modal" ref={ref}>
         <div className="header">
           <button onClick={close}>
             <CgClose />

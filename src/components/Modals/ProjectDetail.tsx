@@ -1,11 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 import { Color } from "../../constants/Color";
 import { Device } from "../../constants/Device";
 
-import { ModalContainer } from "../ModalBase/ModalContainer";
+import { ModalBase } from "../ModalBase";
 
 import { ModalProps } from "../../contexts/Modal";
 
@@ -25,21 +24,9 @@ export const ProjectDetail: React.FC<ModalProps & IProject> = ({
     GA.trackProjectSectionEvent({ action: "Modal Opened", label: title });
   }, []);
 
-  const ref = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      disableBodyScroll(ref.current);
-
-      return () => {
-        enableBodyScroll(ref.current!);
-      };
-    }
-  }, []);
-
   return (
-    <ModalContainer close={close}>
-      <Container ref={ref}>
+    <ModalBase close={close}>
+      <Container>
         <img className="image" src={img} alt="Project" />
         <div className="divider" />
         <div className="description">{description}</div>
@@ -67,7 +54,7 @@ export const ProjectDetail: React.FC<ModalProps & IProject> = ({
           ))}
         </div>
       </Container>
-    </ModalContainer>
+    </ModalBase>
   );
 };
 
