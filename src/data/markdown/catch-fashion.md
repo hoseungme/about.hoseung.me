@@ -49,6 +49,7 @@
   - [상품 리스트 리뉴얼 (2020.08)](#상품-리스트-리뉴얼-(2020.08))
 
 - [문제 해결](#문제-해결)
+  - [AWS Lambda에 query string으로 array를 전달할 때의 문제 (2021.05)](#AWS-Lambda에-query-string으로-array를-전달할-때의-문제-(2021.05))
 
   - [히스토리 변경 시 스크롤 유지가 안되는 문제 (2021.04)](#히스토리-변경-시-스크롤-유지가-안되는-문제-(2021.04))
 
@@ -433,6 +434,46 @@
 ---
 
 ## 문제 해결
+### AWS Lambda에 query string으로 array를 전달할 때의 문제 (2021.05)
+
+- **설명**
+  - query string으로 array를 전달하는 방식은 아래와 같이 다양합니다.
+    - ```
+      1. ?a=1&a=2
+      2. ?a[]=1&a[]=2
+      3. ?a[0]=1&a[1]=2
+      4. ?a=[1,2]
+      ```
+  
+  - 하지만 1, 2번 같은 케이스에서 event.queryStringParameters에 값이 전부다 전달되지 않는 문제가 있었습니다.
+
+- **원인**
+  - API Gateway에서 HTTP request를 파싱해서 Lambda 함수에 전달하는 단계의 문제였습니다.
+
+  - queryStringParameters는 아래와 같이 key의 경우 맨 마지막 key-value 쌍만 들어가게 됩니다.
+    - ```
+      ?a[]=1&a[]=2 으로 요청하면
+      {
+        queryStringParameters: {
+          "a[]": "2"
+        }
+      }
+      ```
+  
+  - 따라서 클라이언트가 query string으로 전달한 배열의 맨 마지막 값만 백엔드 라우터로 전달되고 있었습니다.
+
+- **해결**
+  - event.multiValueQueryStringParameters를 queryStringParameters와 함께 사용해서 해결했습니다.
+
+  - 자세한 해결 과정은 아래의 링크를 참조해주세요.
+  
+  - [해결 과정](https://velog.io/@alvin/AWS-Lambda%EC%97%90-query-string%EC%9C%BC%EB%A1%9C-array-%EC%A0%84%EB%8B%AC%ED%95%98%EA%B8%B0)
+
+- **배운 점**
+  - array를 query string으로 전달하는 방법과, API Gateway가 그걸 어떻게 파싱하는지에 대해서 자세히 알아볼 수 있었습니다.
+
+- [목차로 가기](#목차)
+
 ### 히스토리 변경 시 스크롤 유지가 안되는 문제 (2021.04)
 
 - **설명**
