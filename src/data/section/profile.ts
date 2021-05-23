@@ -6,7 +6,6 @@ export const profile: IProfile = {
   image: profileImage,
   description: {
     primary: "기록은 나를 빛낸다.😎",
-    secondary:
-      "안녕하세요. 좋은 경험을 추구하는 개발자 장호승입니다. 백엔드 포지션을 희망하고 있어요.",
+    secondary: "안녕하세요. 좋은 경험을 추구하는 개발자 장호승입니다.",
   },
 };
