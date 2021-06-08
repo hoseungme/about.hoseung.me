@@ -13,9 +13,9 @@
 
 - Front-end
   - React
-  - styled-components
 
 - Back-end
+  - Node.js
   - AWS
   - Microservice Architecture
 
