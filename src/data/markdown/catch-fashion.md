@@ -17,7 +17,8 @@
 - Back-end
   - Node.js
   - AWS
-  - Microservice Architecture
+  - MSA
+  - Serverless
 
 ---
 
