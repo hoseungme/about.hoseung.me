@@ -72,6 +72,7 @@
 ### '컬렉션' 개발 (2021.05)
 
 ![](/static/catch-fashion/collection-desktop.png)
+![](/static/catch-fashion/collection-brand-desktop.png)
 ![](/static/catch-fashion/collection-mobile.png)
 
 - **설명**
