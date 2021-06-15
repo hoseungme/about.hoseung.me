@@ -56,6 +56,8 @@
   - [상품 리스트 리뉴얼 (2020.08)](#상품-리스트-리뉴얼-(2020.08))
 
 - [문제 해결](#문제-해결)
+  - [Lighthouse CI가 실패하는 문제 (2021.06)](#Lighthouse-CI가-실패하는-문제-(2021.06))
+
   - [synchronization 작업 중 상품을 반복해서 refetch 하는 문제 (2021.06)](#synchronization-작업-중-상품을-반복해서-refetch-하는-문제-(2021.06))
 
   - [AWS Lambda에 query string으로 array를 전달할 때의 문제 (2021.05)](#AWS-Lambda에-query-string으로-array를-전달할-때의-문제-(2021.05))
@@ -496,6 +498,26 @@
 ---
 
 ## 문제 해결
+### Lighthouse CI가 실패하는 문제 (2021.06)
+
+- **설명**
+  - Lighthouse CI가 계속 실패하는 문제가 있었습니다.
+
+- **원인**
+  - Lighthouse CI 가이드에서 제공하는 방법을 따라 Lighthouse server를 Heroku에 배포해서 사용하고 있었습니다.
+
+    - Heroku에 배포할 때 빌드 결과를 저장할 용도의 PostgreSQL 인스턴스가 하나 붙게 되는데, 빌드 결과가 쌓이다보면 무료 용량 한도가 초과되어서 CI가 실패하는 것이었습니다.
+
+- **해결**
+
+  - deleteOldBuildsCron 옵션을 통해서 7일 이상 지난 빌드 결과물은 삭제하도록 설정해서 해결했습니다.
+
+- **배운 점**
+
+  - cron job을 설정하기 위한 crontab 작성법에 대해 간단히 배웠습니다.
+
+- [목차로 가기](#목차)
+
 ### synchronization 작업 중 상품을 반복해서 refetch 하는 문제 (2021.06)
 
 - **설명**
