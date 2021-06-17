@@ -25,6 +25,8 @@
 ## 목차
 
 - [활동 리스트](#활동-리스트)
+  - [Lighthouse CI 퍼포먼스 점수 개선 (2021.06)](#Lighthouse-CI-퍼포먼스-점수-개선-(2021.06))
+
   - ['컬렉션' 개발 (2021.05)](#'컬렉션'-개발-(2021.05))
 
   - [마케팅팀 리뷰 알리미 개발 (2021.05)](#마케팅팀-리뷰-알리미-개발-(2021.05))
@@ -73,6 +75,25 @@
 ---
 
 ## 활동 리스트
+### Lighthouse CI 퍼포먼스 점수 개선 (2021.06)
+
+- **설명**
+  - Lighthouse CI의 퍼포먼스 점수를 개선했습니다.
+
+- **작업 내용 & 배운 점**
+  - 3rd party Javascript 로딩을 개선했습니다.
+    - HTML script 태그의 async / defer 속성을 이해하고, 적용했습니다.
+
+    - link 태그의 preconnect 기능을 활용해서 빠른 다운로드 시작이 가능해지도록 했습니다.
+  
+  - 이미지 관련 성능 결함을 개선했습니다.
+
+    - 상품 리스트의 모든 이미지에 lazy load를 적용했습니다.
+  
+  - web.dev의 [Efficiently load third-party JavaScript](https://web.dev/efficiently-load-third-party-javascript/)를 참고했습니다.
+
+- [목차로 가기](#목차)
+
 ### '컬렉션' 개발 (2021.05)
 
 ![](/static/catch-fashion/collection-desktop.png)
@@ -84,6 +105,7 @@
 
 - **작업 내용 & 배운 점**
   - AWS Lambda Edge를 활용해서 실시간으로 이미지를 처리하는 구조를 배웠습니다.
+
     - 리사이징, 트랜스폼 등 다양한 처리가 가능하고, 처리 후엔 CloudFront CDN에 캐싱됩니다.
 
 - [목차로 가기](#목차)
