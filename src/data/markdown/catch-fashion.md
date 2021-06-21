@@ -86,9 +86,7 @@
 
     - link 태그의 preconnect 기능을 활용해서 빠른 다운로드 시작이 가능해지도록 했습니다.
   
-  - 이미지 관련 성능 결함을 개선했습니다.
-
-    - 상품 리스트의 모든 이미지에 lazy load를 적용했습니다.
+  - 사이트 전체적으로 lazy rendering이 필요한 곳을 찾아 적용했습니다.
   
   - web.dev의 [Efficiently load third-party JavaScript](https://web.dev/efficiently-load-third-party-javascript/)를 참고했습니다.
 
