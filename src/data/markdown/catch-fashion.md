@@ -25,6 +25,8 @@
 ## 목차
 
 - [활동 리스트](#활동-리스트)
+  - [파트너사 URL 검색 개발 (2021.06)](#파트너사-URL-검색-개발-(2021.06))
+
   - [Lighthouse CI 퍼포먼스 점수 개선 (2021.06)](#Lighthouse-CI-퍼포먼스-점수-개선-(2021.06))
 
   - ['컬렉션' 개발 (2021.05)](#'컬렉션'-개발-(2021.05))
@@ -75,6 +77,36 @@
 ---
 
 ## 활동 리스트
+### 파트너사 URL 검색 개발 (2021.06)
+
+![](/static/catch-fashion/search-by-retailer-url-desktop-1.png)
+![](/static/catch-fashion/search-by-retailer-url-desktop-2.png)
+![](/static/catch-fashion/search-by-retailer-url-mobile-1.png)
+![](/static/catch-fashion/search-by-retailer-url-mobile-2.png)
+
+- **설명**
+  - 유저가 파트너사에서 사고 싶은 상품을 이미 찾았을 때, 캐치패션 사이트 내에서 해당 상품을 찾아 가격을 비교해보고 싶은 경우가 있습니다.
+
+  - 해당 파트너사의 상품 페이지 URL을 복사해서 캐치패션 검색 페이지에 붙여넣으면, 해당 상품의 페이지로 이동하는 기능을 개발했습니다.
+
+- **작업 내용 & 배운 점**
+  - 단계별로 컴포넌트와 비즈니스 로직을 나누었습니다.
+
+    - Validating, Crawling, Failed 세 단계로 나누었습니다.
+    
+      - Validating: 유저가 입력한 것이 올바른 URL인지 검사하는 단계입니다.
+
+      - Crawling: 유저가 입력한 URL의 상품이 캐치패션 내에 존재하는지 검색하는 단계입니다.
+
+      - Failed: 검색에 실패했거나, 결과가 없는 경우에 해당하는 단계입니다.
+
+
+    - 유저에겐 같은 화면이 렌더링되지만 내부적으로는 다른 컴포넌트가 렌더링되고, 각각의 컴포넌트에서 알맞은 hook이 실행되도록 설계했습니다.
+
+      - React에서 hook은 conditional하게 실행하는 것이 불가능하므로, 그걸 회피하기 위해 컴포넌트를 활용한 설계입니다.
+
+- [목차로 가기](#목차)
+
 ### Lighthouse CI 퍼포먼스 점수 개선 (2021.06)
 
 - **설명**
@@ -87,7 +119,7 @@
     - link 태그의 preconnect 기능을 활용해서 빠른 다운로드 시작이 가능해지도록 했습니다.
   
   - 사이트 전체적으로 lazy rendering이 필요한 곳을 찾아 적용했습니다.
-  
+
   - web.dev의 [Efficiently load third-party JavaScript](https://web.dev/efficiently-load-third-party-javascript/)를 참고했습니다.
 
 - [목차로 가기](#목차)
