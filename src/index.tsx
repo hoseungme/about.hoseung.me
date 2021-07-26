@@ -45,7 +45,7 @@ ReactDOM.render(
       <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/experience/:title" component={ExperienceDetail} />
+        <Route exact path="/experience/:id" component={ExperienceDetail} />
       </Switch>
     </BrowserRouter>
   </ModalContextProvider>,

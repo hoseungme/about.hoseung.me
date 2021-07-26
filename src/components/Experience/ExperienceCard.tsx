@@ -10,7 +10,7 @@ import { Device } from "../../constants/Device";
 
 export const ExperienceCard: React.FC<
   IExperience & { position: "left" | "right" }
-> = ({ title, duration, summary, detail, position }) => {
+> = ({ id, title, duration, summary, detail, position }) => {
   return (
     <Container
       style={{ alignItems: position === "left" ? "flex-end" : "flex-start" }}
@@ -24,7 +24,7 @@ export const ExperienceCard: React.FC<
         {summary}
       </div>
       {detail && (
-        <Link className="link" to={`/experience/${title}`}>
+        <Link className="link" to={`/experience/${id}`}>
           자세히보기
           <BiLinkExternal />
         </Link>

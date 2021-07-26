@@ -16,7 +16,7 @@ import { Color } from "../constants/Color";
 import { Device } from "../constants/Device";
 
 export const ExperienceDetail: React.FC = () => {
-  const { title } = useParams<{ title: string }>();
+  const { id } = useParams<{ id: string }>();
 
   const [bottomRef, bottomInView] = useInView({ triggerOnce: true });
 
@@ -34,7 +34,7 @@ export const ExperienceDetail: React.FC = () => {
       </Link>
       <div className="content">
         <ReactMarkdown renderers={{ heading: HeadingBlock, code: CodeBlock }}>
-          {experienceDetailMap.get(title)!}
+          {experienceDetailMap.get(id)!}
         </ReactMarkdown>
       </div>
       <div ref={bottomRef} />

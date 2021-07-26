@@ -5,6 +5,7 @@ import dsmDetail from "../markdown/dsm.md";
 
 export const experiences: IExperience[] = [
   {
+    id: "catch-fashion",
     title: "CATCH FASHION",
     duration: "2020.08",
     summary:
@@ -12,6 +13,7 @@ export const experiences: IExperience[] = [
     detail: catchFashionDetail,
   },
   {
+    id: "dsm",
     title: "대덕 소프트웨어 마이스터고등학교",
     duration: "2018.03",
     summary:
@@ -21,5 +23,5 @@ export const experiences: IExperience[] = [
 ];
 
 export const experienceDetailMap = new Map(
-  experiences.filter((e) => e.detail).map((e) => [e.title, e.detail])
+  experiences.filter((e) => e.detail).map((e) => [e.id, e.detail])
 );
