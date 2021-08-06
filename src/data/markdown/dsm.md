@@ -65,7 +65,7 @@
   - API 문서를 OpenAPI Specification에 기반하여 작성하고, Swagger Hub에서 버전관리 및 시각화했습니다.
 
 - **참조**
-  - [프로젝트 일지](https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%BD%94%EB%A1%9C%EB%82%98-%EC%86%94%EB%A3%A8%EC%85%98)
+  - [프로젝트 일지](https://blog.hoseung.me/categories/7920c029-4176-499c-a421-c6ed3d0a8c84/posts)
 
 - [목차로 가기](#목차)
 

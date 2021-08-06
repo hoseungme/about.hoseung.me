@@ -408,7 +408,7 @@
 
     - 이를 Docker를 사용한 가상화를 통해 해결했고, 결과적으로 크로스 플랫폼 이슈와 그런 상황을 해결하는 경험을 해볼 수 있었습니다.
 
-  - 자세한 내용은 [도입 과정을 정리한 글](https://velog.io/@alvin/Visual-Regression-Test-%EB%8F%84%EC%9E%85%EA%B8%B0)에서 확인하실 수 있습니다.
+  - 자세한 내용은 [도입 과정을 정리한 글](https://blog.hoseung.me/posts/83b91deb-55a5-404b-bf86-ab56b746a69f)에서 확인하실 수 있습니다.
 
 - [목차로 가기](#목차)
 
@@ -515,7 +515,7 @@
     - 기존에는 indexedDB를 우선적으로 사용하고 미지원시에 local storage를 사용하도록 구현했었지만, 초기 비동기 작업량으로 인한 퍼포먼스 저하로 인해 indexedDB를 제외하고, 완전히 동기적으로 작동하는 local storage만 사용하도록 하여 배포했습니다. 근본적인 해결을 못한 것에 대한 아쉬움이 있습니다.
 
   - local storage 관련한 여러 예외 상황을 알 수 있었습니다.
-    - [해당 이슈에 대해 정리한 글](https://velog.io/@alvin/LocalStorageSessionStorage%EC%97%90-%EC%A7%81%EC%A0%91-%EC%A0%91%EA%B7%BC%ED%95%98%EB%8A%94-%EB%B0%A9%EC%8B%9D%EC%9D%B4-%EC%9C%84%ED%97%98%ED%95%9C-%EC%9D%B4%EC%9C%A0)
+    - [해당 이슈에 대해 정리한 글](https://blog.hoseung.me/posts/2925d9a4-584d-4a0a-b467-022abc7ca584)
   
   - stale-while-revalidate의 개념을 알 수 있었습니다.
 
@@ -726,7 +726,7 @@
 
   - 자세한 해결 과정은 아래의 링크를 참조해주세요.
   
-  - [해결 과정](https://velog.io/@alvin/AWS-Lambda%EC%97%90-query-string%EC%9C%BC%EB%A1%9C-array-%EC%A0%84%EB%8B%AC%ED%95%98%EA%B8%B0)
+  - [해결 과정](https://blog.hoseung.me/posts/d202b504-b369-434b-b6bc-4f0afe89e56b)
 
 - **배운 점**
   - array를 query string으로 전달하는 방법과, API Gateway가 그걸 어떻게 파싱하는지에 대해서 자세히 알아볼 수 있었습니다.
@@ -896,6 +896,6 @@
   - Back/Forward Cache 처럼 브라우저마다 구현이 다른 부분을 더 신경쓰게 되는 계기가 되었습니다.
 
 - **참조**
-  - [해당 이슈에 대해 정리한 글](https://velog.io/@alvin/2020.10.29-BackForward-%EC%BA%90%EC%8B%9C-%EB%AC%B8%EC%A0%9C)
+  - [해당 이슈에 대해 정리한 글](https://blog.hoseung.me/posts/80912bc1-3e00-4239-9928-63d9a550106c)
 
 - [목차로 가기](#목차)
