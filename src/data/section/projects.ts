@@ -23,12 +23,17 @@ export const projects: IProject[] = [
       "프론트엔드 전용 API client를 자동 생성하는 CLI 패키지 개발",
       "어드민 페이지 개발, Docker로 배포하여 로컬에서만 사용",
       "AWS S3 Presigned POST 기반 이미지 업로드 기능 개발",
+      "Github Actions 기반 CI/CD 자동화",
     ],
     references: [
       {
+        text: "블로그 보러가기",
+        link: "https://blog.hoseung.me/",
+      },
+      {
         text: "프로젝트 일지",
         link:
-          "https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Blog",
+          "https://blog.hoseung.me/categories/bdeb0874-b9e2-4fa5-b6af-9e07b6bd97ca/posts",
       },
       {
         text: "백엔드 시스템 아키텍처",
@@ -62,7 +67,7 @@ export const projects: IProject[] = [
       {
         text: "프로젝트 일지",
         link:
-          "https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Rsum",
+          "https://blog.hoseung.me/categories/29a18b1b-be6c-4488-ab1b-fa97a0f5bb72/posts",
       },
       {
         text: "프론트엔드 코드",
@@ -87,7 +92,7 @@ export const projects: IProject[] = [
       {
         text: "프로젝트 일지",
         link:
-          "https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Referring",
+          "https://blog.hoseung.me/categories/b5c98c3e-422d-4cea-89ba-374597d5c7f9/posts",
       },
       {
         text: "프론트엔드, 백엔드 코드",
@@ -116,7 +121,7 @@ export const projects: IProject[] = [
       {
         text: "프로젝트 일지",
         link:
-          "https://velog.io/@alvin/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%BD%94%EB%A1%9C%EB%82%98-%EC%86%94%EB%A3%A8%EC%85%98",
+          "https://blog.hoseung.me/categories/7920c029-4176-499c-a421-c6ed3d0a8c84/posts",
       },
       {
         text: "백엔드 코드",
