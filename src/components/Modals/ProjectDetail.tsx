@@ -102,6 +102,8 @@ const Container = styled.div`
     padding-left: 30px;
     margin: 0;
 
+    list-style: disc;
+
     > li {
       font-size: 0.85rem;
 

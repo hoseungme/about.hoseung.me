@@ -24,9 +24,16 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${Color.DarkWhite};
 
     font-family: 'Gothic A1', sans-serif;
-    font-weight: 300;
-
     font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    ul {
+      margin: 0;
+      padding: 0;
+  
+      list-style: none;
+    }
 
     @media (max-width: ${Device.Tablet}px) {
       font-size: 17px;
