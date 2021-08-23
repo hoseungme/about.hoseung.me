@@ -20,6 +20,10 @@
 ## 목차
 
 - [활동 리스트](#활동-리스트)
+  - [상품 리스트 UX 개선 (2021.07)](#상품-리스트-UX-개선-(2021.07))
+
+  - [상품리스트 페이지에 카테고리 셀렉터 추가 (2021.07)](상품리스트-페이지에-카테고리-셀렉터-추가-(2021.07))
+
   - [세일 페이지 프론트엔드 / 백엔드 개발 (2021.07)](#세일-페이지-프론트엔드-/-백엔드-개발-(2021.07))
 
   - [파트너사 URL 검색 개발 (2021.06)](#파트너사-URL-검색-개발-(2021.06))
@@ -74,6 +78,55 @@
 ---
 
 ## 활동 리스트
+### 상품 리스트 UX 개선 (2021.07)
+
+- **설명**
+  - 유저가 상품 리스트와 빠르고 자연스럽게 인터랙션할 수 있도록 UX를 개선했습니다.
+
+- **작업 내용 & 배운 점**
+  - 상품 리스트에 prefetch를 적용했습니다.
+
+    - enablePrefetchNext 옵션이 true인 경우, 다음 요청을 미리 실행하고 그 요청의 Promise를 cache map에 담았습니다.
+
+    - 그 후 실제로 loadMore function이 실행됬을 때, prefetch된 Promise가 있는 경우 그걸 await하고, 아닌 경우 새로운 요청을 보내도록 만들었습니다.
+    ```typescript
+    const prefetchedQuery = queryCache.get(key) ?? null; // Promise<OperationResult> | null
+    const result = prefetchedQuery
+      ? (await prefetchedQuery)
+      : (await fetch(operationId, params));
+    ```
+
+  - prefetch를 통해 상품 데이터는 미리 불러올 수 있었지만, 이미지 로딩을 따로 기다려야 하는 문제가 있었습니다.
+
+    - onPrefetchSuccess 옵션을 만들어서, prefetch가 성공한 경우 result를 onPrefetchSuccess 인자로 넘겨줬습니다.
+    ```typescript
+    queryCache.set(
+      key,
+      prefetch(operationId, params).then((result) => {
+        options.onPrefetchSuccess?.(result);
+        return result;
+      }),
+    );
+    ```
+
+    - 그리고 상품 이미지들도 prefetch 해줬습니다.
+    ```typescript
+    {
+      onPrefetchSuccess: (products) => {
+        products.forEach((product) => {
+          const image = new Image();
+          image.src = product.coverImage;
+        });
+      }
+    }
+    ```
+  
+  - 결과적으로 prefetch를 통해 UX와 퍼포먼스에 긍정적인 효과를 얻었습니다.
+
+    - 기존에는 다음 리스트를 불러올 때마다 로딩 skeleton을 띄워주었는데, 유저가 스크롤을 할 때마다 기다리는 시간들은 결코 짧지 않다고 생각했고, 동시에 수많은 skeleton을 렌더링 하면서, skeleton의 animation들도 한꺼번에 실행됬기 때문에 퍼포먼스 저하도 꽤 크게 느껴졌습니다.
+
+    - 그런데 이번 작업에서 상품 데이터와 이미지들을 prefetch 함으로써 유저가 지체없이 다음 상품 리스트를 확인할 수 있게 되었고, 그에 따라 skeleton도 웬만해선 띄우지 않을 수 있게 되어서 상품 리스트 페이지의 퍼포먼스도 꽤나 좋아진 것을 확인할 수 있었습니다.
+
 ### 상품리스트 페이지에 카테고리 셀렉터 추가 (2021.07)
 
 ![](/static/catch-fashion/product-list-category-selector-desktop.png)
