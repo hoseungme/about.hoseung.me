@@ -8,7 +8,7 @@ export function UListBlock(props: any) {
 const S = {
   Container: styled.ul`
     padding-left: 22px;
-    margin: 18px 0;
+    margin: 0;
 
     list-style: disc;
   `,
