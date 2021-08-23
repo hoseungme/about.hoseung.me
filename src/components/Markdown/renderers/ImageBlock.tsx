@@ -8,6 +8,7 @@ export function ImageBlock(props: any) {
 const S = {
   Container: styled.img`
     max-width: 100%;
+    max-height: 500px;
 
     display: block;
 
