@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import ReactMarkdown from "react-markdown";
-
-import { HeadingBlock } from "../components/MarkdownRenderers/HeadingBlock";
-import { CodeBlock } from "../components/MarkdownRenderers/CodeBlock";
 
 import { GA } from "../services/ga";
 
@@ -14,6 +10,8 @@ import { experienceDetailMap } from "../data/section/experiences";
 
 import { Color } from "../constants/Color";
 import { Device } from "../constants/Device";
+
+import { Markdown } from "../components/Markdown";
 
 export const ExperienceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -33,9 +31,7 @@ export const ExperienceDetail: React.FC = () => {
         메인으로 돌아가기
       </Link>
       <div className="content">
-        <ReactMarkdown renderers={{ heading: HeadingBlock, code: CodeBlock }}>
-          {experienceDetailMap.get(id)!}
-        </ReactMarkdown>
+        <Markdown content={experienceDetailMap.get(id)!} />
       </div>
       <div ref={bottomRef} />
     </Container>
@@ -65,84 +61,11 @@ const Container = styled.main`
     }
   }
 
-  > .content {
-    box-sizing: border-box;
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin-bottom: 0;
-    }
-
-    p {
-      margin: 20px 0;
-    }
-
-    a {
-      font-weight: 500;
-      color: ${Color.DarkMint};
-      text-decoration: none;
-
-      transition: color 0.1s;
-
-      &:hover {
-        color: ${Color.Mint};
-      }
-    }
-
-    ul {
-      margin: 0;
-      padding: 0 0 0 40px;
-    }
-
-    img {
-      max-width: 100%;
-      max-height: 450px;
-      object-fit: contain;
-    }
-
-    hr {
-      width: 100%;
-      height: 1px;
-
-      margin-top: 30px;
-
-      border: 0;
-
-      background-color: ${Color.LightGrey};
-    }
-
-    code {
-      font-size: 0.85rem;
-    }
-  }
-
   @media (max-width: ${Device.Tablet}px) {
     padding: 0 20% 20px;
-
-    > .content {
-      ul {
-        padding: 0 0 0 30px;
-      }
-
-      p {
-        margin: 15px 0;
-      }
-    }
   }
 
   @media (max-width: ${Device.Mobile}px) {
     padding: 0 2% 20px;
-
-    > .content {
-      ul {
-        padding: 0 0 0 20px;
-      }
-
-      p {
-        margin: 10px 0;
-      }
-    }
   }
 `;
