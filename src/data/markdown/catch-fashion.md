@@ -20,6 +20,8 @@
 ## 목차
 
 - [활동 리스트](#활동-리스트)
+  - [catch-fake.com 개발 (2021.08 ~ 2021.09)](#catch-fakecom-개발-202108--202109)
+
   - [상품 리스트 UX 개선 (2021.07)](#상품-리스트-ux-개선-202107)
 
   - [상품리스트 페이지에 카테고리 셀렉터 추가 (2021.07)](#상품리스트-페이지에-카테고리-셀렉터-추가-202107)
@@ -78,6 +80,109 @@
 ---
 
 ## 활동 리스트
+### catch-fake.com 개발 (2021.08 ~ 2021.09)
+
+![](/static/catch-fashion/catch-fake-og.png)
+![](/static/catch-fashion/catch-fake1.png)
+![](/static/catch-fashion/catch-fake2.png)
+![](/static/catch-fashion/catch-fake3.png)
+![](/static/catch-fashion/catch-fake4.png)
+![](/static/catch-fashion/catch-fake5.png)
+
+- **설명**
+  - 캐치패션 하반기 광고 랜딩 페이지를 개발했습니다.
+
+- **작업 내용 & 배운 점**
+  - catch-fake.com 을 catchfashion.com/catch-fake로 리다이렉트 시켰습니다.
+
+    - AWS의 S3와 CloudFront를 활용했고, CDK로 인프라 구축을 자동화하고 테스트코드를 작성했습니다.
+
+    - 인프라 구축과 관련한 테스트코드는 처음 작성해 보았는데, 실수가 치명적인 부분인 만큼, 인프라 구축 자동화 도구들이 테스트도 잘 제공하는지 알아보는 것도 중요하다고 느꼈습니다.
+
+  - 명품 테스트 기능을 개발했습니다.
+
+    - 먼저 interface로 미리 준비된 질문/답변 트리를 데이터로 어떻게 옮길지 형식을 정의했습니다.
+      ```typescript
+      interface QuestionNode {
+        type: "question";
+        question: string;
+        answers: AnswerNode[];
+      }
+
+      interface DescriptionNode {
+        type: "description";
+        /* ... */
+      }
+
+      interface ResultNode {
+        type: "result";
+        /* ... */
+      }
+
+      interface AnswerNode {
+        type: "answer";
+        answer: string;
+        next: QuestionNode | DescriptionNode | ResultNode;
+      }
+      ```
+
+        - 즉, 질문 화면에서 답변을 선택하면, AnswerNode.next의 type을 확인해서 다음에 어떤 컴포넌트를 렌더링할지 결정하게 됩니다.
+
+          ```typescript
+          switch (nextNode.type) {
+            case "question": {
+              return <Question {...nextNode}>;
+            }
+            case "description": {
+              return <Description {...nextNode}>;
+            }
+            case "result": {
+              return <Result {...nextNode}>;
+            }
+          }
+          ```
+
+    - 테스트를 한 단계씩 진행할 때마다 location의 hash 값을 수정해서 앞 / 뒤로 돌아가거나, 맨 처음으로 리셋할 수 있도록 했습니다.
+
+      ```typescript
+      const { back } = useContentHistoryContext();
+      return <button onClick={back}></button>
+      ```
+
+  - video 엘리먼트를 처음 다뤄보았습니다.
+
+    - 2번째 섹션에서 순차적인 동영상 재생이 필요했는데, mp4 파일들을 S3에 업로드 했습니다.
+
+    - iOS에서 비디오 자동 재생을 차단시켜버리는 문제가 있었는데, [New <video> Policies for iOS](https://webkit.org/blog/6784/new-video-policies-for-ios/)를 참고해서 해결했습니다.
+
+      - 자동재생이 허용되는 조건이 몇가지 있는데, 그 중 muted, autoplay, playsinline 세 가지 attribute를 모두 true로 설정하는 방법을 택했습니다.
+
+    - canplaythrough 이벤트를 활용해서 비디오를 재생시켰습니다.
+    
+      - canplay 같은 다른 이벤트도 있지만, [MDN 문서](https://developer.mozilla.org/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event)에 따르면 canplaythrough는 컨텐츠를 중단 없이 재생할 수 있다고 예상되는 시점에 발생되는 이벤트이기 때문에, 유저가 최대한 끊김없이 페이지를 읽을 수 있게 하기 위해서 사용했습니다.
+
+  - Redis를 활용하여 사이트의 방문자수를 간단히 트래킹할 수 있도록 API를 추가했습니다.
+
+    - [INCR](https://redis.io/commands/INCR) 문서를 참고해서, counter 패턴으로 활용했습니다.
+
+    - 개인 프로젝트를 할 때, 이러한 단순 counter와 비슷한 기능에 DynamoDB와 TTL 기능을 사용했었는데, Redis가 DynamoDB에 비해 들여야하는 리소스 크기와 속도 면에서 효율적일 것 같다고 느꼈습니다.
+
+  - Lambda@Edge를 활용해서 catch-fake의 Open Graph 데이터를 렌더링했습니다.
+
+    - 캐치패션 사이트는 CSR을 기반으로 하고 있기 때문에, Lambda@Edge를 사용해서 SEO나 Open Graph 같은 것들을 처리해주고 있습니다.
+
+    - 따라서 조건을 추가해서 /catch-fake/* 로 요청이 들어온 경우를 따로 처리해줬습니다.
+
+      ```typescript
+      if (request.uri.starsWith("/catch-fake")) {
+        return renderMeta({
+          /* ... */
+        });
+      }
+      ```
+
+- [목차로 가기](#목차)
+
 ### 상품 리스트 UX 개선 (2021.07)
 
 - **설명**
