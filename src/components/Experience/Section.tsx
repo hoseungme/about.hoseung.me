@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { IExperience } from "../../interfaces/section/Experience";
-import { ExperienceCardList } from "./ExperienceCardList";
+import { ExperienceCardList } from "./CardList";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";

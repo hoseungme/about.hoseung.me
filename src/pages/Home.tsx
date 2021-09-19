@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 
 import { Header } from "../components/common/Header";
 import { Main } from "../components/common/Main";
-import { ProfileSection } from "../components/profile/ProfileSection";
-import { ValuesSection } from "../components/values/ValuesSection";
-import { ExperienceSection } from "../components/experience/ExperienceSection";
-import { SkillSection } from "../components/skill/SkillSection";
-import { ProjectSection } from "../components/project/ProjectSection";
+import { ProfileSection } from "../components/profile/Section";
+import { ValuesSection } from "../components/values/Section";
+import { ExperienceSection } from "../components/experience/Section";
+import { SkillSection } from "../components/skill/Section";
+import { ProjectSection } from "../components/project/Section";
 import { Footer } from "../components/common/Footer";
 
 import { GA } from "../services/ga";

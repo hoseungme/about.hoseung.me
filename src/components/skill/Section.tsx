@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
-import { SkillCardList } from "./SkillCardList";
+import { SkillCardList } from "./CardList";
 
 import { ISkill } from "../../interfaces/section/Skill";
 

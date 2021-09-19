@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 
-import { ExperienceCard } from "./ExperienceCard";
+import { ExperienceCard } from "./Card";
 import { TransitionContainer } from "../common/TransitionContainer";
 
 import { useValueByMedia } from "../../hooks/useValueByMedia";
