@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 import { ModalBase } from "../ModalBase";
 
@@ -145,7 +145,7 @@ const Container = styled.div`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     width: 500px;
     max-height: 600px;
 
@@ -160,7 +160,7 @@ const Container = styled.div`
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     width: 300px;
     max-height: 400px;
 

@@ -11,7 +11,7 @@ import { ExperienceDetail } from "./pages/ExperienceDetail";
 import { ModalContextProvider } from "./contexts/Modal";
 
 import { Color } from "./constants/Color";
-import { Device } from "./constants/Device";
+import { Media } from "./constants/Media";
 
 const GlobalStyles = createGlobalStyle`
   html, body {
@@ -35,11 +35,11 @@ const GlobalStyles = createGlobalStyle`
       list-style: none;
     }
 
-    @media (max-width: ${Device.Tablet}px) {
+    ${Media.Tablet} {
       font-size: 17px;
     }
 
-    @media (max-width: ${Device.Mobile}px) {
+    ${Media.Mobile} {
       font-size: 14px;
     }
   }

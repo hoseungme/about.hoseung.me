@@ -8,7 +8,7 @@ import { GA } from "../../services/ga";
 import { IHeaderTab } from "../../interfaces/layout/HeaderTab";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const Header: React.FC<{ tabs: IHeaderTab[] }> = ({ tabs }) => {
   const { ref, inView } = useInView({ initialInView: true });
@@ -137,7 +137,7 @@ const Container = styled.header`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     height: 80px;
 
     padding: 0 20px;
@@ -154,7 +154,7 @@ const Container = styled.header`
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     height: 60px;
 
     padding: 0 15px;

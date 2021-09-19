@@ -7,7 +7,7 @@ import { ProjectCardList } from "./ProjectCardList";
 import { IProject } from "../../interfaces/section/Project";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
   projects,
@@ -112,7 +112,7 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     padding: 5% 2%;
 
     > header {
@@ -138,7 +138,7 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     padding: 5% 1%;
   }
 `;

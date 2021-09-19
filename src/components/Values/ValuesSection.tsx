@@ -7,7 +7,7 @@ import { ValuesCard } from "./ValuesCard";
 import { IValues } from "../../interfaces/section/Values";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
   return (
@@ -92,13 +92,13 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     > aside {
       width: 300px;
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     display: flex;
     flex-direction: column;
     align-items: center;

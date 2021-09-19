@@ -6,7 +6,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { IExperience } from "../../interfaces/section/Experience";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const ExperienceCard: React.FC<
   IExperience & { position: "left" | "right" }
@@ -83,13 +83,13 @@ const Container = styled.div`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     > .summary {
       width: 300px;
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     > .summary {
       width: 250px;
       line-height: 25px;

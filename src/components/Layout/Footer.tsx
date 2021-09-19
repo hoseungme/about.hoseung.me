@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { GA } from "../../services/ga";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const Footer: React.FC<{ link: string }> = ({ link }) => {
   return (
@@ -58,11 +58,11 @@ const Container = styled.footer`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     height: 100px;
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     height: 70px;
   }
 `;

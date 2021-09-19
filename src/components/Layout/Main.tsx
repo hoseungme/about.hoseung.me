@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const Main: React.FC = ({ children }) => {
   return <Container>{children}</Container>;
@@ -17,11 +17,11 @@ const Container = styled.main`
 
   overflow: hidden;
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     padding-top: 80px;
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     padding-top: 50px;
   }
 `;

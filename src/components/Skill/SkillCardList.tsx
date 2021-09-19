@@ -8,7 +8,7 @@ import { useValueByMedia } from "../../hooks/useValueByMedia";
 
 import { ISkill } from "../../interfaces/section/Skill";
 
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const SkillCardList: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
   const columnSize = useValueByMedia({ desktop: 5, tablet: 5, mobile: 3 });
@@ -41,7 +41,7 @@ const Container = styled.div<{ columnSize: number }>`
     padding: 0 20px 20px;
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     width: ${({ columnSize }) => 90 * columnSize}px;
 
     > .card {

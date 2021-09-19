@@ -6,7 +6,7 @@ import { Tag } from "../Tag/Tag";
 import { IProject } from "../../interfaces/section/Project";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 import { useModal } from "../../contexts/Modal";
 
@@ -60,11 +60,11 @@ const Container = styled.div`
 
     height: 400px;
 
-    @media (max-width: ${Device.Tablet}px) {
+    ${Media.Tablet} {
       height: 350px;
     }
 
-    @media (max-width: ${Device.Mobile}px) {
+    ${Media.Mobile} {
       height: 200px;
     }
 

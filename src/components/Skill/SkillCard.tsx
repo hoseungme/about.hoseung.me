@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { ISkill } from "../../interfaces/section/Skill";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const SkillCard: React.FC<ISkill> = ({ img, name }) => {
   return (
@@ -70,7 +70,7 @@ const Container = styled.div`
     height: 1px;
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     > .image {
       width: 70px;
       height: 70px;

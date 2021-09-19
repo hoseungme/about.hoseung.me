@@ -10,7 +10,7 @@ import { useValueByMedia } from "../../hooks/useValueByMedia";
 import { IExperience } from "../../interfaces/section/Experience";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const ExperienceCardList: React.FC<{ experiences: IExperience[] }> = ({
   experiences,
@@ -133,7 +133,7 @@ const Container = styled.ul`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     > .card {
       &.left {
         left: -350px;
@@ -153,7 +153,7 @@ const Container = styled.ul`
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     > .card {
       &.right {
         right: -40px;

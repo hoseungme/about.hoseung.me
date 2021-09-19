@@ -6,7 +6,7 @@ import { TransitionContainer } from "../Layout/TransitionContainer";
 import { IProfile } from "../../interfaces/section/Profile";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 
 export const ProfileSection: React.FC<IProfile> = ({ image, description }) => {
   return (
@@ -103,7 +103,7 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     padding: 100px 20px;
 
     box-sizing: border-box;
@@ -122,7 +122,7 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     flex-direction: column;
     align-items: center;
 

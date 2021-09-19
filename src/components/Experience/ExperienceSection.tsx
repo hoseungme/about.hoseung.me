@@ -5,7 +5,7 @@ import { IExperience } from "../../interfaces/section/Experience";
 import { ExperienceCardList } from "./ExperienceCardList";
 
 import { Color } from "../../constants/Color";
-import { Device } from "../../constants/Device";
+import { Media } from "../../constants/Media";
 import { TransitionContainer } from "../Layout/TransitionContainer";
 
 export const ExperienceSection: React.FC<{
@@ -72,7 +72,7 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     align-items: flex-start;
 
     padding: 150px 0;
@@ -83,7 +83,7 @@ const Container = styled.section`
     }
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     align-items: flex-start;
 
     padding: 100px 0;

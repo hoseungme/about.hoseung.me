@@ -9,7 +9,7 @@ import { GA } from "../services/ga";
 import { experienceDetailMap } from "../data/section/experiences";
 
 import { Color } from "../constants/Color";
-import { Device } from "../constants/Device";
+import { Media } from "../constants/Media";
 
 import { Markdown } from "../components/Markdown";
 
@@ -61,11 +61,11 @@ const Container = styled.main`
     }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     padding: 0 20% 20px;
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     padding: 0 2% 20px;
   }
 `;
