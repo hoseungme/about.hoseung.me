@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../Layout/TransitionContainer";
+import { TransitionContainer } from "../common/TransitionContainer";
 import { SkillCard } from "./SkillCard";
 
 import { useValueByMedia } from "../../hooks/useValueByMedia";

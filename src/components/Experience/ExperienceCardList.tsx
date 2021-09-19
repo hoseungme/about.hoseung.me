@@ -3,7 +3,7 @@ import styled from "styled-components";
 import classNames from "classnames";
 
 import { ExperienceCard } from "./ExperienceCard";
-import { TransitionContainer } from "../Layout/TransitionContainer";
+import { TransitionContainer } from "../common/TransitionContainer";
 
 import { useValueByMedia } from "../../hooks/useValueByMedia";
 

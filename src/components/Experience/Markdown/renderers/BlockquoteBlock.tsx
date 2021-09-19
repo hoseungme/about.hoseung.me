@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Color } from "../../../constants/Color";
+import { Color } from "../../../../constants/Color";
 
 export function BlockquoteBlock(props: any) {
   return <S.Container>{props.children}</S.Container>;

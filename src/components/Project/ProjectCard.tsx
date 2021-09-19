@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Tag } from "../Tag/Tag";
+import { Tag } from "./Tag";
 
 import { IProject } from "../../interfaces/section/Project";
 

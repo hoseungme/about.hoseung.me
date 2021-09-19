@@ -11,7 +11,7 @@ import { experienceDetailMap } from "../data/section/experiences";
 import { Color } from "../constants/Color";
 import { Media } from "../constants/Media";
 
-import { Markdown } from "../components/Markdown";
+import { Markdown } from "../components/experience/Markdown";
 
 export const ExperienceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 
-import { Header } from "../components/Layout/Header";
-import { Main } from "../components/Layout/Main";
-import { ProfileSection } from "../components/Profile/ProfileSection";
-import { ValuesSection } from "../components/Values/ValuesSection";
-import { ExperienceSection } from "../components/Experience/ExperienceSection";
-import { SkillSection } from "../components/Skill/SkillSection";
-import { ProjectSection } from "../components/Project/ProjectSection";
-import { Footer } from "../components/Layout/Footer";
+import { Header } from "../components/common/Header";
+import { Main } from "../components/common/Main";
+import { ProfileSection } from "../components/profile/ProfileSection";
+import { ValuesSection } from "../components/values/ValuesSection";
+import { ExperienceSection } from "../components/experience/ExperienceSection";
+import { SkillSection } from "../components/skill/SkillSection";
+import { ProjectSection } from "../components/project/ProjectSection";
+import { Footer } from "../components/common/Footer";
 
 import { GA } from "../services/ga";
 

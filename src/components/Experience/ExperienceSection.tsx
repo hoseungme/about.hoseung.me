@@ -6,7 +6,7 @@ import { ExperienceCardList } from "./ExperienceCardList";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
-import { TransitionContainer } from "../Layout/TransitionContainer";
+import { TransitionContainer } from "../common/TransitionContainer";
 
 export const ExperienceSection: React.FC<{
   experiences: IExperience[];
