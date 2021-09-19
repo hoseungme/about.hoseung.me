@@ -33,6 +33,8 @@ function RouteSwitch() {
 }
 
 const GlobalStyles = createGlobalStyle`
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
   html, body {
     width: 100%;
     height: 100%;
@@ -42,7 +44,6 @@ const GlobalStyles = createGlobalStyle`
 
     background-color: ${Color.DarkWhite};
 
-    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     font-size: 20px;
     font-weight: 300;
