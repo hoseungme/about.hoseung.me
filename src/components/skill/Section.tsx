@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
@@ -8,7 +7,11 @@ import { ISkill } from "../../interfaces/section/Skill";
 
 import { Color } from "../../constants/Color";
 
-export const SkillSection: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
+interface SkillSectionProps {
+  skills: ISkill[];
+}
+
+export function SkillSection({ skills }: SkillSectionProps) {
   return (
     <Container>
       <header>
@@ -25,7 +28,7 @@ export const SkillSection: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
       </article>
     </Container>
   );
-};
+}
 
 const Container = styled.section`
   width: 100%;

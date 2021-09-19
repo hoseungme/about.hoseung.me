@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
@@ -10,7 +10,11 @@ import { IHeaderTab } from "../../interfaces/layout/HeaderTab";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const Header: React.FC<{ tabs: IHeaderTab[] }> = ({ tabs }) => {
+interface HeaderProps {
+  tabs: IHeaderTab[];
+}
+
+export function Header({ tabs }: HeaderProps) {
   const { ref, inView } = useInView({ initialInView: true });
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -46,7 +50,7 @@ export const Header: React.FC<{ tabs: IHeaderTab[] }> = ({ tabs }) => {
       </Container>
     </>
   );
-};
+}
 
 const Container = styled.header`
   position: fixed;

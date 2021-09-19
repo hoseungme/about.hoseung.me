@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BiLinkExternal } from "react-icons/bi";
@@ -8,9 +7,13 @@ import { IExperience } from "../../interfaces/section/Experience";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const ExperienceCard: React.FC<
-  IExperience & { position: "left" | "right" }
-> = ({ id, title, duration, summary, detail, position }) => {
+interface ExperienceCardProps {
+  position: "left" | "right";
+  experience: IExperience;
+}
+
+export function ExperienceCard({ position, experience }: ExperienceCardProps) {
+  const { id, title, duration, summary, detail } = experience;
   return (
     <Container
       style={{ alignItems: position === "left" ? "flex-end" : "flex-start" }}
@@ -31,7 +34,7 @@ export const ExperienceCard: React.FC<
       )}
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   width: 100%;

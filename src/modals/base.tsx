@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { PropsWithChildren, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { CgClose } from "react-icons/cg";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -7,7 +7,7 @@ import { ModalProps, useTransitionStatus } from "../contexts/Modal";
 
 import { Color } from "../constants/Color";
 
-export const ModalBase: React.FC<ModalProps> = ({ close, children }) => {
+export function ModalBase({ close, children }: PropsWithChildren<ModalProps>) {
   useEffect(() => {
     const closeModal = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -56,7 +56,7 @@ export const ModalBase: React.FC<ModalProps> = ({ close, children }) => {
       </div>
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   position: fixed;

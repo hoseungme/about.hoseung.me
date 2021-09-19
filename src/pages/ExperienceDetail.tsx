@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
@@ -13,7 +13,7 @@ import { Media } from "../constants/Media";
 
 import { Markdown } from "../components/experience/Markdown";
 
-export const ExperienceDetail: React.FC = () => {
+export function ExperienceDetail() {
   const { id } = useParams<{ id: string }>();
 
   const [bottomRef, bottomInView] = useInView({ triggerOnce: true });
@@ -36,7 +36,7 @@ export const ExperienceDetail: React.FC = () => {
       <div ref={bottomRef} />
     </Container>
   );
-};
+}
 
 const Container = styled.main`
   display: flex;

@@ -1,4 +1,3 @@
-import React from "react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import slug from "remark-slug";
@@ -11,7 +10,11 @@ import { BlockquoteBlock } from "./renderers/BlockquoteBlock";
 import { UListBlock } from "./renderers/UListBlock";
 import { LIBlock } from "./renderers/LIBlock";
 
-export function Markdown({ content }: { content: string }) {
+interface MarkdownProps {
+  content: string;
+}
+
+export function Markdown({ content }: MarkdownProps) {
   return (
     <S.Container>
       <ReactMarkdown

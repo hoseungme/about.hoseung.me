@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 
 import { Color } from "../../constants/Color";
@@ -12,14 +12,13 @@ import { GA } from "../../services/ga";
 
 import { IProject } from "../../interfaces/section/Project";
 
-export const ProjectDetail: React.FC<ModalProps & IProject> = ({
-  close,
-  img,
-  title,
-  description,
-  activities,
-  references,
-}) => {
+interface ProjectDetailProps extends ModalProps {
+  project: IProject;
+}
+
+export function ProjectDetail({ close, project }: ProjectDetailProps) {
+  const { img, title, description, activities, references } = project;
+
   useEffect(() => {
     GA.trackProjectSectionEvent({ action: "Modal Opened", label: title });
   }, []);
@@ -56,7 +55,7 @@ export const ProjectDetail: React.FC<ModalProps & IProject> = ({
       </Container>
     </ModalBase>
   );
-};
+}
 
 const Container = styled.div`
   width: 700px;

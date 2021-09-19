@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { Tag } from "./Tag";
@@ -10,13 +9,17 @@ import { Media } from "../../constants/Media";
 
 import { useModal } from "../../contexts/Modal";
 
-export const ProjectCard: React.FC<IProject> = (project) => {
+interface ProjectCardProps {
+  project: IProject;
+}
+
+export function ProjectCard({ project }: ProjectCardProps) {
   const modal = useModal();
 
   const { img, tags, title, duration } = project;
 
   return (
-    <Container onClick={() => modal.open("ProjectDetail", project)}>
+    <Container onClick={() => modal.open("ProjectDetail", { project })}>
       <div className="top">
         <img src={img} alt="Project" />
         <div className="tags">
@@ -31,7 +34,7 @@ export const ProjectCard: React.FC<IProject> = (project) => {
       </div>
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   width: 100%;

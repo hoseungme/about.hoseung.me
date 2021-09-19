@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
@@ -9,7 +8,11 @@ import { IValues } from "../../interfaces/section/Values";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
+interface ValuesSectionProps {
+  values: IValues[];
+}
+
+export function ValuesSection({ values }: ValuesSectionProps) {
   return (
     <Container>
       <summary>
@@ -36,7 +39,7 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
         </div>
       </summary>
       <aside>
-        {values.map((props, index) => (
+        {values.map((value, index) => (
           <TransitionContainer
             key={index}
             className="card"
@@ -45,13 +48,13 @@ export const ValuesSection: React.FC<{ values: IValues[] }> = ({ values }) => {
             duration={0.5}
             intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
-            <ValuesCard key={index} page={index + 1} {...props} />
+            <ValuesCard key={index} page={index + 1} value={value} />
           </TransitionContainer>
         ))}
       </aside>
     </Container>
   );
-};
+}
 
 const Container = styled.section`
   display: flex;

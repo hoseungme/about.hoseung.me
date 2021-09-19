@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
@@ -10,9 +9,11 @@ import { GA } from "../../services/ga";
 
 import { IProject } from "../../interfaces/section/Project";
 
-export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
-  projects,
-}) => {
+interface ProjectCardListProps {
+  projects: IProject[];
+}
+
+export function ProjectCardList({ projects }: ProjectCardListProps) {
   const columnSize = useValueByMedia({ desktop: 3, tablet: 2, mobile: 1 });
 
   return (
@@ -30,12 +31,12 @@ export const ProjectCardList: React.FC<{ projects: IProject[] }> = ({
             })
           }
         >
-          <ProjectCard {...project} />
+          <ProjectCard project={project} />
         </TransitionContainer>
       ))}
     </Container>
   );
-};
+}
 
 const Container = styled.div<{ columnSize: number }>`
   width: 100%;

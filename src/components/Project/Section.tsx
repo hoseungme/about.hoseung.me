@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
@@ -9,9 +8,11 @@ import { IProject } from "../../interfaces/section/Project";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
-  projects,
-}) => {
+interface ProjectSectionProps {
+  projects: IProject[];
+}
+
+export function ProjectSection({ projects }: ProjectSectionProps) {
   return (
     <Container>
       <header>
@@ -54,7 +55,7 @@ export const ProjectSection: React.FC<{ projects: IProject[] }> = ({
       </article>
     </Container>
   );
-};
+}
 
 const Container = styled.section`
   width: 100%;

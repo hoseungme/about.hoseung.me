@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
@@ -10,7 +9,11 @@ import { ISkill } from "../../interfaces/section/Skill";
 
 import { Media } from "../../constants/Media";
 
-export const SkillCardList: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
+interface SkillCardListProps {
+  skills: ISkill[];
+}
+
+export function SkillCardList({ skills }: SkillCardListProps) {
   const columnSize = useValueByMedia({ desktop: 5, tablet: 5, mobile: 3 });
 
   return (
@@ -22,12 +25,12 @@ export const SkillCardList: React.FC<{ skills: ISkill[] }> = ({ skills }) => {
           effect="fadeInUp"
           delay={0.25 * (index % columnSize)}
         >
-          <SkillCard {...skill} />
+          <SkillCard skill={skill} />
         </TransitionContainer>
       ))}
     </Container>
   );
-};
+}
 
 const Container = styled.div<{ columnSize: number }>`
   width: ${({ columnSize }) => 140 * columnSize}px;

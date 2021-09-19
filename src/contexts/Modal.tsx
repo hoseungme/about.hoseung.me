@@ -1,24 +1,26 @@
-import React, { createContext, useState, useCallback, useContext } from "react";
+import { createContext, useState, useCallback, useContext } from "react";
 import {
   TransitionGroup,
   Transition,
   TransitionStatus,
 } from "react-transition-group";
 
+import { ChildrenProp } from "../types/react";
+
 import * as modals from "../modals";
 
-export type ModalProps = {
+export interface ModalProps {
   close: () => void;
-};
+}
 
-type Modal = {
+interface Modal {
   name: keyof typeof modals;
   props: {
     [key in string]: any;
   };
-};
+}
 
-type ModalContextValues = {
+interface ModalContextValues {
   open: <T extends Modal["name"]>(
     name: T,
     props: Omit<
@@ -26,12 +28,12 @@ type ModalContextValues = {
       keyof ModalProps | "children"
     >
   ) => void;
-};
+}
 
 const ModalContext = createContext<ModalContextValues | null>(null);
 const TransitionStatusContext = createContext<TransitionStatus | null>(null);
 
-export const ModalContextProvider: React.FC = ({ children }) => {
+export function ModalContextProvider({ children }: ChildrenProp) {
   const [openedModal, setOpenedModal] = useState<Modal | null>(null);
 
   const open: ModalContextValues["open"] = useCallback((name, props) => {
@@ -58,17 +60,18 @@ export const ModalContextProvider: React.FC = ({ children }) => {
       </TransitionGroup>
     </ModalContext.Provider>
   );
-};
+}
 
-const ModalRenderer: React.FC<ModalProps & { modal: Modal }> = ({
-  close,
-  modal,
-}) => {
+interface ModalRendererProps extends ModalProps {
+  modal: Modal;
+}
+
+function ModalRenderer({ close, modal }: ModalRendererProps) {
   const Modal = modals[modal.name];
   return <Modal close={close} {...(modal.props as any)} />;
-};
+}
 
-export const useModal = () => {
+export function useModal() {
   const context = useContext(ModalContext);
 
   if (!context) {
@@ -76,9 +79,9 @@ export const useModal = () => {
   }
 
   return context;
-};
+}
 
-export const useTransitionStatus = () => {
+export function useTransitionStatus() {
   const context = useContext(TransitionStatusContext);
 
   if (!context) {
@@ -86,4 +89,4 @@ export const useTransitionStatus = () => {
   }
 
   return context;
-};
+}

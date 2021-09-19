@@ -1,15 +1,16 @@
-import React from "react";
 import styled from "styled-components";
 
 import { IValues } from "../../interfaces/section/Values";
 
 import { Color } from "../../constants/Color";
 
-export const ValuesCard: React.FC<IValues & { page: number }> = ({
-  page,
-  title,
-  description,
-}) => {
+interface ValuesCardProps {
+  page: number;
+  value: IValues;
+}
+
+export function ValuesCard({ page, value }: ValuesCardProps) {
+  const { title, description } = value;
   return (
     <Container>
       <div className="title">
@@ -19,7 +20,7 @@ export const ValuesCard: React.FC<IValues & { page: number }> = ({
       <div className="description">{description}</div>
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   width: 100%;

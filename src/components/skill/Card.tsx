@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { ISkill } from "../../interfaces/section/Skill";
@@ -6,7 +5,12 @@ import { ISkill } from "../../interfaces/section/Skill";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const SkillCard: React.FC<ISkill> = ({ img, name }) => {
+interface SkillCardProps {
+  skill: ISkill;
+}
+
+export function SkillCard({ skill }: SkillCardProps) {
+  const { img, name } = skill;
   return (
     <Container>
       <div className="image">
@@ -16,7 +20,7 @@ export const SkillCard: React.FC<ISkill> = ({ img, name }) => {
       <div className="background" />
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   position: relative;

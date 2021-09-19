@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { GA } from "../../services/ga";
@@ -6,7 +5,11 @@ import { GA } from "../../services/ga";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const Footer: React.FC<{ link: string }> = ({ link }) => {
+interface FooterProps {
+  link: string;
+}
+
+export function Footer({ link }: FooterProps) {
   return (
     <Container>
       <span>
@@ -21,7 +24,7 @@ export const Footer: React.FC<{ link: string }> = ({ link }) => {
       </span>
     </Container>
   );
-};
+}
 
 const Container = styled.footer`
   width: 100%;

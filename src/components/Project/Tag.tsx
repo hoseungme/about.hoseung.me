@@ -1,11 +1,14 @@
-import React from "react";
 import styled from "styled-components";
 
 import { Color } from "../../constants/Color";
 
-export const Tag: React.FC<{ tag: string }> = ({ tag }) => {
+interface TagProps {
+  tag: string;
+}
+
+export function Tag({ tag }: TagProps) {
   return <Container>{tag}</Container>;
-};
+}
 
 const Container = styled.div`
   width: fit-content;

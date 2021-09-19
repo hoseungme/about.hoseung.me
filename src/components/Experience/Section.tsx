@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { IExperience } from "../../interfaces/section/Experience";
@@ -8,9 +7,11 @@ import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 import { TransitionContainer } from "../common/TransitionContainer";
 
-export const ExperienceSection: React.FC<{
+interface ExperienceSectionProps {
   experiences: IExperience[];
-}> = ({ experiences }) => {
+}
+
+export function ExperienceSection({ experiences }: ExperienceSectionProps) {
   return (
     <Container>
       <div className="summary">
@@ -37,7 +38,7 @@ export const ExperienceSection: React.FC<{
       <ExperienceCardList experiences={experiences} />
     </Container>
   );
-};
+}
 
 const Container = styled.section`
   width: 100%;

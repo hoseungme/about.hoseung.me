@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { Header } from "../components/common/Header";
 import { Main } from "../components/common/Main";
@@ -19,14 +19,14 @@ import { skills } from "../data/section/skills";
 import { projects } from "../data/section/projects";
 import { footerLink } from "../data/layout/footerLink";
 
-export const Home: React.FC = () => {
+export function Home() {
   useEffect(() => GA.trackPageView({ path: window.location.pathname }), []);
 
   return (
     <>
       <Header tabs={headerTabs} />
       <Main>
-        <ProfileSection {...profile} />
+        <ProfileSection profile={profile} />
         <ValuesSection values={values} />
         <ExperienceSection experiences={experiences} />
         <SkillSection skills={skills} />
@@ -35,4 +35,4 @@ export const Home: React.FC = () => {
       <Footer link={footerLink} />
     </>
   );
-};
+}

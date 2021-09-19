@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 
@@ -12,9 +11,11 @@ import { IExperience } from "../../interfaces/section/Experience";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const ExperienceCardList: React.FC<{ experiences: IExperience[] }> = ({
-  experiences,
-}) => {
+interface ExperienceCardListProps {
+  experiences: IExperience[];
+}
+
+export function ExperienceCardList({ experiences }: ExperienceCardListProps) {
   const isMobile = useValueByMedia({
     desktop: false,
     tablet: true,
@@ -42,7 +43,7 @@ export const ExperienceCardList: React.FC<{ experiences: IExperience[] }> = ({
             >
               <ExperienceCard
                 position={isPositionLeft ? "left" : "right"}
-                {...experience}
+                experience={experience}
               />
             </TransitionContainer>
             <div className="marker" />
@@ -51,7 +52,7 @@ export const ExperienceCardList: React.FC<{ experiences: IExperience[] }> = ({
       })}
     </Container>
   );
-};
+}
 
 const Container = styled.ul`
   position: relative;

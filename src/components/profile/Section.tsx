@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
@@ -8,7 +7,12 @@ import { IProfile } from "../../interfaces/section/Profile";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-export const ProfileSection: React.FC<IProfile> = ({ image, description }) => {
+interface ProfileSectionProps {
+  profile: IProfile;
+}
+
+export function ProfileSection({ profile }: ProfileSectionProps) {
+  const { image, description } = profile;
   return (
     <Container>
       <TransitionContainer className="profile-image" effect="fadeInDown">
@@ -42,7 +46,7 @@ export const ProfileSection: React.FC<IProfile> = ({ image, description }) => {
       </div>
     </Container>
   );
-};
+}
 
 const Container = styled.section`
   display: flex;
