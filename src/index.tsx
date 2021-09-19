@@ -23,7 +23,8 @@ const GlobalStyles = createGlobalStyle`
 
     background-color: ${Color.DarkWhite};
 
-    font-family: 'Gothic A1', sans-serif;
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.4;
