@@ -1,20 +1,36 @@
 import { useEffect, useState } from "react";
+import { IconType } from "react-icons";
+import { IoLogoGithub } from "react-icons/io";
+import { ImBook } from "react-icons/im";
 import styled from "styled-components";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 
 import { GA } from "../../services/ga";
 
-import { IHeaderTab } from "../../interfaces/layout/HeaderTab";
-
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-interface HeaderProps {
-  tabs: IHeaderTab[];
+interface Tab {
+  icon: IconType;
+  text: string;
+  link: string;
 }
 
-export function Header({ tabs }: HeaderProps) {
+const tabs: Tab[] = [
+  {
+    icon: IoLogoGithub,
+    text: "github",
+    link: "https://github.com/HoseungJang",
+  },
+  {
+    icon: ImBook,
+    text: "blog",
+    link: "https://blog.hoseung.me/",
+  },
+];
+
+export function Header() {
   const { ref, inView } = useInView({ initialInView: true });
   const [isScrolled, setIsScrolled] = useState(false);
 

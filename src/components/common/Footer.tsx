@@ -5,17 +5,13 @@ import { GA } from "../../services/ga";
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-interface FooterProps {
-  link: string;
-}
-
-export function Footer({ link }: FooterProps) {
+export function Footer() {
   return (
     <Container>
       <span>
         ⓒ 2020
         <a
-          href={link}
+          href="https://github.com/hoseung-only/about.janghoseung.com"
           onClick={() => GA.trackFooterEvent({ action: "Name Clicked" })}
         >
           HoseungJang
