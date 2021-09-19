@@ -20,7 +20,7 @@ export const ModalBase: React.FC<ModalProps> = ({ close, children }) => {
     return () => {
       window.removeEventListener("keydown", closeModal);
     };
-  }, []);
+  }, [close]);
 
   const ref = useRef<HTMLDivElement | null>(null);
 
