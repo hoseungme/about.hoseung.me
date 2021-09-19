@@ -82,12 +82,12 @@
 ## 활동 리스트
 ### catch-fake.com 개발 (2021.08 ~ 2021.09)
 
-![](/static/catch-fashion/catch-fake-og.png)
-![](/static/catch-fashion/catch-fake1.png)
-![](/static/catch-fashion/catch-fake2.png)
-![](/static/catch-fashion/catch-fake3.png)
-![](/static/catch-fashion/catch-fake4.png)
-![](/static/catch-fashion/catch-fake5.png)
+![](/images/catch-fashion/catch-fake-og.png)
+![](/images/catch-fashion/catch-fake1.png)
+![](/images/catch-fashion/catch-fake2.png)
+![](/images/catch-fashion/catch-fake3.png)
+![](/images/catch-fashion/catch-fake4.png)
+![](/images/catch-fashion/catch-fake5.png)
 
 - **설명**
   - 캐치패션 하반기 광고 랜딩 페이지를 개발했습니다.
@@ -236,8 +236,8 @@
 
 ### 상품리스트 페이지에 카테고리 셀렉터 추가 (2021.07)
 
-![](/static/catch-fashion/product-list-category-selector-desktop.png)
-![](/static/catch-fashion/product-list-category-selector-mobile.png)
+![](/images/catch-fashion/product-list-category-selector-desktop.png)
+![](/images/catch-fashion/product-list-category-selector-mobile.png)
 
 - **설명**
   - 유저가 카테고리 상품 리스트 페이지에서 상위 카테고리를 변경하려면, 다시 쇼핑하기 페이지로 돌아가야 한다는 불편함이 있었습니다.
@@ -259,10 +259,10 @@
 
 ### 세일 페이지 프론트엔드 / 백엔드 개발 (2021.07)
 
-![](/static/catch-fashion/sale-desktop-1.png)
-![](/static/catch-fashion/sale-desktop-2.png)
-![](/static/catch-fashion/sale-mobile-1.png)
-![](/static/catch-fashion/sale-mobile-2.png)
+![](/images/catch-fashion/sale-desktop-1.png)
+![](/images/catch-fashion/sale-desktop-2.png)
+![](/images/catch-fashion/sale-mobile-1.png)
+![](/images/catch-fashion/sale-mobile-2.png)
 
 - **설명**
   - 세일과 관련된 정보를 모아서 보여주는 페이지를 개발했습니다.
@@ -292,10 +292,10 @@
 
 ### 파트너사 URL 검색 개발 (2021.06)
 
-![](/static/catch-fashion/search-by-retailer-url-desktop-1.png)
-![](/static/catch-fashion/search-by-retailer-url-desktop-2.png)
-![](/static/catch-fashion/search-by-retailer-url-mobile-1.png)
-![](/static/catch-fashion/search-by-retailer-url-mobile-2.png)
+![](/images/catch-fashion/search-by-retailer-url-desktop-1.png)
+![](/images/catch-fashion/search-by-retailer-url-desktop-2.png)
+![](/images/catch-fashion/search-by-retailer-url-mobile-1.png)
+![](/images/catch-fashion/search-by-retailer-url-mobile-2.png)
 
 - **설명**
   - 유저가 파트너사에서 사고 싶은 상품을 이미 찾았을 때, 캐치패션 사이트 내에서 해당 상품을 찾아 가격을 비교해보고 싶은 경우가 있습니다.
@@ -340,9 +340,9 @@
 
 ### '컬렉션' 개발 (2021.05)
 
-![](/static/catch-fashion/collection-desktop.png)
-![](/static/catch-fashion/collection-brand-desktop.png)
-![](/static/catch-fashion/collection-mobile.png)
+![](/images/catch-fashion/collection-desktop.png)
+![](/images/catch-fashion/collection-brand-desktop.png)
+![](/images/catch-fashion/collection-mobile.png)
 
 - **설명**
   - 개인화, 프로모션 등에 사용할 '컬렉션'을 도입했습니다.
@@ -413,8 +413,8 @@
 
 ### 리테일러 프로모션 포스트들을 '이동 후 구매' 페이지에 노출 (2021.04)
 
-![](/static/catch-fashion/outlink-promotion-desktop.png)
-![](/static/catch-fashion/outlink-promotion-mobile.png)
+![](/images/catch-fashion/outlink-promotion-desktop.png)
+![](/images/catch-fashion/outlink-promotion-mobile.png)
 
 - **설명**
   - 기존에 모든 포스트들은 캐치태그 페이지에서만 확인할 수 있었는데, 전체 유저를 통틀어 캐치태그 페이지의 방문율이 없다시피 할 정도로 매우 낮았습니다.
@@ -438,8 +438,8 @@
 
 ### '쇼핑하기' 페이지 프론트엔드 / 백엔드 개발 (2021.04)
 
-![](/static/catch-fashion/browse-desktop.png)
-![](/static/catch-fashion/browse-mobile.png)
+![](/images/catch-fashion/browse-desktop.png)
+![](/images/catch-fashion/browse-mobile.png)
 
 - **설명**
   - 기존에 사이트 상단 헤더에 존재했던 카테고리 리스트와 브랜드 리스트 페이지를 '쇼핑하기' 페이지로 통합시켰습니다.
@@ -483,8 +483,8 @@
 
 ### '이동 후 구매' 페이지 프론트엔드 / 백엔드 개발 (2021.02)
 
-![](/static/catch-fashion/outlink-desktop.png)
-![](/static/catch-fashion/outlink-mobile.png)
+![](/images/catch-fashion/outlink-desktop.png)
+![](/images/catch-fashion/outlink-mobile.png)
 
 - **설명**
   - 기존에 '이동 후 구매' 페이지와 할인코드 페이지가 따로 분리되어 있었는데, 그것을 하나로 합쳤습니다.
@@ -540,7 +540,7 @@
 
 ### Visual Regression Test 도입 (2021.02)
 
-![](/static/catch-fashion/visual-regression-test.png)
+![](/images/catch-fashion/visual-regression-test.png)
 
 - **설명**
   - 작업 중에 의도치 않게 생긴 UI 변경을 인지하지 못하고 프로덕션에 배포되거나, 변경된 UI의 Before / After를 한눈에 비교하기가 힘든 문제가 있었습니다.
@@ -576,8 +576,8 @@
 
 ### 프로모션 페이지 프론트엔드 / 백엔드 개발 (2021.01)
 
-![](/static/catch-fashion/promotion-list-desktop.png)
-![](/static/catch-fashion/promotion-list-mobile.png)
+![](/images/catch-fashion/promotion-list-desktop.png)
+![](/images/catch-fashion/promotion-list-mobile.png)
 
 - **설명**
   - 기존에 카드사 프로모션을 진행할 때의 문제점은, 한 사람이 여러 카드를 같은 프로모션에 등록할 수 있다는 점이었습니다.
@@ -706,7 +706,7 @@
 
 ### 상품 상세보기 페이지 리팩토링 (2020.10)
 
-![](/static/catch-fashion/product-detail.png)
+![](/images/catch-fashion/product-detail.png)
 
 - **설명**
   - 상품 페이지의 UI를 개선하고, 내부 코드를 리팩토링 했습니다.
@@ -740,7 +740,7 @@
 
 ### 상품 태그 시스템 도입 (2020.09)
 
-![](/static/catch-fashion/product-tag.png)
+![](/images/catch-fashion/product-tag.png)
 
 - **설명**
   - 기존의 관련 상품 리스트에서는 같은 카테고리 내의 상품들을 보여주고 있었습니다.
@@ -776,8 +776,8 @@
 
 ### 상품 리스트 리뉴얼 (2020.08)
 
-![](/static/catch-fashion/product-list.png)
-![](/static/catch-fashion/search-result.png)
+![](/images/catch-fashion/product-list.png)
+![](/images/catch-fashion/search-result.png)
 
 - **설명**
   - 상품 리스트 페이지, 검색 결과 페이지에 완전히 새로운 디자인을 적용했습니다.
