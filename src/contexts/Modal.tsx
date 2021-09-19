@@ -5,7 +5,7 @@ import {
   TransitionStatus,
 } from "react-transition-group";
 
-import * as modals from "../components/Modals";
+import * as modals from "../modals";
 
 export type ModalProps = {
   close: () => void;
