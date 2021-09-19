@@ -73,8 +73,8 @@ module.exports = (env) => {
       new CopyWebpackPlugin({
         patterns: [
           {
-            from: "src/data/markdown/images",
-            to: "static",
+            from: "public/images",
+            to: "images",
           },
         ],
       }),

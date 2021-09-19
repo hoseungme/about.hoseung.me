@@ -1,6 +1,6 @@
 import { useMediaLayout } from "use-media";
 
-import { Device } from "../constants/Device";
+import { Media } from "../constants/Media";
 
 type Values<T> = {
   desktop: T;
@@ -9,11 +9,8 @@ type Values<T> = {
 };
 
 export const useValueByMedia = <T>(values: Values<T>) => {
-  const isDesktop = useMediaLayout({ minWidth: Device.Tablet + 1 });
-  const isTablet = useMediaLayout({
-    maxWidth: Device.Tablet,
-    minWidth: Device.Mobile + 1,
-  });
+  const isDesktop = useMediaLayout(Media.Desktop.split("@media ")[1]);
+  const isTablet = useMediaLayout(Media.Tablet.split("@media ")[1]);
 
   const currentMedia = isDesktop ? "desktop" : isTablet ? "tablet" : "mobile";
 

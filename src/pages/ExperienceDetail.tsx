@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import { useEffect } from "react";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
 
 import { GA } from "../services/ga";
 
-import { experienceDetailMap } from "../data/section/experiences";
+import { experienceDetailMap } from "../data/experience";
 
 import { Color } from "../constants/Color";
-import { Device } from "../constants/Device";
+import { Media } from "../constants/Media";
 
-import { Markdown } from "../components/Markdown";
+import { Markdown } from "../components/experience/Markdown";
 
-export const ExperienceDetail: React.FC = () => {
+export function ExperienceDetail() {
   const { id } = useParams<{ id: string }>();
 
   const [bottomRef, bottomInView] = useInView({ triggerOnce: true });
@@ -36,7 +36,7 @@ export const ExperienceDetail: React.FC = () => {
       <div ref={bottomRef} />
     </Container>
   );
-};
+}
 
 const Container = styled.main`
   display: flex;
@@ -46,6 +46,7 @@ const Container = styled.main`
 
   > .back-button {
     display: flex;
+    align-items: center;
 
     margin-top: 20px;
 
@@ -59,13 +60,17 @@ const Container = styled.main`
     &:hover {
       color: ${Color.BlueHover};
     }
+
+    > :first-child {
+      margin-right: 4px;
+    }
   }
 
-  @media (max-width: ${Device.Tablet}px) {
+  ${Media.Tablet} {
     padding: 0 20% 20px;
   }
 
-  @media (max-width: ${Device.Mobile}px) {
+  ${Media.Mobile} {
     padding: 0 2% 20px;
   }
 `;
