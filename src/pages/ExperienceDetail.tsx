@@ -46,6 +46,7 @@ const Container = styled.main`
 
   > .back-button {
     display: flex;
+    align-items: center;
 
     margin-top: 20px;
 
@@ -58,6 +59,10 @@ const Container = styled.main`
 
     &:hover {
       color: ${Color.BlueHover};
+    }
+
+    > :first-child {
+      margin-right: 4px;
     }
   }
 
