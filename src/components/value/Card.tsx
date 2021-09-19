@@ -4,12 +4,12 @@ import { IValues } from "../../interfaces/section/Values";
 
 import { Color } from "../../constants/Color";
 
-interface ValuesCardProps {
+interface ValueCardProps {
   page: number;
   value: IValues;
 }
 
-export function ValuesCard({ page, value }: ValuesCardProps) {
+export function ValueCard({ page, value }: ValueCardProps) {
   const { title, description } = value;
   return (
     <Container>

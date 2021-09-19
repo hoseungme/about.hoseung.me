@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
-import { ValuesCard } from "./Card";
+import { ValueCard } from "./Card";
 
 import { IValues } from "../../interfaces/section/Values";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
-interface ValuesSectionProps {
+interface ValueSectionProps {
   values: IValues[];
 }
 
-export function ValuesSection({ values }: ValuesSectionProps) {
+export function ValueSection({ values }: ValueSectionProps) {
   return (
     <Container>
       <summary>
@@ -48,7 +48,7 @@ export function ValuesSection({ values }: ValuesSectionProps) {
             duration={0.5}
             intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
-            <ValuesCard key={index} page={index + 1} value={value} />
+            <ValueCard key={index} page={index + 1} value={value} />
           </TransitionContainer>
         ))}
       </aside>
