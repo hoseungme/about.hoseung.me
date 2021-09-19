@@ -1,20 +1,16 @@
 import { ISkill } from "../../interfaces/section/Skill";
 
-import typescriptImage from "../../images/skills/typescript.png";
-import reactImage from "../../images/skills/react.png";
-import nodejsImage from "../../images/skills/nodejs.png";
-
 export const skills: ISkill[] = [
   {
-    img: typescriptImage,
+    img: "/images/skill/typescript.png",
     name: "Typescript",
   },
   {
-    img: reactImage,
+    img: "/images/skill/react.png",
     name: "React",
   },
   {
-    img: nodejsImage,
+    img: "/images/skill/nodejs.png",
     name: "Node.js",
   },
 ];

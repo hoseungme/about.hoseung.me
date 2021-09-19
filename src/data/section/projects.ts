@@ -1,14 +1,8 @@
 import { IProject } from "../../interfaces/section/Project";
 
-import blogImage from "../../images/project/blog.png";
-import resumeImage from "../../images/project/resume.png";
-import referringImage from "../../images/project/referring.png";
-import coronaSolutionImage from "../../images/project/corona-solution.png";
-import dsmMarketImage from "../../images/project/dsm-market.png";
-
 export const projects: IProject[] = [
   {
-    img: blogImage,
+    img: "/images/project/blog.png",
     title: "나만의 공간. 개인 블로그 프로젝트",
     duration: "2020.12 ~ 진행중",
     description:
@@ -51,7 +45,7 @@ export const projects: IProject[] = [
     tags: ["Front-end", "Back-end"],
   },
   {
-    img: resumeImage,
+    img: "/images/project/resume.png",
     title: "나를 소개합니다. 개인 레주메 프로젝트",
     duration: "2020.10 ~ 2020.11",
     description:
@@ -77,7 +71,7 @@ export const projects: IProject[] = [
     tags: ["Front-end"],
   },
   {
-    img: referringImage,
+    img: "/images/project/referring.png",
     title: "읽다가 말아도 안심. 주소를 잊어도 안심. 프로젝트 Referring",
     duration: "2020.08 ~ 2020.10",
     description:
@@ -102,7 +96,7 @@ export const projects: IProject[] = [
     tags: ["Front-end", "Back-end"],
   },
   {
-    img: coronaSolutionImage,
+    img: "/images/project/corona-solution.png",
     title: "전국의 마스크 재고정보가 한눈에. 프로젝트 코로나 솔루션",
     duration: "2020.03 ~ 2020.07",
     description:
@@ -131,7 +125,7 @@ export const projects: IProject[] = [
     tags: ["Back-end"],
   },
   {
-    img: dsmMarketImage,
+    img: "/images/project/dsm-market.png",
     title: "빠르고 간편한 교내 중고거래. 프로젝트 대마장터",
     duration: "2019.08 ~ 2020.01",
     description:
