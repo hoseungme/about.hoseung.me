@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BiLinkExternal } from "react-icons/bi";
 
-import { IExperience } from "../../interfaces/section/Experience";
+import { Experience } from "../../data/experience";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
 interface ExperienceCardProps {
   position: "left" | "right";
-  experience: IExperience;
+  experience: Experience;
 }
 
 export function ExperienceCard({ position, experience }: ExperienceCardProps) {

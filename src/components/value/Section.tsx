@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { TransitionContainer } from "../common/TransitionContainer";
 import { ValueCard } from "./Card";
 
-import { IValues } from "../../interfaces/section/Values";
+import { Value } from "../../data/value";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
 interface ValueSectionProps {
-  values: IValues[];
+  values: Value[];
 }
 
 export function ValueSection({ values }: ValueSectionProps) {

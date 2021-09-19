@@ -1,9 +1,15 @@
-import { IExperience } from "../../interfaces/section/Experience";
+import catchFashionDetail from "./catch-fashion.md";
+import dsmDetail from "./dsm.md";
 
-import catchFashionDetail from "../markdown/catch-fashion.md";
-import dsmDetail from "../markdown/dsm.md";
+export interface Experience {
+  id: string;
+  title: string;
+  duration: string;
+  summary: string;
+  detail?: string;
+}
 
-export const experiences: IExperience[] = [
+export const experiences: Experience[] = [
   {
     id: "catch-fashion",
     title: "CATCH FASHION",

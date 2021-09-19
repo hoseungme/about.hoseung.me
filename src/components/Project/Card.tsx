@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { Tag } from "./Tag";
 
-import { IProject } from "../../interfaces/section/Project";
+import { Project } from "../../data/project";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
@@ -10,18 +10,18 @@ import { Media } from "../../constants/Media";
 import { useModal } from "../../contexts/Modal";
 
 interface ProjectCardProps {
-  project: IProject;
+  project: Project;
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const modal = useModal();
 
-  const { img, tags, title, duration } = project;
+  const { imageURL, tags, title, duration } = project;
 
   return (
     <Container onClick={() => modal.open("ProjectDetail", { project })}>
       <div className="top">
-        <img src={img} alt="Project" />
+        <img src={imageURL} alt="Project" />
         <div className="tags">
           {tags.map((tag, index) => (
             <Tag key={index} tag={tag} />

@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
-import { ISkill } from "../../interfaces/section/Skill";
+import { Skill } from "../../data/skill";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
 interface SkillCardProps {
-  skill: ISkill;
+  skill: Skill;
 }
 
 export function SkillCard({ skill }: SkillCardProps) {
-  const { img, name } = skill;
+  const { imageURL, name } = skill;
   return (
     <Container>
       <div className="image">
-        <img src={img} alt="Skill" />
+        <img src={imageURL} alt="Skill" />
       </div>
       <div className="name">{name}</div>
       <div className="background" />

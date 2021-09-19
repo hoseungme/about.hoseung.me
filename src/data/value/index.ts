@@ -1,6 +1,9 @@
-import { IValues } from "../../interfaces/section/Values";
+export interface Value {
+  title: string;
+  description: string;
+}
 
-export const values: IValues[] = [
+export const values: Value[] = [
   {
     title: "기록을 좋아해요.",
     description:

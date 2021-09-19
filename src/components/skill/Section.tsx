@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { TransitionContainer } from "../common/TransitionContainer";
 import { SkillCardList } from "./CardList";
 
-import { ISkill } from "../../interfaces/section/Skill";
+import { Skill } from "../../data/skill";
 
 import { Color } from "../../constants/Color";
 
 interface SkillSectionProps {
-  skills: ISkill[];
+  skills: Skill[];
 }
 
 export function SkillSection({ skills }: SkillSectionProps) {

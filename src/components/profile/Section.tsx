@@ -2,21 +2,21 @@ import styled from "styled-components";
 
 import { TransitionContainer } from "../common/TransitionContainer";
 
-import { IProfile } from "../../interfaces/section/Profile";
+import { Profile } from "../../data/profile";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
 interface ProfileSectionProps {
-  profile: IProfile;
+  profile: Profile;
 }
 
 export function ProfileSection({ profile }: ProfileSectionProps) {
-  const { image, description } = profile;
+  const { imageURL, description } = profile;
   return (
     <Container>
       <TransitionContainer className="profile-image" effect="fadeInDown">
-        <img src={image} alt="Profile" />
+        <img src={imageURL} alt="Profile" />
       </TransitionContainer>
       <div className="profile-text">
         <TransitionContainer

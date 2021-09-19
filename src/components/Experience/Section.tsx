@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { IExperience } from "../../interfaces/section/Experience";
+import { Experience } from "../../data/experience";
 import { ExperienceCardList } from "./CardList";
 
 import { Color } from "../../constants/Color";
@@ -8,7 +8,7 @@ import { Media } from "../../constants/Media";
 import { TransitionContainer } from "../common/TransitionContainer";
 
 interface ExperienceSectionProps {
-  experiences: IExperience[];
+  experiences: Experience[];
 }
 
 export function ExperienceSection({ experiences }: ExperienceSectionProps) {

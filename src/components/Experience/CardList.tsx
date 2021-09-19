@@ -6,13 +6,13 @@ import { TransitionContainer } from "../common/TransitionContainer";
 
 import { useValueByMedia } from "../../hooks/useValueByMedia";
 
-import { IExperience } from "../../interfaces/section/Experience";
+import { Experience } from "../../data/experience";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
 interface ExperienceCardListProps {
-  experiences: IExperience[];
+  experiences: Experience[];
 }
 
 export function ExperienceCardList({ experiences }: ExperienceCardListProps) {

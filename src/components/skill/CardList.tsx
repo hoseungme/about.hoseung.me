@@ -5,12 +5,12 @@ import { SkillCard } from "./Card";
 
 import { useValueByMedia } from "../../hooks/useValueByMedia";
 
-import { ISkill } from "../../interfaces/section/Skill";
+import { Skill } from "../../data/skill";
 
 import { Media } from "../../constants/Media";
 
 interface SkillCardListProps {
-  skills: ISkill[];
+  skills: Skill[];
 }
 
 export function SkillCardList({ skills }: SkillCardListProps) {

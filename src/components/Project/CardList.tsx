@@ -7,10 +7,10 @@ import { useValueByMedia } from "../../hooks/useValueByMedia";
 
 import { GA } from "../../services/ga";
 
-import { IProject } from "../../interfaces/section/Project";
+import { Project } from "../../data/project";
 
 interface ProjectCardListProps {
-  projects: IProject[];
+  projects: Project[];
 }
 
 export function ProjectCardList({ projects }: ProjectCardListProps) {

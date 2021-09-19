@@ -10,14 +10,14 @@ import { ModalProps } from "../../contexts/Modal";
 
 import { GA } from "../../services/ga";
 
-import { IProject } from "../../interfaces/section/Project";
+import { Project } from "../../data/project";
 
 interface ProjectDetailProps extends ModalProps {
-  project: IProject;
+  project: Project;
 }
 
 export function ProjectDetail({ close, project }: ProjectDetailProps) {
-  const { img, title, description, activities, references } = project;
+  const { imageURL, title, description, activities, references } = project;
 
   useEffect(() => {
     GA.trackProjectSectionEvent({ action: "Modal Opened", label: title });
@@ -26,7 +26,7 @@ export function ProjectDetail({ close, project }: ProjectDetailProps) {
   return (
     <ModalBase close={close}>
       <Container>
-        <img className="image" src={img} alt="Project" />
+        <img className="image" src={imageURL} alt="Project" />
         <div className="divider" />
         <div className="description">{description}</div>
         <div className="divider" />

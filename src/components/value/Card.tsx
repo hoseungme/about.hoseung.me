@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-import { IValues } from "../../interfaces/section/Values";
+import { Value } from "../../data/value";
 
 import { Color } from "../../constants/Color";
 
 interface ValueCardProps {
   page: number;
-  value: IValues;
+  value: Value;
 }
 
 export function ValueCard({ page, value }: ValueCardProps) {

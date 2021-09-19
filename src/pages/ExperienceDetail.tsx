@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import styled from "styled-components";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
 
 import { GA } from "../services/ga";
 
-import { experienceDetailMap } from "../data/section/experiences";
+import { experienceDetailMap } from "../data/experience";
 
 import { Color } from "../constants/Color";
 import { Media } from "../constants/Media";

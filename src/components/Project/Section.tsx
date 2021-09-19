@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { TransitionContainer } from "../common/TransitionContainer";
 import { ProjectCardList } from "./CardList";
 
-import { IProject } from "../../interfaces/section/Project";
+import { Project } from "../../data/project";
 
 import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
 interface ProjectSectionProps {
-  projects: IProject[];
+  projects: Project[];
 }
 
 export function ProjectSection({ projects }: ProjectSectionProps) {
