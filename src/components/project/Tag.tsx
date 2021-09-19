@@ -7,7 +7,7 @@ interface TagProps {
 }
 
 export function Tag({ tag }: TagProps) {
-  return <Container>{tag}</Container>;
+  return <Container>{tag.toUpperCase()}</Container>;
 }
 
 const Container = styled.div`
@@ -15,7 +15,6 @@ const Container = styled.div`
 
   padding: 5px;
 
-  font-family: "Bebas Neue", cursive;
   font-size: 1.5rem;
 
   color: ${Color.LightBlack};

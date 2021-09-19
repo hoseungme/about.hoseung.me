@@ -42,7 +42,7 @@ export function Header() {
     <>
       <div ref={ref} />
       <Container className={classNames({ scrolled: isScrolled })}>
-        <div className="title">Hoseung Jang Résumé</div>
+        <div className="title">HOSEUNG JANG RÉSUMÉ</div>
         <nav className="accounts">
           {tabs.map((tab, index) => {
             const Icon = tab.icon;
@@ -58,7 +58,7 @@ export function Header() {
                 }
               >
                 <Icon className="icon" />
-                <div className="name">{tab.text}</div>
+                <div className="name">{tab.text.toUpperCase()}</div>
               </a>
             );
           })}
@@ -99,7 +99,6 @@ const Container = styled.header`
   > .title {
     width: auto;
 
-    font-family: "Bebas Neue", cursive;
     font-size: 2rem;
 
     white-space: nowrap;
@@ -145,7 +144,6 @@ const Container = styled.header`
         max-width: 0;
         width: auto;
 
-        font-family: "Bebas Neue", cursive;
         font-size: 2rem;
 
         color: ${Color.DarkMint};
