@@ -85,9 +85,7 @@
 ### RxJS로 렌더링 성능 개선 (2021.09)
 
 - **설명**
-  - react-router의 RouterContext, useLocation을 프론트엔드 곳곳에서 사용하고 있었습니다.
-
-  - RouterContext나 useLocation은 history가 변경될 때마다 리렌더링을 일으키는데, 그걸 쓰지 않아도 되는 경우에도 사용하는 케이스가 많이 있었습니다.
+  - react-router의 RouterContext나 useLocation같이 history가 변경될 때마다 리렌더링을 일으키는 것들이 불필요한 경우에도 사용되는 케이스가 많이 있었습니다.
 
   - 필요하지 않은 경우를 찾아서 사용을 없애거나 컴포넌트를 분리하고, RxJS를 도입해서 필요할 때만 리렌더링 되도록 개선했습니다.
 
