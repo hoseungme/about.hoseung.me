@@ -20,7 +20,11 @@
 ## 목차
 
 - [활동 리스트](#활동-리스트)
-  - [RxJS로 렌더링 성능 개선 (2021.09)](#rxjs로-렌더링-성능-개선-202109)
+  - [상품 페이지 렌더링 성능 개선 (2021.10)](#상품-페이지-렌더링-성능-개선-202110)
+
+  - [상품 페이지 UI/UX 개선 및 리팩토링 (2021.10)](#상품-페이지-uiux-개선-및-리팩토링-202110)
+
+  - [RxJS로 렌더링 성능 개선 (2021.09)](#rxjs로-렌더링-성능-개선-202109)
 
   - [catch-fake.com 개발 (2021.08 ~ 2021.09)](#catch-fakecom-개발-202108--202109)
 
@@ -82,7 +86,50 @@
 ---
 
 ## 활동 리스트
-### RxJS로 렌더링 성능 개선 (2021.09)
+### 상품 페이지 렌더링 성능 개선 (2021.10)
+
+- **설명**
+  - 상품 페이지의 렌더링 속도가 너무 느려서, 원인을 파악하고 개선했습니다.
+
+- **작업 내용 & 배운 점**
+  - 사용자가 상품 페이지를 보는 것 자체와는 관련이 없는 데이터들(가격변동 그래프 데이터, 관련 상품 리스트 데이터 등)도 전부 로딩되야만 상품 페이지가 유저에게 렌더링되어 보여지는 문제가 있었습니다.
+
+    - react에서 제공하는 Suspense 컴포넌트와 react-query의 suspense 옵션을 잘못 사용하고 있어서 발생한 문제였는데, 모든 데이터 로딩에는 suspense 옵션이 true로 설정되어 있었지만, 그걸 대기해주는 Suspense 컴포넌트는 최상위에 하나만 감싸져 있었습니다.
+
+    - 따라서 자식 컴포넌트들도 Suspense로 감싸서, 유저가 페이지를 보는 것에 필요한 최소한의 데이터만 로딩되면 바로 렌더링되어 보여질 수 있도록 수정했습니다.
+
+  - lazy rendering을 적극 적용해서, 스크롤을 내려야만 보여지는 컴포넌트들은 스크롤을 내렸을 때만 렌더링 하도록 수정했습니다.
+
+  - 우선 FCP가 눈에 띄게 개선되었고, 유저가 보지 않은 컴포넌트들은 렌더링 자체를 안하기 때문에 불필요한 API 호출도 줄일 수 있었습니다.
+
+- [목차로 가기](#목차)
+
+### 상품 페이지 UI/UX 개선 및 리팩토링 (2021.10)
+
+![](/images/experience/catch-fashion/product-page-uiux-improve-desktop1.png)
+![](/images/experience/catch-fashion/product-page-uiux-improve-desktop2.png)
+![](/images/experience/catch-fashion/product-page-uiux-improve-desktop3.png)
+![](/images/experience/catch-fashion/product-page-uiux-improve-mobile1.png)
+![](/images/experience/catch-fashion/product-page-uiux-improve-mobile2.png)
+![](/images/experience/catch-fashion/product-page-uiux-improve-mobile3.png)
+
+- **설명**
+  - 상품 페이지의 UI/UX를 개선하고, 기존 코드를 리팩토링했습니다.
+
+- **작업 내용 & 배운 점**
+  - 캐치구매 / 이동 후 구매 두 종류로 분리되어 완전히 다른 섹션으로 보여졌었던 가격정보들을 하나의 Accordion 내에 함께 보여줌으로써, 상품 구매, 알림등록에서 생기는 혼란을 줄였습니다.
+
+  - 기존엔 '사이즈가 선택이 되었는지'에 대한 boolean state를 여러 자식 컴포넌트를 거쳐서 '쇼핑백 담기' 버튼을 렌더링하는 컴포넌트까지 넘겨줬었습니다.
+
+    - 따라서 사이즈가 선택되면 해당 state가 거쳐간 모든 컴포넌트들에 불필요한 리렌더링이 일어났어야 했는데, RxJS를 사용해서 사이즈가 선택되면 필요한 곳에만 state 변경을 전파해서 리렌더링 문제를 개선했습니다.
+
+  - 최상위 컴포넌트에서 state 변경이 많았고, 그때마다 거의 페이지 전체가 리렌더링 루프에 포함되는 문제가 있었습니다.
+
+    - React.memo를 활용해서 state의 변경에 관련이 없어도 리렌더링이 일어나는 문제를 개선했습니다.
+
+- [목차로 가기](#목차)
+
+### RxJS로 렌더링 성능 개선 (2021.09)
 
 - **설명**
   - react-router의 RouterContext나 useLocation같이 history가 변경될 때마다 리렌더링을 일으키는 것들이 불필요한 경우에도 사용되는 케이스가 많이 있었습니다.
