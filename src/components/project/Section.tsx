@@ -33,7 +33,7 @@ export function ProjectSection({ projects }: ProjectSectionProps) {
             duration={0.2}
             intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
           >
-            <h1>프로젝트 둘러보기</h1>
+            프로젝트 둘러보기
           </TransitionContainer>
           <TransitionContainer
             className="description"
@@ -87,13 +87,10 @@ const Container = styled.section`
 
         margin-right: 10%;
 
-        word-break: keep-all;
-
+        font-size: 1.7rem;
+        font-weight: 600;
         color: ${Color.Black};
-
-        > h1 {
-          margin: 0;
-        }
+        word-break: keep-all;
       }
 
       > .description {
