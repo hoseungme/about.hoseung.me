@@ -47,7 +47,7 @@ export const skills: Skill[] = [
       "DynamoDB의 query, index를 활용해서 페이지네이션과 CRUD API를 구현한 경험이 있습니다. TTL을 활용해서 API 요청 Limit를 걸어본 경험이 있습니다.",
       "Redis를 사용해서 백엔드 로직의 결과물을 캐싱하고, 간단한 방문자수 트래커를 구현한 경험이 있습니다.",
       "MySQL, DynamoDB 등 SQL, NoSQL DB들의 용도를 구분하여 사용할 수 있습니다.",
-      "S3과 관련된 보안을 다루어본 경험이 있습니다. Presigned Post를 사용한 객체 업로드, CloudFront와 OAI를 사용하여 private S3 bucket의 content를 안전하게 제공할 수 있습니다.",
+      "S3을 안전하게 활용한 경험이 있습니다. Presigned Post를 통해 객체를 업로드하고, CloudFront와 OAI로 private S3 content를 제공할 수 있습니다.",
     ],
   },
   {
