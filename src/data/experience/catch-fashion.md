@@ -2,19 +2,6 @@
 ### 주요 프로덕트
 - [CATCH FASHION](https://www.catchfashion.com)
 
-### 기술 스택
-- 공통
-  - Typescript
-
-- Front-end
-  - React
-
-- Back-end
-  - Node.js
-  - AWS
-  - MSA
-  - Serverless
-
 ---
 
 ## 목차
