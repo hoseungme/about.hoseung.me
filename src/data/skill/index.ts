@@ -38,6 +38,7 @@ export const skills: Skill[] = [
     title: "백엔드",
     imageURLs: [
       "/images/skill/nodejs.png",
+      "/images/skill/mysql.png",
       "/images/skill/redis.png",
       "/images/skill/aws.png",
     ],
