@@ -88,6 +88,8 @@
   - Service Worker API, Notification API, Push API를 사용했습니다.
 
     - 로그인 / 로그아웃 상태에 따라 Service Worker를 등록 / 삭제하도록 구현했습니다.
+  
+  - 백엔드에 DynamoDB를 사용해서 유저의 PushSubscription 정보를 저장하여 알림을 전송했습니다.
 
 - [목차로 가기](#목차)
 
