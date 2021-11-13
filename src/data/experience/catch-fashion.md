@@ -77,7 +77,7 @@
 ## 활동 리스트
 ### 브라우저 푸시 알림 기능 개발 (2021.11)
 
-![](/images/experience/catch-fashion/web-push-notification.png)
+![](/images/experience/catch-fashion/web-push-notification.jpg)
 
 - **설명**
   - 웹 브라우저에서도 모바일 앱처럼 푸시 알림 기능을 추가했습니다.
