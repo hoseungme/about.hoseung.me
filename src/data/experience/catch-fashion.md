@@ -85,9 +85,7 @@
 - **작업 내용 & 배운 점**
   - [Web Push Notifications 가이드](https://developers.google.com/web/fundamentals/push-notifications)를 참고해서 푸시 알림을 구현했습니다.
 
-  - Service Worker API, Notification API, Push API를 사용했습니다.
-
-    - 로그인 / 로그아웃 상태에 따라 Service Worker를 등록 / 삭제하도록 구현했습니다.
+  - Service Worker, Push API를 사용해 구현했습니다.
   
   - 백엔드에 DynamoDB를 사용해서 유저의 PushSubscription 정보를 저장하여 알림을 전송했습니다.
 
@@ -96,7 +94,7 @@
 ### 상품 페이지 렌더링 성능 개선 (2021.10)
 
 - **설명**
-  - 상품 페이지의 렌더링 속도가 너무 느려서, 원인을 파악하고 개선했습니다.
+  - 상품 페이지의 렌더링 속도가 너무 느려서 원인을 파악하고 개선했습니다.
 
 - **작업 내용 & 배운 점**
   - 사용자가 상품 페이지를 보는 것 자체와는 관련이 없는 데이터들(가격변동 그래프 데이터, 관련 상품 리스트 데이터 등)도 전부 로딩되야만 상품 페이지가 유저에게 렌더링되어 보여지는 문제가 있었습니다.
