@@ -83,11 +83,9 @@
   - 웹 브라우저에서도 모바일 앱처럼 푸시 알림 기능을 추가했습니다.
 
 - **작업 내용 & 배운 점**
-  - [Web Push Notifications 가이드](https://developers.google.com/web/fundamentals/push-notifications)를 참고해서 푸시 알림을 구현했습니다.
+  - Service Worker API, DynamoDB를 사용해서 구현했습니다.
 
-  - Service Worker, Push API를 사용해 구현했습니다.
-  
-  - 백엔드에 DynamoDB를 사용해서 유저의 PushSubscription 정보를 저장하여 알림을 전송했습니다.
+  - 관련 내용을 [정리한 글](https://blog.hoseung.me/posts/1cb02762-a7a8-4401-99e3-7913bea3ef07)을 참고해주세요.
 
 - [목차로 가기](#목차)
 
