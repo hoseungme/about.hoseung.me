@@ -128,7 +128,7 @@ const Container = styled.header`
 
       &:hover {
         > .name {
-          max-width: 120px;
+          max-width: 140px;
         }
       }
 
