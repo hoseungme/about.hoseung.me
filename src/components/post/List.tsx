@@ -21,7 +21,7 @@ export function List({ columnSize, posts }: ListProps) {
             className="content-wrapper"
             effect="fadeInUp"
             delay={0.2 * (index % columnSize)}
-            translateY={30}
+            translateY={25}
             duration={0.6}
             intersectionOptions={{ rootMargin: "-250px 0px -100px 0px" }}
           >
