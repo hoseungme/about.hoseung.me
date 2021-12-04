@@ -9,8 +9,16 @@ type Values<T> = {
 };
 
 export const useValueByMedia = <T>(values: Values<T>) => {
-  const isDesktop = useMediaLayout(Media.Desktop.split("@media ")[1]);
-  const isTablet = useMediaLayout(Media.Tablet.split("@media ")[1]);
+  const desktopMediaQuery = Media.Desktop.split("@media ")[1];
+  const tabletMediaQuery = Media.Tablet.split("@media ")[1];
+  const isDesktop = useMediaLayout(
+    desktopMediaQuery,
+    window.matchMedia(desktopMediaQuery).matches
+  );
+  const isTablet = useMediaLayout(
+    tabletMediaQuery,
+    window.matchMedia(tabletMediaQuery).matches
+  );
 
   const currentMedia = isDesktop ? "desktop" : isTablet ? "tablet" : "mobile";
 
