@@ -62,7 +62,7 @@ const Container = styled.ul<{ columnSize: number }>`
   > li {
     width: calc(
       ${({ columnSize }) =>
-        `(100% - (10px * ${columnSize - 1})) / ${columnSize}`}
+        `(100% - (25px * ${columnSize - 1})) / ${columnSize}`}
     );
 
     ${Media.Tablet} {
@@ -79,7 +79,7 @@ const Container = styled.ul<{ columnSize: number }>`
     display: flex;
 
     &:not(:nth-child(${({ columnSize }) => columnSize}n)) {
-      margin-right: 10px;
+      margin-right: 25px;
 
       ${Media.Tablet} {
         margin-right: 20px;

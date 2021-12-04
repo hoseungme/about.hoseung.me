@@ -72,7 +72,7 @@ export function PostSection() {
 const Container = styled.section`
   width: 100%;
 
-  padding: 5% 8%;
+  padding: 5% 12%;
 
   box-sizing: border-box;
 
@@ -97,10 +97,10 @@ const Container = styled.section`
   }
 
   ${Media.Tablet} {
-    padding: 0 4%;
+    padding: 5% 4%;
   }
 
   ${Media.Mobile} {
-    padding: 0 4%;
+    padding: 5% 4%;
   }
 `;
