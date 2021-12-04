@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import { Skill } from "../../data/skill";
 
+import { Color } from "../../constants/Color";
 import { Media } from "../../constants/Media";
 
 import { TransitionContainer } from "../common/TransitionContainer";
@@ -95,7 +96,9 @@ const S = {
           list-style: disc;
 
           > li {
+            color: ${Color.LightBlack};
             font-size: 1rem;
+            font-weight: 400;
             word-break: break-all;
 
             &:not(:last-child) {

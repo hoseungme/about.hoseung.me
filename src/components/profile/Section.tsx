@@ -101,7 +101,8 @@ const Container = styled.section`
     > .description-secondary {
       line-height: 30px;
       font-size: 0.95rem;
-      color: ${Color.LightBlack};
+      font-weight: 400;
+      color: ${Color.DarkGrey};
 
       word-break: keep-all;
     }

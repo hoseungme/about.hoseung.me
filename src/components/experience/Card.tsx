@@ -65,7 +65,7 @@ const Container = styled.div`
     width: 350px;
 
     font-size: 1rem;
-    line-height: 30px;
+    font-weight: 400;
     color: ${Color.DarkGrey};
   }
 
