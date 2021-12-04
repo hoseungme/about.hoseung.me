@@ -6,19 +6,17 @@ import { useScrollToTopOnHistoryChange } from "./hooks/useScrollToTopOnHistoryCh
 import { Home } from "./pages/Home";
 import { ExperienceDetail } from "./pages/ExperienceDetail";
 
-import { ModalContextProvider } from "./contexts/Modal";
-
 import { Color } from "./constants/Color";
 import { Media } from "./constants/Media";
 
 export function Main() {
   return (
-    <ModalContextProvider>
+    <>
       <GlobalStyles />
       <BrowserRouter>
         <RouteSwitch />
       </BrowserRouter>
-    </ModalContextProvider>
+    </>
   );
 }
 
