@@ -3,8 +3,9 @@ import { useEffect } from "react";
 import { Header } from "../components/common/Header";
 import { Main } from "../components/common/Main";
 import { ProfileSection } from "../components/profile/Section";
-import { ExperienceSection } from "../components/experience/Section";
 import { SkillSection } from "../components/skill/Section";
+import { ExperienceSection } from "../components/experience/Section";
+import { PostSection } from "../components/post/Section";
 import { ProjectSection } from "../components/project/Section";
 import { Footer } from "../components/common/Footer";
 
@@ -25,6 +26,7 @@ export function Home() {
         <ProfileSection profile={profile} />
         <SkillSection skills={skills} />
         <ExperienceSection experiences={experiences} />
+        <PostSection />
         <ProjectSection projects={projects} />
       </Main>
       <Footer />
