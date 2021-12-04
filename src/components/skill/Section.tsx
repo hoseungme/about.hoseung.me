@@ -34,16 +34,7 @@ export function SkillSection({ skills }: SkillSectionProps) {
           저는 이런 기술을 가지고 있어요!
         </TransitionContainer>
       </header>
-      <TransitionContainer
-        className="content"
-        effect="fadeInDown"
-        delay={0.4}
-        translateY={2}
-        duration={0.8}
-        intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
-      >
-        <List skills={skills} />
-      </TransitionContainer>
+      <List skills={skills} />
     </Container>
   );
 }
