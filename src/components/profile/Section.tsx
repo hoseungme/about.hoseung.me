@@ -66,12 +66,11 @@ const Content = styled.div`
     margin: 1rem 0;
     padding-left: 1.5rem;
 
+    box-sizing: border-box;
+
     list-style: disc;
 
     > li {
-      width: 100%;
-
-      color: ${Color.Black};
       font-size: 0.9rem;
 
       &:not(:last-child) {
