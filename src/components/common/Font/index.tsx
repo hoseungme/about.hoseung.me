@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Font = {
   R: styled.div`
-    font-weight: 300;
+    font-weight: 400;
   `,
   M: styled.div`
     font-weight: 500;
