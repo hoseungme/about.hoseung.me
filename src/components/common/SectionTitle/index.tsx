@@ -47,16 +47,34 @@ export const SectionTitle = React.memo<SectionTitleProps>(({ title }) => {
 });
 
 const Container = styled.div`
-  width: 100%;
+  position: relative;
+
+  width: fit-content;
 
   margin: 3rem 0 1.5rem;
+
+  &::after {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 6px;
+
+    z-index: 0;
+
+    content: "";
+
+    height: 8px;
+
+    background-color: ${Color.Mint};
+  }
 
   > a {
     position: relative;
 
-    width: fit-content;
+    z-index: 1;
 
-    box-shadow: 0 -8px 0 0 inset ${Color.Mint};
+    width: fit-content;
 
     color: ${Color.Black};
     font-size: 2.5rem;
