@@ -49,7 +49,7 @@ export const SectionTitle = React.memo<SectionTitleProps>(({ title }) => {
 const Container = styled.div`
   width: 100%;
 
-  margin: 40px 0 20px;
+  margin: 3rem 0 1.5rem;
 
   > a {
     position: relative;
