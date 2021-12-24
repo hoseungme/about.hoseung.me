@@ -11,10 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install NPM Dependencies
-        run: |
-          echo @hoseung-only:registry=https://npm.pkg.github.com/ > .npmrc
-          echo //npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }} >> .npmrc
-          npm ci
+        run: npm ci
       - name: Build
         run: |
           echo "${{ secrets.ENV }}" > .env
