@@ -1,9 +1,3 @@
-# CATCH FASHION
-### 주요 프로덕트
-- [CATCH FASHION](https://www.catchfashion.com)
-
----
-
 ## 목차
 
 - [활동 리스트](#활동-리스트)

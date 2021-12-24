@@ -1,92 +1,75 @@
+import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../common/TransitionContainer";
-import { List } from "./List";
+import { skillData } from "../../data/skill";
 
-import { Skill } from "../../data/skill";
+import { Font } from "../common/Font";
+import { SectionTitle } from "../common/SectionTitle";
 
-import { Color } from "../../constants/Color";
-import { Media } from "../../constants/Media";
-
-interface SkillSectionProps {
-  skills: Skill[];
-}
-
-export function SkillSection({ skills }: SkillSectionProps) {
+export const SkillSection = React.memo(() => {
   return (
-    <Container>
-      <header>
-        <TransitionContainer
-          className="topic"
-          effect="fadeInDown"
-          translateY={50}
-        >
-          MY SKILLS
-        </TransitionContainer>
-        <TransitionContainer
-          className="title"
-          effect="fadeInDown"
-          delay={0.2}
-          translateY={50}
-          duration={0.2}
-          intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
-        >
-          저는 이런 기술을 가지고 있어요!
-        </TransitionContainer>
-      </header>
-      <List skills={skills} />
-    </Container>
+    <>
+      <SectionTitle title="SKILLS" />
+      <Content>
+        <tbody>
+          {skillData.skills.map((skill, index) => (
+            <tr key={index}>
+              <Font.B as="td">{skill.category}</Font.B>
+              <td>
+                <ul>
+                  {skill.items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Content>
+    </>
   );
-}
+});
 
-const Container = styled.section`
+const Content = styled.table`
   width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 10% 0;
-
-  box-sizing: border-box;
-
-  > header {
+  > tbody > tr {
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    > td {
+      vertical-align: top;
 
-    text-align: center;
+      padding-bottom: 2rem;
 
-    > .topic {
-      width: fit-content;
+      &:first-child {
+        font-size: 1.2rem;
+      }
 
-      margin-bottom: 20px;
+      &:last-child {
+        width: 100%;
 
-      font-size: 0.85rem;
-      font-weight: 700;
+        padding-left: 1.5rem;
 
-      color: ${Color.DarkMint};
-    }
+        box-sizing: border-box;
 
-    > .title {
-      width: 100%;
+        > ul {
+          width: 100%;
 
-      margin-bottom: 80px;
+          padding-left: 1.5rem;
 
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-  }
+          box-sizing: border-box;
 
-  > .content {
-    width: 100%;
-  }
+          list-style: disc;
 
-  ${Media.Mobile} {
-    > header > .title {
-      margin-bottom: 40px;
+          > li {
+            font-size: 1rem;
+
+            &:not(:last-child) {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
     }
   }
 `;

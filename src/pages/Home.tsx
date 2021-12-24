@@ -1,32 +1,52 @@
-import { useEffect } from "react";
+import React from "react";
+import styled from "styled-components";
 
-import { Header } from "../components/common/Header";
-import { Main } from "../components/common/Main";
-import { ProfileSection } from "../components/profile/Section";
-import { SkillSection } from "../components/skill/Section";
-import { ExperienceSection } from "../components/experience/Section";
-import { PostSection } from "../components/post/Section";
-import { Footer } from "../components/common/Footer";
+import { Color } from "../constants/Color";
 
 import { GA } from "../services/ga";
 
-import { profile } from "../data/profile";
-import { experiences } from "../data/experience";
-import { skills } from "../data/skill";
+import { ProfileSection } from "../components/profile/Section";
+import { SkillSection } from "../components/skill/Section";
+import { ExperienceSection } from "../components/experience/Section";
+import { OpenSourceSection } from "../components/openSource/Section";
+import { EducationSection } from "../components/education/Section";
+import { Font } from "../components/common/Font";
 
-export function Home() {
-  useEffect(() => GA.trackPageView({ path: window.location.pathname }), []);
-
-  return (
-    <>
-      <Header />
-      <Main>
-        <ProfileSection profile={profile} />
-        <SkillSection skills={skills} />
-        <ExperienceSection experiences={experiences} />
-        <PostSection />
-      </Main>
-      <Footer />
-    </>
+export const Home = React.memo(() => {
+  React.useEffect(
+    () => GA.trackPageView({ path: window.location.pathname }),
+    []
   );
-}
+  return (
+    <Container>
+      <ProfileSection />
+      <SkillSection />
+      <ExperienceSection />
+      <OpenSourceSection />
+      <EducationSection />
+      <Font.M className="footnote">읽어주셔서 감사합니다.</Font.M>
+    </Container>
+  );
+});
+
+const Container = styled.div`
+  max-width: 35rem;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 0.8rem;
+
+  box-sizing: border-box;
+
+  > .footnote {
+    width: 100%;
+
+    margin: 4rem 0;
+
+    color: ${Color.LightBlack};
+    font-size: 1rem;
+    text-align: center;
+  }
+`;

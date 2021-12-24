@@ -1,97 +1,170 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { Experience } from "../../data/experience";
-import { ExperienceCardList } from "./CardList";
-
 import { Color } from "../../constants/Color";
-import { Media } from "../../constants/Media";
-import { TransitionContainer } from "../common/TransitionContainer";
 
-interface ExperienceSectionProps {
-  experiences: Experience[];
-}
+import { experienceData } from "../../data/experience";
 
-export function ExperienceSection({ experiences }: ExperienceSectionProps) {
+import { renderWithAnchor } from "../../helpers/common/renderWithAnchor";
+
+import { Font } from "../common/Font";
+import { SectionTitle } from "../common/SectionTitle";
+
+export const ExperienceSection = React.memo(() => {
   return (
-    <Container>
-      <div className="summary">
-        <TransitionContainer
-          className="topic"
-          effect="fadeInDown"
-          translateY={50}
-          duration={0.2}
-          intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
-        >
-          EXPERIENCE
-        </TransitionContainer>
-        <TransitionContainer
-          className="title"
-          effect="fadeInDown"
-          delay={0.2}
-          translateY={50}
-          duration={0.2}
-          intersectionOptions={{ rootMargin: "-250px 0px -250px 0px" }}
-        >
-          저는 이런 경험을 가지고 있어요!
-        </TransitionContainer>
-      </div>
-      <ExperienceCardList experiences={experiences} />
-    </Container>
+    <>
+      <SectionTitle title="EXPERIENCES" />
+      <Content>
+        <ul className="experiences">
+          {experienceData.experiences.map((experience, index) => (
+            <li key={index}>
+              <Font.B className="name">{experience.name}</Font.B>
+              <Font.M className="period">{experience.period}</Font.M>
+              <ul className="projects">
+                {experience.projects.map((project, index) => (
+                  <li key={index}>
+                    <Font.B className="name">{project.name}</Font.B>
+                    <Font.M className="skills">
+                      {project.skills.join(", ")}
+                    </Font.M>
+                    <Font.R className="summary">{project.summary}</Font.R>
+                    <ul className="descriptions">
+                      {project.descriptions.map(
+                        ([primary, secondary], index) => (
+                          <li key={index}>
+                            <Font.R className="parent">{primary}</Font.R>
+                            <ul className="children">
+                              {secondary.map((item, index) => (
+                                <Font.R as="li" key={index}>
+                                  {renderWithAnchor(item)}
+                                </Font.R>
+                              ))}
+                            </ul>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                className="link-to-detail"
+                to={`/experience/${experience.id}`}
+              >
+                <Font.M>{experience.name}에서의 모든 경력사항 살펴보기</Font.M>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Content>
+    </>
   );
-}
+});
 
-const Container = styled.section`
+const Content = styled.div`
   width: 100%;
 
-  padding: 200px 0;
+  > .experiences {
+    > li {
+      width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+      ul {
+        width: 100%;
 
-  > .summary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        padding-left: 1.5rem;
 
-    margin-bottom: 30px;
+        box-sizing: border-box;
 
-    > .topic {
-      width: fit-content;
+        list-style: disc;
 
-      margin-bottom: 20px;
+        > li {
+          font-size: 0.8rem;
 
-      font-weight: 700;
-      color: ${Color.DarkMint};
-    }
+          &:not(:last-child) {
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
 
-    > .title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: ${Color.Black};
-      word-break: keep-all;
-    }
-  }
+      > .name {
+        width: 100%;
 
-  ${Media.Tablet} {
-    align-items: flex-start;
+        font-size: 1.7rem;
+      }
 
-    padding: 150px 0;
-    margin-left: 30%;
+      > .period {
+        width: 100%;
 
-    > .summary {
-      align-items: flex-start;
-    }
-  }
+        margin-bottom: 1.6rem;
 
-  ${Media.Mobile} {
-    align-items: flex-start;
+        font-size: 0.9rem;
+      }
 
-    padding: 100px 0;
-    margin-left: 8%;
+      > .projects {
+        padding: 0;
+        list-style: none;
 
-    > .summary {
-      align-items: flex-start;
+        > li {
+          &:not(:last-child) {
+            margin-bottom: 1.2rem;
+          }
+
+          > .name {
+            width: 100%;
+
+            font-size: 1.3rem;
+          }
+
+          > .skills {
+            font-size: 0.8rem;
+          }
+
+          > .summary {
+            margin-top: 1rem;
+
+            font-size: 0.9rem;
+          }
+
+          > .descriptions {
+            margin-top: 0.6rem;
+
+            > li {
+              > .parent,
+              > .children {
+                margin-bottom: 0.5rem;
+
+                > li > span > a {
+                  color: ${Color.Mint};
+                  text-decoration: none;
+
+                  transition: color 0.1s;
+
+                  &:hover {
+                    color: ${Color.DarkMint};
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > .link-to-detail {
+        display: flex;
+
+        margin: 1.5rem 0 2rem;
+
+        font-size: 1rem;
+        color: ${Color.Mint};
+        text-decoration: none;
+
+        transition: color 0.1s;
+
+        &:hover {
+          color: ${Color.DarkMint};
+        }
+      }
     }
   }
 `;

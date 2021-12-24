@@ -1,151 +1,111 @@
+import React from "react";
 import styled from "styled-components";
 
-import { TransitionContainer } from "../common/TransitionContainer";
-
-import { Profile } from "../../data/profile";
-
 import { Color } from "../../constants/Color";
-import { Media } from "../../constants/Media";
 
-interface ProfileSectionProps {
-  profile: Profile;
-}
+import { profileData } from "../../data/profile";
 
-export function ProfileSection({ profile }: ProfileSectionProps) {
-  const { imageURL, description } = profile;
+import { Font } from "../common/Font";
+import { SectionTitle } from "../common/SectionTitle";
+
+export const ProfileSection = React.memo(() => {
   return (
-    <Container>
-      <TransitionContainer className="profile-image" effect="fadeInDown">
-        <img src={imageURL} alt="Profile" />
-      </TransitionContainer>
-      <div className="profile-text">
-        <TransitionContainer
-          className="topic"
-          effect="fadeInUp"
-          delay={0.2}
-          duration={0.2}
-          translateY={50}
-        >
-          WELCOME
-        </TransitionContainer>
-        <TransitionContainer
-          className="description-primary"
-          effect="fadeInUp"
-          delay={0.4}
-        >
-          {description.primary}
-        </TransitionContainer>
-        <TransitionContainer
-          className="description-secondary"
-          effect="fadeInUp"
-          delay={0.6}
-          duration={0.2}
-        >
-          {description.secondary}
-        </TransitionContainer>
-      </div>
-    </Container>
+    <>
+      <SectionTitle title="장호승" />
+      <Content>
+        <Font.M className="title">{profileData.title}</Font.M>
+        <ul className="descriptions">
+          {profileData.descriptions.map((description, index) => (
+            <Font.R as="li" key={index}>
+              {description}
+            </Font.R>
+          ))}
+        </ul>
+        <table className="contacts">
+          <tbody>
+            {profileData.contacts.map((contact, index) => (
+              <tr key={index}>
+                <td>
+                  <Font.B className="label">{contact.label}</Font.B>
+                </td>
+                <td>
+                  {(() => {
+                    switch (contact.type) {
+                      case "link": {
+                        return (
+                          <Font.M as="a" className="value" href={contact.value}>
+                            {contact.value}
+                          </Font.M>
+                        );
+                      }
+                      case "string": {
+                        return (
+                          <Font.R className="value">{contact.value}</Font.R>
+                        );
+                      }
+                    }
+                  })()}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Content>
+    </>
   );
-}
+});
 
-const Container = styled.section`
-  display: flex;
-  flex-direction: row;
+const Content = styled.div`
+  width: 100%;
 
-  margin: 0 auto;
-  padding: 150px 20px;
+  > .title {
+    width: 100%;
 
-  box-sizing: border-box;
+    font-size: 1rem;
+  }
 
-  > .profile-image {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  > .descriptions {
+    width: 100%;
 
-    padding: 20px 40px;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
 
     box-sizing: border-box;
 
-    > img {
-      width: 300px;
-      height: 300px;
+    list-style: disc;
 
-      border-radius: 50%;
+    > li {
+      font-size: 0.9rem;
 
-      box-shadow: 0 0 15px ${Color.LightGrey};
-    }
-  }
-
-  > .profile-text {
-    max-width: 500px;
-
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    > .topic {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: ${Color.DarkMint};
-    }
-
-    > .description-primary {
-      margin: 15px 0 5px;
-
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: ${Color.Black};
-    }
-
-    > .description-secondary {
-      line-height: 30px;
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: ${Color.DarkGrey};
-
-      word-break: keep-all;
-    }
-  }
-
-  ${Media.Tablet} {
-    padding: 100px 20px;
-
-    box-sizing: border-box;
-
-    > .profile-image {
-      padding: 10px 20px;
-
-      > img {
-        width: 250px;
-        height: 250px;
+      &:not(:last-child) {
+        margin-bottom: 0.2rem;
       }
     }
-
-    > .profile-text {
-      max-width: 400px;
-    }
   }
 
-  ${Media.Mobile} {
-    flex-direction: column;
-    align-items: center;
+  > .contacts {
+    width: 100%;
 
-    padding: 50px 40px;
+    > tbody > tr {
+      width: 100%;
 
-    > .profile-image {
-      padding: 20px 0 40px;
-    }
+      font-size: 0.9rem;
 
-    > .profile-text {
-      flex: 0;
-      display: flex;
-      align-items: center;
+      > td:last-child {
+        width: 100%;
 
-      text-align: center;
+        padding-left: 0.6rem;
 
-      > * {
-        width: fit-content;
+        > a.value {
+          color: ${Color.Mint};
+          text-decoration: none;
+
+          transition: color 0.1s;
+
+          &:hover {
+            color: ${Color.DarkMint};
+          }
+        }
       }
     }
   }

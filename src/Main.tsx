@@ -40,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    background-color: ${Color.DarkWhite};
+    background-color: ${Color.White};
 
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     font-size: 20px;
