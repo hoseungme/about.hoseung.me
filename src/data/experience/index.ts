@@ -88,7 +88,12 @@ export const experienceData: ExperienceData = {
             "AWS Lambda",
           ],
           descriptions: [
-            ["Service Worker, Web Push API를 사용해 푸시 알림 구현", []],
+            [
+              "Service Worker, Web Push API를 사용해 푸시 알림 구현",
+              [
+                "https://blog.hoseung.me/posts/1cb02762-a7a8-4401-99e3-7913bea3ef07",
+              ],
+            ],
             ["백엔드 Notification 서비스에 웹 푸시 Sender 추가", []],
             [
               "푸시 알림 권한을 요청하는 모달 추가",
