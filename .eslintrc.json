@@ -17,7 +17,8 @@
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/prefer-namespace-keyword": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/display-name": "off"
   },
   "parserOptions": {
     "ecmaFeatures": {
