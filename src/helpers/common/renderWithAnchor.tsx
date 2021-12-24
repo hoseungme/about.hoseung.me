@@ -20,7 +20,7 @@ export function renderWithAnchor(input: string) {
 
     content.push([
       pre,
-      <span>
+      <span key={matched[0]}>
         <a href={matched[0]}>{matched[0]}</a>
       </span>,
     ]);
