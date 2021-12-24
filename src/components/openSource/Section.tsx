@@ -17,14 +17,16 @@ export const OpenSourceSection = React.memo(() => {
           <li key={index}>
             <Font.B className="name">{openSource.name}</Font.B>
             <table className="links">
-              {openSource.links.map((link, index) => (
-                <tr key={index}>
-                  <Font.B as="td">{link.label}:</Font.B>
-                  <Font.R as="td">
-                    <a href={link.link}>{link.link}</a>
-                  </Font.R>
-                </tr>
-              ))}
+              <tbody>
+                {openSource.links.map((link, index) => (
+                  <tr key={index}>
+                    <Font.B as="td">{link.label}:</Font.B>
+                    <Font.R as="td">
+                      <a href={link.link}>{link.link}</a>
+                    </Font.R>
+                  </tr>
+                ))}
+              </tbody>
             </table>
             <Font.R className="summary">{openSource.summary}</Font.R>
             <ul className="articles">
@@ -58,7 +60,7 @@ const Content = styled.ul`
     > .links {
       width: 100%;
 
-      > tr {
+      > tbody > tr {
         width: 100%;
 
         font-size: 0.9rem;

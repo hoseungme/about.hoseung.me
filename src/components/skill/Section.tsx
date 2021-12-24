@@ -11,18 +11,20 @@ export const SkillSection = React.memo(() => {
     <>
       <SectionTitle title="SKILLS" />
       <Content>
-        {skillData.skills.map((skill, index) => (
-          <tr key={index}>
-            <Font.B as="td">{skill.category}</Font.B>
-            <td>
-              <ul>
-                {skill.items.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </td>
-          </tr>
-        ))}
+        <tbody>
+          {skillData.skills.map((skill, index) => (
+            <tr key={index}>
+              <Font.B as="td">{skill.category}</Font.B>
+              <td>
+                <ul>
+                  {skill.items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </Content>
     </>
   );
@@ -31,7 +33,7 @@ export const SkillSection = React.memo(() => {
 const Content = styled.table`
   width: 100%;
 
-  > tr {
+  > tbody > tr {
     width: 100%;
 
     > td {

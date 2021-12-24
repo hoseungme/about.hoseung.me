@@ -22,29 +22,33 @@ export const ProfileSection = React.memo(() => {
           ))}
         </ul>
         <table className="contacts">
-          {profileData.contacts.map((contact, index) => (
-            <tr key={index}>
-              <td>
-                <Font.B className="label">{contact.label}</Font.B>
-              </td>
-              <td>
-                {(() => {
-                  switch (contact.type) {
-                    case "link": {
-                      return (
-                        <Font.M as="a" className="value" href={contact.value}>
-                          {contact.value}
-                        </Font.M>
-                      );
+          <tbody>
+            {profileData.contacts.map((contact, index) => (
+              <tr key={index}>
+                <td>
+                  <Font.B className="label">{contact.label}</Font.B>
+                </td>
+                <td>
+                  {(() => {
+                    switch (contact.type) {
+                      case "link": {
+                        return (
+                          <Font.M as="a" className="value" href={contact.value}>
+                            {contact.value}
+                          </Font.M>
+                        );
+                      }
+                      case "string": {
+                        return (
+                          <Font.R className="value">{contact.value}</Font.R>
+                        );
+                      }
                     }
-                    case "string": {
-                      return <Font.R className="value">{contact.value}</Font.R>;
-                    }
-                  }
-                })()}
-              </td>
-            </tr>
-          ))}
+                  })()}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </Content>
     </>
@@ -82,7 +86,7 @@ const Content = styled.div`
   > .contacts {
     width: 100%;
 
-    > tr {
+    > tbody > tr {
       width: 100%;
 
       font-size: 0.9rem;
