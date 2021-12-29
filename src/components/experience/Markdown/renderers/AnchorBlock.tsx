@@ -16,11 +16,11 @@ export function AnchorBlock(props: any) {
 const S = {
   Container: styled.a`
     font-weight: bold;
-    color: ${Color.Blue};
+    color: ${Color.Mint};
     text-decoration: none;
 
     &:hover {
-      color: ${Color.BlueHover};
+      color: ${Color.DarkMint};
     }
   `,
 };
