@@ -52,7 +52,7 @@ export const ExperienceSection = React.memo(() => {
                 className="link-to-detail"
                 to={`/experience/${experience.id}`}
               >
-                <Font.M>{experience.name}에서의 모든 경력사항 살펴보기</Font.M>
+                <Font.M>{experience.name} 이력 자세히보기</Font.M>
               </Link>
             </li>
           ))}
