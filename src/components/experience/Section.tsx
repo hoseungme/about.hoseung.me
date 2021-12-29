@@ -20,6 +20,7 @@ export const ExperienceSection = React.memo(() => {
           {experienceData.experiences.map((experience, index) => (
             <li key={index}>
               <Font.B className="name">{experience.name}</Font.B>
+              <Font.M className="position">{experience.position}</Font.M>
               <Font.M className="period">{experience.period}</Font.M>
               <ul className="projects">
                 {experience.projects.map((project, index) => (
@@ -91,6 +92,14 @@ const Content = styled.div`
         width: 100%;
 
         font-size: 1.7rem;
+      }
+
+      > .position {
+        width: 100%;
+
+        margin-bottom: 0.5rem;
+
+        font-size: 1rem;
       }
 
       > .period {
