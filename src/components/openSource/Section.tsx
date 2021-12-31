@@ -5,6 +5,8 @@ import { Color } from "../../constants/Color";
 
 import { openSourceData } from "../../data/openSource";
 
+import { renderWithAnchor } from "../../helpers/common/renderWithAnchor";
+
 import { Font } from "../common/Font";
 import { SectionTitle } from "../common/SectionTitle";
 
@@ -32,7 +34,7 @@ export const OpenSourceSection = React.memo(() => {
             <ul className="articles">
               {openSource.articles.map((article, index) => (
                 <Font.R as="li" key={index}>
-                  <a href={article}>{article}</a>
+                  {renderWithAnchor(article)}
                 </Font.R>
               ))}
             </ul>
@@ -106,7 +108,7 @@ const Content = styled.ul`
           margin-bottom: 0.2rem;
         }
 
-        > a {
+        > span > a {
           color: ${Color.Mint};
           text-decoration: none;
 
