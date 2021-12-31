@@ -6,6 +6,7 @@ import { Color } from "../../constants/Color";
 
 import { experienceData } from "../../data/experience";
 
+import { renderHash } from "../../helpers/common/renderHash";
 import { renderWithAnchor } from "../../helpers/common/renderWithAnchor";
 
 import { Font } from "../common/Font";
@@ -18,8 +19,10 @@ export const ExperienceSection = React.memo(() => {
       <Content>
         <ul className="experiences">
           {experienceData.experiences.map((experience, index) => (
-            <li key={index}>
-              <Font.B className="name">{experience.name}</Font.B>
+            <li key={index} id={renderHash(experience.id)}>
+              <a className="name" href={`#${renderHash(experience.id)}`}>
+                <Font.B>{experience.name}</Font.B>
+              </a>
               <Font.M className="position">{experience.position}</Font.M>
               <Font.M className="period">{experience.period}</Font.M>
               <ul className="projects">
@@ -91,6 +94,8 @@ const Content = styled.div`
       > .name {
         width: 100%;
 
+        color: ${Color.Black};
+        text-decoration: none;
         font-size: 1.7rem;
       }
 
