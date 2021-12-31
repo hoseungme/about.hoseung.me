@@ -10,18 +10,17 @@ export interface OpenSourceData {
 export const openSourceData: OpenSourceData = {
   openSources: [
     {
-      name: "개인 블로그",
+      name: "개발 블로그",
       links: [
         {
-          label: "Blog",
+          label: "Link",
           link: "https://blog.hoseung.me",
         },
-        { label: "Github", link: "https://github.com/hoseung-only" },
       ],
       summary:
         "개발을 하면서 배우고 생각한 것들을 기록으로 남겨 공유하고 있습니다.",
       articles: [
-        "https://blog.hoseung.me/categories/bdeb0874-b9e2-4fa5-b6af-9e07b6bd97ca/posts",
+        "블로그 개발 일지: https://blog.hoseung.me/categories/bdeb0874-b9e2-4fa5-b6af-9e07b6bd97ca/posts",
       ],
     },
     {
