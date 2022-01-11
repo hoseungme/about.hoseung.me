@@ -24,6 +24,18 @@ export const openSourceData: OpenSourceData = {
       ],
     },
     {
+      name: "위키",
+      links: [
+        {
+          label: "Link",
+          link: "https://hoseungjang.github.io/wiki-front",
+        },
+      ],
+      summary:
+        "개발 블로그와는 다른 성격으로, 단순 개념정리나 TIL을 작성하고 있습니다. 기억이 희미해질 때면 다시 문서를 읽어보고 수정하는 재미로 운영하고 있습니다.",
+      articles: [],
+    },
+    {
       name: "typed-express",
       links: [
         {
