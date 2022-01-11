@@ -10,8 +10,6 @@ const S = {
   Container: styled.ul`
     display: list-item;
 
-    list-style: disc;
-
     color: ${Color.LightBlack};
     font-weight: 400;
 
