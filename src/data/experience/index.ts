@@ -68,6 +68,7 @@ export const experienceData: ExperienceData = {
               [
                 "User-Agent를 파싱해서 적절한 UI 렌더링 (앱다운 유도 컨텐츠를 앱에서는 숨기는 등)",
                 "Applike한 UI/UX에 대한 시도 (Route Animation, 2 depth 이상부터 로고 대신 Back Button 노출 등)",
+                "웹뷰와 네이티브간 통신을 통해 특정 작업을 네이티브에 위임",
               ],
             ],
           ],
