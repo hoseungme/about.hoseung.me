@@ -7,7 +7,7 @@ export function LIBlock(props: any) {
 }
 
 const S = {
-  Container: styled.ul`
+  Container: styled.li`
     display: list-item;
 
     color: ${Color.LightBlack};
