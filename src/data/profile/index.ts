@@ -12,6 +12,7 @@ export const profileData: ProfileData = {
     "자동화로 생산성을 높히는 것에 관심이 많습니다.",
     "하고싶은 일에 도전해볼 수 있는 조직을 좋아합니다.",
     "수평적이고 화기애애하며 투명한 조직을 좋아합니다.",
+    "현역 산업기능요원으로 복무중입니다.",
   ],
   contacts: [
     { type: "link", label: "GITHUB", value: "https://github.com/HoseungJang" },
