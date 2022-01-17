@@ -10,32 +10,6 @@ export interface OpenSourceData {
 export const openSourceData: OpenSourceData = {
   openSources: [
     {
-      name: "개발 블로그",
-      links: [
-        {
-          label: "Link",
-          link: "https://blog.hoseung.me",
-        },
-      ],
-      summary:
-        "개발을 하면서 배우고 생각한 것들을 기록으로 남겨 공유하고 있습니다.",
-      articles: [
-        "블로그 개발 일지: https://blog.hoseung.me/categories/bdeb0874-b9e2-4fa5-b6af-9e07b6bd97ca/posts",
-      ],
-    },
-    {
-      name: "위키",
-      links: [
-        {
-          label: "Link",
-          link: "https://hoseungjang.github.io/wiki-front",
-        },
-      ],
-      summary:
-        "개발 블로그와는 다른 성격으로, 단순 개념정리나 TIL을 작성하고 있습니다. 기억이 희미해질 때면 다시 문서를 읽어보고 수정하는 재미로 운영하고 있습니다.",
-      articles: [],
-    },
-    {
       name: "typed-express",
       links: [
         {
