@@ -91,6 +91,10 @@ const Content = styled.div`
         }
       }
 
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
       > .name {
         width: 100%;
 
