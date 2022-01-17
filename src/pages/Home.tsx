@@ -8,6 +8,7 @@ import { GA } from "../services/ga";
 import { ProfileSection } from "../components/profile/Section";
 import { SkillSection } from "../components/skill/Section";
 import { ExperienceSection } from "../components/experience/Section";
+import { ProjectSection } from "../components/project/Section";
 import { OpenSourceSection } from "../components/openSource/Section";
 import { EducationSection } from "../components/education/Section";
 import { Font } from "../components/common/Font";
@@ -22,6 +23,7 @@ export const Home = React.memo(() => {
       <ProfileSection />
       <SkillSection />
       <ExperienceSection />
+      <ProjectSection />
       <OpenSourceSection />
       <EducationSection />
       <Font.M className="footnote">읽어주셔서 감사합니다.</Font.M>
