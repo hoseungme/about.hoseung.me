@@ -10,6 +10,7 @@ import { BlockquoteBlock } from "./renderers/BlockquoteBlock";
 import { UListBlock } from "./renderers/UListBlock";
 import { OListBlock } from "./renderers/OListBlock";
 import { LIBlock } from "./renderers/LIBlock";
+import { ParagraphBlock } from "./renderers/ParagraphBlock";
 
 interface MarkdownProps {
   content: string;
@@ -28,6 +29,7 @@ export function Markdown({ content }: MarkdownProps) {
           ul: UListBlock,
           ol: OListBlock,
           li: LIBlock,
+          p: ParagraphBlock,
         }}
       >
         {content}
