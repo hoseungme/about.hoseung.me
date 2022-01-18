@@ -6,6 +6,6 @@ export function ParagraphBlock(props: any) {
 
 const S = {
   Container: styled.p`
-    margin: 5px 0;
+    margin: 8px 0;
   `,
 };
