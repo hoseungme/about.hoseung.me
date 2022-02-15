@@ -44,7 +44,7 @@
 
 - 서비스워커 API, 웹푸시 API를 사용해 구현
 
-  - [https://blog.hoseung.me/posts/1cb02762-a7a8-4401-99e3-7913bea3ef07](https://blog.hoseung.me/posts/1cb02762-a7a8-4401-99e3-7913bea3ef07)
+  - [https://blog.hoseung.me/2021-11-28-web-push-notification](https://blog.hoseung.me/2021-11-28-web-push-notification)
 
 - 푸시 알림 사용률 개선
 
@@ -93,9 +93,9 @@
 
 - 필요하지 않은 경우를 찾아서 사용을 없애거나 컴포넌트를 분리하고, RxJS를 도입해서 필요할 때만 리렌더링 되도록 개선
 
-- [https://blog.hoseung.me/posts/ab8363df-6066-4f4d-af13-efbe8364f771](https://blog.hoseung.me/posts/ab8363df-6066-4f4d-af13-efbe8364f771)
+- [https://blog.hoseung.me/2021-10-09-rxjs](https://blog.hoseung.me/2021-10-09-rxjs)
 
-- [https://blog.hoseung.me/posts/d850b3c1-6ffc-405b-a662-5046244df1fc](https://blog.hoseung.me/posts/d850b3c1-6ffc-405b-a662-5046244df1fc)
+- [https://blog.hoseung.me/2021-12-07-do-not-use-link](https://blog.hoseung.me/2021-12-07-do-not-use-link)
 
 [목차](#목차)
 
@@ -260,7 +260,7 @@
 
   - 팀에서 [Storybook](https://storybook.js.org/)을 사용하고 있었고, [Chromatic](https://www.chromatic.com/)을 연결
 
-  - [Chromatic을 선택하기 까지의 과정](https://blog.hoseung.me/posts/83b91deb-55a5-404b-bf86-ab56b746a69f)
+  - [Chromatic을 선택하기 까지의 과정](https://blog.hoseung.me/2021-02-10-visual-regression-test)
 
 - 좋은 개발자 경험과 인터페이스에 대해 고민
 
@@ -313,7 +313,7 @@
 
 - 약 50 ~ 500 밀리초의 API 응답 대기 시간 절약, 렌더링이 동기 방식으로 즉시 이루어져 깜빡임 사라짐
 
-- 브라우저 마다 다른 [local stroage의 예외 상황들](https://blog.hoseung.me/posts/2925d9a4-584d-4a0a-b467-022abc7ca584)을 알 수 있었음
+- 브라우저 마다 다른 [local stroage의 예외 상황들](https://blog.hoseung.me/2021-01-13-local-session-danger)을 알 수 있었음
 
 [목차](#목차)
 
@@ -365,7 +365,7 @@
 
 - event.multiValueQueryStringParameters를 event.queryStringParameters와 함께 사용해서 해결
 
-  - [해결 과정](https://blog.hoseung.me/posts/d202b504-b369-434b-b6bc-4f0afe89e56b)
+  - [해결 과정](https://blog.hoseung.me/2021-05-19-aws-lambda-querystring)
 
 [목차](#목차)
 
