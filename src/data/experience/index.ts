@@ -41,7 +41,7 @@ export const experienceData: ExperienceData = {
             [
               "Microservices Architecture로 설계된 serverless 백엔드 개발",
               [
-                "AWS Lambda에 querystring으로 array가 제대로 전달되지 않는 문제 해결 https://blog.hoseung.me/posts/d202b504-b369-434b-b6bc-4f0afe89e56b",
+                "AWS Lambda에 querystring으로 array가 제대로 전달되지 않는 문제 해결 https://blog.hoseung.me/2021-05-19-aws-lambda-querystring",
               ],
             ],
             [
@@ -57,10 +57,10 @@ export const experienceData: ExperienceData = {
               [
                 "변동이 적은 데이터에 Local Storage 기반 client-side 캐싱을 적용하여 렌더링 속도 개선 (약 50 ~ 500 밀리초의 API 응답 대기 시간 절약, 렌더링이 동기 방식으로 즉시 이루어져 깜빡임 사라짐)",
                 "Github Actions에 Lighthouse CI를 추가하고 퍼포먼스 점수를 근소하게 개선한 경험 (Chrome dev tools 기준 40점대에서 60점대로 개선)",
-                "특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때, 빠르게 파악할 수 있도록 Visual Regression Test 도입(https://blog.hoseung.me/posts/83b91deb-55a5-404b-bf86-ab56b746a69f)",
+                "특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때, 빠르게 파악할 수 있도록 Visual Regression Test 도입(https://blog.hoseung.me/2021-02-10-visual-regression-test)",
                 "react-router에서 일으키는 불필요한 리렌더링을 React.memo, RxJS를 사용해 개선한 경험 (react-dev-tools의 Profier의 highlight 기능을 사용해 측정)",
-                "https://blog.hoseung.me/posts/ab8363df-6066-4f4d-af13-efbe8364f771",
-                "https://blog.hoseung.me/posts/d850b3c1-6ffc-405b-a662-5046244df1fc",
+                "https://blog.hoseung.me/2021-12-07-do-not-use-link",
+                "https://blog.hoseung.me/2021-10-09-rxjs",
               ],
             ],
             [
@@ -116,7 +116,7 @@ export const experienceData: ExperienceData = {
             [
               "Service Worker, Web Push API를 사용해 푸시 알림 구현",
               [
-                "https://blog.hoseung.me/posts/1cb02762-a7a8-4401-99e3-7913bea3ef07",
+                "https://blog.hoseung.me/2021-11-28-web-push-notification",
               ],
             ],
             [

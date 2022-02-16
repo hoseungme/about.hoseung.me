@@ -401,6 +401,6 @@
 
 - Back/Forward Cache 처럼 브라우저마다 구현이 다른 것들에 대해 더욱 신경쓰는 계기가 됨
 
-- [해당 이슈에 대해 정리한 글](https://blog.hoseung.me/posts/80912bc1-3e00-4239-9928-63d9a550106c)
+- [해당 이슈에 대해 정리한 글](https://blog.hoseung.me/2020-10-31-chrome-back-forward-cache)
 
 [목차](#목차)
