@@ -25,6 +25,15 @@ export const ExperienceSection = React.memo(() => {
               </a>
               <Font.M className="position">{experience.position}</Font.M>
               <Font.M className="period">{experience.period}</Font.M>
+              {experience.articles.length > 0 && (
+                <ul className="articles">
+                  {experience.articles.map((article) => (
+                    <Font.R as="li" key={article}>
+                      {renderWithAnchor(article)}
+                    </Font.R>
+                  ))}
+                </ul>
+              )}
               <ul className="projects">
                 {experience.projects.map((project, index) => (
                   <li key={index}>
@@ -37,7 +46,9 @@ export const ExperienceSection = React.memo(() => {
                       {project.descriptions.map(
                         ([primary, secondary], index) => (
                           <li key={index}>
-                            <Font.R className="parent">{primary}</Font.R>
+                            <Font.R className="parent">
+                              {renderWithAnchor(primary)}
+                            </Font.R>
                             <ul className="children">
                               {secondary.map((item, index) => (
                                 <Font.R as="li" key={index}>
@@ -100,7 +111,7 @@ const Content = styled.div`
 
         color: ${Color.Black};
         text-decoration: none;
-        font-size: 1.7rem;
+        font-size: 2rem;
       }
 
       > .position {
@@ -114,13 +125,29 @@ const Content = styled.div`
       > .period {
         width: 100%;
 
-        margin-bottom: 1.6rem;
-
         font-size: 0.9rem;
+      }
+
+      > .articles {
+        padding: 0;
+        margin-top: 0.3rem;
+        list-style: none;
+
+        > li > span > a {
+          color: ${Color.Mint};
+          text-decoration: none;
+
+          transition: color 0.1s;
+
+          &:hover {
+            color: ${Color.DarkMint};
+          }
+        }
       }
 
       > .projects {
         padding: 0;
+        margin-top: 1.2rem;
         list-style: none;
 
         > li {
@@ -131,7 +158,7 @@ const Content = styled.div`
           > .name {
             width: 100%;
 
-            font-size: 1.3rem;
+            font-size: 1.1rem;
           }
 
           > .skills {
@@ -152,7 +179,7 @@ const Content = styled.div`
               > .children {
                 margin-bottom: 0.5rem;
 
-                > li > span > a {
+                span > a {
                   color: ${Color.Mint};
                   text-decoration: none;
 

@@ -6,6 +6,7 @@ export interface ExperienceData {
     id: string;
     detail: string;
     name: string;
+    articles: string[];
     period: string;
     position: string;
     projects: {
@@ -23,6 +24,9 @@ export const experienceData: ExperienceData = {
       id: "catch-fashion",
       detail: catchFashionDetail,
       name: "CATCH FASHION",
+      articles: [
+        "[CTO님의 캐치패션 2년 8개월 회고](https://medium.com/@kurtlee/serverless%EB%A1%9C-e-commerce-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EB%B8%94%EB%9E%99%ED%94%84%EB%9D%BC%EC%9D%B4%EB%8D%B0%EC%9D%B4-%ED%8A%B8%EB%9E%98%ED%94%BD-%EC%8D%B0-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EC%97%90%EC%84%9C-cto%EB%8A%94-%EB%AD%98-%ED%95%98%EB%8A%94-%EC%9E%90%EB%A6%AC%EC%9D%B8%EA%B0%80-a6f9d9beb930)",
+      ],
       period: "2020.08 ~ 현재",
       position: "Frontend 개발자, Backend 개발자",
       projects: [
@@ -41,7 +45,7 @@ export const experienceData: ExperienceData = {
             [
               "Microservices Architecture로 설계된 serverless 백엔드 개발",
               [
-                "AWS Lambda에 querystring으로 array가 제대로 전달되지 않는 문제 해결 https://blog.hoseung.me/2021-05-19-aws-lambda-querystring",
+                "[AWS Lambda에 querystring으로 array가 제대로 전달되지 않는 문제 해결](https://blog.hoseung.me/2021-05-19-aws-lambda-querystring)",
               ],
             ],
             [
@@ -57,10 +61,8 @@ export const experienceData: ExperienceData = {
               [
                 "변동이 적은 데이터에 Local Storage 기반 client-side 캐싱을 적용하여 렌더링 속도 개선 (약 50 ~ 500 밀리초의 API 응답 대기 시간 절약, 렌더링이 동기 방식으로 즉시 이루어져 깜빡임 사라짐)",
                 "Github Actions에 Lighthouse CI를 추가하고 퍼포먼스 점수를 근소하게 개선한 경험 (Chrome dev tools 기준 40점대에서 60점대로 개선)",
-                "특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때, 빠르게 파악할 수 있도록 Visual Regression Test 도입(https://blog.hoseung.me/2021-02-10-visual-regression-test)",
-                "react-router에서 일으키는 불필요한 리렌더링을 React.memo, RxJS를 사용해 개선한 경험 (react-dev-tools의 Profier의 highlight 기능을 사용해 측정)",
-                "https://blog.hoseung.me/2021-12-07-do-not-use-link",
-                "https://blog.hoseung.me/2021-10-09-rxjs",
+                "특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때, 빠르게 파악할 수 있도록 [Visual Regression Test 도입](https://blog.hoseung.me/2021-02-10-visual-regression-test)",
+                "[react-router에서 일으키는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 [React.memo, RxJS를 사용해 개선](https://blog.hoseung.me/2021-10-09-rxjs)한 경험 (react-dev-tools의 Profier의 highlight 기능을 사용해 측정)",
               ],
             ],
             [
@@ -114,10 +116,8 @@ export const experienceData: ExperienceData = {
           ],
           descriptions: [
             [
-              "Service Worker, Web Push API를 사용해 푸시 알림 구현",
-              [
-                "https://blog.hoseung.me/2021-11-28-web-push-notification",
-              ],
+              "[Service Worker, Web Push API를 사용해 푸시 알림 구현](https://blog.hoseung.me/2021-11-28-web-push-notification)",
+              [],
             ],
             [
               "푸시 알림 서비스 사용률 개선",
@@ -146,7 +146,7 @@ export const experienceData: ExperienceData = {
             [
               "HTML video element로 mp4 동영상 컨텐츠 제공",
               [
-                "iOS의 자동재생 차단 이슈를 https://webkit.org/blog/6784/new-video-policies-for-ios를 참고해 해결",
+                "[iOS의 자동재생 차단 이슈](https://webkit.org/blog/6784/new-video-policies-for-ios)를 해결",
               ],
             ],
             [
@@ -171,7 +171,7 @@ export const experienceData: ExperienceData = {
             [
               "프론트엔드, 백엔드 전체를 설계부터 개발, 배포, 유지보수 담당",
               [
-                "팀에서 개발한 dynamorm(https://github.com/serverless-seoul/dynamorm)이라는 오픈소스를 사용해 DynamoDB 테이블 정의, serverless framework를 사용해 배포",
+                "팀에서 개발한 [dynamorm](https://github.com/serverless-seoul/dynamorm)이라는 오픈소스를 사용해 DynamoDB 테이블 정의, serverless framework를 사용해 배포",
                 "BDD 방식의 테스트코드 작성 -> 유저 입장에서 나올 수 있는 유효한 시나리오들을 생각해볼 수 있었음 -> 개발자 입장에서도 비즈니스 로직을 빠르게 이해하는데에 도움이 됨",
               ],
             ],
