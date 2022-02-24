@@ -91,7 +91,7 @@ export const experienceData: ExperienceData = {
             [
               "Elasticsearch에 모든 포스트를 인덱싱",
               [
-                "DynamoDB Stream, Lambda, SQS를 사용, 트래픽 분산 및 장애 전파 방지",
+                "[DynamoDB Stream을 사용해 Elasticsearch로 가는 트래픽 분산 및 장애 전파 방지](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)",
                 "기존에 불가능했던 제목 / 본문 검색이 가능해짐",
               ],
             ],
