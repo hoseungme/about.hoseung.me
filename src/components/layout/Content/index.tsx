@@ -6,5 +6,11 @@ export function Content({ children }: React.PropsWithChildren<{}>) {
 }
 
 const Container = styled.main`
+  margin-top: 70px;
   padding: 0 20px;
+
+  @media screen and (max-width: 950px) {
+    margin-top: 50px;
+    padding: 0 16px;
+  }
 `;
