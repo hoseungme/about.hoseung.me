@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 import { FadeIn } from "../../../components/common/FadeIn";
-import { LinkButton } from "./LinkButton";
 
+import { LinkButton } from "./LinkButton";
 import { SectionTitle } from "./SectionTitle";
 
 export function ExperienceSection() {
