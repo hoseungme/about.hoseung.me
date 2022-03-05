@@ -112,15 +112,7 @@ export function OpensourceSection() {
               className="link font-medium"
               to="https://blog.hoseung.me/2021-05-01-api-client-sdk"
             >
-              개발 일지 1
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              className="link font-medium"
-              to="https://blog.hoseung.me/2021-03-27-open-api-specification"
-            >
-              개발 일지 2
+              개발 일지
             </LinkButton>
           </li>
         </ul>
