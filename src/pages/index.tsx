@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory, Switch, Route } from "react-router-dom";
 
 import { Main } from "./Main";
+import { Experience } from "./Experience";
 
 export function RouteSwitch() {
   const history = useHistory();
@@ -16,7 +17,8 @@ export function RouteSwitch() {
 
   return (
     <Switch>
-      <Route path="" component={Main} />
+      <Route exact path="/" component={Main} />
+      <Route exact path="/experiences/:id" component={Experience} />
     </Switch>
   );
 }
