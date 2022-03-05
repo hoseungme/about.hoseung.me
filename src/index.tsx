@@ -17,9 +17,10 @@ const GlobalStyle = createGlobalStyle`
     --black0: rgba(85, 87, 112, 1);
     --black1: rgba(0, 0, 0, 1);
 
-    --grey0: rgba(224, 224, 224, 1);
-    --grey1: rgba(189, 189, 189, 1);
-    --grey2: rgba(164, 164, 164, 1);
+    --grey0: rgba(242, 242, 242, 1);
+    --grey1: rgba(230, 230, 230, 1);
+    --grey2: rgba(216, 216, 216, 1);
+    --grey3: rgba(205, 205, 205, 1);
 
     --green0: rgba(0, 227, 192, 1);
     --green1: rgba(0, 209, 178, 1);

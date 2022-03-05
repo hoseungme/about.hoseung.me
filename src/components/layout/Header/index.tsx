@@ -11,11 +11,11 @@ export function Header() {
         <Link className="link-to-home font-medium" to="/">
           hoseung.me
         </Link>
-        <a className="link-to-blog font-regular" href="https://blog.hoseung.me">
+        <a className="link-to-blog font-medium" href="https://blog.hoseung.me">
           blog
         </a>
         <a
-          className="link-to-github font-regular"
+          className="link-to-github font-medium"
           href="https://github.com/HoseungJang"
         >
           github
@@ -50,7 +50,7 @@ const Container = styled.header`
 
   &.scrolled {
     background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 10px var(--grey0);
+    box-shadow: 0 0 10px var(--grey1);
   }
 
   > a {
@@ -76,19 +76,19 @@ const Container = styled.header`
 
   > .link-to-blog {
     margin-left: auto;
-    color: var(--grey1);
+    color: var(--grey2);
 
     &:hover {
-      color: var(--grey2);
+      color: var(--grey3);
     }
   }
 
   > .link-to-github {
     margin-left: 12px;
-    color: var(--grey1);
+    color: var(--grey2);
 
     &:hover {
-      color: var(--grey2);
+      color: var(--grey3);
     }
   }
 `;
