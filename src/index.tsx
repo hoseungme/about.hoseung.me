@@ -2,8 +2,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
 
-import { Color } from "./constants/Color";
-
 import { Footer } from "./components/layout/Footer";
 import { Content } from "./components/layout/Content";
 import { Header } from "./components/layout/Header";
