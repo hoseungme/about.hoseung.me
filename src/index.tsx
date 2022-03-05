@@ -22,9 +22,10 @@ const GlobalStyle = createGlobalStyle`
     --grey2: rgba(216, 216, 216, 1);
     --grey3: rgba(205, 205, 205, 1);
 
-    --green0: rgba(0, 227, 192, 1);
-    --green1: rgba(0, 209, 178, 1);
-    --green2: rgba(0, 185, 157, 1);
+    --green0: rgba(0, 230, 195, 1);
+    --green1: rgba(0, 204, 173, 1);
+    --green2: rgba(0, 179, 152, 1);
+    --green3: rgba(0, 153, 130, 1);
   }
 
   html, body {

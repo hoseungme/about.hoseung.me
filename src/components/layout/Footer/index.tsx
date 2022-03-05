@@ -9,8 +9,8 @@ export function Footer() {
 }
 
 const Container = styled.footer`
-  padding: 20px 20px 30px;
+  padding: 100px 20px 30px;
   margin-top: auto;
-  color: var(--grey1);
+  color: var(--grey3);
   font-size: 0.85rem;
 `;
