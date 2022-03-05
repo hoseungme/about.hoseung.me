@@ -28,6 +28,7 @@ export function LinkButton({
 }
 
 const Container = styled(Link)`
+  width: fit-content;
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
