@@ -7,7 +7,7 @@ import { SectionTitle } from "./SectionTitle";
 export function SkillSection() {
   return (
     <Container>
-      <FadeIn as={SectionTitle}>기술 및 역량 요약</FadeIn>
+      <SectionTitle>기술 및 역량 요약</SectionTitle>
       <ul>
         <FadeIn as="li">
           <p className="font-regular">
