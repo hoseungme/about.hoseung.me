@@ -11,7 +11,9 @@
     - 특정 작업이 비즈니스적으로 어떤 결과를 불러일으킬지 고민하고, 결과 중심으로 사고하고 선택하려 노력
 - 각종 성능 이슈 파악 및 개선
     - 변동이 적은 데이터에 Local Storage 기반 client-side 캐싱을 적용하여 렌더링 속도 개선 (약 50 ~ 500 밀리초의 API 응답 대기 시간 절약, 렌더링이 동기 방식으로 즉시 이루어져 깜빡임 사라짐)
-    - Github Actions에 Lighthouse CI를 추가하고 퍼포먼스 점수를 근소하게 개선한 경험 (Chrome dev tools 기준 40점대에서 60점대로 개선)
+    - Lighthouse CI 지표를 활용해 웹 성능 최적화 (Chrome dev tools 기준 40점대에서 60점대로 개선)
+        - 안쓰는 폰트 삭제, moment.js -> dayjs 마이그레이션으로 번들 경량화
+        - 써드 파티 라이브러리(kakao, facebook, zendesk 등)를 HTML 파싱 단계에서 제거하고, 필요할 때 lazy load하도록 개선
     - 특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때, 빠르게 파악할 수 있도록 [Visual Regression Test 도입](https://blog.hoseung.me/2021-02-10-visual-regression-test)
     - [react-router에서 일으키는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 [React.memo, RxJS](https://blog.hoseung.me/2021-10-09-rxjs)를 사용해 개선한 경험 (react-dev-tools의 Profier의 highlight 기능을 사용해 측정)
 - 웹뷰 환경의 Android, iOS앱을 개발한 경험
