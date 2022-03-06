@@ -4,13 +4,19 @@ import { useHistory, Switch, Route } from "react-router-dom";
 import { Main } from "./Main";
 import { Experience } from "./Experience";
 
+import { GA } from "../services/ga";
+
 export function RouteSwitch() {
   const history = useHistory();
+
   React.useEffect(() => {
-    const unlisten = history.listen(() => {
-      if (history.action !== "POP") {
+    GA.trackPageView({ path: window.location.pathname });
+
+    const unlisten = history.listen((location, action) => {
+      if (action !== "POP") {
         window.scrollTo(0, 0);
       }
+      GA.trackPageView({ path: location.pathname });
     });
     return () => unlisten();
   }, [history]);
