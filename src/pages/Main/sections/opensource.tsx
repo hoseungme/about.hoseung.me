@@ -35,9 +35,17 @@ export function OpensourceSection() {
           <li>
             <LinkButton
               className="link font-medium"
+              to="https://github.com/HoseungJang/blog.hoseung.me"
+            >
+              깃허브 (현재)
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              className="link font-medium"
               to="https://github.com/hoseung-only"
             >
-              깃허브
+              깃허브 (Archived)
             </LinkButton>
           </li>
         </ul>
@@ -144,8 +152,10 @@ const Container = styled.section`
 
     > .buttons {
       display: flex;
+      flex-flow: row wrap;
 
       > li {
+        flex-shrink: 0;
         padding: 0;
         font-size: 0.85rem;
 
@@ -154,7 +164,7 @@ const Container = styled.section`
         }
 
         &:not(:last-child) {
-          margin-right: 0.5rem;
+          margin: 0 0.5rem 0.5rem 0;
         }
       }
     }
