@@ -19,8 +19,8 @@ export function SkillSection() {
         <FadeIn as="li">
           <p className="font-regular">
             <Highlight>React</Highlight>를 사용한 CSR 기반 프론트엔드 개발에
-            익숙합니다. <Highlight>styled-components</Highlight>로{" "}
-            <Highlight>SCSS</Highlight>문법을 사용해 스타일링합니다.
+            익숙합니다. <Highlight>React의 렌더링 성능</Highlight>을 개선한
+            경험이 있습니다.
           </p>
         </FadeIn>
         <FadeIn as="li">
@@ -30,13 +30,6 @@ export function SkillSection() {
             개발, 데이터 파이프라인 구축, SEO 처리 경험이 있습니다.{" "}
             <Highlight>Github Actions</Highlight>로 CI/CD를 자동화하는 것에
             익숙합니다.
-          </p>
-        </FadeIn>
-        <FadeIn as="li">
-          <p className="font-regular">
-            <Highlight>RxJS</Highlight>, <Highlight>React.memo</Highlight> 등을
-            활용해 <Highlight>React의 렌더링 성능</Highlight>을 개선한 경험이
-            있습니다.
           </p>
         </FadeIn>
         <FadeIn as="li">
@@ -55,12 +48,6 @@ export function SkillSection() {
           <p className="font-regular">
             <Highlight>프론트엔드, 백엔드 전체</Highlight>에 걸친 설계, 개발,
             유지보수를 해본 경험이 있습니다.
-          </p>
-        </FadeIn>
-        <FadeIn as="li">
-          <p className="font-regular">
-            최근에는 <Highlight>Go</Highlight>에 관심을 갖고, 서버리스 백엔드
-            구축에 활용해보려고 공부하고 있습니다.
           </p>
         </FadeIn>
       </ul>
