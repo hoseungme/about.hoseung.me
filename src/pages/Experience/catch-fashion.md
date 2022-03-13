@@ -4,7 +4,7 @@
 - 더 불러올 가능성이 높은 **페이징 데이터를 prefetch**해두는 기능을 개발했습니다.
     - 데이터 prefetch가 끝난 시점에 이미지까지 미리 불러와둘 수 있으므로, **상품 리스트의 렌더링 퍼포먼스가 기존 대비 크게 개선**되었습니다.
 - Lighthouse CI 지표를 활용해 **웹 성능을 최적화**했습니다.
-    - **안쓰는 폰트를 삭제**하고, **moment.js를 dayjs로 마이그레이션**하는 등 **번들을 경량화**했습니다.
+    - **안쓰는 폰트를 삭제**하고, [moment.js를 dayjs로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하는 등 **번들을 경량화**했습니다.
     - kakao, facebook, zendesk 등의 **써드 파티 라이브러리를 사용하는 시점에 lazy load**하도록 개선하여 **HTML 파싱 시간과 네트워크 비용을 절약**했습니다.
 - 특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때 즉각 파악할 수 있도록 [Visual Regression Test를 도입](https://blog.hoseung.me/2021-02-10-visual-regression-test)했습니다.
 - [react-router에서 일으키는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 [React.memo, RxJS](https://blog.hoseung.me/2021-10-09-rxjs)를 사용해 개선했습니다.
