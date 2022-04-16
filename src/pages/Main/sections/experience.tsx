@@ -12,7 +12,7 @@ export function ExperienceSection() {
       <FadeIn className="item-container">
         <div className="company font-bold">스마일벤처스 (캐치패션)</div>
         <div className="role font-regular">프론트엔드/백엔드 엔지니어</div>
-        <div className="period font-medium">2020.08 ~ 현재</div>
+        <div className="period font-medium">2020.08 ~ 2022.04</div>
         <ul className="buttons">
           <li>
             <LinkButton
