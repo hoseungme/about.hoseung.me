@@ -10,7 +10,7 @@ export function ExperienceSection() {
     <Container>
       <SectionTitle>커리어 요약</SectionTitle>
       <FadeIn className="item-container">
-        <div className="company font-bold">Viva Republica (토스)</div>
+        <div className="company font-bold">비바리퍼블리카 (토스)</div>
         <div className="role font-regular">프론트엔드 엔지니어</div>
         <div className="period font-medium">2022.05 ~ 현재</div>
         <ul className="buttons"></ul>
