@@ -4,12 +4,18 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 import catchFashion from "./catch-fashion.md";
+import vivaRepublica from "./viva-republica.md";
 
 const data = [
   {
     id: "catch-fashion",
     title: "스마일벤처스 커리어 상세 페이지 입니다.",
     detail: catchFashion,
+  },
+  {
+    id: "viva-republica",
+    title: "비바리퍼블리카 (토스) 커리어 상세 페이지 입니다.",
+    detail: vivaRepublica,
   },
 ];
 
