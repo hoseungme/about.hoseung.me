@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { adaptive } from "../../../constants/colors";
+
 import { FadeIn } from "../../../components/common/FadeIn";
 
 import { SectionTitle } from "./SectionTitle";
@@ -66,5 +68,5 @@ const Container = styled.section`
 `;
 
 const Highlight = styled.span.attrs({ className: "font-medium" })`
-  color: var(--green2);
+  color: ${adaptive.green2};
 `;

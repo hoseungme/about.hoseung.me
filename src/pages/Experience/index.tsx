@@ -3,6 +3,8 @@ import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
+import { adaptive } from "../../constants/colors";
+
 import catchFashion from "./catch-fashion.md";
 import vivaRepublica from "./viva-republica.md";
 
@@ -46,12 +48,12 @@ const Container = styled.main`
 
 const Markdown = styled(ReactMarkdown)`
   a {
-    color: var(--green2);
+    color: ${adaptive.green2};
     font-weight: 500;
     transition: color 0.1s;
 
     &:hover {
-      color: var(--green3);
+      color: ${adaptive.green3};
     }
   }
 

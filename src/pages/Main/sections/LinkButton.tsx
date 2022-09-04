@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { adaptive } from "../../../constants/colors";
+
 interface LinkButtonProps {
   className?: string;
   to: string;
@@ -33,10 +35,10 @@ const Container = styled(Link)`
   align-items: center;
   padding: 0.5em 1em;
   border-radius: 12px;
-  background-color: var(--grey0);
+  background-color: ${adaptive.grey0};
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: var(--grey1);
+    background-color: ${adaptive.grey1};
   }
 `;

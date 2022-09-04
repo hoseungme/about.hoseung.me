@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { adaptive } from "../../../constants/colors";
+
 export function Footer() {
   return (
     <Container>
@@ -28,11 +30,11 @@ const Container = styled.footer`
   font-size: 0.85rem;
 
   a {
-    color: var(--green1);
+    color: ${adaptive.green1};
     transition: color 0.1s;
 
     &:hover {
-      color: var(--green2);
+      color: ${adaptive.green2};
     }
   }
 `;

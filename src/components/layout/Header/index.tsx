@@ -2,6 +2,8 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { adaptive } from "../../../constants/colors";
+
 export function Header() {
   const [ref, inView] = useInView({ initialInView: true });
   return (
@@ -36,7 +38,7 @@ const Container = styled.header`
   margin: 0 auto;
   padding: 12px 20px;
   border-radius: 12px;
-  background-color: var(--white0);
+  background-color: ${adaptive.white0};
   backdrop-filter: blur(8px);
   transition: background-color 0.2s, box-shadow 0.2s;
 
@@ -50,8 +52,8 @@ const Container = styled.header`
   }
 
   &.scrolled {
-    background-color: var(--white0_t70);
-    box-shadow: 0 0 10px var(--grey1);
+    background-color: ${adaptive.white0_t70};
+    box-shadow: 0 0 10px ${adaptive.grey1};
   }
 
   > a {
@@ -60,18 +62,18 @@ const Container = styled.header`
   }
 
   > .link-to-home {
-    color: var(--green1);
+    color: ${adaptive.green1};
 
     &:hover {
-      color: var(--green2);
+      color: ${adaptive.green2};
     }
   }
 
   > .link-to-home {
-    color: var(--green1);
+    color: ${adaptive.green1};
 
     &:hover {
-      color: var(--green2);
+      color: ${adaptive.green2};
     }
   }
 
@@ -79,7 +81,7 @@ const Container = styled.header`
     margin-left: auto;
 
     &:hover {
-      color: var(--black1);
+      color: ${adaptive.black1};
     }
   }
 
@@ -87,7 +89,7 @@ const Container = styled.header`
     margin-left: 12px;
 
     &:hover {
-      color: var(--black1);
+      color: ${adaptive.black1};
     }
   }
 `;
