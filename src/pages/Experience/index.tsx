@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import { adaptive } from "../../constants/colors";
+import { adaptive } from "constants/colors";
 
 import catchFashion from "./catch-fashion.md";
 import vivaRepublica from "./viva-republica.md";

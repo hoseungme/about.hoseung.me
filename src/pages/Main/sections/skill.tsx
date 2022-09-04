@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { adaptive } from "../../../constants/colors";
+import { adaptive } from "constants/colors";
 
-import { FadeIn } from "../../../components/common/FadeIn";
+import { FadeIn } from "components/common/FadeIn";
 
 import { SectionTitle } from "./SectionTitle";
 

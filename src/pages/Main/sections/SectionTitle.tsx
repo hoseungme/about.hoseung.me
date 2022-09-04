@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FadeIn } from "../../../components/common/FadeIn";
+import { FadeIn } from "components/common/FadeIn";
 
 export const SectionTitle = styled(
   ({

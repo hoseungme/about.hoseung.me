@@ -2,7 +2,7 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { adaptive } from "../../../constants/colors";
+import { adaptive } from "constants/colors";
 
 export function Header() {
   const [ref, inView] = useInView({ initialInView: true });

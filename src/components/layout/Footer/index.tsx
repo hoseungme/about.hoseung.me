@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { adaptive } from "../../../constants/colors";
+import { adaptive } from "constants/colors";
 
 export function Footer() {
   return (

@@ -4,7 +4,7 @@ import { useHistory, Switch, Route } from "react-router-dom";
 import { Main } from "./Main";
 import { Experience } from "./Experience";
 
-import { GA } from "../services/ga";
+import { GA } from "services/ga";
 
 export function RouteSwitch() {
   const history = useHistory();

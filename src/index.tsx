@@ -6,7 +6,7 @@ import { Footer } from "./components/layout/Footer";
 import { Content } from "./components/layout/Content";
 import { Header } from "./components/layout/Header";
 
-import { RouteSwitch } from "./pages";
+import { RouteSwitch } from "pages";
 
 const GlobalStyle = createGlobalStyle`
   :root {

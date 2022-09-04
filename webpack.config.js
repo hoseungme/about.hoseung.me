@@ -4,8 +4,25 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const webpack = require("webpack");
 const dotenv = require("dotenv");
+const tsconfig = require("./tsconfig.json");
 
 dotenv.config();
+
+function convertPathsToAlias() {
+  const { baseUrl, paths } = tsconfig.compilerOptions;
+  const alias = {};
+
+  for (const pathsKey in paths) {
+    const aliasKey = pathsKey.substring(0, pathsKey.length - 2); // remove '/*'
+    const pathsValue = paths[pathsKey][0];
+    const resolvedTo = `${baseUrl}/${pathsValue.substring(0, pathsValue.length - 2)}`; // remove '/*'
+
+    alias[aliasKey] = path.resolve(__dirname, resolvedTo);
+  }
+  return alias;
+}
+
+const aliasFromTsconfig = convertPathsToAlias();
 
 module.exports = (env) => {
   const { mode } = env;
@@ -31,6 +48,7 @@ module.exports = (env) => {
         fs: false,
         path: false,
       },
+      alias: aliasFromTsconfig,
       modules: ["node_modules"],
       extensions: [".ts", ".tsx", ".js"],
     },

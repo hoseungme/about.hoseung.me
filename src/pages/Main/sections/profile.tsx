@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FadeIn } from "../../../components/common/FadeIn";
+import { FadeIn } from "components/common/FadeIn";
 
 const data = {
   title: "안녕하세요.\n좋은 경험을 추구하는\n장호승입니다.",
