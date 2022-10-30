@@ -11,15 +11,24 @@ export function OpensourceSection() {
       <SectionTitle>오픈소스 기여</SectionTitle>
       <FadeIn className="item-container">
         <div className="description font-regular">
-          개발하면서 생긴 아이디어를 꾸준히 오픈소스화 하고 있습니다.
+          토스 프론트엔드 라이브러리 오픈소스인 Slash의 메인테이너로 활동하고
+          있습니다.
         </div>
         <ul className="buttons">
           <li>
             <LinkButton
               className="link font-medium"
-              to="https://github.com/HoseungJang/opensources"
+              to="https://github.com/toss/slash"
             >
-              모아보기
+              Slash Github
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              className="link font-medium"
+              to="https://github.com/toss/slash/pulls?q=involves%3AHoseungJang"
+            >
+              기여한 PR 및 Issue 목록
             </LinkButton>
           </li>
         </ul>
