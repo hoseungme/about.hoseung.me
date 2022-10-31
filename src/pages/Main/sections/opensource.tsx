@@ -26,7 +26,7 @@ export function OpensourceSection() {
           <li>
             <LinkButton
               className="link font-medium"
-              to="https://github.com/toss/slash/pulls?q=involves%3AHoseungJang"
+              to="https://github.com/toss/slash/issues?q=involves%3AHoseungJang"
             >
               기여한 PR 및 Issue 목록
             </LinkButton>

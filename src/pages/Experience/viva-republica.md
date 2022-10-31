@@ -1,6 +1,6 @@
 ## 프론트엔드 챕터 기여
 - 토스 내부 라이브러리들 일부를 오픈소스화한 [toss/slash](https://github.com/toss/slash) 프로젝트의 메인테이너로 기여했습니다.
-    - [기여한 PR 및 Issue 목록](https://github.com/toss/slash/pulls?q=involves%3AHoseungJang)
+    - [기여한 PR 및 Issue 목록](https://github.com/toss/slash/issues?q=involves%3AHoseungJang)
 - 코드를 작성하며 좋은 아이디어가 생기면 프론트엔드 공통 라이브러리에 추가하고, 기존의 라이브러리에서 불편한 부분은 수정하여 개발 생산성에 기여했습니다.
     - [@toss/storage](https://github.com/toss/slash/tree/main/packages/common/storage)
         - [문서](https://slash.page/ko/libraries/common/storage/README.i18n)
