@@ -25,12 +25,20 @@
   - 압축된 모델 적용 이후 전후 비교를 해보았을 때, 외관도 손상되지 않고 그대로 유지된 것을 확인했습니다.
 
 <div style="width: 100%; display: flex; justify-content: center">
-  <iframe src="https://www.youtube.com/embed/A7M6lioKRMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 560px; width: 100%; height: 315px"></iframe>
+  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/A7M6lioKRMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
 </div>
 
 <div style="width: 100%; display: flex; justify-content: center">
-  <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 560px; width: 100%; height: 315px"></iframe>
+  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
 </div>
+
+<div style="height: 60px"></div>
 
 ## 토스 모의 주식 투자
 
@@ -62,9 +70,14 @@
   - 순수 자바스크립트 로직으로 구현하였고, 투사체가 날아가는 것이 최대한 자연스럽게 보이도록 아래와 같은 기준을 세워 수많은 테스트를 거쳤습니다.
     - 어느 정도 속도로 touch move가 일어났을 때 투사체가 던져진 것으로 판단할 것인지
     - 투사체가 던져진 방향이 얼마나 벗어나야 목표물에서 빗나갔다고 판단할 것인지
-    - 목표물을 향해 투사체가 잘 던져진 경우, 어느 정도 속도로 포물선을 그리며 자연스럽게 날아가게 할 것인지
+    - 목표물을 향해 투사체가 잘 던져진 경우, 어느 정도 속도로 자연스럽게 이동시킬 것인지, 포물선을 그릴 것인지
     - ...
 
 <div style="width: 100%; display: flex; justify-content: center">
-  <iframe src="https://www.youtube.com/embed/kJXQZrcpNMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 560px; width: 100%; height: 315px"></iframe>
+  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/kJXQZrcpNMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
 </div>
+
+<div style="height: 60px"></div>
