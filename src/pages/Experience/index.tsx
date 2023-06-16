@@ -1,6 +1,8 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
+import rehypeRaw from "rehype-raw";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import styled from "styled-components";
 
 import { adaptive } from "constants/colors";
@@ -31,7 +33,16 @@ export function Experience() {
   return (
     <Container>
       <p className="title">{title}</p>
-      <Markdown>{detail}</Markdown>
+      <Markdown
+        rehypePlugins={
+          [
+            rehypeRaw,
+            rehypeSanitize(defaultSchema),
+          ] as ReactMarkdown.PluggableList
+        }
+      >
+        {detail}
+      </Markdown>
     </Container>
   );
 }
