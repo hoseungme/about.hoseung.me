@@ -10,8 +10,27 @@
 ## 서버 챕터 기여
 
 - [Date는 어떻게 주고 받는게 바람직할까요?](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)
-  - 토스 대부분의 서버에서 Date를 응답할 때 형태도 다 다르고, 타임존도 명시하지 않는, 즉 표준을 지키지 않는 문제가 있었습니다.
-  - 따라서 타임존 명시를 당연히 해야하는 중요성에 대해 공유했고, 각 팀별로 새로운 API에 대해서는 타임존을 적용하는 방식으로 점진적 개선을 이루어 냈습니다.
+  - 토스 대부분의 서버에서 Date를 응답할 때 타임존 정보가 누락되어 있었습니다.
+  - 타임존을 명시하지 않아서 생긴 조직 내의 사례, 타임존을 명시하지 않았을 때 생기는 문제점들, 타임존을 지키면 얻을 수 있는 것들을 정리하여 공유했습니다.
+  - 각 팀별로 새로운 API에 대해서는 타임존을 명시하는 방향으로 점진적인 개선이 시작되었습니다.
+
+## 토스유스카드 3D 리소스 용량 92% 개선
+
+- 토스유스카드 발급 화면에서는 three.js를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
+  - **카드는 단순한 평면이라는 특징**에 무색하게 토스유스카드 3D 모델 파일의 용량은 심각하게 큰 문제가 있었습니다.
+    - 토스유스카드는 5종류로 이루어져 있는데, 각각의 모델 용량은 2MB ~ 7MB 사이로, **총합하면 21.5MB 였습니다**.
+  - 따라서 리서치를 통해 [Draco](https://github.com/google/draco)라는 구글에서 개발한 3D 모델 압축기를 찾아 사용하게 되었습니다.
+    - 여러 번의 테스트를 거쳐 3D 모델 외관이 손상되지 않는 선에서의 최저점을 찾아 압축했습니다.
+  - 결과적으로 토스유스카드 3D 모델 파일들의 총합 용량이 **21.5MB (22016KB) -> 1820KB 로 대단히 개선**되었고, 즉 유저들의 **네트워크 비용을 약 92% 가까이 절약**해줄 수 있었습니다.
+  - 압축된 모델 적용 이후 전후 비교를 해보았을 때, 외관도 손상되지 않고 그대로 유지된 것을 확인했습니다.
+
+<div style="width: 100%; display: flex; justify-content: center">
+  <iframe src="https://www.youtube.com/embed/A7M6lioKRMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 560px; width: 100%; height: 315px"></iframe>
+</div>
+
+<div style="width: 100%; display: flex; justify-content: center">
+  <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 560px; width: 100%; height: 315px"></iframe>
+</div>
 
 ## 토스 모의 주식 투자
 
@@ -36,5 +55,16 @@
 ## 토스 치킨 대회
 
 - 입사 후 처음 개발한 제품으로, 만 7세 ~ 만 18세 유저들의 신규 가입과 리텐션 증가를 유도하기 위한 이벤트 제품입니다.
-- 기본적으로 10대가 서로 단합할 수 있는 제품에 반응이 크다는 점을 공략하여, 수많은 신규 유저를 데려올 수 있었던 제품입니다.
 - 기술적으로는 [데이터 응답을 적절한 형태로 정규화](https://blog.hoseung.me/2022-06-02-normalization-for-intuitive-component/)하는 등, 직관적으로 이해되는 코드를 작성하기 위해 노력했습니다.
+- 기본적으로 10대가 서로 단합할 수 있는 제품에 반응이 크다는 점을 공략하여, 수많은 신규 유저를 데려올 수 있었던 제품입니다.
+- 반응이 워낙 좋다 보니 여러번 오픈하여 진행하게 되었는데, 유저가 재미를 잃지 않도록 점수를 쌓는 방식을 계속 바꾸어 갔습니다.
+  - 가장 마지막 토스 치킨 대회는 포켓몬 고에서 영감을 받아, 아래와 같이 눈덩이를 던져 박을 터뜨려 점수를 얻는 게임을 구현했습니다.
+  - 순수 자바스크립트 로직으로 구현하였고, 투사체가 날아가는 것이 최대한 자연스럽게 보이도록 아래와 같은 기준을 세워 수많은 테스트를 거쳤습니다.
+    - 어느 정도 속도로 touch move가 일어났을 때 투사체가 던져진 것으로 판단할 것인지
+    - 투사체가 던져진 방향이 얼마나 벗어나야 목표물에서 빗나갔다고 판단할 것인지
+    - 목표물을 향해 투사체가 잘 던져진 경우, 어느 정도 속도로 포물선을 그리며 자연스럽게 날아가게 할 것인지
+    - ...
+
+<div style="width: 100%; display: flex; justify-content: center">
+  <iframe src="https://www.youtube.com/embed/kJXQZrcpNMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 560px; width: 100%; height: 315px"></iframe>
+</div>
