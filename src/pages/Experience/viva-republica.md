@@ -14,6 +14,23 @@
   - 타임존을 명시하지 않아서 생긴 조직 내의 사례, 타임존을 명시하지 않았을 때 생기는 문제점들, 타임존을 지키면 얻을 수 있는 것들을 정리하여 공유했습니다.
   - 각 팀별로 새로운 API에 대해서는 타임존을 명시하는 방향으로 점진적인 개선이 시작되었습니다.
 
+## 덕질 저금통
+
+- 좋아하는 아이돌 그룹의 이름으로 저금을 할 수 있는 제품입니다.
+- 브라우저 버그로 인해 디자인 요구사항을 충족하지 못하고 타협할 수도 있었지만, 끝까지 해결 방법을 찾아내 일정에 맞추어 구현했습니다.
+  - 실시간 채팅 메시지 같은 느낌을 주기 위해 스크롤 방향을 거꾸로 해야하는 요구사항이 있었습니다.
+  - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
+- [배경 그래픽과 Parallax Scroll을 조합](https://github.com/HoseungJang/wiki/blob/main/front-end/uiux/implement-parallax-scroll-component-in-react/ko.md)하여 다채로운 UX를 제공했습니다.
+
+<div style="width: 100%; display: flex; justify-content: center">
+  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/mPXaqnyDKi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+</div>
+
+<div style="height: 60px"></div>
+
 ## 토스유스카드 3D 리소스 용량 92% 개선
 
 - 토스유스카드 발급 화면에서는 three.js를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
@@ -47,6 +64,16 @@
   - 기존에는 처음 들어온 유저에게 첫 매수를 유도하면서, 모든 종목을 보여주었습니다.
   - 다만 처음 들어오기도 했고, 주식을 어려워할 가능성도 높은 유저에게 **무턱대고 너무 많은 선택지를 주고 있어 이탈할 가능성이 높다**는 문제가 있었습니다.
   - 따라서 **유저가 관심 분야를 선택하면, 그 분야와 관련된 종목을 추천해주는 방식으로 개선**하였고, 결과적으로 **첫 매수 전환율이 17% 증가**하는 큰 성공을 이루었습니다.
+- [숫자가 올라가는 애니메이션을 직접 구현](https://github.com/HoseungJang/wiki/blob/main/front-end/uiux/implement-rolling-number-component-in-react/ko.md)하여 실시간 주가 제공에 알맞는 생동감 있는 UX를 제공했습니다.
+
+<div style="width: 100%; display: flex; justify-content: center">
+  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/uxJIEwMhCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+</div>
+
+<div style="height: 60px"></div>
 
 ## 토스유스카드 교통카드 인앱 잔액조회 및 충전
 
