@@ -20,6 +20,20 @@
 - 브라우저 버그로 인해 디자인 요구사항을 충족하지 못하고 타협할 수도 있었지만, 끝까지 해결 방법을 찾아내 일정에 맞추어 구현했습니다.
   - 실시간 채팅 메시지 같은 느낌을 주기 위해 스크롤 방향을 거꾸로 해야하는 요구사항이 있었습니다.
   - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
+  - 하지만 위의 방법으로 해결하고 나니 터치가 끝나면 스크롤이 바로 멈춰버려 부자연스러운 문제가 있었습니다.
+  - 따라서 이후 CSS Transform을 사용한 터치 스크롤러 오픈소스인 [flickable-scroll](https://github.com/HoseungJang/flickable-scroll)을 직접 개발하여 서비스에 적용했습니다.
+
+<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
+  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/Lo-si7UopVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/OfK0HXn7hRo"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+</div>
+
 - [배경 그래픽과 Parallax Scroll을 조합](https://github.com/HoseungJang/wiki/blob/main/front-end/uiux/implement-parallax-scroll-component-in-react/ko.md)하여 다채로운 UX를 제공했습니다.
 
 <div style="width: 100%; display: flex; justify-content: center">
@@ -41,15 +55,12 @@
   - 결과적으로 토스유스카드 3D 모델 파일들의 총합 용량이 **21.5MB (22016KB) -> 1820KB 로 대단히 개선**되었고, 즉 유저들의 **네트워크 비용을 약 92% 가까이 절약**해줄 수 있었습니다.
   - 압축된 모델 적용 이후 전후 비교를 해보았을 때, 외관도 손상되지 않고 그대로 유지된 것을 확인했습니다.
 
-<div style="width: 100%; display: flex; justify-content: center">
-  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
+<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
+  <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
     <div style="width: 100%; height: 100%; background-color: black"></div>
     <iframe src="https://www.youtube.com/embed/A7M6lioKRMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
   </div>
-</div>
-
-<div style="width: 100%; display: flex; justify-content: center">
-  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
+  <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
     <div style="width: 100%; height: 100%; background-color: black"></div>
     <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
   </div>
