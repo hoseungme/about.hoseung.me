@@ -5,34 +5,46 @@ import { FadeIn } from "components/common/FadeIn";
 import { LinkButton } from "./LinkButton";
 import { SectionTitle } from "./SectionTitle";
 
+const data = [
+  {
+    title:
+      "토스 프론트엔드 라이브러리 오픈소스 Slash의 메인테이너로 활동하고 있습니다.",
+    links: [
+      {
+        title: "활동 목록",
+        to: "https://github.com/toss/slash/issues?q=involves%3AHoseungJang",
+      },
+    ],
+  },
+  {
+    title: "아이디어를 얻으면 오픈소스로 만들어 공개하고 있습니다.",
+    links: [
+      {
+        title: "오픈소스 목록",
+        to: "https://github.com/HoseungJang/opensources/blob/main/ko.md",
+      },
+    ],
+  },
+];
+
 export function OpensourceSection() {
   return (
     <Container>
       <SectionTitle>오픈소스 기여</SectionTitle>
-      <FadeIn className="item-container">
-        <div className="description font-regular">
-          토스 프론트엔드 라이브러리 오픈소스인 Slash의 메인테이너로 활동하고
-          있습니다.
-        </div>
-        <ul className="buttons">
-          <li>
-            <LinkButton
-              className="link font-medium"
-              to="https://github.com/toss/slash"
-            >
-              Slash Github
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              className="link font-medium"
-              to="https://github.com/toss/slash/issues?q=involves%3AHoseungJang"
-            >
-              기여한 PR 및 Issue 목록
-            </LinkButton>
-          </li>
-        </ul>
-      </FadeIn>
+      {data.map(({ title, links }) => (
+        <FadeIn key={title} className="item-container">
+          <div className="description font-regular">{title}</div>
+          <ul className="buttons">
+            {links.map((link) => (
+              <li key={link.title}>
+                <LinkButton className="link font-medium" to={link.to}>
+                  {link.title}
+                </LinkButton>
+              </li>
+            ))}
+          </ul>
+        </FadeIn>
+      ))}
     </Container>
   );
 }
