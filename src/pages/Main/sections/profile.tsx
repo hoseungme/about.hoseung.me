@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FadeIn } from "components/common/FadeIn";
 
 const data = {
-  title: "안녕하세요.\n좋은 경험을 추구하는\n장호승입니다.",
+  title: "안녕하세요.\n프론트엔드 개발자\n장호승입니다.",
   descriptions: [
     "주어진 작업을 왜 하는지 이해하는 것을 중요하게 생각합니다.",
     "투명하게 일하며 서로 신뢰하는 조직을 좋아합니다.",
