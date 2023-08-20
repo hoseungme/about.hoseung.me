@@ -34,15 +34,6 @@
   </div>
 </div>
 
-- [배경 그래픽과 Parallax Scroll을 조합](https://github.com/HoseungJang/wiki/blob/main/front-end/uiux/implement-parallax-scroll-component-in-react/ko.md)하여 다채로운 UX를 제공했습니다.
-
-<div style="width: 100%; display: flex; justify-content: center">
-  <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
-    <div style="width: 100%; height: 100%; background-color: black"></div>
-    <iframe src="https://www.youtube.com/embed/mPXaqnyDKi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
-  </div>
-</div>
-
 <div style="height: 60px"></div>
 
 ## 토스유스카드 3D 리소스 용량 92% 개선
