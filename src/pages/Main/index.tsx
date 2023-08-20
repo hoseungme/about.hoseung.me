@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ProfileSection } from "./sections/profile";
 import { SkillSection } from "./sections/skill";
 import { ExperienceSection } from "./sections/experience";
-import { OpensourceSection } from "./sections/opensource";
+import { ActivitySection } from "./sections/activity";
 import { EducationSection } from "./sections/education";
 
 export function Main() {
@@ -12,7 +12,7 @@ export function Main() {
       <ProfileSection />
       <SkillSection />
       <ExperienceSection />
-      <OpensourceSection />
+      <ActivitySection />
       <EducationSection />
     </Container>
   );

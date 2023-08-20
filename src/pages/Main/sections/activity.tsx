@@ -27,10 +27,10 @@ const data = [
   },
 ];
 
-export function OpensourceSection() {
+export function ActivitySection() {
   return (
     <Container>
-      <SectionTitle>오픈소스 기여</SectionTitle>
+      <SectionTitle>Activities</SectionTitle>
       {data.map(({ title, links }) => (
         <FadeIn key={title} className="item-container">
           <div className="description font-regular">{title}</div>

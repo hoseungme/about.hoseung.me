@@ -8,7 +8,7 @@ import { SectionTitle } from "./SectionTitle";
 export function EducationSection() {
   return (
     <Container>
-      <SectionTitle>학력 요약</SectionTitle>
+      <SectionTitle>Educations</SectionTitle>
       <FadeIn className="item-container">
         <div className="name font-bold">대덕소프트웨어마이스터고등학교</div>
         <div className="period font-medium">2018.03 ~ 2021.01</div>

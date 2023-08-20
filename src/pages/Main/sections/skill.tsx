@@ -9,7 +9,7 @@ import { SectionTitle } from "./SectionTitle";
 export function SkillSection() {
   return (
     <Container>
-      <SectionTitle>기술 및 역량 요약</SectionTitle>
+      <SectionTitle>Skills</SectionTitle>
       <ul>
         <FadeIn as="li">
           <p className="font-regular">

@@ -8,7 +8,7 @@ import { SectionTitle } from "./SectionTitle";
 export function ExperienceSection() {
   return (
     <Container>
-      <SectionTitle>커리어 요약</SectionTitle>
+      <SectionTitle>Experiences</SectionTitle>
       <FadeIn className="item-container">
         <div className="company font-bold">비바리퍼블리카 (토스)</div>
         <div className="role font-regular">프론트엔드 엔지니어</div>
