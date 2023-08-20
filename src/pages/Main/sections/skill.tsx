@@ -13,7 +13,7 @@ export function SkillSection() {
       <ul>
         <FadeIn as="li">
           <p className="font-regular">
-            <Highlight>Javascript ES6+</Highlight>와{" "}
+            <Highlight>Javascript</Highlight>와{" "}
             <Highlight>Typescript</Highlight>에 익숙합니다.
           </p>
         </FadeIn>
