@@ -8,6 +8,16 @@ import { SectionTitle } from "./SectionTitle";
 const data = [
   {
     title:
+      "재미있고, 아름다우며, 도전적인 UI/UX 인터랙션을 구현하여 공유하고 있습니다.",
+    links: [
+      {
+        title: "확인하기",
+        to: "https://craft.hoseung.me",
+      },
+    ],
+  },
+  {
+    title:
       "토스 프론트엔드 라이브러리 오픈소스 Slash의 메인테이너로 활동하고 있습니다.",
     links: [
       {
