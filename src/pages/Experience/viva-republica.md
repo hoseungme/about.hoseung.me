@@ -8,6 +8,9 @@
   - [CommonJS와 ESM에 모두 대응하는 라이브러리 개발하기: exports field](https://toss.tech/article/commonjs-esm-exports-field)
     - 토스에서는 개발 생산성 극대화를 위해 수많은 코드를 라이브러리로 만들어 관리하고 있습니다.
     - 이때 라이브러리가 정상적으로 동작하기 위해서, 더 나아가 프론트엔드 퍼포먼스를 위해서도 가장 중요한 Node.js의 모듈 시스템에 대한 지식을 공유했습니다.
+  - [라이브러리 번들링 개선 과정: 커맨드 한 줄로 번들링 끝내기](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
+    - 지금까지 수많은 라이브러리를 만들며 얻은 번들링에 대한 경험을 공유했습니다.
+    - 특정 번들링 방식의 한계와 개선 과정이 담겨 있습니다.
   - [Next.js가 서버 사이드에서 모듈을 읽는 방식](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
     - 회사에서 개발하던 중 겪은 문제의 원인을 깊게 파악한 과정을 공유했습니다.
     - 해당 문제와 관련된 Next.js와 Webpack 코드를 전부 읽는 과정이 담겨있습니다.
