@@ -4,8 +4,11 @@
   - [기여한 PR 및 Issue 목록](https://github.com/toss/slash/issues?q=involves%3AHoseungJang)
 - 코드를 작성하며 좋은 아이디어가 생기면 프론트엔드 공통 라이브러리에 추가하고, 기존의 라이브러리에서 불편한 부분은 수정하여 개발 생산성에 기여했습니다.
   - [@toss/storage](https://github.com/toss/slash/tree/main/packages/common/storage) ([문서](https://slash.page/ko/libraries/common/storage/README.i18n))
-- 생산성을 올리거나 원활한 소통에 도움이 되는 지식들을 문서화하고 공유했습니다. 필요하다면 기술 블로그에도 작성했습니다.
+- 기술 수준과 생산성을 올리기 위한 지식들을 정리하여 공유했습니다.
   - [CommonJS와 ESM에 모두 대응하는 라이브러리 개발하기: exports field](https://toss.tech/article/commonjs-esm-exports-field)
+  - [Next.js가 서버 사이드에서 모듈을 읽는 방식](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
+  - [transform: rotate() + filter: blur() 퍼포먼스 개선 (feat. 레이어, 합성)](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
+  - ...
 
 ## 서버 챕터 기여
 
