@@ -13,7 +13,7 @@ import vivaRepublica from "./viva-republica.md";
 const data = [
   {
     id: "catch-fashion",
-    title: "스마일벤처스 커리어 상세 페이지 입니다.",
+    title: "스마일벤처스 (캐치패션) 커리어 상세 페이지 입니다.",
     detail: catchFashion,
   },
   {
