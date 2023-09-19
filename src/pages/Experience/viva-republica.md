@@ -17,28 +17,6 @@
   - 타임존을 명시하지 않아서 생긴 조직 내의 사례, 타임존을 명시하지 않았을 때 생기는 문제점들, 타임존을 지키면 얻을 수 있는 것들을 정리하여 공유했습니다.
   - 각 팀별로 새로운 API에 대해서는 타임존을 명시하는 방향으로 점진적인 개선이 시작되었습니다.
 
-## 덕질 저금통
-
-- 좋아하는 아이돌 그룹의 이름으로 저금을 할 수 있는 제품입니다.
-- 브라우저 버그로 인해 디자인 요구사항을 충족하지 못하고 타협할 수도 있었지만, 끝까지 해결 방법을 찾아내 일정에 맞추어 구현했습니다.
-  - 실시간 채팅 메시지 같은 느낌을 주기 위해 스크롤 방향을 거꾸로 해야하는 요구사항이 있었습니다.
-  - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
-  - 하지만 위의 방법으로 해결하고 나니 터치가 끝나면 스크롤이 바로 멈춰버려 부자연스러운 문제가 있었습니다.
-  - 따라서 이후 CSS Transform을 사용한 터치 스크롤러 오픈소스인 [flickable-scroll](https://github.com/HoseungJang/flickable-scroll)을 직접 개발하여 서비스에 적용했습니다.
-
-<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
-  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
-    <div style="width: 100%; height: 100%; background-color: black"></div>
-    <iframe src="https://www.youtube.com/embed/Lo-si7UopVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
-  </div>
-  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
-    <div style="width: 100%; height: 100%; background-color: black"></div>
-    <iframe src="https://www.youtube.com/embed/OfK0HXn7hRo"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
-  </div>
-</div>
-
-<div style="height: 60px"></div>
-
 ## 토스유스카드 3D 리소스 용량 92% 개선
 
 - 토스유스카드 발급 화면에서는 three.js를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
@@ -57,6 +35,28 @@
   <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
     <div style="width: 100%; height: 100%; background-color: black"></div>
     <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+</div>
+
+<div style="height: 60px"></div>
+
+## 덕질 저금통
+
+- 좋아하는 아이돌 그룹의 이름으로 저금을 할 수 있는 제품입니다.
+- 브라우저 버그로 인해 디자인 요구사항을 충족하지 못하고 타협할 수도 있었지만, 끝까지 해결 방법을 찾아내 일정에 맞추어 구현했습니다.
+  - 실시간 채팅 메시지 같은 느낌을 주기 위해 스크롤 방향을 거꾸로 해야하는 요구사항이 있었습니다.
+  - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
+  - 하지만 위의 방법으로 해결하고 나니 터치가 끝나면 스크롤이 바로 멈춰버려 부자연스러운 문제가 있었습니다.
+  - 따라서 이후 CSS Transform을 사용한 터치 스크롤러 오픈소스인 [flickable-scroll](https://github.com/HoseungJang/flickable-scroll)을 직접 개발하여 서비스에 적용했습니다.
+
+<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
+  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/Lo-si7UopVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/OfK0HXn7hRo"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
   </div>
 </div>
 
@@ -91,6 +91,15 @@
 - 교통카드는 실시간 잔액 동기화가 불가능하다는 특징에서 나오는 유저 경험 문제를 적극적으로 방지했습니다.
   - 유저가 잔액 조회를 하지 않으면, 잔액이 업데이트되지 않기 때문에 충전 시 혼동이 발생할 수 있습니다.
   - 충전 퍼널에 진입했을 때 유저의 잔액 정보가 오래된 경우 조회를 유도하도록 개선하여, 혼동을 방지했습니다.
+
+## 편의점 택배 예약하기
+
+- 토스앱 내에서 GS25, CU 편의점 택배를 예약할 수 있는 제품입니다.
+- 일정 금액을 할인해주는 프로모션을 매달 진행했는데, 이때 생기는 비효율적인 상황을 개선했습니다.
+  - 초기에는 프로모션이 어떤 형태로 진행될지에 대해 예측이 가지 않아 프론트엔드 코드에 하드코딩 하는 방식으로 진행했습니다.
+  - 다만 프로모션을 여러번 진행하며 어느 정도 동일한 형태를 띄게 되었고, 매번 요청을 받아 하드코딩하여 배포하는 작업이 비효율적으로 느껴졌습니다.
+  - 따라서 디자인을 고정하여 템플릿화 하고, 해당 템플릿을 채워넣는 JSON 데이터 포맷을 정해 에디터에서 누구나 수정할 수 있도록 만들었습니다.
+  - 이로써 프로모션 세팅에 프론트엔드 배포가 필요하지 않게 되었고, 팀원들이 다른 작업에 더욱 집중할 수 있게 되어 생산성이 증가했습니다.
 
 ## 토스 치킨 대회
 
