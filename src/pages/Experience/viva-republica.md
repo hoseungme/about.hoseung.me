@@ -1,21 +1,24 @@
-## 프론트엔드 챕터 기여
+## 기술적인 기여
 
-- 토스 내부 라이브러리들 일부를 오픈소스화한 [toss/slash](https://github.com/toss/slash) 프로젝트의 메인테이너로 기여했습니다.
+- 토스 내부에서 사용하는 라이브러리를 오픈소스화한 [Slash](https://github.com/toss/slash) 프로젝트의 메인테이너로 기여했습니다.
   - [기여한 PR 및 Issue 목록](https://github.com/toss/slash/issues?q=involves%3AHoseungJang)
 - 코드를 작성하며 좋은 아이디어가 생기면 프론트엔드 공통 라이브러리에 추가하고, 기존의 라이브러리에서 불편한 부분은 수정하여 개발 생산성에 기여했습니다.
   - [@toss/storage](https://github.com/toss/slash/tree/main/packages/common/storage) ([문서](https://slash.page/ko/libraries/common/storage/README.i18n))
-- 기술 수준과 생산성을 올리기 위한 지식들을 정리하여 공유했습니다.
+- 기술 수준과 생산성을 높히기 위한 지식들을 정리하여 공유했습니다.
   - [CommonJS와 ESM에 모두 대응하는 라이브러리 개발하기: exports field](https://toss.tech/article/commonjs-esm-exports-field)
+    - 토스에서는 개발 생산성 극대화를 위해 수많은 코드를 라이브러리로 만들어 관리하고 있습니다.
+    - 이때 라이브러리가 정상적으로 동작하기 위해서, 더 나아가 프론트엔드 퍼포먼스를 위해서도 가장 중요한 Node.js의 모듈 시스템에 대한 지식을 공유했습니다.
   - [Next.js가 서버 사이드에서 모듈을 읽는 방식](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
+    - 회사에서 개발하던 중 겪은 문제의 원인을 깊게 파악한 과정을 공유했습니다.
+    - 해당 문제와 관련된 Next.js와 Webpack 코드를 전부 읽는 과정이 담겨있습니다.
   - [transform: rotate() + filter: blur() 퍼포먼스 개선 (feat. 레이어, 합성)](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
+    - 사이드 프로젝트를 하면서 겪은 브라우저 렌더링 퍼포먼스 문제를 개선한 과정을 공유했습니다.
+    - 모던 브라우저의 레이어, 합성에 대한 지식이 담겨있습니다.
+  - [Date는 어떻게 주고 받는게 바람직할까요?](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)
+    - 토스 대부분의 서버에서 Date를 응답할 때 타임존 정보가 누락되어 있었습니다.
+    - 타임존을 명시하지 않아서 생긴 조직 내의 사례, 타임존을 명시하지 않았을 때 생기는 문제점들, 타임존을 지키면 얻을 수 있는 것들을 정리하여 공유했습니다.
+    - 각 팀별로 새로운 API에 대해서는 타임존을 명시하는 방향으로 점진적인 개선이 시작되었습니다.
   - ...
-
-## 서버 챕터 기여
-
-- [Date는 어떻게 주고 받는게 바람직할까요?](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)
-  - 토스 대부분의 서버에서 Date를 응답할 때 타임존 정보가 누락되어 있었습니다.
-  - 타임존을 명시하지 않아서 생긴 조직 내의 사례, 타임존을 명시하지 않았을 때 생기는 문제점들, 타임존을 지키면 얻을 수 있는 것들을 정리하여 공유했습니다.
-  - 각 팀별로 새로운 API에 대해서는 타임존을 명시하는 방향으로 점진적인 개선이 시작되었습니다.
 
 ## 토스유스카드 3D 리소스 용량 92% 개선
 
