@@ -23,6 +23,38 @@
     - 각 팀별로 새로운 API에 대해서는 타임존을 명시하는 방향으로 점진적인 개선이 시작되었습니다.
   - ...
 
+## 해냄 저금통/덕질 저금통
+
+- 목표를 설정하고 그 목표를 위해 돈을 모으는 제품입니다. 단순히 목표만 설정하고 돈을 모으는 해냄 저금통과, 좋아하는 아이돌, 스포츠 선수, 웹툰, 애니메이션 등을 위해 저금을 하는 덕질 저금통으로 종류가 나뉩니다.
+- 해냄 저금통 대표 이미지 생성 스크립트를 개발했습니다.
+  - 해냄 저금통을 생성할 때에는 이모지와 배경색을 선택하여 저금통의 대표 이미지를 만들게 됩니다.
+  - 그 대표 이미지는 하나의 이미지 파일로 만들어져 있는 것이 아닌, 배경을 렌더링하고 그 위에 이모지를 렌더링하는 방식이었습니다.
+  - 이때, 토스 앱 홈의 계좌 섹션에서 유저가 가진 해냄 저금통의 목록을 보여줘야 하는 요구사항이 있었습니다.
+    - 홈은 Server Driven UI에 기반하고 있었고, 계좌 목록은 각 계좌의 대표 이미지 URL을 받는 스펙으로 구현되어 있었습니다.
+    - 즉, 홈 팀(외부 팀)에서 새로운 스펙 개발이 필요했고, 그에 따른 앱 버전 분기도 필요했습니다.
+  - 따라서 대표 이미지를 생성하여 S3에 업로드하는 작업을 하게 되었습니다.
+    - 이모지는 약 3000개 정도이고, 선택 가능한 대표 이미지의 배경 색은 8개로 고정되어 있으므로, 동적으로 생성할 필요 없이 로컬에서 전부 생성하여 업로드하여도 충분한 양이었습니다.
+    - 토스는 자체 이모지인 [토스페이스](https://toss.im/tossface)를 사용하고 있어서, 토스페이스 이미지 파일과 배경색 이미지를 합성하도록 스크립트를 작성했습니다.
+    - 이모지를 토스페이스 이미지의 파일명으로 변환하는 과정에서 [이모지가 유니코드로 표현되는 방식](https://blog.hoseung.me/2022-08-25-emoji-and-unicode)에 대해 배웠고, 이미지 합성에는 [sharp](https://sharp.pixelplumbing.com) 라이브러리를 사용했습니다.
+- 브라우저 버그로 인해 디자인 요구사항을 충족하지 못하고 타협할 수도 있었지만, 끝까지 해결 방법을 찾아내 일정에 맞추어 구현했습니다.
+  - 실시간 채팅 메시지 같은 느낌을 주기 위해 스크롤 방향을 거꾸로 해야하는 요구사항이 있었습니다.
+  - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
+  - 하지만 위의 방법으로 해결하고 나니 터치가 끝나면 스크롤이 바로 멈춰버려 부자연스러운 문제가 있었습니다.
+  - 따라서 이후 CSS Transform을 사용한 터치 스크롤러 오픈소스인 [flickable-scroll](https://github.com/HoseungJang/flickable-scroll)을 직접 개발하여 서비스에 적용했습니다.
+
+<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
+  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/Lo-si7UopVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/OfK0HXn7hRo"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+</div>
+
+<div style="height: 60px"></div>
+
 ## 토스유스카드 3D 리소스 용량 92% 개선
 
 - 토스유스카드 발급 화면에서는 three.js를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
