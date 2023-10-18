@@ -13,26 +13,21 @@ import vivaRepublica from "./viva-republica.md";
 const data = [
   {
     id: "catch-fashion",
-    title: "스마일벤처스 (캐치패션) 커리어 상세 페이지 입니다.",
     detail: catchFashion,
   },
   {
     id: "viva-republica",
-    title: "비바리퍼블리카 (토스) 커리어 상세 페이지 입니다.",
     detail: vivaRepublica,
   },
 ];
 
-const detailMap = new Map(
-  data.map(({ id, title, detail }) => [id, { title, detail }])
-);
+const detailMap = new Map(data.map(({ id, detail }) => [id, { detail }]));
 
 export function Experience() {
   const { id } = useParams<{ id: string }>();
-  const { title, detail } = React.useMemo(() => detailMap.get(id)!, [id]);
+  const { detail } = React.useMemo(() => detailMap.get(id)!, [id]);
   return (
     <Container>
-      <p className="title">{title}</p>
       <Markdown
         rehypePlugins={
           [
@@ -52,9 +47,7 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
 
-  > .title {
-    margin: 1.5rem 0 2.5rem;
-  }
+  padding: 1.5rem 0;
 `;
 
 const Markdown = styled(ReactMarkdown)`
