@@ -5,39 +5,16 @@ import { FadeIn } from "components/common/FadeIn";
 import { LinkButton } from "./LinkButton";
 import { SectionTitle } from "./SectionTitle";
 
-const data = [
-  {
-    title:
-      "재미있고, 아름다우며, 도전적인 UI/UX 인터랙션을 구현하여 공유하고 있습니다.",
-    links: [
-      {
-        title: "확인하기",
-        to: "https://craft.hoseung.me",
-      },
-    ],
-  },
-  {
-    title:
-      "토스 프론트엔드 라이브러리 오픈소스 Slash의 메인테이너로 활동하고 있습니다.",
-    links: [
-      {
-        title: "활동 목록",
-        to: "https://github.com/toss/slash/issues?q=involves%3AHoseungJang",
-      },
-    ],
-  },
-  {
-    title: "아이디어를 얻으면 오픈소스로 만들어 공개하고 있습니다.",
-    links: [
-      {
-        title: "오픈소스 목록",
-        to: "https://github.com/HoseungJang/opensources/blob/main/ko.md",
-      },
-    ],
-  },
-];
+export type ActivitySectionData = {
+  title: string;
+  links: { title: string; to: string }[];
+}[];
 
-export function ActivitySection() {
+interface Props {
+  data: ActivitySectionData;
+}
+
+export function ActivitySection({ data }: Props) {
   return (
     <Container>
       <SectionTitle>Activities</SectionTitle>

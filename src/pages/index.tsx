@@ -1,8 +1,10 @@
 import React from "react";
 import { useHistory, Switch, Route } from "react-router-dom";
 
-import { Main } from "./Main";
-import { Experience } from "./Experience";
+import { MainKo } from "./Main/Ko";
+import { MainEn } from "./Main/En";
+import { ExperienceKo } from "./Experience/Ko";
+import { ExperienceEn } from "./Experience/En";
 
 import { GA } from "services/ga";
 
@@ -23,8 +25,11 @@ export function RouteSwitch() {
 
   return (
     <Switch>
-      <Route exact path="/" component={Main} />
-      <Route exact path="/experiences/:id" component={Experience} />
+      <Route exact path="/" component={MainKo} />
+      <Route exact path="/experiences/:id" component={ExperienceKo} />
+
+      <Route exact path="/en" component={MainEn} />
+      <Route exact path="/en/experiences/:id" component={ExperienceEn} />
     </Switch>
   );
 }
