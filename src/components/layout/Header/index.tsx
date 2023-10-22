@@ -3,17 +3,31 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { adaptive } from "constants/colors";
+import { useLocale } from "hooks/useLocale";
 
 export function Header() {
   const [ref, inView] = useInView({ initialInView: true });
+
+  const locale = useLocale();
+
   return (
     <>
       <div ref={ref} />
       <Container className={!inView ? "scrolled" : ""}>
-        <Link className="link-to-home font-medium" to="/">
+        <Link
+          className="link-to-home font-medium"
+          to={locale === "en" ? "/en" : "/"}
+        >
           hoseung.me
         </Link>
-        <a className="link-to-blog font-medium" href="https://blog.hoseung.me">
+        <a
+          className="link-to-blog font-medium"
+          href={
+            locale === "en"
+              ? "https://blog.hoseung.me/en"
+              : "https://blog.hoseung.me"
+          }
+        >
           blog
         </a>
         <a
