@@ -61,7 +61,7 @@ const experienceSectionData: ExperienceSectionData = [
 
 const activitySectionData: ActivitySectionData = [
   {
-    title: "Making and Sharing beautiful UI/UX interactions",
+    title: "Making and sharing beautiful UI/UX interactions",
     links: [
       {
         title: "See all crafts",
