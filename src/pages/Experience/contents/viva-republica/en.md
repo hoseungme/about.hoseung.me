@@ -20,3 +20,9 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
   - Leading technical standardization of things used incorrectly.
 
 <div style="height: 40px"></div>
+
+# Details
+
+<div style="height: 20px"></div>
+
+Translate in progress...
