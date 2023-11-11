@@ -30,8 +30,6 @@
   - **안쓰는 폰트를 삭제**하고, [moment.js를 dayjs로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하는 등 **번들을 경량화**했습니다.
   - kakao, facebook, zendesk 등의 **써드 파티 라이브러리를 사용하는 시점에 lazy load**하도록 개선하여 **HTML 파싱 시간과 네트워크 비용을 절약**했습니다.
 - 특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때 즉각 파악할 수 있도록 [Visual Regression Test를 도입](https://blog.hoseung.me/2021-02-10-visual-regression-test)했습니다.
-- [react-router에서 일으키는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 [React.memo, RxJS](https://blog.hoseung.me/2021-10-09-rxjs)를 사용해 개선했습니다.
-  - **react-dev-tools Profier의 highlight 기능을 사용**해 확인했을 때, **history 변경시마다 발생하던 특정 컴포넌트의 불필요한 리렌더링이 완전히 삭제**됬습니다.
 
 ## 포스트 타겟팅 시스템 개발
 
@@ -39,10 +37,8 @@
 - 기존의 포스트 데이터 스키마를 새로운 스키마로 마이그레이션했습니다.
   - 데이터 수가 적고 DynamoDB에 저장되어 있었기 때문에, 간단한 스크립트와 테스트 코드를 작성하여 **별도의 서비스 중단 없이 마이그레이션**할 수 있었습니다.
 - [DynamoDB Stream을 활용해 변경사항을 Elasticsearch에 자동으로 인덱싱](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)할 수 있도록 **데이터 파이프라인을 구축**했습니다.
-  - Elasticsearch에 포스트를 인덱싱함으로써 **기존에 불가능했던 복잡한 조건을 포함한 검색이 가능**해졌습니다.
-- 포스트 타겟팅 시스템을 새롭게 도입했습니다.
-  - 저희 팀에서는 [url-catalog-generator](https://github.com/catchfashion/url-catalog-generator)를 사용해 프론트엔드의 **페이지 URL 목록을 중앙화 하여 관리**하고 있는데, 이를 **포스트의 노출 타겟으로써 활용**했습니다.
-  - **어드민들이 원하는 페이지에 스스로 포스트를 노출/제거**할 수 있게 되었습니다.
+- 어드민 웹에 포스트에 타겟을 추가, 삭제할 수 있는 기능을 추가했습니다.
+  - 타겟 생성에는 실제 유저 웹의 URL을 활용했는데, 유저 웹의 모든 URL은 팀에서 만든 오픈소스인 [url-catalog-generator](https://github.com/catchfashion/url-catalog-generator)를 사용해 중앙화되어 관리되고 있었기에, 유저 웹과 어드민 웹 사이에 타겟을 안전하게 통일하여 사용할 수 있었습니다.
 
 ## 웹 푸시 알림 서비스 개발
 
