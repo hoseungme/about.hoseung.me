@@ -30,7 +30,7 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
 - Contributed as the maintainer of the [Slash](https://github.com/toss/slash) project, an open-source libraries used at Toss.
   - [List of contributed PRs and Issues](https://github.com/toss/slash/issues?q=involves%3AHoseungJang)
 - Contributed to internal shared frontend libraries to improve development productivity.
-  - [@toss/storage](https://github.com/toss/slash/tree/main/packages/common/storage) ([Documentation](https://slash.page/ko/libraries/common/storage/README.i18n))
+  - [@toss/storage](https://github.com/toss/slash/tree/main/packages/common/storage) ([Documentation](https://slash.page/libraries/common/storage/readme.i18n))
 - Compiled and shared knowledge to elevate technical expertise and productivity.
   - [How to develop a library compatible with CommonJS and ESM: exports field](https://blog.hoseung.me/en/2022-10-04-commonjs-esm-exports-field)
     - Toss maximizes development productivity by managing numerous codes as libraries.
