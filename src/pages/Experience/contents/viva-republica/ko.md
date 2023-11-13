@@ -84,7 +84,7 @@
 
 ## 토스유스카드 3D 리소스 용량 92% 개선
 
-- 토스유스카드 발급 화면에서는 three.js를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
+- 토스유스카드 발급 화면에서는 `three.js`를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
   - **카드는 단순한 평면이라는 특징**에 무색하게 토스유스카드 3D 모델 파일의 용량은 심각하게 큰 문제가 있었습니다.
     - 토스유스카드는 5종류로 이루어져 있는데, 각각의 모델 용량은 2MB ~ 7MB 사이로, **총합하면 21.5MB 였습니다**.
   - 따라서 리서치를 통해 [Draco](https://github.com/google/draco)라는 구글에서 개발한 3D 모델 압축기를 찾아 사용하게 되었습니다.
@@ -100,28 +100,6 @@
   <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
     <div style="width: 100%; height: 100%; background-color: black"></div>
     <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
-  </div>
-</div>
-
-<div style="height: 60px"></div>
-
-## 덕질 저금통
-
-- 좋아하는 아이돌 그룹의 이름으로 저금을 할 수 있는 제품입니다.
-- 브라우저 버그로 인해 디자인 요구사항을 충족하지 못하고 타협할 수도 있었지만, 끝까지 해결 방법을 찾아내 일정에 맞추어 구현했습니다.
-  - 실시간 채팅 메시지 같은 느낌을 주기 위해 스크롤 방향을 거꾸로 해야하는 요구사항이 있었습니다.
-  - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
-  - 하지만 위의 방법으로 해결하고 나니 터치가 끝나면 스크롤이 바로 멈춰버려 부자연스러운 문제가 있었습니다.
-  - 따라서 이후 CSS Transform을 사용한 터치 스크롤러 오픈소스인 [flickable-scroll](https://github.com/HoseungJang/flickable-scroll)을 직접 개발하여 서비스에 적용했습니다.
-
-<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
-  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
-    <div style="width: 100%; height: 100%; background-color: black"></div>
-    <iframe src="https://www.youtube.com/embed/Lo-si7UopVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
-  </div>
-  <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
-    <div style="width: 100%; height: 100%; background-color: black"></div>
-    <iframe src="https://www.youtube.com/embed/OfK0HXn7hRo"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
   </div>
 </div>
 
@@ -144,18 +122,6 @@
 </div>
 
 <div style="height: 60px"></div>
-
-## 토스유스카드 교통카드 인앱 잔액조회 및 충전
-
-- [토스유스카드](https://www.hankyung.com/economy/article/202204251165i)의 교통카드 잔액을 토스 앱에서도 NFC 태깅으로 조회 및 충전할 수 있는 기능을 추가했습니다.
-- 교통카드 기능 첫 진입시 거치는 가이드 퍼널의 통과율이 낮은 문제를 개선했습니다.
-  - 기존에 첫 유저에 대해 가이드 퍼널이 최초 1회만 노출되었고, NFC 태깅을 실패하면 웹뷰를 닫아버리는 문제가 있어, **태깅에 실패하면 가이드를 다시는 볼 수 없다는 문제**가 있었습니다.
-  - 따라서 가이드 퍼널을 **최초 1회가 아닌, NFC 태깅 성공 이력이 있기 전까지 항상 노출**하도록 로직을 수정하여 **첫 유저에게 항상 충분한 설명**이 되도록 개선했습니다.
-  - 또한 **NFC 태깅에 실패하더라도 웹뷰가 닫히지 않도록 수정**하여, 유저가 **다시 태깅하기 위해 모든 가이드 퍼널을 다시 거쳐야 한다는 문제를 해결**했습니다.
-  - 결과적으로 **안드로이드 11%, iOS 6%의 전환율 증가**를 이뤄냈습니다.
-- 교통카드는 실시간 잔액 동기화가 불가능하다는 특징에서 나오는 유저 경험 문제를 적극적으로 방지했습니다.
-  - 유저가 잔액 조회를 하지 않으면, 잔액이 업데이트되지 않기 때문에 충전 시 혼동이 발생할 수 있습니다.
-  - 충전 퍼널에 진입했을 때 유저의 잔액 정보가 오래된 경우 조회를 유도하도록 개선하여, 혼동을 방지했습니다.
 
 ## 편의점 택배 예약하기
 
