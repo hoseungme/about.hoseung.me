@@ -19,8 +19,8 @@ export function SkillSection({ data }: Props) {
     <Container>
       <SectionTitle>Skills</SectionTitle>
       <ul>
-        {data.descriptions.map((description) => (
-          <FadeIn as="li">
+        {data.descriptions.map((description, index) => (
+          <FadeIn key={index} as="li">
             <p className="font-regular">{renderDescription(description)}</p>
           </FadeIn>
         ))}
@@ -32,10 +32,10 @@ export function SkillSection({ data }: Props) {
 function renderDescription(description: string) {
   return description.split("**").map((str, index) => {
     if (index % 2 === 1) {
-      return <Highlight>{str}</Highlight>;
+      return <Highlight key={index}>{str}</Highlight>;
     }
 
-    return <span>{str}</span>;
+    return <span key={index}>{str}</span>;
   });
 }
 

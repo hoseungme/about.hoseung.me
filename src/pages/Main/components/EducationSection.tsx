@@ -23,8 +23,8 @@ export function EducationSection({ data }: Props) {
   return (
     <Container>
       <SectionTitle>Educations</SectionTitle>
-      {data.map((education) => (
-        <FadeIn className="item-container">
+      {data.map((education, index) => (
+        <FadeIn key={index} className="item-container">
           <div className="name font-bold">{education.name}</div>
           <div className="period font-medium">
             {format(education.period.start, "yyyy.MM")} ~{" "}

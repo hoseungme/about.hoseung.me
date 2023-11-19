@@ -24,8 +24,8 @@ export function ExperienceSection({ data }: Props) {
   return (
     <Container>
       <SectionTitle>Experiences</SectionTitle>
-      {data.map((experience) => (
-        <FadeIn className="item-container">
+      {data.map((experience, index) => (
+        <FadeIn key={index} className="item-container">
           <div className="company font-bold">{experience.name}</div>
           <div className="role font-regular">{experience.role}</div>
           <div className="period font-medium">
@@ -35,8 +35,8 @@ export function ExperienceSection({ data }: Props) {
               : null}
           </div>
           <ul className="buttons">
-            {experience.links.map((link) => (
-              <li>
+            {experience.links.map((link, index) => (
+              <li key={index}>
                 <LinkButton className="link font-medium" to={link.to}>
                   {link.title}
                 </LinkButton>

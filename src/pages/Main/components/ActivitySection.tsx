@@ -18,8 +18,8 @@ export function ActivitySection({ data }: Props) {
   return (
     <Container>
       <SectionTitle>Activities</SectionTitle>
-      {data.map(({ title, links }) => (
-        <FadeIn key={title} className="item-container">
+      {data.map(({ title, links }, index) => (
+        <FadeIn key={index} className="item-container">
           <div className="description font-regular">{title}</div>
           <ul className="buttons">
             {links.map((link) => (
