@@ -36,7 +36,7 @@ Catch Fashion is a e-commerce company has monthly 500K+ users, and my role was:
 - Established a system to expose posts throughout the site to make users to interact with posts more naturally.
 - Migrated the existing post data schema to a new schema.
   - Due to the small data size stored in DynamoDB, a simple script and test code were used to migrate the data **without any service disruption**.
-- Built a data pipeline using [DynamoDB Streams to automatically index changes in Elasticsearch](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch).
+- Built a data pipeline using [DynamoDB Streams to automatically index changes in Elasticsearch](https://blog.hoseung.me/en/2022-02-19-dynamodb-stream-elasticsearch).
 - Added a feature, adding and deleting targets to a post, to the admin web.
   - Used page URLs on our website for creating targets. There were not any discrepancy between the user web and the admin web, because All URLs are centrally managed using the open-source [url-catalog-generator](https://github.com/catchfashion/url-catalog-generator), developed by our team.
 

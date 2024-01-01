@@ -35,7 +35,7 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
   - [How to develop a library compatible with CommonJS and ESM: exports field](https://blog.hoseung.me/en/2022-10-04-commonjs-esm-exports-field)
     - Toss maximizes development productivity by managing numerous codes as libraries.
     - Shared knowledge about the Node.js module system for the proper working of libraries and, furthermore, for frontend performance.
-  - [Library Bundling Improvement: Bundle with a Single Command (Korean)](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
+  - [My Journey to simplify Node.js library bundling process: Bundle a library with a single command](https://blog.hoseung.me/en/2023-07-22-improve-library-bundling)
     - Shared experiences and insights gained from creating numerous libraries.
     - Includes limitations of specific bundling methods and the improvement process.
   - [Module Reading Process in Next.js on the Server Side (Korean)](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
@@ -44,7 +44,7 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
   - [Performance Improvement of transform: rotate() + filter: blur() (feat. layers, compositing) (Korean)](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
     - Shared the process of solving browser rendering performance issues encountered in a side project.
     - Includes knowledge about layers and compositing in modern browsers.
-  - [How Should Dates be Exchanged?](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)
+  - [How to represent and exchange date?](https://blog.hoseung.me/en/2023-03-23-how-to-transfer-date)
     - Many Toss servers were responding without timezone information in Dates.
     - Shared insights on bad cases caused by not specifying timezones, and benefits of specifying timezones.
     - After sharing it, progressive improvements began, like specifying timezones for new APIs in each team.
