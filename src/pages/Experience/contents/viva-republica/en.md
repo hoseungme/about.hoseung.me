@@ -135,7 +135,7 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
 ## Toss Chicken Contest
 
 - This product was designed to increase new sign-ups and retention.
-- Technically, I made efforts to write intuitively understandable code, such as [normalizing data responses into an appropriate format (Korean)](https://blog.hoseung.me/2022-06-02-normalization-for-intuitive-component/).
+- Technically, I made efforts to write intuitively understandable code, such as [normalizing data responses into an appropriate format](https://blog.hoseung.me/en/2022-06-02-normalization-for-intuitive-component).
 - Exploiting the fact that teenagers respond well to products that foster unity, the contest successfully attracted numerous new users.
 - Due to its overwhelmingly positive response, the contest was opened multiple times, with continuous changes to the scoring mechanism to ensure that users did not lose interest.
   - For the last Toss Chicken Contest, inspired by Pokémon GO, I implemented a game where users throw snowballs to burst bubbles and earn points.
