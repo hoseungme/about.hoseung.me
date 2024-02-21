@@ -4,7 +4,7 @@
 
 Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my role is:
 
-- Building products for users aged 7 to 18.
+- Building products for users aged 7 to 18, in Teens Team.
   - Developing and maintaining whole web products have monthly 170M+ users.
   - Finding out technically improvable points and improve them.
   - Finding out improvable points affect productivity for whole team and improve them.
@@ -17,11 +17,7 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
 
 <div style="height: 40px"></div>
 
-# Details
-
-<div style="height: 20px"></div>
-
-## Technical Contributions
+# Technical Contributions
 
 - Contributed as the maintainer of the [Slash](https://github.com/toss/slash) project, an open-source libraries used at Toss.
   - [List of contributed PRs and Issues](https://github.com/toss/slash/issues?q=involves%3AHoseungJang)
@@ -45,6 +41,12 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
     - Shared insights on bad cases caused by not specifying timezones, and benefits of specifying timezones.
     - After sharing it, progressive improvements began, like specifying timezones for new APIs in each team.
   - ...
+
+<div style="height: 40px"></div>
+
+# Teens Team
+
+<div style="height: 20px"></div>
 
 ## Savings Boxes for Achievements and Hobbies
 
@@ -78,7 +80,7 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
 
 <div style="height: 60px"></div>
 
-## Toss Uss Card 3D Resource Size Reduced by 92%
+## Reducing Toss Uss Card 3D Resource Size By 92%
 
 - On the Toss Uss Card issuance screen, we use `three.js` to render the card in 3D, providing users with the experience of actually choosing a card by viewing it.
   - Despite the cards having the characteristic of being simple planes, the size of the 3D model was unnecessarily big.
