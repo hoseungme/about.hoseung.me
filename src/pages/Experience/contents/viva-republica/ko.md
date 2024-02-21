@@ -1,7 +1,3 @@
-비바리퍼블리카 (토스) 커리어 상세 페이지입니다.
-
-<div style="height: 60px"></div>
-
 # 역할 요약
 
 <div style="height: 20px"></div>

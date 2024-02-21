@@ -1,7 +1,3 @@
-Experiences in Viva Republica (Toss)
-
-<div style="height: 60px"></div>
-
 # Summary
 
 <div style="height: 20px"></div>

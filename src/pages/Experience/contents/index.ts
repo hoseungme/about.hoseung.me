@@ -7,12 +7,24 @@ import vivaRepublicaEn from "./viva-republica/en.md";
 export const Experiences = [
   {
     id: "catch-fashion",
-    ko: catchFashionKo,
-    en: catchFashionEn,
+    ko: {
+      name: "스마일벤처스 (캐치패션)",
+      markdown: catchFashionKo,
+    },
+    en: {
+      name: "Catch Fashion",
+      markdown: catchFashionEn,
+    },
   },
   {
     id: "viva-republica",
-    ko: vivaRepublicaKo,
-    en: vivaRepublicaEn,
+    ko: {
+      name: "비바리퍼블리카 (토스)",
+      markdown: vivaRepublicaKo,
+    },
+    en: {
+      name: "Viva Republica (Toss)",
+      markdown: vivaRepublicaEn,
+    },
   },
 ];
