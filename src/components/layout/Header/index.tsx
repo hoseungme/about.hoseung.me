@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { adaptive } from "constants/colors";
 import { useLocale } from "hooks/useLocale";
+import { MobileMediaQuery } from "constants/css";
 
 export function Header() {
   const [ref, inView] = useInView({ initialInView: true });
@@ -56,7 +57,7 @@ const Container = styled.header`
   backdrop-filter: blur(8px);
   transition: background-color 0.2s, box-shadow 0.2s;
 
-  @media screen and (max-width: 950px) {
+  ${MobileMediaQuery} {
     max-width: 100%;
     top: 0;
     left: 0;

@@ -1,3 +1,4 @@
+import { MobileMediaQuery } from "constants/css";
 import React from "react";
 import styled from "styled-components";
 
@@ -9,7 +10,7 @@ const Container = styled.main`
   margin-top: 70px;
   padding: 0 20px;
 
-  @media screen and (max-width: 950px) {
+  ${MobileMediaQuery} {
     padding: 0 16px;
   }
 `;

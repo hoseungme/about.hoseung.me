@@ -7,6 +7,7 @@ import { Content } from "./components/layout/Content";
 import { Header } from "./components/layout/Header";
 
 import { RouteSwitch } from "pages";
+import { MobileMediaQuery } from "constants/css";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -61,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: var(--black0);
 
-    @media screen and (max-width: 950px) {
+    ${MobileMediaQuery} {
       font-size: 16px;
     }
 
