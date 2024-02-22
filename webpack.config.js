@@ -40,7 +40,7 @@ module.exports = (env) => {
   return {
     entry: "./src/index.tsx",
     output: {
-      filename: "bundle.js",
+      filename: "js/[contenthash].js",
       path: path.resolve("./build"),
       publicPath: "/",
     },
@@ -58,18 +58,6 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test: /\.png$/,
-          use: [
-            {
-              loader: "url-loader",
-              options: {
-                limit: 10000,
-                name: "static/[name].[ext]",
-              },
-            },
-          ],
-        },
-        {
           test: /\.(ts|tsx)$/,
           use: ["babel-loader", "ts-loader"],
         },
@@ -85,14 +73,6 @@ module.exports = (env) => {
         filename: "index.html",
       }),
       new CleanWebpackPlugin(),
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: "public/images",
-            to: "images",
-          },
-        ],
-      }),
     ],
   };
 };
