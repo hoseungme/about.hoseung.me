@@ -5,6 +5,11 @@ import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import styled from "styled-components";
 
 import { adaptive } from "constants/colors";
+import {
+  DesktopHeaderHeight,
+  MobileHeaderHeight,
+  MobileMediaQuery,
+} from "constants/css";
 
 interface Props {
   children: string;
@@ -76,7 +81,6 @@ function HeadingElement(props: HeadingElementProps) {
   return createElement(props.node.tagName, {
     id: createHeadingElementId(innerText),
     children: innerText,
-    style: { scrollMarginTop: 96 },
   });
 }
 
@@ -85,6 +89,19 @@ function createHeadingElementId(innerText: string) {
 }
 
 const Base = styled(ReactMarkdown)`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: ${DesktopHeaderHeight + 20}px;
+
+    ${MobileMediaQuery} {
+      scroll-margin-top: ${MobileHeaderHeight + 16}px;
+    }
+  }
+
   a {
     color: ${adaptive.green2};
     font-weight: 500;
