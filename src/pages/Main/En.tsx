@@ -25,7 +25,6 @@ const profileSectionData: ProfileSectionData = {
     "Thoughtful Problem Solving: I always work towards finding the most reasonable and simplest solution for problems.",
     "User experiences first: I always think how much does my work make lives of people better, so give feedbacks on flaws of design, find out technically improvable points in my product.",
     "Open to learning new things: I enjoy to learn new things because I want to ship products in high-quality and to be fast-paced, in any technical fields.",
-    "Currently I'm living in South Korea, so I need visa sponsorship.",
   ],
 };
 
