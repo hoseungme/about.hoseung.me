@@ -22,6 +22,9 @@ export function RouteSwitch() {
       <Route exact path="/" component={MainKo} />
       <Route exact path="/experiences/:id" component={ExperienceKo} />
 
+      <Route exact path="/ko" component={MainKo} />
+      <Route exact path="/ko/experiences/:id" component={ExperienceKo} />
+
       <Route exact path="/en" component={MainEn} />
       <Route exact path="/en/experiences/:id" component={ExperienceEn} />
     </Switch>
