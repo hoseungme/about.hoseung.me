@@ -30,10 +30,10 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
   - [My Journey to simplify Node.js library bundling process: Bundle a library with a single command](https://blog.hoseung.me/en/2023-07-22-improve-library-bundling)
     - Shared experiences and insights gained from creating numerous libraries.
     - Includes limitations of specific bundling methods and the improvement process.
-  - [Module Reading Process in Next.js on the Server Side (Korean)](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
+  - [Module Reading Process in Next.js on the Server Side (Korean)](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
     - Shared in-depth analysis of the causes of problems encountered during development at the company.
     - Contains a detailed examination of Next.js and Webpack code related to the issue.
-  - [Performance Improvement of transform: rotate() + filter: blur() (feat. layers, compositing) (Korean)](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
+  - [Performance Improvement of transform: rotate() + filter: blur() (feat. layers, compositing) (Korean)](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
     - Shared the process of solving browser rendering performance issues encountered in a side project.
     - Includes knowledge about layers and compositing in modern browsers.
   - [How to represent and exchange date?](https://blog.hoseung.me/en/2023-03-23-how-to-transfer-date)
@@ -63,9 +63,9 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
     - During the process of converting emojis to TossFace image filenames, I learned about the [way emojis are represented in Unicode (Korean)](https://blog.hoseung.me/2022-08-25-emoji-and-unicode) and usage of the [sharp](https://sharp.pixelplumbing.com) library for image composition.
 - Despite browser bugs, I found solutions to meet design requirements and implemented them on schedule.
   - There was a requirement to reverse the scroll direction to give a real-time chat message feel.
-  - In Safari, there was a serious rendering bug when using `flex-direction: column-reverse`, but I [solved the rendering bug (Korean)](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md).
+  - In Safari, there was a serious rendering bug when using `flex-direction: column-reverse`, but I [solved the rendering bug (Korean)](https://github.com/hoseungme/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md).
   - However, after solving the issue using the above method, there was an unnatural problem where the scroll stopped immediately after the touch ended.
-  - Therefore, I developed and applied a touch scroller open source using CSS Transform called [flickable-scroll](https://github.com/HoseungJang/flickable-scroll).
+  - Therefore, I developed and applied a touch scroller open source using CSS Transform called [flickable-scroll](https://github.com/hoseungme/flickable-scroll).
 
 <div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
   <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
@@ -109,7 +109,7 @@ Toss is leading fintech superapp has monthly 13M+ users in South Korea, and my r
   - Initially, new users were prompted to make their first purchase by showing all available stocks.
   - However, there was a **problem of providing too many choices blindly** to users who are new and potentially feel challenging for the investment.
   - Therefore, allowed users to **choose their interest, and recommended stocks related to it**. It resulted in a significant **17% increase in the first purchase conversion rate**.
-- [Implemented a rolling number animation (Korean)](https://github.com/HoseungJang/wiki/blob/main/front-end/uiux/implement-rolling-number-component-in-react/ko.md) to provide a lively UX suitable for real-time stock prices.
+- [Implemented a rolling number animation (Korean)](https://github.com/hoseungme/wiki/blob/main/front-end/uiux/implement-rolling-number-component-in-react/ko.md) to provide a lively UX suitable for real-time stock prices.
 
 <div style="width: 100%; display: flex; justify-content: center">
   <div style="position: relative; max-width: 560px; width: 100%; height: 315px">

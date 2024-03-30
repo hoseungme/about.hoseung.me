@@ -87,7 +87,7 @@ const activitySectionData: ActivitySectionData = [
     links: [
       {
         title: "오픈소스 목록",
-        to: "https://github.com/HoseungJang/opensources/blob/main/ko.md",
+        to: "https://github.com/hoseungme/opensources/blob/main/ko.md",
       },
     ],
   },

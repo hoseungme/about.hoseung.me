@@ -83,7 +83,7 @@ const activitySectionData: ActivitySectionData = [
     links: [
       {
         title: "See all contributions",
-        to: "https://github.com/HoseungJang/opensources/blob/main/README.md",
+        to: "https://github.com/hoseungme/opensources/blob/main/README.md",
       },
     ],
   },

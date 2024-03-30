@@ -33,7 +33,7 @@ export function Header() {
         </a>
         <a
           className="link-to-github font-medium"
-          href="https://github.com/HoseungJang"
+          href="https://github.com/hoseungme"
         >
           github
         </a>

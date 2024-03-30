@@ -30,10 +30,10 @@
   - [라이브러리 번들링 개선 과정: 커맨드 한 줄로 번들링 끝내기](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
     - 지금까지 수많은 라이브러리를 만들며 얻은 번들링에 대한 경험을 공유했습니다.
     - 특정 번들링 방식의 한계와 개선 과정이 담겨 있습니다.
-  - [Next.js가 서버 사이드에서 모듈을 읽는 방식](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
+  - [Next.js가 서버 사이드에서 모듈을 읽는 방식](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
     - 회사에서 개발하던 중 겪은 문제의 원인을 깊게 파악한 과정을 공유했습니다.
     - 해당 문제와 관련된 Next.js와 Webpack 코드를 전부 읽는 과정이 담겨있습니다.
-  - [transform: rotate() + filter: blur() 퍼포먼스 개선 (feat. 레이어, 합성)](https://github.com/HoseungJang/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
+  - [transform: rotate() + filter: blur() 퍼포먼스 개선 (feat. 레이어, 합성)](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
     - 사이드 프로젝트를 하면서 겪은 브라우저 렌더링 퍼포먼스 문제를 개선한 과정을 공유했습니다.
     - 모던 브라우저의 레이어, 합성에 대한 지식이 담겨있습니다.
   - [Date는 어떻게 주고 받는게 바람직할까요?](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)
@@ -63,9 +63,9 @@
     - 이모지를 토스페이스 이미지의 파일명으로 변환하는 과정에서 [이모지가 유니코드로 표현되는 방식](https://blog.hoseung.me/2022-08-25-emoji-and-unicode)에 대해 배웠고, 이미지 합성에는 [sharp](https://sharp.pixelplumbing.com) 라이브러리를 사용했습니다.
 - 브라우저 버그로 인해 디자인 요구사항을 충족하지 못하고 타협할 수도 있었지만, 끝까지 해결 방법을 찾아내 일정에 맞추어 구현했습니다.
   - 실시간 채팅 메시지 같은 느낌을 주기 위해 스크롤 방향을 거꾸로 해야하는 요구사항이 있었습니다.
-  - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/HoseungJang/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
+  - 이때 Safari에서 `flex-direction: column-reverse`인 경우 생기는 심각한 렌더링 버그가 있었지만, [끊임없이 렌더링 버그를 우회할 방법을 탐구하여 해결](https://github.com/hoseungme/wiki/blob/main/front-end/browser/safari-flex-direction-column-reverse-scroll-and-rendering-issue/ko.md)했습니다.
   - 하지만 위의 방법으로 해결하고 나니 터치가 끝나면 스크롤이 바로 멈춰버려 부자연스러운 문제가 있었습니다.
-  - 따라서 이후 CSS Transform을 사용한 터치 스크롤러 오픈소스인 [flickable-scroll](https://github.com/HoseungJang/flickable-scroll)을 직접 개발하여 서비스에 적용했습니다.
+  - 따라서 이후 CSS Transform을 사용한 터치 스크롤러 오픈소스인 [flickable-scroll](https://github.com/hoseungme/flickable-scroll)을 직접 개발하여 서비스에 적용했습니다.
 
 <div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
   <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
@@ -110,7 +110,7 @@
   - 기존에는 처음 들어온 유저에게 첫 매수를 유도하면서, 모든 종목을 보여주었습니다.
   - 다만 처음 들어오기도 했고, 주식을 어려워할 가능성도 높은 유저에게 **무턱대고 너무 많은 선택지를 주고 있어 이탈할 가능성이 높다**는 문제가 있었습니다.
   - 따라서 **유저가 관심 분야를 선택하면, 그 분야와 관련된 종목을 추천해주는 방식으로 개선**하였고, 결과적으로 **첫 매수 전환율이 17% 증가**하는 큰 성공을 이루었습니다.
-- [숫자가 올라가는 애니메이션을 직접 구현](https://github.com/HoseungJang/wiki/blob/main/front-end/uiux/implement-rolling-number-component-in-react/ko.md)하여 실시간 주가 제공에 알맞는 생동감 있는 UX를 제공했습니다.
+- [숫자가 올라가는 애니메이션을 직접 구현](https://github.com/hoseungme/wiki/blob/main/front-end/uiux/implement-rolling-number-component-in-react/ko.md)하여 실시간 주가 제공에 알맞는 생동감 있는 UX를 제공했습니다.
 
 <div style="width: 100%; display: flex; justify-content: center">
   <div style="position: relative; max-width: 560px; width: 100%; height: 315px">
