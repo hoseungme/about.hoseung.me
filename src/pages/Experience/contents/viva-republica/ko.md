@@ -20,7 +20,7 @@
 # 기술적인 기여
 
 - 토스 내부에서 사용하는 라이브러리를 오픈소스화한 [Slash](https://github.com/toss/slash) 프로젝트의 메인테이너로 기여했습니다.
-  - [기여한 PR 및 Issue 목록](https://github.com/toss/slash/issues?q=involves%3AHoseungJang)
+  - [기여한 PR 및 Issue 목록](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 - 코드를 작성하며 좋은 아이디어가 생기면 프론트엔드 공통 라이브러리에 추가하고, 기존의 라이브러리에서 불편한 부분은 수정하여 개발 생산성에 기여했습니다.
   - [@toss/storage](https://github.com/toss/slash/tree/main/packages/common/storage) ([문서](https://slash.page/ko/libraries/common/storage/README.i18n))
 - 기술 수준과 생산성을 높히기 위한 지식들을 정리하여 공유했습니다.

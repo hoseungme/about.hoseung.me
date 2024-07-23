@@ -74,7 +74,7 @@ const activitySectionData: ActivitySectionData = [
     links: [
       {
         title: "See all PR & Issues",
-        to: "https://github.com/toss/slash/issues?q=involves%3AHoseungJang",
+        to: "https://github.com/toss/slash/issues?q=involves%3Ahoseungme",
       },
     ],
   },

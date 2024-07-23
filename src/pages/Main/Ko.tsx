@@ -78,7 +78,7 @@ const activitySectionData: ActivitySectionData = [
     links: [
       {
         title: "활동 목록",
-        to: "https://github.com/toss/slash/issues?q=involves%3AHoseungJang",
+        to: "https://github.com/toss/slash/issues?q=involves%3Ahoseungme",
       },
     ],
   },
