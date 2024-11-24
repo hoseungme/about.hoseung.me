@@ -1,11 +1,17 @@
+import "./page.style.scss";
+
 import { Metadata } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
-import { Page } from "./content/Page";
+import { Markdown } from "@/components/Markdown";
 
 export default function Home() {
-  const content = readFileSync(join(process.cwd(), "src/app/data/index.md")).toString();
-  return <Page content={content} />;
+  const content = readFileSync(join(process.cwd(), "src/data/index.md")).toString();
+  return (
+    <div className="pt-4">
+      <Markdown>{content}</Markdown>
+    </div>
+  );
 }
 
 const title = "장호승 이력서";

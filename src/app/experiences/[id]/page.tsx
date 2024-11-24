@@ -1,8 +1,10 @@
+import "./style.scss";
+
 import { readFileSync } from "fs";
 import { Metadata } from "next";
 import { permanentRedirect } from "next/navigation";
 import { join } from "path";
-import { Page } from "./content/Page";
+import { Markdown } from "@/components/Markdown";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -11,9 +13,10 @@ interface Props {
 export default async function Experience({ params }: Props) {
   try {
     const { id } = await params;
-    const content = readFileSync(join(process.cwd(), `src/app/experiences/[id]/data/${id}.md`)).toString();
-    return <Page content={content} />;
-  } catch {
+    const content = readFileSync(join(process.cwd(), `src/data/experiences/${id}.md`)).toString();
+    return <Markdown>{content}</Markdown>;
+  } catch (error) {
+    console.log(error);
     permanentRedirect("/");
   }
 }
