@@ -1,0 +1,30 @@
+.markdown-body {
+  .title {
+    font-size: 2em;
+    font-weight: 600;
+    color: transparent;
+    background: linear-gradient(var(--blue), var(--lightblue));
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+
+  .experience {
+    font-size: 1.6em;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .experience-role {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .experience-period {
+    font-size: 1em;
+    margin-bottom: 24px;
+  }
+
+  a {
+    color: var(--blue) !important;
+  }
+}

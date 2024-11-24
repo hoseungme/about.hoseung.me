@@ -1,0 +1,13 @@
+.markdown-body {
+  .cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    > img {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}
