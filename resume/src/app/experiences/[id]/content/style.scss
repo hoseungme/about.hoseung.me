@@ -1,0 +1,10 @@
+.markdown-body {
+  .title {
+    font-size: 2em;
+    font-weight: 600;
+    color: transparent;
+    background: linear-gradient(var(--blue), var(--lightblue));
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+}
