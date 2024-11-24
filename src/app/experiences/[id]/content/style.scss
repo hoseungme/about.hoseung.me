@@ -1,10 +1,13 @@
 .markdown-body {
-  .title {
-    font-size: 2em;
-    font-weight: 600;
-    color: transparent;
-    background: linear-gradient(var(--blue), var(--lightblue));
-    background-clip: text;
-    margin-bottom: 12px;
+  .cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    > img {
+      width: 100%;
+      max-width: 400px;
+    }
   }
 }

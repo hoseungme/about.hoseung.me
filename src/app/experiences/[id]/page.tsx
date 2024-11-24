@@ -22,6 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const name = (() => {
     switch (id) {
+      case "mirror": {
+        return "Mirror";
+      }
       case "viva-republica": {
         return "Toss";
       }

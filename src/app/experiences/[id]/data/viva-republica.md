@@ -1,5 +1,5 @@
-<div style="width: 100%; display: flex; justify-content: center;">
-  <img src="/experiences/viva-republica/cover.jpeg" alt="Toss" style="width: 100%; max-width: 400px; margin-bottom: 24px;">
+<div class="cover">
+  <img src="/experiences/viva-republica/cover.jpeg" alt="Toss" />
 </div>
 
 토스는 월 1300만 이상의 유저가 사용하는 핀테크 슈퍼앱으로, 이 곳에서의 제 역할은:

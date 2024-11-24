@@ -1,5 +1,5 @@
-<div style="width: 100%; display: flex; justify-content: center;">
-  <img src="/experiences/catch-fashion/cover.png" alt="Catch Fashion" style="width: 100%; max-width: 410px; margin-bottom: 24px;">
+<div class="cover">
+  <img src="/experiences/catch-fashion/cover.png" alt="Catch Fashion" />
 </div>
 
 캐치패션은 월 50만의 유저가 사용하는 명품 이커머스로, 이 곳에서의 제 역할은:
