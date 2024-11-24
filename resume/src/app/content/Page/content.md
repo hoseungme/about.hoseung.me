@@ -17,10 +17,16 @@
 
 <p className="title">Experiences</p>
 
+<p className="experience">Mirror</p>
+<p className="experience-role">Sofeware Engineer</p>
+<p className="experience-period">2024-04 ~ 현재</p>
+
 <p className="experience"><a href="/experiences/viva-republica">Toss</a></p>
+<p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
 <p className="experience"><a href="/experiences/catch-fashion">Catch Fashion</a></p>
+<p className="experience-role">Sofeware Engineer</p>
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
 <p className="title">Activities</p>
