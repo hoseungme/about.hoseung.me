@@ -6,14 +6,6 @@
 
 프론트엔드를 넘어 백엔드, iOS 등 타 분야 프로젝트도 함께 해오면서, 넓은 범위의 기술적 사고와 작업에 익숙하고, 새로운 지식을 빠르게 습득하는 것에 두려움이 없습니다.
 
-<p className="title">Skills</p>
-
-- JavaScript와 TypeScript에 익숙합니다.
-- React 기반의 CSR/SSR 프론트엔드 개발에 익숙하고, 리렌더링 최적화, 번들 경량화 등 기본적인 웹 성능 최적화 경험이 있습니다.
-- Node.js 기반의 백엔드 개발 경험이 있습니다. Lambda, DynamoDB 등 AWS의 서버리스 인프라에 익숙합니다.
-- Node.js의 Module System인 CJS/ESM을 이해하고, 두 Module System 모두에 호환 가능한 라이브러리를 운영 해본 경험이 있습니다.
-- 웹뷰 환경의 모바일 웹 제품 개발 경험이 있습니다. User-Agent 파싱, 앱브릿지 통신, meta 태그 파싱 등 네이티브와 웹이 상호작용하는 패턴에 매우 익숙합니다.
-
 <p className="title">Experiences</p>
 
 <p className="experience"><a href="/experiences/mirror">Mirror</a></p>
