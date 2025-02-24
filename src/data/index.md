@@ -12,13 +12,17 @@
 <p className="experience-role">Sofeware Engineer</p>
 <p className="experience-period">2024-04 ~ 현재</p>
 
-- macOS, iOS, 프론트엔드, 백엔드 전체를 유지보수
-  - SwiftUI의 수많은 렌더링 버그, 퍼포먼스 저하, 메모리 누수 문제 해결
-  - 네이티브(Swift), 프론트엔드(TypeScript) 환경 전체를 고려한 백엔드 개발
-  - 누락된 i18n 번역 검사 추가, Release Note 포맷 검사 추가 등 CI/CD 유지보수
-  - OpenAPI Spec 생성, API Client 라이브러리 생성을 자동화하여 플랫폼 간 타입 안전성 확보
-- OpenAI, Anthropic 등 LLM을 활용한 제품 개발
-  - 개인화된 온보딩 도입을 통한 신규 유저 리텐션 개선
+- [Mirror 브라우저](https://www.mirror.work/) 개발
+  - macOS, iOS, 프론트엔드, 백엔드 전체 유지보수
+    - SwiftUI의 수많은 렌더링 버그, 퍼포먼스 저하, 메모리 누수 문제 해결
+    - 네이티브(Swift), 프론트엔드(TypeScript) 환경 전체를 고려한 백엔드 개발
+    - 누락된 i18n 번역 검사 추가, Release Note 포맷 검사 추가 등 CI/CD 유지보수
+    - OpenAPI Spec 생성, API Client 라이브러리 생성을 자동화하여 플랫폼 간 타입 안전성 확보
+  - 디바이스 간 클라우드 싱크 기능 개발
+  - Mirror Pro 유료 멤버십 개발
+  - OpenAI, Anthropic, Gemini 등 LLM을 활용한 기능 개발
+    - 개인화된 온보딩 도입을 통해 신규 유저 리텐션 개선
+    - Vector Search, RAG 등 경험
 - 마케팅 자동화를 통한 생산성 개선 및 제품 성장 기여
   - SNS 크롤링을 자동화하여 인플루언서 DB 구축
   - LLM을 활용해 인플루언서 각각에게 개인화된 내용의 메일 발송 자동화
@@ -30,6 +34,9 @@
 
 - 200만 MAU 유저 서비스의 프론트엔드 프로젝트 유지보수
   - yarn workspace 기반 monorepo에서 홈, 카드, 이벤트 등 5개의 Next.js 프로젝트 운영
+- 신규 유저, 부활 유저 확보를 위한 다양한 단기 이벤트 제품 개발
+- GS, Apple 등 타 기업과 제휴하는 제품 개발
+  - 무언가 필요한 상황 또는 문제가 발생한 상황의 경우 담당자와 직접 소통하여 원활히 해결
 - 유저 경험에 직접적으로 악영향이 가는 문제를 주도적으로 찾아서 개선
   - 3D 리소스 용량을 총합 21.5MB -> 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절감
 - 100명 이상의 프론트엔드 개발자가 사용하는 사내 라이브러리 프로젝트 운영
@@ -38,6 +45,7 @@
   - 사내 라이브러리를 오픈소스화한 [Slash 프로젝트의 메인테이너로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 - 개발 조직 전체에 필수적인 표준 도입 리드
   - 플랫폼 간 날짜/시간 교환시 타임존을 필수적으로 포함하도록 [아티클을 작성](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 공유
+  - 각 팀별로 새롭게 개발하는 API부터 타임존 명시 시작
 - 프론트엔드 조직의 기술 수준 향상을 위한 다양한 지식과 경험 공유
   - [모듈 시스템](https://toss.tech/article/commonjs-esm-exports-field)
   - [라이브러리 번들링 간소화](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
