@@ -42,6 +42,27 @@
 
 # Teens Team
 
+## 토스유스카드 3D 리소스 용량 92% 개선
+
+- 토스유스카드 발급 화면에서는 `three.js`를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
+  - **카드는 단순한 평면이라는 특징**에 무색하게 토스유스카드 3D 모델 파일의 용량은 심각하게 큰 문제가 있었습니다.
+    - 토스유스카드는 5종류로 이루어져 있는데, 각각의 모델 용량은 2MB ~ 7MB 사이로, **총합하면 21.5MB 였습니다**.
+  - 따라서 리서치를 통해 [Draco](https://github.com/google/draco)라는 구글에서 개발한 3D 모델 압축기를 찾아 사용하게 되었습니다.
+    - 여러 번의 테스트를 거쳐 3D 모델 외관이 손상되지 않는 선에서의 최저점을 찾아 압축했습니다.
+  - 결과적으로 토스유스카드 3D 모델 파일들의 총합 용량이 **21.5MB (22016KB) -> 1820KB 로 대단히 개선**되었고, 즉 유저들의 **네트워크 비용을 약 92% 가까이 절약**해줄 수 있었습니다.
+  - 압축된 모델 적용 이후 전후 비교를 해보았을 때, 외관도 손상되지 않고 그대로 유지된 것을 확인했습니다.
+
+<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
+  <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/A7M6lioKRMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+  <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
+    <div style="width: 100%; height: 100%; background-color: black"></div>
+    <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
+  </div>
+</div>
+
 ## 해냄 저금통/덕질 저금통
 
 - 목표를 설정하고 그 목표를 위해 돈을 모으는 제품입니다. 단순히 목표만 설정하고 돈을 모으는 해냄 저금통과, 좋아하는 아이돌, 스포츠 선수, 웹툰, 애니메이션 등을 위해 저금을 하는 덕질 저금통으로 종류가 나뉩니다.
@@ -69,27 +90,6 @@
   <div style="position: relative; min-width: 300px; width: 50%; height: 315px">
     <div style="width: 100%; height: 100%; background-color: black"></div>
     <iframe src="https://www.youtube.com/embed/OfK0HXn7hRo"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
-  </div>
-</div>
-
-## 토스유스카드 3D 리소스 용량 92% 개선
-
-- 토스유스카드 발급 화면에서는 `three.js`를 사용해 카드를 3D로 렌더링하여 유저에게 실제로 카드를 보면서 고르는 경험을 주고 있습니다.
-  - **카드는 단순한 평면이라는 특징**에 무색하게 토스유스카드 3D 모델 파일의 용량은 심각하게 큰 문제가 있었습니다.
-    - 토스유스카드는 5종류로 이루어져 있는데, 각각의 모델 용량은 2MB ~ 7MB 사이로, **총합하면 21.5MB 였습니다**.
-  - 따라서 리서치를 통해 [Draco](https://github.com/google/draco)라는 구글에서 개발한 3D 모델 압축기를 찾아 사용하게 되었습니다.
-    - 여러 번의 테스트를 거쳐 3D 모델 외관이 손상되지 않는 선에서의 최저점을 찾아 압축했습니다.
-  - 결과적으로 토스유스카드 3D 모델 파일들의 총합 용량이 **21.5MB (22016KB) -> 1820KB 로 대단히 개선**되었고, 즉 유저들의 **네트워크 비용을 약 92% 가까이 절약**해줄 수 있었습니다.
-  - 압축된 모델 적용 이후 전후 비교를 해보았을 때, 외관도 손상되지 않고 그대로 유지된 것을 확인했습니다.
-
-<div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center">
-  <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
-    <div style="width: 100%; height: 100%; background-color: black"></div>
-    <iframe src="https://www.youtube.com/embed/A7M6lioKRMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
-  </div>
-  <div style="position: relative; min-width: 300px; max-width: 560px; width: 50%; height: 315px">
-    <div style="width: 100%; height: 100%; background-color: black"></div>
-    <iframe src="https://www.youtube.com/embed/ddGYG_xyirI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"></iframe>
   </div>
 </div>
 
