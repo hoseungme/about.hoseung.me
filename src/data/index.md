@@ -49,7 +49,7 @@
   - PoC 프로세스를 도입하고 리뷰어로 활동하여 불필요한 작업 절감 및 라이브러리 퀄리티 유지
   - 사내 라이브러리를 오픈소스화한 [Slash 프로젝트의 메인테이너로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 - 개발 조직 전체에 필수적인 표준 도입 리드
-  - 플랫폼 간 날짜/시간 교환시 타임존을 필수적으로 포함하도록 [아티클을 작성](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 공유
+  - 플랫폼 간 날짜, 시간 교환시 타임존을 필수적으로 포함하도록 [아티클을 작성](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 공유
   - 각 팀별로 새롭게 개발하는 API부터 타임존 명시 시작
 - 프론트엔드 조직의 기술 수준 향상을 위한 다양한 지식과 경험 공유
   - [Node.js의 두 가지 시스템을 라이브러리에서 완벽하게 지원하는 방법](https://toss.tech/article/commonjs-esm-exports-field)
