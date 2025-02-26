@@ -43,16 +43,18 @@
   - 3D 리소스 용량을 총합 21.5MB -> 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절감
 - 100명 이상의 프론트엔드 개발자가 사용하는 사내 라이브러리 프로젝트 운영
   - 주요 라이브러리의 구현을 모두 이해하고 지속적으로 개선, 필요에 따라 새로운 라이브러리 추가
+  - 웹 네비게이션 바 라이브러리 개편
+    - 기존 구현의 수많은 버그, 불필요한 강결합, 비직관적인 사용 방식 개선
+    - 안드로이드, iOS 구현 버그를 관련 엔지니어들과 주도적으로 협업하여 해결
   - PoC 프로세스를 도입하고 리뷰어로 활동하여 불필요한 작업 절감 및 라이브러리 퀄리티 유지
   - 사내 라이브러리를 오픈소스화한 [Slash 프로젝트의 메인테이너로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 - 개발 조직 전체에 필수적인 표준 도입 리드
   - 플랫폼 간 날짜/시간 교환시 타임존을 필수적으로 포함하도록 [아티클을 작성](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 공유
   - 각 팀별로 새롭게 개발하는 API부터 타임존 명시 시작
 - 프론트엔드 조직의 기술 수준 향상을 위한 다양한 지식과 경험 공유
-  - [모듈 시스템](https://toss.tech/article/commonjs-esm-exports-field)
-  - [라이브러리 번들링 간소화](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
-  - [렌더링 퍼포먼스 문제 해결](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/css/improve-transform-rotate-filter-blur-performance/ko.md)
-  - [Next.js 빌드 문제 해결](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
+  - [Node.js의 두 가지 시스템을 라이브러리에서 완벽하게 지원하는 방법](https://toss.tech/article/commonjs-esm-exports-field)
+  - [번들러를 설정하는 복잡한 과정 대신 커맨드 한줄로 번들링을 간소화한 경험](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
+  - [라이브러리 Reolustion 문제를 Next.js, Webpack 구현을 확인하여 해결한 과정](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
 
 <p className="experience"><a href="/experiences/catch-fashion">Catch Fashion</a></p>
 <p className="experience-role">Sofeware Engineer</p>
