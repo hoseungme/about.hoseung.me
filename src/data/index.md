@@ -1,4 +1,11 @@
-<p className="title">안녕하세요.<br>소프트웨어 엔지니어<br/>장호승 입니다.</p>
+<p className="title">Frontend Engineer<br/>장호승</p>
+
+<div className="info">
+  <p>010-3428-0052</p>
+  <p><a href="mailto:hsjang.dev@gmail.com">hsjang.dev@gmail.com</a></p>
+  <p><a href="https://github.com/hoseungme">GitHub</a></p>
+  <p><a href="https://blog.hoseung.me">Tech Blog</a></p>
+</div>
 
 빠르고 급한 이터레이션을 필요로 하는 팀에 속하여 작업의 비즈니스적 가치를 판단하고, 일정 내에 좋은 퀄리티로 마무리하는 것을 커리어 전체에 걸쳐 해왔습니다.
 
