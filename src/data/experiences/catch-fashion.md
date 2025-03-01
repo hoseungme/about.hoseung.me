@@ -22,6 +22,9 @@
   - **안쓰는 폰트를 삭제**하고, [moment.js를 dayjs로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하는 등 **번들을 경량화**했습니다.
   - kakao, facebook, zendesk 등의 **써드 파티 라이브러리를 사용하는 시점에 lazy load**하도록 개선하여 **HTML 파싱 시간과 네트워크 비용을 절약**했습니다.
 - 특정 변경이 UI에 예기치 못한 사이드 이펙트를 일으켰을 때 즉각 파악할 수 있도록 [Visual Regression Test를 도입](https://blog.hoseung.me/2021-02-10-visual-regression-test)했습니다.
+- React의 불필요한 리렌더링을 개선했습니다.
+  - [react-router의 내장 Link 사용을 삭제](https://blog.hoseung.me/2021-12-07-do-not-use-link)하여 URL 변경에 영향이 없는 컴포넌트들은 리렌더링이 걸리지 않도록 개선했습니다.
+  - [RxJS로 필요한 때에만 변경을 전파](https://blog.hoseung.me/2021-10-09-rxjs)하여 URL에서 필요한 부분의 변화시에만 리렌더링이 걸리도록 개선했습니다.
 
 ## 포스트 타겟팅 시스템 개발
 
