@@ -7,13 +7,9 @@
   <p><a href="https://blog.hoseung.me">Tech Blog</a></p>
 </div>
 
-빠르고 급한 이터레이션을 필요로 하는 팀에 속하여 작업의 비즈니스적 가치를 판단하고, 일정 내에 좋은 퀄리티로 마무리하는 것을 커리어 전체에 걸쳐 해왔습니다.
+빠르고 급한 이터레이션을 필요로 하는 팀에 속하여 작업의 비즈니스적 가치를 판단하고, 일정 내에 좋은 퀄리티로 마무리하는 것을 커리어 전체에 걸쳐 해왔습니다. 따라서 불필요한 일을 하지 않을 수 있는 환경을 만드는 것을 가장 중요하게 여깁니다. 이를 위해 주도적으로 생산성을 개선하고, 문제의 핵심과 가장 간단한 답안을 찾으려 노력합니다.
 
-불필요한 일을 하지 않을 수 있는 환경을 만드는 것을 가장 중요하게 여깁니다. 이를 위해 주도적으로 생산성을 개선하고, 문제의 핵심과 가장 간단한 답안을 찾으려 노력합니다.
-
-거대한 프론트엔드 프로젝트를 다루는 일을 가장 오랜 시간 해왔습니다. 유저 경험, 개발자 경험 모든 측면에서 다양한 개선 작업을 해왔습니다.
-
-프론트엔드를 넘어 백엔드, iOS 등 타 분야 프로젝트도 함께 해오면서, 넓은 범위의 기술적 사고와 작업에 익숙하고, 새로운 지식을 빠르게 습득하는 것에 두려움이 없습니다.
+프론트엔드 프로젝트를 다루는 일을 가장 오랜 시간 해왔고, 유저 경험, 개발자 경험 모든 측면에서 다양한 개선 작업을 해왔습니다. 백엔드, iOS 등 타 분야 프로젝트도 함께 해오면서, 넓은 범위의 기술적 사고와 작업에 익숙하고, 새로운 지식을 빠르게 습득하는 것에 두려움이 없습니다.
 
 <p className="title">Experiences</p>
 
@@ -21,68 +17,30 @@
 <p className="experience-role">Sofeware Engineer</p>
 <p className="experience-period">2024-04 ~ 현재</p>
 
-- [Mirror 브라우저](https://www.mirror.work/) 개발
-  - macOS, iOS, 프론트엔드, 백엔드 전체 유지보수
-    - SwiftUI의 수많은 렌더링 버그, 퍼포먼스 저하, 메모리 누수 문제 해결
-    - 네이티브(Swift), 프론트엔드(TypeScript) 환경 전체를 고려한 백엔드 개발
-    - 누락된 i18n 번역 검사 추가, Release Note 포맷 검사 추가 등 CI/CD 유지보수
-    - OpenAPI Spec 생성, API Client 라이브러리 생성을 자동화하여 플랫폼 간 타입 안전성 확보
-  - 디바이스 간 클라우드 싱크 기능 개발
-  - Mirror Pro 유료 멤버십 개발
-  - OpenAI, Anthropic, Gemini 등 LLM을 활용한 기능 개발
-    - 개인화된 온보딩 도입을 통해 신규 유저 리텐션 개선
-    - Vector Search, RAG 등 경험
-- 마케팅 자동화를 통한 생산성 개선 및 제품 성장 기여
-  - SNS 크롤링을 자동화하여 인플루언서 DB 구축
-  - LLM을 활용해 인플루언서 각각에게 개인화된 내용의 메일 발송 자동화
-  - 신규 가입, 결제율 등 제품의 주요 수치 개선
+- SwiftUI 기반 macOS, iOS앱 개발 - SwiftUI에 내장된 애니메이션 문제, 메모리 누수 버그 등 해결
+- Next.js, React, TypeScript, Vercel 기반 SSR 프론트엔드 개발 - 웹 브라우저용 페이지 및 인앱 웹뷰 페이지 개발
+- Node.js, TypeScript, AWS Lambda 기반 Serverless 백엔드 개발 - 디바이스간 데이터 싱크 기능 개발, 결제 시스템 연동
+- Github Actions 베이스의 CI/CD 유지보수 - 누락된 i18n 번역이 있는지 검사하는 과정 추가, Release Note YAML 포맷이 올바른지 검사하는 과정 추가 등 생산성 개선
+- OpenAI, Anthropic 등 LLM을 적극 활용해 제품 수치 및 생산성 개선 - 개인화된 신규 유저 온보딩을 개발하여 리텐션 10% 개선, 개인화된 마케팅을 자동화하여 일반적인 인플루언서 마케팅 비용 대비 99%에 가까운 비용 절약
 
 <p className="experience"><a href="/experiences/viva-republica">Viva Republica (Toss)</a></p>
 <p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
-- 200만 MAU 유저 서비스의 프론트엔드 프로젝트 유지보수
-  - yarn workspace 기반 monorepo에서 홈, 카드, 이벤트 등 5개의 Next.js 프로젝트 운영
-- 신규 유저, 부활 유저 확보를 위한 다양한 단기 이벤트 제품 개발
-- GS, Apple 등 타 기업과 제휴하는 제품 개발
-  - 문제 상황을 담당자와 직접 소통하여 원활히 해결
-- 유저 경험에 직접적으로 악영향이 가는 문제를 주도적으로 찾아서 개선
-  - 3D 리소스 용량을 총합 21.5MB -> 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절감
-- 100명 이상의 프론트엔드 개발자가 사용하는 사내 라이브러리 프로젝트 운영
-  - 주요 라이브러리의 구현을 모두 이해하고 지속적으로 개선, 필요에 따라 새로운 라이브러리 추가
-  - 웹 네비게이션 바 라이브러리 개편
-    - 기존 구현의 수많은 버그, 불필요한 강결합, 비직관적인 사용 방식 개선
-    - 안드로이드, iOS 구현 버그를 관련 엔지니어들과 주도적으로 협업하여 해결
-  - PoC 프로세스를 도입하고 리뷰어로 활동하여 불필요한 작업 절감 및 라이브러리 퀄리티 유지
-  - 사내 라이브러리를 오픈소스화한 [Slash 프로젝트의 메인테이너로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
-- 개발 조직 전체에 필수적인 표준 도입 리드
-  - 플랫폼 간 날짜, 시간 교환시 타임존을 필수적으로 포함하도록 [아티클을 작성](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 공유
-  - 각 팀별로 새롭게 개발하는 API부터 타임존 명시 시작
-- 프론트엔드 조직의 기술 수준 향상을 위한 다양한 지식과 경험 공유
-  - [Node.js의 두 가지 시스템을 라이브러리에서 완벽하게 지원하는 방법](https://toss.tech/article/commonjs-esm-exports-field)
-  - [번들러를 설정하는 복잡한 과정 대신 커맨드 한줄로 번들링을 간소화한 경험](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
-  - [라이브러리 Resolution 문제를 Next.js, Webpack 구현을 확인하여 해결한 과정](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
+- Yarn Workspace 기반 Micro Frontend 환경에서 Next.js, React, TypeScript 기반 SSR 프론트엔드 개발 - 월 200만 유저가 사용하는 프론트엔드 제품 유지보수
+- 100명이 넘는 토스 프론트엔드 개발자의 생산성을 2배 이상 개선 - 사내 라이브러리 프로젝트의 주요한 기여자로써 활동, QnA 채널에 올라온 수십 개의 질문을 직접 해결([Next.js의 라이브러리 Resolution 문제 해결](https://github.com/hoseungme/wiki/blob/4ceddf9f12f17592317174ce9fd2010cf34f41ca/front-end/nextjs/server-side-module-resolution/ko.md)), [타임존 명시의 중요성을 설득](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 토스 전체에 표준화
+- 유저 경험에 악영향을 주는 문제를 주도적으로 찾아서 개선 - 한 화면에서 사용하는 3D 리소스의 용량을 21.5MB -> 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절감
+- 토스 오픈소스 Slash의 메인 기여자로 활동 - [기여한 모든 PR, Issue 모음](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 
 <p className="experience"><a href="/experiences/catch-fashion">Catch Fashion</a></p>
 <p className="experience-role">Sofeware Engineer</p>
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
-- 50만 MAU 유저 서비스와 사내 백오피스의 프론트엔드, 백엔드 프로젝트 유지보수
-  - AWS S3, CloudFront를 통해 배포되는 CSR 환경의 React 프론트엔드 개발
-    - GitHub 브랜치 별로 배포되는 CI/CD 구축
-    - AWS Lambda@Edge를 사용하여 SEO 대응 및 특정 배포로 라우팅
-  - AWS Lambda에 배포되는 Serverless 환경의 Node.js 백엔드 개발
-  - OpenAPI Spec 생성, API Client 라이브러리 생성을 자동화하여 프론트엔드, 백엔드 간 타입 안전성 확보
-- 프론트엔드 퍼포먼스 개선
-  - 응답의 변화가 거의 없는 API에 클라이언트 사이드 캐싱 도입, 렌더링 속도 100 ~ 500 밀리초 개선
-  - 페이징 데이터에 prefetch를 적용하여 유저 경험과 렌더링 퍼포먼스 개선
-  - [moment.js를 day.js로 마이그레이션하여 번들 용량 30% 절감](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)
-- 브라우저에서도 푸시 알림을 받을 수 있도록 개선
-  - [Service Worker, Web Push API를 사용해 구현](https://blog.hoseung.me/2021-11-28-web-push-notification)
-  - 푸시 알림 구독 요청이 일평균 600회 -> 1200회로 대폭 개선
-- 포스트 노출 시스템 개편
-  - [프론트엔드, 백엔드 전체를 고려하여 설계 및 개발](https://blog.hoseung.me/2022-02-06-post-system-retrospect)
-  - [DynamoDB Streams를 활용하여 안전한 데이터 파이프라인 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)
+- React, TypeScript, AWS 기반 CSR 프론트엔드 개발 - [AWS Lambda@Edge를 활용한 SEO 대응](https://blog.hoseung.me/2021-11-28-lambda-edge-seo)
+- Node.js, TypeScript, AWS 기반 Serverless 백엔드 개발 - [포스트 노출 시스템 개편 회고](https://blog.hoseung.me/2022-02-06-post-system-retrospect), [DynamoDB Streams 기반 데이터 파이프라인 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)
+- React의 불필요한 리렌더링을 극한까지 개선 - [react-router Link 사용 없애기](https://blog.hoseung.me/2021-12-07-do-not-use-link), [RxJS로 필요할 때만 변경 전파하기](https://blog.hoseung.me/2021-10-09-rxjs)
+- 불필요하게 용량이 큰 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 사이즈 30% 절감
+- [웹 브라우저에서도 푸시 알림을 받을 수 있게 개발](https://blog.hoseung.me/2021-11-28-web-push-notification)하고, 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독율 2배 이상 개선
 
 <p className="title">Activities</p>
 
