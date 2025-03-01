@@ -7,11 +7,7 @@ import { Markdown } from "@/components/Markdown";
 
 export default function Home() {
   const content = readFileSync(join(process.cwd(), "src/data/index.md")).toString();
-  return (
-    <div className="pt-4">
-      <Markdown>{content}</Markdown>
-    </div>
-  );
+  return <Markdown>{content}</Markdown>;
 }
 
 const title = "장호승 이력서";

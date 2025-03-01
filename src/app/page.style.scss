@@ -5,8 +5,15 @@
     color: transparent;
     background: linear-gradient(var(--blue), var(--lightblue));
     background-clip: text;
-    margin-top: 32px;
     margin-bottom: 12px;
+  }
+
+  .info {
+    margin-bottom: 20px;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .experience {
@@ -16,7 +23,8 @@
   }
 
   .experience-role {
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
     margin-bottom: 0;
   }
 
