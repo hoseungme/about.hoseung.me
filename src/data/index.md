@@ -61,7 +61,7 @@
 - 프론트엔드 조직의 기술 수준 향상을 위한 다양한 지식과 경험 공유
   - [Node.js의 두 가지 시스템을 라이브러리에서 완벽하게 지원하는 방법](https://toss.tech/article/commonjs-esm-exports-field)
   - [번들러를 설정하는 복잡한 과정 대신 커맨드 한줄로 번들링을 간소화한 경험](https://blog.hoseung.me/2023-07-22-improve-library-bundling)
-  - [라이브러리 Reolustion 문제를 Next.js, Webpack 구현을 확인하여 해결한 과정](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
+  - [라이브러리 Resolution 문제를 Next.js, Webpack 구현을 확인하여 해결한 과정](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjs/server-side-module-resolution/ko.md)
 
 <p className="experience"><a href="/experiences/catch-fashion">Catch Fashion</a></p>
 <p className="experience-role">Sofeware Engineer</p>
