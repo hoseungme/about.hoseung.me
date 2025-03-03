@@ -42,7 +42,7 @@
 
 - 월 50만 유저가 사용하는 이커머스 제품과 백오피스의 프론트엔드, 백엔드 개발
 - React의 불필요한 리렌더링을 극한까지 개선 - [react-router Link 사용 없애기](https://blog.hoseung.me/2021-12-07-do-not-use-link), [RxJS로 필요할 때만 변경 전파하기](https://blog.hoseung.me/2021-10-09-rxjs)
-- 변동이 없는 서버 응답에 client-side cache 적용, Infinite Scroll UI에서 다음 페이지 prefetching 등 최적화를 통해 렌더링 속도 100 ~ 500 밀리초 개선
+- 변동이 없는 서버 응답에 client-side cache 적용, data prefetching 등 최적화를 통해 렌더링 속도 100 ~ 500 밀리초 개선
 - 불필요하게 용량이 큰 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 사이즈 30% 절감
 - [웹 브라우저에서도 푸시 알림을 받을 수 있게 개발](https://blog.hoseung.me/2021-11-28-web-push-notification)하고, 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독율 2배 이상 개선
 
