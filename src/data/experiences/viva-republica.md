@@ -44,7 +44,7 @@
 - 라이브러리와 관련된 중요한 지식, 개선 경험, 디버깅 경험을 공유했습니다.
   - [Node.js의 두 가지 모듈 시스템을 라이브러리에서 완벽하게 지원하는 방법](https://toss.tech/article/commonjs-esm-exports-field)을 공유했습니다.
   - [번들러를 설정하는 복잡한 과정 대신 커맨드 한줄로 번들링을 간소화](https://blog.hoseung.me/2023-07-22-improve-library-bundling)한 경험을 공유했습니다.
-  - 제품 개발을 하던 중 겪은 [라이브러리 resolution 문제를 Next.js, Webpack 구현을 확인하여 해결](https://github.com/hoseungme/wiki/blob/b16bad3a6736091ed80752edb6fa9dca6c0cb9be/front-end/nextjsserver-side-module-resolution/ko.md)한 과정을 공유했습니다.
+  - 제품 개발을 하던 중 겪은 [라이브러리 resolution 문제를 Next.js, Webpack 구현을 확인하여 해결](https://github.com/hoseungme/wiki/blob/4ceddf9f12f17592317174ce9fd2010cf34f41ca/front-end/nextjs/server-side-module-resolution/ko.md)한 과정을 공유했습니다.
 
 ## 날짜, 시간 교환시 타임존 명시
 
