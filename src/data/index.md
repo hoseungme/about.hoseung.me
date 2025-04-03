@@ -1,4 +1,4 @@
-<p className="title">Frontend Engineer<br/>장호승</p>
+<p className="title">Software Engineer<br/>장호승</p>
 
 <div className="info">
   <p>010-3428-0052</p>
