@@ -24,7 +24,7 @@
 
 <p className="title">Experiences</p>
 
-<p className="experience"><a href="/experiences/mirror">Mirror</a></p>
+<p className="experience">Mirror</p>
 <p className="experience-role">Sofeware Engineer</p>
 <p className="experience-period">2024-04 ~ 현재</p>
 
