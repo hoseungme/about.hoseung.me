@@ -24,7 +24,7 @@
 <p className="experience-role">Sofeware Engineer</p>
 <p className="experience-period">2024-04 ~ 현재</p>
 
-- 월 2000명 글로벌 유저가 사용하는 [Mirror 브라우저](https://www.mirror.work)의 macOS, iOS 앱과 프론트엔드, 백엔드 개발: 디바이스간 실시간 데이터 싱크 기능 개발
+- 글로벌 유저가 사용하는 [Mirror 브라우저](https://www.mirror.work)의 macOS, iOS 앱과 프론트엔드, 백엔드 개발: 디바이스간 실시간 데이터 싱크 기능 개발
 - LLM을 활용한 제품 기능 개발: 개인화된 신규 유저 온보딩을 개발하여 리텐션 5% 개선, 브라우징 히스토리 요약 기능 개발
 - 인플루언서 마케팅 자동화: 크롤링을 통해 인플루언서 DB 구축 자동화, LLM을 활용해 인플루언서 각각에게 개인화된 메일 생성 자동화, 약 99%의 비용 및 생산성 개선
 
