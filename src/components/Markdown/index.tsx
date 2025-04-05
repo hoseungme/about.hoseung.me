@@ -1,4 +1,4 @@
-import "github-markdown-css/github-markdown-dark.css";
+import "github-markdown-css/github-markdown-light.css";
 import "./style.scss";
 
 import ReactMarkdown from "react-markdown";

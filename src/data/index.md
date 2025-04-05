@@ -32,7 +32,7 @@
 - LLM을 적극 활용한 제품 개발: 유저의 직업에 맞추어 개인화되는 신규 유저 온보딩 개발, 브라우징 내역 요약 기능 개발
 - 인플루언서 마케팅 자동화를 통해 약 99%의 비용 및 생산성 개선: 인플루언서 DB 구축 자동화, 인플루언서 각각에게 개인화된 메일 생성 자동화
 
-<p className="experience"><a href="/experiences/viva-republica">Viva Republica (Toss)</a></p>
+<p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
@@ -40,8 +40,9 @@
 - 100명이 넘는 토스 프론트엔드 개발자의 생산성을 2배 이상 개선: 사내 라이브러리 프로젝트의 주요한 기여자로 활동, QnA 채널 활성화 및 문제 해결([Next.js의 라이브러리 Resolution 문제 해결](https://github.com/hoseungme/wiki/blob/4ceddf9f12f17592317174ce9fd2010cf34f41ca/front-end/nextjs/server-side-module-resolution/ko.md)), 전사에 [타임존 명시의 중요성을 설득](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 표준화 시도
 - 유저 경험에 악영향을 주는 문제를 주도적으로 찾아서 개선: 한 화면에서 사용하는 3D 리소스의 용량을 21.5MB -> 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절감
 - 토스 오픈소스 Slash의 메인 기여자로 활동: [기여한 모든 PR, Issue 모음](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
+- [자세히보기](/experiences/viva-republica)
 
-<p className="experience"><a href="/experiences/catch-fashion">Catch Fashion</a></p>
+<p className="experience">Catch Fashion</p>
 <p className="experience-role">Sofeware Engineer</p>
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
@@ -50,6 +51,7 @@
 - 변동이 없는 서버 응답에 client-side cache 적용, data prefetching 등 최적화를 통해 렌더링 속도 100 ~ 500 밀리초 개선
 - 불필요하게 용량이 큰 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 사이즈 30% 절감
 - [웹 브라우저에서도 푸시 알림을 받을 수 있게 개발](https://blog.hoseung.me/2021-11-28-web-push-notification)하고, 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독율 2배 이상 개선
+- [자세히보기](/experiences/catch-fashion)
 
 <p className="title">Activities</p>
 

@@ -1,7 +1,5 @@
 import "./layout.style.scss";
 
-import Link from "next/link";
-
 const GAScript = `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
