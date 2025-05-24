@@ -25,7 +25,7 @@
 <p className="title">Experiences</p>
 
 <p className="experience">Mirror</p>
-<p className="experience-role">Sofeware Engineer</p>
+<p className="experience-role">Software Engineer</p>
 <p className="experience-period">2024-04 ~ 현재</p>
 
 - 글로벌 유저가 사용하는 [Mirror 브라우저](https://www.mirror.work)의 macOS, iOS 앱과 프론트엔드, 백엔드 개발: 디바이스간 실시간 데이터 싱크 기능 개발
@@ -43,7 +43,7 @@
 - [자세히보기](/experiences/viva-republica)
 
 <p className="experience">Catch Fashion</p>
-<p className="experience-role">Sofeware Engineer</p>
+<p className="experience-role">Software Engineer</p>
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
 - 월 50만 유저가 사용하는 이커머스 제품과 백오피스의 프론트엔드, 백엔드 개발: 포스트 노출 시스템 개편([설계 회고](https://blog.hoseung.me/2022-02-06-post-system-retrospect), [데이터 파이프라인 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch))
