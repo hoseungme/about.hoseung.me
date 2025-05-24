@@ -20,7 +20,7 @@
 - 브라우저, 웹뷰 모두 익숙합니다. 특히 SwiftUI 기반의 macOS, iOS 웹 브라우저를 개발해본 경험이 있어, WebKit 웹뷰에 대해 자세히 알고있습니다.
 - 프론트엔드 퍼포먼스 개선 경험이 있습니다. 불필요한 리렌더링 최적화, 번들 경량화, 렌더링 속도 최적화, 네트워크 비용 최적화 등 다양한 경험을 가지고 있습니다.
 - Node.js, AWS 기반의 Serverless 백엔드 개발 경험이 있습니다. 특히 Lambda, DynamoDB를 활용한 경험이 많습니다.
-- LLM 활용 경험이 있습니다. 추천, 요약, 검색 등 제품 내 기능 개발에 적극 활용한 경험이 있고, 개인화된 마케팅 자동화 등 생산성 개선에도 활용했습니다.
+- 초기 스타트업에서 AI Product를 개발한 경험이 있어 LLM을 깊게 다뤄보았습니다.
 
 <p className="title">Experiences</p>
 
@@ -29,8 +29,9 @@
 <p className="experience-period">2024-04 ~ 현재</p>
 
 - 글로벌 유저가 사용하는 [Mirror 브라우저](https://www.mirror.work)의 macOS, iOS 앱과 프론트엔드, 백엔드 개발: 디바이스간 실시간 데이터 싱크 기능 개발
-- LLM을 적극 활용한 제품 개발: [유저의 직업에 맞추어 개인화되는 신규 유저 온보딩 개발](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm), 브라우징 내역 요약 기능 개발
-- 인플루언서 마케팅 자동화를 통해 약 99%의 비용 및 생산성 개선: 인플루언서 DB 구축 자동화, 인플루언서 각각에게 개인화된 메일 생성 자동화
+- LLM을 활용한 제품 기능 개발: [유저의 직업에 맞추어 개인화되는 신규 유저 온보딩](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm), 브라우징 히스토리 요약
+- LLM을 활용한 팀 내부 비용 개선: 인플루언서 마케팅 자동화를 통해 약 99%의 비용 및 생산성 개선: 인플루언서 DB 구축 자동화, 인플루언서 각각에게 개인화된 메일 생성 자동화
+- LLM이 좋은 퀄리티의 결과를 적은 비용으로 빠르게 만들어낼 수 있는 프롬프트 설계 및 최적화
 
 <p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Engineer</p>
