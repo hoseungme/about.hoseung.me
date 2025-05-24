@@ -3,7 +3,7 @@
     font-size: 2em;
     font-weight: 600;
     color: transparent;
-    background: linear-gradient(180deg, var(--lightblue), var(--blue),);
+    background: linear-gradient(180deg, theme("colors.blue.300"), theme("colors.blue.600"), );
     background-clip: text;
     margin-bottom: 12px;
   }
