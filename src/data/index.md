@@ -59,5 +59,5 @@
 
 <p className="title">Educations</p>
 
-<p className="experience">대덕소프트웨어마이스터고등학교</p>
-<p className="experience-period">2018.03 ~ 2021-01</p>
+<p className="education">대덕소프트웨어마이스터고등학교</p>
+<p className="education-period">2018.03 ~ 2021-01</p>
