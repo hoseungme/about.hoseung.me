@@ -56,7 +56,7 @@
 
 <p className="title">Activities</p>
 
-- 아이디어를 얻으면 [오픈소스로 만들어 공개](https://github.com/hoseungme/opensources/blob/main/ko.md)하고 있습니다.
+- 아이디어를 얻으면 [오픈소스로 만들어 공개](https://github.com/hoseungme/opensources/blob/main/README.md)하고 있습니다.
 
 <p className="title">Educations</p>
 
