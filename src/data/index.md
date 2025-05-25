@@ -1,7 +1,7 @@
 <p className="title">Software Engineer<br/>장호승</p>
 
 <div className="info">
-  <p>010-3428-0052</p>
+  <p><a href="sms:010-3428-0052">010-3428-0052</p>
   <p><a href="mailto:hsjang.dev@gmail.com">hsjang.dev@gmail.com</a></p>
   <p><a href="https://github.com/hoseungme">GitHub</a></p>
   <p><a href="https://blog.hoseung.me">기술 블로그</a></p>
