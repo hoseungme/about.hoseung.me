@@ -45,6 +45,7 @@
 - 한 화면에서 사용하는 3D 리소스의 용량을 21.5MB에서 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절약
 - 제품 개발 중 최악의 경우 1~2일까지 소모되던 비효율적인 병목들을 웹 JSON 에디터를 적극 활용해 10분 미만으로 전부 개선
 - 비직관적인 구조로 설계되어 있고 Android, iOS 네이티브 레거시까지 엮여 예상치 못한 버그가 많던 기존의 네비게이션 바를 완벽히 개선하여 10개 이상의 서비스에 적용
+- [카드 선택 인터랙션](https://youtu.be/LdrSjTIRh8o?feature=shared), [가격 변동 애니메이션](https://youtu.be/uxJIEwMhCb0?feature=shared) 등 생동감 있는 인터랙션 구현
 - 라이브러리 오픈소스 [Slash의 메인 기여자로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 - [자세히보기](/experiences/viva-republica)
 
