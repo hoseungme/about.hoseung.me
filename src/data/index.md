@@ -17,7 +17,7 @@
 
 - React, TypeScript 기반의 프론트엔드 개발을 주로 해왔습니다.
 - CSR, SSR 모두 익숙합니다. CSR 환경에서는 AWS를 주로 다루었고, S3, CloudFront, Lambda@Edge 기반 테스트/프로덕션 배포 구성, SEO 처리 경험이 있습니다. SSR 환경에서는 Next.js를 주로 다루었습니다.
-- 브라우저, 웹뷰 모두 익숙합니다. 특히 SwiftUI 기반의 macOS, iOS 웹 브라우저를 개발해본 경험이 있어, WebKit 웹뷰에 대해 자세히 알고있습니다.
+- 브라우저, 웹뷰 모두 익숙합니다. 특히 Swift로 웹 브라우저를 개발해본 경험이 있어, WebKit 웹뷰에 대해 자세히 알고있습니다.
 - 프론트엔드 퍼포먼스 개선 경험이 있습니다. 불필요한 리렌더링 최적화, 번들 경량화, 렌더링 속도 최적화, 네트워크 비용 최적화 등 다양한 경험을 가지고 있습니다.
 - Node.js, AWS 기반의 Serverless 백엔드 개발 경험이 있습니다. 특히 Lambda, DynamoDB를 활용한 경험이 많습니다.
 - 초기 스타트업에서 AI Product를 개발하면서 LLM을 여러 목적으로 깊게 다뤄본 경험이 있습니다.
@@ -28,30 +28,36 @@
 <p className="experience-role">Software Engineer</p>
 <p className="experience-period">2024-04 ~ 현재</p>
 
-- 글로벌 유저가 사용하는 [Mirror 브라우저](https://www.mirror.work)의 macOS, iOS 앱과 프론트엔드, 백엔드 개발: 디바이스간 실시간 데이터 싱크 기능 개발
-- LLM을 활용한 제품 기능 개발: [유저의 직업에 맞추어 개인화되는 신규 유저 온보딩](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm), 브라우징 히스토리 요약
-- LLM으로 인플루언서 마케팅을 자동화하여 약 99%의 비용 및 생산성 개선
-- LLM이 좋은 퀄리티의 결과를 적은 비용으로 빠르게 만들어낼 수 있도록 프롬프트 설계 및 최적화
+- 글로벌 유저가 사용하는 WebKit 기반 브라우저 [Mirror](https://www.mirror.work)의 SwiftUI 기반 macOS, iOS 앱 개발, Next.js기반 SSR 프론트엔드 개발, 서버리스 환경의 Node.js 기반 백엔드 개발
+- 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM 기반으로 유저의 직업에 맞추어 개인화](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm)되도록 하여 리텐션 개선
+- 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 마케팅 자동화 프로세스를 적용하여 마케팅 비용을 1시간 시급보다도 낮게 개선
+- 디바이스간 실시간으로 데이터를 싱크할 수 있게 하여 기기 변경, 멀티 디바이스 상황에 있는 유저들의 문의 100% 감소
+- Chrome Extension을 WebKit에서 실행 가능하게 만드는 런타임 구축
+- Function Calling 대신 Code Execution 환경을 구축하여 LLM 토큰 비용 90% 개선
 
 <p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
-- 월 200만 10대 유저가 사용하는 제품의 프론트엔드 개발
-- 100명이 넘는 토스 프론트엔드 개발자의 생산성을 2배 이상 개선: 사내 라이브러리 프로젝트의 주요한 기여자로 활동, QnA 채널 활성화 및 문제 해결([Next.js의 라이브러리 Resolution 문제 해결](https://github.com/hoseungme/wiki/blob/4ceddf9f12f17592317174ce9fd2010cf34f41ca/front-end/nextjs/server-side-module-resolution/ko.md)), 전사에 [타임존 명시의 중요성을 설득](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 표준화 시도
-- 유저 경험에 악영향을 주는 문제를 주도적으로 찾아서 개선: 한 화면에서 사용하는 3D 리소스의 용량을 21.5MB -> 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절감
-- 토스 오픈소스 Slash의 메인 기여자로 활동: [기여한 모든 PR, Issue 모음](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
+- 월 200만 10대 유저가 사용하는 제품들의 Next.js기반 SSR 프론트엔드를 마이크로 프론트엔드 환경에서 개발
+- 라이브러리 PoC 프로세스의 메인 리뷰어로써 활동하여 라이브러리 개발 및 PR 리뷰 시간을 2배 이상 절약
+- [토스 서버에서 타임존을 명시하지 않는 문제를 공론화](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하고 각 팀별로 명시를 시작하도록 설득하여, 타임존으로 인해 장애를 겪어 문의하는 유저들의 시간, 대응하는 직원들의 시간 모두 2배 이상 절약
+- 한 화면에서 사용하는 3D 리소스의 용량을 21.5MB에서 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절약
+- 제품 개발 중 최악의 경우 1~2일까지 소모되던 비효율적인 병목들을 웹 JSON 에디터를 적극 활용해 10분 미만으로 전부 개선
+- 비직관적인 구조로 설계되어 있고 Android, iOS 네이티브 레거시까지 엮여 예상치 못한 버그가 넘쳐나는 기존의 네비게이션 바 라이브러리를 완벽히 개선한 새로운 네비게이션 바 라이브러리를 만들어 10개 이상의 서비스에 적용
+- 라이브러리 오픈소스 [Slash의 메인 기여자로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 - [자세히보기](/experiences/viva-republica)
 
 <p className="experience">Catch Fashion</p>
 <p className="experience-role">Software Engineer</p>
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
-- 월 50만 유저가 사용하는 이커머스 제품과 백오피스의 프론트엔드, 백엔드 개발: 포스트 노출 시스템 개편([설계 회고](https://blog.hoseung.me/2022-02-06-post-system-retrospect), [데이터 파이프라인 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch))
-- React의 불필요한 리렌더링을 극한까지 개선: [react-router Link 사용 없애기](https://blog.hoseung.me/2021-12-07-do-not-use-link), [RxJS로 필요할 때만 변경 전파하기](https://blog.hoseung.me/2021-10-09-rxjs)
-- 변동이 없는 서버 응답에 client-side cache 적용, data prefetching 등 최적화를 통해 렌더링 속도 100 ~ 500 밀리초 개선
-- 불필요하게 용량이 큰 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 사이즈 30% 절감
-- [웹 브라우저에서도 푸시 알림을 받을 수 있게 개발](https://blog.hoseung.me/2021-11-28-web-push-notification)하고, 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독율 2배 이상 개선
+- 월 50만 유저가 사용하는 명품 이커머스 캐치패션의 React, CSR 기반 프론트엔드, 서버리스 환경의 Node.js 백엔드 개발
+- 컨텐츠 팀의 포스트를 더 많은 곳에 노출하는 [새로운 시스템을 설계](https://blog.hoseung.me/2022-02-06-post-system-retrospect)하고 [데이터 파이프라인을 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)하여 포스트 전환율 10% 개선
+- [외부 라이브러리에서 발생하는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 완전히 없애고, [변경된 상태 전파를 매우 엄격하게 관리](https://blog.hoseung.me/2021-10-09-rxjs)하여 React 리렌더링 퍼포먼스를 극한까지 개선
+- 변경되지 않는 서버 응답에 Client-side 캐싱을 적용하고, Infinite Scroll이 적용된 페이지에서 다음 데이터를 Prefetch하는 등 API 호출을 최적화하여 렌더링 시간 500 밀리초 절약
+- 불필요하게 용량이 큰 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 용량 30% 절약
+- [웹 브라우저에서도 푸시 알림을 받을 수 있도록](https://blog.hoseung.me/2021-11-28-web-push-notification) 만들고 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독 2배 이상 증가
 - [자세히보기](/experiences/catch-fashion)
 
 <p className="title">Activities</p>
