@@ -29,7 +29,7 @@
 <p className="experience-period">2024-04 ~ 현재</p>
 
 - 글로벌 유저가 사용하는 WebKit 기반 브라우저 [Mirror](https://www.mirror.work)의 SwiftUI 기반 macOS, iOS 앱 개발, Next.js기반 SSR 프론트엔드 개발, 서버리스 환경의 Node.js 기반 백엔드 개발
-- 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM 기반으로 유저의 직업에 맞추어 개인화](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm)되도록 하여 리텐션 개선
+- 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM 기반으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 개선
 - 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 마케팅 자동화 프로세스를 적용하여 마케팅 비용을 1시간 시급보다도 낮게 개선
 - 디바이스간 실시간으로 데이터를 싱크할 수 있게 하여 기기 변경, 멀티 디바이스 상황에 있는 유저들의 문의 100% 감소
 - Chrome Extension을 WebKit에서 실행 가능하게 만드는 런타임 구축
