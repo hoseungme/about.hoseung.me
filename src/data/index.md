@@ -56,7 +56,7 @@
 - 월 50만 유저가 사용하는 명품 이커머스 캐치패션의 React, CSR 기반 프론트엔드, 서버리스 환경의 Node.js 백엔드 개발
 - 컨텐츠 팀의 포스트를 더 많은 곳에 노출하는 [새로운 시스템을 설계](https://blog.hoseung.me/2022-02-06-post-system-retrospect)하고 [데이터 파이프라인을 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)하여 포스트 전환율 10% 개선
 - [외부 라이브러리에서 발생하는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 완전히 없애고, [변경된 상태 전파를 매우 엄격하게 관리](https://blog.hoseung.me/2021-10-09-rxjs)하여 React 리렌더링 퍼포먼스를 극한까지 개선
-- 변경되지 않는 서버 응답에 Client-side 캐싱을 적용하고, Infinite Scroll이 적용된 페이지에서 다음 데이터를 Prefetch하는 등 API 호출을 최적화하여 렌더링 시간 500 밀리초 절약
+- 변경되지 않는 서버 응답에 Client-side 캐싱을 적용하고, Infinite Scroll이 적용된 페이지에서 다음 데이터를 Prefetch하는 등 API 호출을 최적화하여 렌더링 시간 500 밀리초 이상 절약
 - 불필요하게 용량이 큰 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 용량 30% 절약
 - [웹 브라우저에서도 푸시 알림을 받을 수 있도록](https://blog.hoseung.me/2021-11-28-web-push-notification) 만들고 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독 2배 이상 증가
 - [자세히보기](/experiences/catch-fashion)
