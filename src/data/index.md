@@ -33,7 +33,7 @@
 - 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM 기반으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 개선
 - 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 월 20달러 미만으로 작동하는 자동화된 마케팅 프로세스 구축
 - 디바이스간 실시간으로 데이터를 싱크할 수 있게 하여 기기 변경, 멀티 디바이스 상황에 있는 유저들의 문의 100% 감소
-- Chrome Extension을 WebKit에서 실행 가능하게 만드는 런타임 구축
+- [Chrome Extension을 WebKit에서 실행](https://youtu.be/Gmp_dMzacmI?feature=shared) 가능하게 만드는 런타임 구축
 - Function Calling 대신 Code Execution 환경을 구축하여 LLM 토큰 비용 90% 개선
 
 <p className="experience">Viva Republica (Toss)</p>
