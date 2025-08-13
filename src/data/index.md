@@ -34,7 +34,9 @@
 - 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 월 20달러 미만으로 작동하는 자동화된 마케팅 프로세스 구축
 - 디바이스간 실시간으로 데이터를 싱크할 수 있게 하여 기기 변경, 멀티 디바이스 상황에 있는 유저들의 문의 100% 감소
 - [Chrome Extension을 WebKit에서 실행](https://youtu.be/Gmp_dMzacmI?feature=shared) 가능하게 만드는 런타임 구축
-- Function Calling 대신 Code Execution 환경을 구축하여 LLM 토큰 비용 90% 개선
+- [브라우징을 돕는 AI Agent 채팅 인터페이스](https://youtu.be/ZwJab0mye6w?feature=shared) 개발
+  - Function Calling 대신 Code Execution 환경을 구축하여 LLM 토큰 비용 90% 개선
+  - [특정 웹사이트에서 사용 가능한 Tool](https://youtu.be/gyZlj_Tlodk?feature=shared)을 개발하여 제공할 수 있는 오픈소스 프로토콜 설계
 
 <p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Engineer</p>
