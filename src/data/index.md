@@ -25,24 +25,28 @@
 
 <p className="title">Experiences</p>
 
+<p className="experience">Viva Republica (Toss)</p>
+<p className="experience-role">Frontend Platform Engineer</p>
+<p className="experience-period">2025-09 ~ 현재</p>
+
+- App in App 서비스 [앱인토스](https://developers-apps-in-toss.toss.im/)의 개발환경 고도화
+
 <p className="experience">Mirror</p>
 <p className="experience-role">Software Engineer</p>
-<p className="experience-period">2024-04 ~ 현재</p>
+<p className="experience-period">2024-04 ~ 2024-08</p>
 
-- 글로벌 유저가 사용하는 WebKit 기반 브라우저 [Mirror](https://www.mirror.work)의 SwiftUI 기반 macOS, iOS 앱 개발, Next.js기반 SSR 프론트엔드 개발, 서버리스 환경의 Node.js 기반 백엔드 개발
+- 글로벌 유저가 사용하는 WebKit 기반 브라우저 [Mirror](https://www.mirror.work)의 SwiftUI 기반 macOS/iOS 앱, Next.js기반 SSR 프론트엔드, 서버리스 환경의 Node.js 기반 백엔드 개발
 - 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM 기반으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 개선
 - 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 월 20달러 미만으로 작동하는 자동화된 마케팅 프로세스 구축
 - 디바이스간 실시간으로 데이터를 싱크할 수 있게 하여 기기 변경, 멀티 디바이스 상황에 있는 유저들의 문의 100% 감소
-- [Chrome Extension을 WebKit에서 실행](https://youtu.be/Gmp_dMzacmI?feature=shared) 가능하게 만드는 런타임 구축
-- [브라우징을 돕는 AI Agent 채팅 인터페이스](https://youtu.be/ZwJab0mye6w?feature=shared) 개발
-  - Function Calling 대신 Code Execution 환경을 구축하여 LLM 토큰 비용 90% 개선
-  - [특정 웹사이트에서 사용 가능한 Tool](https://youtu.be/gyZlj_Tlodk?feature=shared)을 개발하여 제공할 수 있는 오픈소스 프로토콜 설계
+- [Chrome Extension을 WebKit에서 실행](https://youtu.be/Gmp_dMzacmI?feature=shared) 가능하게 만드는 런타임 PoC
+- [브라우징을 돕는 AI Agent 채팅 인터페이스](https://youtu.be/ZwJab0mye6w?feature=shared) 개발, Function Calling 대신 Code Execution 환경을 구축하여 LLM 토큰 비용 90% 개선
 
 <p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
-- 월 200만 10대 유저가 사용하는 제품들의 Next.js기반 SSR 프론트엔드를 마이크로 프론트엔드 환경에서 개발
+- 월 200만 10대 유저가 사용하는 제품들의 Next.js기반 SSR 프론트엔드 개발
 - MAU를 120만 부터 시작하여 200만 이상으로 성장시킨 수많은 제품의 프론트엔드 개발을 혼자서 담당, 코레일/티머니, CU/GS, 애플 등 제휴사와 직접 소통
 - 라이브러리 PoC 프로세스의 메인 리뷰어로써 활동하여 개발 및 PR 리뷰 시간을 2배 이상 절약
 - [토스 서버에서 타임존을 명시하지 않는 문제를 공론화](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하고 각 팀별로 명시를 시작하도록 설득하여, 타임존으로 인해 장애를 겪어 문의하는 유저들의 시간, 대응하는 직원들의 시간 모두 2배 이상 절약
@@ -50,7 +54,7 @@
 - 제품 개발 중 최악의 경우 1~2일까지 소모되던 비효율적인 병목들을 웹 JSON 에디터를 적극 활용해 10분 미만으로 전부 개선
 - 비직관적인 구조로 설계되어 있고 Android, iOS 네이티브 레거시까지 엮여 예상치 못한 버그가 많던 기존의 네비게이션 바를 완벽히 개선하여 10개 이상의 서비스에 적용
 - [카드 선택 인터랙션](https://youtu.be/LdrSjTIRh8o?feature=shared), [가격 변동 애니메이션](https://youtu.be/uxJIEwMhCb0?feature=shared) 등 생동감 있는 인터랙션 구현
-- 라이브러리 오픈소스 [Slash의 메인 기여자로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
+- 라이브러리 오픈소스 [Slash의 메인 리뷰어로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
 - [자세히보기](/experiences/viva-republica)
 
 <p className="experience">Catch Fashion</p>
