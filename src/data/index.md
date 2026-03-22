@@ -4,7 +4,7 @@
   <p><a href="sms:010-3428-0052">010-3428-0052</a></p>
   <p><a href="mailto:hsjang.dev@gmail.com">hsjang.dev@gmail.com</a></p>
   <p><a href="https://github.com/hoseungme">GitHub</a></p>
-  <p><a href="https://blog.hoseung.me">기술 블로그</a></p>
+  <p><a href="https://blog.hoseung.me">블로그</a></p>
 </div>
 
 빠르고 급한 이터레이션을 필요로 하는 팀에 속하여 작업의 비즈니스적 가치를 판단하고, 일정 내에 좋은 퀄리티로 마무리하는 것을 커리어 전체에 걸쳐 해왔습니다.
@@ -72,10 +72,6 @@
 - 불필요하게 용량이 큰 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 용량 30% 절약
 - [웹 브라우저에서도 푸시 알림을 받을 수 있도록](https://blog.hoseung.me/2021-11-28-web-push-notification) 만들고 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독 2배 이상 증가
 - [자세히보기](/experiences/catch-fashion)
-
-<p className="title">Activities</p>
-
-- 아이디어를 얻으면 [오픈소스로 만들어 공개](https://github.com/hoseungme/opensources/blob/main/README.md)하고 있습니다.
 
 <p className="title">Educations</p>
 
