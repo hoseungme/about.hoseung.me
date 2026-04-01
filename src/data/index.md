@@ -49,14 +49,14 @@
 <p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
-- 월 200만 10대 유저가 사용하는 제품들의 Next.js SSR 프론트엔드 개발
-  - MAU를 120만부터 200만 이상으로 성장시킨 수많은 프론트엔드 제품을 혼자서 담당, 코레일/티머니, CU/GS, 애플 등 제휴사와 직접 소통
-  - 페이지 하나에서 사용하는 3D 리소스의 용량을 21.5MB에서 1.8MB까지 압축하여 유저의 네트워크 비용 92% 절약
-  - [전사적인 타임존 누락 문제를 공론화](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하고 컨벤션으로 자리잡을 수 있도록 설득하여 장애 발생 가능성을 차단하고 유저 경험 개선
+- 월 200만 10대 유저가 사용하는 제품들의 Next.js SSR 프론드엔드 개발
+- [유스카드](https://youtu.be/LdrSjTIRh8o?si=fv2ZLPOlpkpJEJIM), [모의주식투자](https://youtu.be/uxJIEwMhCb0?si=M5IeP-fVOAQvAsWy), [덕질저금통](https://youtu.be/mPXaqnyDKi4?si=uNHJHmAX4U3J4xcL), [치킨대회](https://youtu.be/kJXQZrcpNMw?si=BOaQrz4yS80nGaYK) 등 MAU를 120만 부터 200만까지 성장시킨 모든 프론트엔드 제품을 혼자서 담당
+- 카드 디자인 선택 화면의 3D 리소스를 퀄리티 손상 없이 21.5MB -> 1.8MB로 92% 압축하여 사용성과 네트워크 비용 대폭 개선
+- 프로모션, 점검 등 매번 동일한 형태로 반복되는 작업들의 디자인을 템플릿으로 만들어 고정하고 팀 내에 웹 에디터를 제공하여 프론트엔드 배포 의존을 완전히 제거하고 일 단위의 작업 시간을 분 단위까지 단축
+- 시차와 관련된 장애 대응이 전사적으로 매우 빈번하다는 문제를 서버 조직 전체에 공론화하고 [타임존 명시를 설득](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 기본 컨벤션으로 도입
 - 100명 이상의 사내 프론트엔드 개발자들이 사용하는 공통 라이브러리 프로젝트 운영
-  - 작업을 진행하기 전 미리 논의하는 PoC 프로세스를 도입하고 메인 리뷰어로 활동하여 모든 기여자들의 생산성 개선
-  - 동작이 예측 불가능하고 버그가 많아 정상적으로 사용할 수 없어 디버깅에 시간을 낭비하게 만들던 네비게이션 바 라이브러리를 처음부터 재설계하고 전사에 도입
-  - 라이브러리 오픈소스 [Slash의 메인테이너로 활동](https://github.com/toss/slash/issues?q=involves%3Ahoseungme)
+- 동작이 제대로 되지 않던 상단 네비게이션 바 시스템을 재설계하고 새로운 라이브러리로 만들어 전사에 배포하여 사용성과 안정성을 크게 개선하고 20개 이상의 프론트엔드 서비스에 적용
+- 라이브러리 작업의 의도와 인터페이스를 미리 공유하고 모든 프론트엔드 구성원이 자유롭게 논의하는 PoC 프로세스를 도입하여 기여자의 시간을 절약하고 최종 결과물의 퀄리티 개선
 - [자세히보기](/experiences/viva-republica)
 
 <p className="experience">Catch Fashion</p>
@@ -64,7 +64,7 @@
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
 - 월 50만 유저가 사용하는 명품 이커머스 캐치패션의 React CSR 프론트엔드, 서버리스 Node.js 백엔드 개발
-- [포스트 노출 시스템을 재설계](https://blog.hoseung.me/2022-02-06-post-system-retrospect)하고 [데이터 파이프라인을 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)하여 전환율 10% 증가
+- 포스트 노출 시스템을 [프론트엔드, 백엔드 전체에 걸쳐 재설계](https://blog.hoseung.me/2022-02-06-post-system-retrospect)하고 [검색을 위한 데이터 파이프라인을 새로 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)하여 전환율 10% 개선
 - [외부 라이브러리에서 발생하는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 제거하고, [상태 전파를 매우 엄격하게 관리](https://blog.hoseung.me/2021-10-09-rxjs)하여 React 리렌더링 퍼포먼스 개선
 - 변경되지 않는 서버 응답에 Client-side 캐싱을 적용하고, Infinite Scroll이 적용된 페이지에서 다음 데이터를 Prefetch하는 등 API 호출을 최적화하여 렌더링 시간을 약 500 밀리초 절감
 - 트리쉐이킹이 불가능하여 번들 용량을 불필요하게 키우는 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 용량 30% 축소
