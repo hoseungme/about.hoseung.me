@@ -7,11 +7,13 @@ import { createElement } from "react";
 
 export function Markdown({ children }: { children: string }) {
   return (
-    <ReactMarkdown className="markdown-body" urlTransform={(url) => url} components={headingComponents} rehypePlugins={[rehypeRaw]}>
+    <ReactMarkdown className="markdown-body" urlTransform={(url) => url} components={{...headingComponents, a: anchorComponent}} rehypePlugins={[rehypeRaw]}>
       {children}
     </ReactMarkdown>
   );
 }
+
+const anchorComponent: Components['a'] = (props) => <a {...props} target={props.href?.startsWith('https://') ? "_blank" : "_self"} />
 
 const headingComponents = (["h1", "h2", "h3", "h4", "h5", "h6"] as const).reduce((components, name) => {
   components[name] = (props) => createElement(name, { ...props, node: undefined, id: (props.children?.toString() ?? "").toLowerCase().replace(/[^a-z가-힣\d\s]/g, "").replace(/\s/g, "-") });
