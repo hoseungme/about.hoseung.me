@@ -27,7 +27,7 @@
 
 <p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Platform Engineer</p>
-<p className="experience-period">2025-09 ~ 현재</p>
+<p className="experience-period">2025-09 ~ 2026-07</p>
 
 - 토스의 앱인앱 서비스 [앱인토스](https://developers-apps-in-toss.toss.im/)의 SDK 프로젝트 리딩
 - SDK를 위한 새로운 모노레포 프로젝트를 구축하고 이관하여 레거시 코드베이스 제거
@@ -40,10 +40,10 @@
 
 - 글로벌 유저가 사용하는 WebKit 기반 브라우저 [Mirror](https://www.mirror.work)의 SwiftUI macOS/iOS 앱, Next.js SSR 프론트엔드, 서버리스 Node.js 백엔드 개발
 - 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM 기반으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 개선
-- 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 월 20달러 미만으로 작동하는 자동화된 마케팅 프로세스 구축
-- 디바이스 데이터를 실시간으로 싱크하는 기능을 개발하여 멀티 디바이스 유저들의 경험 개선
+- 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 자동화된 마케팅 프로세스 구축
+- 디바이스 데이터를 실시간으로 싱크하는 기능 개발, 멀티 디바이스 유저들의 경험 개선
 - [Chrome Extension을 WebKit에서 실행](https://youtu.be/Gmp_dMzacmI?feature=shared) 가능하게 만드는 런타임 PoC
-- [브라우징을 돕는 AI Agent 채팅 인터페이스](https://youtu.be/ZwJab0mye6w?feature=shared) 개발, Function Calling 대신 Code Execution 환경을 구축하여 LLM 토큰 비용 90% 개선
+- [AI 브라우징 에이전트](https://youtu.be/ZwJab0mye6w?feature=shared) 개발, [LLM Tool Calling을 JavaScript 코드 실행 기반으로 최적화](https://blog.hoseung.me/2026-07-25-code-execution-based-agent)하여 성능 개선
 
 <p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Engineer</p>
