@@ -29,47 +29,43 @@
 <p className="experience-role">Frontend Platform Engineer</p>
 <p className="experience-period">2025-09 ~ 2026-07</p>
 
-- 토스의 앱인앱 서비스 [앱인토스](https://developers-apps-in-toss.toss.im/)의 SDK 프로젝트 리딩
-- SDK를 위한 새로운 모노레포 프로젝트를 구축하고 이관하여 레거시 코드베이스 제거
-- 빌드 캐싱, 패키지 의존 관계 정리 등 CI 파이프라인의 병목을 분석하고 제거하여 8분 걸리던 실행 속도를 최대 2분까지 단축
-- 배포 프로세스를 완전히 자동화하여 개발자가 로컬에서 수동으로 배포하던 환경 개선
+- 월 400만 이상의 유저가 사용하는 미니앱 플랫폼 [앱인토스](https://developers-apps-in-toss.toss.im/)의 미니앱 런타임, 배포 시스템, SDK 등 기반 아키텍처의 설계, 개발 리딩
+- SDK 프로젝트에서 불필요한 레거시를 제거하고 CI 처리 시간을 8분에서 2분까지 단축, 수동 배포 프로세스를 자동화하여 개발 생산성 개선
+- 공통 로직을 OTA로 배포할 수 있도록 미니앱 런타임을 재설계하여 제휴사의 SDK 업데이트에 의존하는 문제를 제거하고, 기능 이터레이션 속도와 플랫폼 안정성, 확장성을 크게 개선
 
 <p className="experience">Mirror</p>
 <p className="experience-role">Software Engineer</p>
 <p className="experience-period">2024-04 ~ 2024-08</p>
 
-- 글로벌 유저가 사용하는 WebKit 기반 브라우저 [Mirror](https://www.mirror.work)의 SwiftUI macOS/iOS 앱, Next.js SSR 프론트엔드, 서버리스 Node.js 백엔드 개발
-- 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM 기반으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 개선
-- 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 자동화된 마케팅 프로세스 구축
-- 디바이스 데이터를 실시간으로 싱크하는 기능 개발, 멀티 디바이스 유저들의 경험 개선
+- WebKit 기반 글로벌 브라우저 [Mirror](https://www.mirror.work)의 네이티브 앱, 프론트엔드, 백엔드 개발
+- [AI 브라우징 에이전트](https://youtu.be/ZwJab0mye6w?feature=shared)를 [Tool Calling 대신 JavaScript 코드 실행 기반으로 동작하도록 최적화](https://blog.hoseung.me/2026-07-25-code-execution-based-agent)하여 성능 개선
+- 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 개선
 - [Chrome Extension을 WebKit에서 실행](https://youtu.be/Gmp_dMzacmI?feature=shared) 가능하게 만드는 런타임 PoC
-- [AI 브라우징 에이전트](https://youtu.be/ZwJab0mye6w?feature=shared) 개발, [LLM Tool Calling을 JavaScript 코드 실행 기반으로 최적화](https://blog.hoseung.me/2026-07-25-code-execution-based-agent)하여 성능 개선
+- 주기적으로 SNS를 크롤링하여 인플루언서를 찾고 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 자동화된 마케팅 프로세스 구축
+- 디바이스간 실시간 데이터 동기화 기능을 개발하여 여러 기기를 사용하는 유저들의 반복적인 피드백을 해소하고 제품 사용 경험 개선
 
 <p className="experience">Viva Republica (Toss)</p>
 <p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
-- 월 200만 10대 유저가 사용하는 제품들의 Next.js SSR 프론드엔드 개발
-- [유스카드](https://youtu.be/LdrSjTIRh8o?si=fv2ZLPOlpkpJEJIM), [모의주식투자](https://youtu.be/uxJIEwMhCb0?si=M5IeP-fVOAQvAsWy), [덕질저금통](https://youtu.be/mPXaqnyDKi4?si=uNHJHmAX4U3J4xcL), [치킨대회](https://youtu.be/kJXQZrcpNMw?si=BOaQrz4yS80nGaYK) 등 MAU를 120만 부터 200만까지 성장시킨 모든 프론트엔드 제품을 혼자서 담당
+- [유스카드](https://youtu.be/LdrSjTIRh8o?si=fv2ZLPOlpkpJEJIM), [모의주식투자](https://youtu.be/uxJIEwMhCb0?si=M5IeP-fVOAQvAsWy), [덕질저금통](https://youtu.be/mPXaqnyDKi4?si=uNHJHmAX4U3J4xcL), [치킨대회](https://youtu.be/kJXQZrcpNMw?si=BOaQrz4yS80nGaYK) 등 월 200만 10대 유저가 사용하는 모든 제품의 프론트엔드 개발 리딩
 - 카드 디자인 선택 화면의 3D 리소스를 퀄리티 손상 없이 21.5MB -> 1.8MB로 92% 압축하여 사용성과 네트워크 비용 대폭 개선
-- 프로모션, 점검 등 매번 동일한 형태로 반복되는 작업들의 디자인을 템플릿으로 만들어 고정하고 팀 내에 웹 에디터를 제공하여 프론트엔드 배포 의존을 완전히 제거하고 일 단위의 작업 시간을 분 단위까지 단축
-- 시차와 관련된 장애 대응이 전사적으로 매우 빈번하다는 문제를 서버 조직 전체에 공론화하고 [타임존 명시를 설득](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 기본 컨벤션으로 도입
+- 프로모션, 점검 등 동일한 디자인의 하드코딩 작업들을 프론트엔드 배포 없이 반영할 수 있도록 템플릿으로 만들어 일 단위로 걸리던 작업 시간을 분 단위까지 단축
+- 시차와 관련된 장애 대응이 매우 빈번한 문제를 조직 전체에 공론화하고 [타임존 명시를 설득](https://blog.hoseung.me/2023-03-23-how-to-transfer-date)하여 기본 컨벤션으로 도입
 - 100명 이상의 사내 프론트엔드 개발자들이 사용하는 공통 라이브러리 프로젝트 운영
-- 동작이 제대로 되지 않던 상단 네비게이션 바 시스템을 재설계하고 새로운 라이브러리로 만들어 전사에 배포하여 사용성과 안정성을 크게 개선하고 20개 이상의 프론트엔드 서비스에 적용
-- 라이브러리 작업의 의도와 인터페이스를 미리 공유하고 모든 프론트엔드 구성원이 자유롭게 논의하는 PoC 프로세스를 도입하여 기여자의 시간을 절약하고 최종 결과물의 퀄리티 개선
-- [자세히보기](/experiences/viva-republica)
+- 동작이 제대로 되지 않던 상단 네비게이션 바 시스템을 재설계하고 사용성과 안정성을 크게 개선하고 20개 이상의 프론트엔드 서비스에 적용
+- 작업 의도와 인터페이스를 미리 공유하고 모든 구성원이 자유롭게 논의하는 PoC 프로세스를 운영하여 라이브러리 기여자의 시간을 절약하고 최종 결과물의 퀄리티 개선
 
 <p className="experience">Catch Fashion</p>
 <p className="experience-role">Software Engineer</p>
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
-- 월 50만 유저가 사용하는 명품 이커머스 캐치패션의 React CSR 프론트엔드, 서버리스 Node.js 백엔드 개발
+- 월 50만 유저가 사용하는 명품 이커머스 캐치패션의 프론트엔드, 백엔드 개발
 - 포스트 노출 시스템을 [프론트엔드, 백엔드 전체에 걸쳐 재설계](https://blog.hoseung.me/2022-02-06-post-system-retrospect)하고 [검색을 위한 데이터 파이프라인을 새로 구축](https://blog.hoseung.me/2022-02-19-dynamodb-stream-elasticsearch)하여 전환율 10% 개선
 - [외부 라이브러리에서 발생하는 불필요한 리렌더링](https://blog.hoseung.me/2021-12-07-do-not-use-link)을 제거하고, [상태 전파를 매우 엄격하게 관리](https://blog.hoseung.me/2021-10-09-rxjs)하여 React 리렌더링 퍼포먼스 개선
 - 변경되지 않는 서버 응답에 Client-side 캐싱을 적용하고, Infinite Scroll이 적용된 페이지에서 다음 데이터를 Prefetch하는 등 API 호출을 최적화하여 렌더링 시간을 약 500 밀리초 절감
 - 트리쉐이킹이 불가능하여 번들 용량을 불필요하게 키우는 라이브러리인 [moment.js를 day.js로 마이그레이션](https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs)하여 번들 용량 30% 축소
 - [웹 브라우저에서도 푸시 알림을 받을 수 있도록](https://blog.hoseung.me/2021-11-28-web-push-notification) 만들고 알림 권한을 받는 UI를 직접 개선하여 푸시 알림 구독률 2배 개선
-- [자세히보기](/experiences/catch-fashion)
 
 <p className="title">Educations</p>
 
