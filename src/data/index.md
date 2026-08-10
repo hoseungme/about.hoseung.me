@@ -31,17 +31,17 @@
 
 - 월 400만 이상의 유저가 사용하는 미니앱 플랫폼 [앱인토스](https://developers-apps-in-toss.toss.im/)의 미니앱 런타임, 배포 시스템, SDK 등 기반 아키텍처의 설계, 개발 리딩
 - 미니앱 플랫폼의 마이크로 프론트엔드 구조를 재설계하여 공통 로직을 OTA로 업데이트할 수 있는 격리 레이어를 만들고 기능 이터레이션 속도와 플랫폼 안정성, 확장성을 크게 개선
-- SDK 프로젝트를 독립된 모노레포로 분리하여 불필요한 레거시를 제거하고 CI 처리 시간을 8분에서 2분까지 단축, 수동 배포 프로세스를 자동화하여 개발 생산성 개선
+- SDK 프로젝트를 모노레포로 분리하고, 불필요한 레거시를 제거하고, CI 병목을 제거하여 처리 시간을 8분에서 2분까지 단축하고, 수동 배포 프로세스를 자동화하여 개발 생산성 개선
 
 <p className="experience">Mirror</p>
 <p className="experience-role">Software Engineer</p>
 <p className="experience-period">2024-04 ~ 2024-08</p>
 
 - WebKit 기반 글로벌 브라우저 [Mirror](https://www.mirror.work)의 네이티브 앱, 프론트엔드, 백엔드 개발
-- [AI 브라우징 에이전트](https://youtu.be/ZwJab0mye6w?feature=shared)를 [Tool Calling 대신 JavaScript 코드 실행 기반으로 동작하도록 최적화](https://blog.hoseung.me/2026-07-25-code-execution-based-agent)하여 성능 개선
-- 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 개선
+- [AI 브라우징 에이전트](https://youtu.be/ZwJab0mye6w?feature=shared)를 [Tool Calling 대신 JavaScript 코드 실행 기반으로 동작하도록 최적화](https://blog.hoseung.me/2026-07-25-code-execution-based-agent)하여 성능과 토큰 비용 개선
+- 하드코딩된 JSON 데이터로 동작하던 신규 유저 온보딩을 [LLM으로 유저의 직업에 따라 개인화되도록](https://blog.hoseung.me/2025-04-13-mirror-onboading-llm) 만들어 리텐션 5% 개선
 - [Chrome Extension을 WebKit에서 실행](https://youtu.be/Gmp_dMzacmI?feature=shared) 가능하게 만드는 런타임 PoC
-- 주기적으로 SNS를 크롤링하여 인플루언서를 찾고 개인화된 이메일을 LLM으로 생성하여 자동 발송하는 자동화된 마케팅 프로세스 구축
+- 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 발송하는 자동화된 마케팅 프로세스 구축
 - 디바이스간 실시간 데이터 동기화 기능을 개발하여 여러 기기를 사용하는 유저들의 반복적인 피드백을 해소하고 제품 사용 경험 개선
 
 <p className="experience">Viva Republica (Toss)</p>
