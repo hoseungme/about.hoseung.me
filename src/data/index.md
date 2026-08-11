@@ -1,7 +1,6 @@
 <p className="title">Software Engineer<br/>장호승</p>
 
 <div className="info">
-  <p><a href="sms:010-3428-0052">010-3428-0052</a></p>
   <p><a href="mailto:hsjang.dev@gmail.com">hsjang.dev@gmail.com</a></p>
   <p><a href="https://github.com/hoseungme">GitHub</a></p>
   <p><a href="https://blog.hoseung.me">블로그</a></p>
@@ -25,7 +24,7 @@
 
 <p className="title">Experiences</p>
 
-<p className="experience">Viva Republica (Toss)</p>
+<p className="experience"><a href="https://www.linkedin.com/company/tossglobal/home">Viva Republica (Toss)</a></p>
 <p className="experience-role">Frontend Platform Engineer</p>
 <p className="experience-period">2025-09 ~ 2026-07</p>
 
@@ -33,7 +32,7 @@
 - 미니앱 플랫폼의 마이크로 프론트엔드 구조를 재설계하여 공통 로직을 OTA로 업데이트할 수 있는 격리 레이어를 만들고 기능 이터레이션 속도와 플랫폼 안정성, 확장성을 크게 개선
 - SDK 프로젝트를 모노레포로 분리하고, 불필요한 레거시를 제거하고, CI 병목을 제거하여 처리 시간을 8분에서 2분까지 단축하고, 수동 배포 프로세스를 자동화하여 개발 생산성 개선
 
-<p className="experience">Mirror</p>
+<p className="experience"><a href="https://www.linkedin.com/company/mirror-browser/home">Mirror</a></p>
 <p className="experience-role">Software Engineer</p>
 <p className="experience-period">2024-04 ~ 2024-08</p>
 
@@ -44,7 +43,7 @@
 - 주기적으로 SNS를 크롤링하여 인플루언서를 찾고, 개인화된 이메일을 LLM으로 생성하여 발송하는 자동화된 마케팅 프로세스 구축
 - 디바이스간 실시간 데이터 동기화 기능을 개발하여 여러 기기를 사용하는 유저들의 반복적인 피드백을 해소하고 제품 사용 경험 개선
 
-<p className="experience">Viva Republica (Toss)</p>
+<p className="experience"><a href="https://www.linkedin.com/company/tossglobal/home">Viva Republica (Toss)</a></p>
 <p className="experience-role">Frontend Engineer</p>
 <p className="experience-period">2022-04 ~ 2024-04</p>
 
@@ -56,7 +55,7 @@
 - 동작이 제대로 되지 않던 상단 네비게이션 바 시스템을 재설계하고 사용성과 안정성을 크게 개선하고 20개 이상의 프론트엔드 서비스에 적용
 - 작업 의도와 인터페이스를 미리 공유하고 모든 구성원이 자유롭게 논의하는 PoC 프로세스를 운영하여 라이브러리 기여자의 시간을 절약하고 최종 결과물의 퀄리티 개선
 
-<p className="experience">Catch Fashion</p>
+<p className="experience"><a href="https://www.linkedin.com/company/catchfashion-hr/home">Catch Fashion</a></p>
 <p className="experience-role">Software Engineer</p>
 <p className="experience-period">2020-08 ~ 2022-04</p>
 
