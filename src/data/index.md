@@ -19,8 +19,8 @@
 <p className="experience-period">2025-09 ~ 2026-07</p>
 
 - MAU 400만 미니앱 플랫폼 [앱인토스](https://developers-apps-in-toss.toss.im/)의 SDK·런타임·배포 시스템 등 기반 아키텍처 설계·개발 리딩
-- 미니앱 런타임 아키텍처를 재설계하여 공통 로직을 SDK에서 분리하고 OTA 업데이트가 가능한 격리 레이어 구축, 빠르고 안정적인 이터레이션과 일관된 미니앱 사용 경험 확보
-- 수십~수백 MB 규모의 Unity WebGL 리소스를 캐싱하는 스크립트를 웹뷰에 주입하여 게임 미니앱 재진입마다 발생하던 10초 이상의 로딩 시간 제거
+- 미니앱 런타임 아키텍처를 재설계해 공통 로직의 OTA 업데이트가 가능한 격리 레이어를 구축하여, 빠르고 안정적인 이터레이션을 가능하게 하고 미니앱 사용 경험을 일관되게 통일
+- 수십~수백 MB 규모의 Unity WebGL 리소스를 웹뷰에 캐싱하여 게임 미니앱 재진입마다 발생하던 10초 이상의 로딩 시간 제거
 - SDK 프로젝트를 독립된 모노레포로 재구성하고, CI 실행 시간을 8분 -> 2분으로 단축, 배포·공지 프로세스 자동화
 
 <p className="experience"><a href="https://www.linkedin.com/company/mirror-browser/home">Mirror</a></p>
